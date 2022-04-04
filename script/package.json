@@ -1,0 +1,14 @@
+{
+  "name": "script",
+  "version": "0.0.1",
+  "dependencies": {
+    "module-alias": "^2.2.2",
+    "puppeteer": "^13.5.2"
+  },
+  "devDependencies": {
+    "@types/puppeteer": "^5.4.5"
+  },
+  "_moduleAliases": {
+    "@shared": "../shared"
+  }
+}
