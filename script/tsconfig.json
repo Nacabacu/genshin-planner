@@ -1,20 +1,22 @@
 {
     "compilerOptions": {
         "target": "esnext",
-        "esModuleInterop": true,
+        "useDefineForClassFields": true,
+        "allowJs": false,
+        "skipLibCheck": false,
+        "esModuleInterop": false,
+        "allowSyntheticDefaultImports": true,
         "strict": true,
         "strictNullChecks": true,
+        "forceConsistentCasingInFileNames": true,
         "module": "commonjs",
-        "moduleResolution": "node",
-        "jsx": "react-jsx",
+        "moduleResolution": "Node",
+        "resolveJsonModule": true,
+        "noEmit": true,
         "baseUrl": "./",
         "paths": {
-            "@shared/*": [
-                "../shared/*"
-            ]
+            "@shared/*": ["../shared/*"]
         }
     },
-    "include": [
-        "./*"
-, "../service/node_modules/index.ts"    ]
+    "include": ["src"]
 }

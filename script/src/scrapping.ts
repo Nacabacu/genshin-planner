@@ -1,11 +1,10 @@
-import 'module-alias/register';
-import puppeteer from 'puppeteer';
+import { chromium } from 'playwright';
 import { Ascension, Dictionary, AscensionMaterial, Rarity, Weapon } from '@shared/items';
 
 (async () => {
-    const browser = await puppeteer.launch({ headless: false });
+    const browser = await chromium.launch({ headless: false });
     const page = await browser.newPage();
-    await page.goto('https://genshin-impact.fandom.com/wiki/Hunter%27s_Bow');
+    await page.goto('https://genshin-impact.fandom.com/wiki/Hunter%27s_Bow', { timeout: 0 });
 
     const data: Weapon | null = await page.$eval('body', (element) => {
         const itemName = element.querySelector('.pi-title')?.innerHTML;
@@ -20,7 +19,7 @@ import { Ascension, Dictionary, AscensionMaterial, Rarity, Weapon } from '@share
             '2 stars': Rarity.TwoStar,
             '3 stars': Rarity.ThreeStar,
             '4 stars': Rarity.FourStar,
-            '5 stars': Rarity.FiveStar
+            '5 stars': Rarity.FiveStar,
         };
 
         function parseId(name: string) {
@@ -42,20 +41,20 @@ import { Ascension, Dictionary, AscensionMaterial, Rarity, Weapon } from '@share
 
                 materials.push({
                     id: parseId(itemName),
-                    quantity: parseInt(quantityString)
+                    quantity: parseInt(quantityString),
                 });
             }
 
             ascensions.push({
-                materials
-            })
+                materials,
+            });
         }
 
         return {
             id: parseId(itemName),
             rarity: rarityMapping[rarity],
-            ascensions
-        }
+            ascensions,
+        };
     });
 
     console.log(JSON.stringify(data));
