@@ -3,9 +3,9 @@ import { chromium } from 'playwright';
 import exportWeapon from './weapon';
 
 async function main() {
-    const browser = await chromium.launch({ headless: false });
+  const browser = await chromium.launch({ headless: false });
 
-    await exportWeapon(browser);
+  await exportWeapon(browser);
 }
 
 main();
