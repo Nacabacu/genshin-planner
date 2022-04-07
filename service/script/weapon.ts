@@ -1,4 +1,8 @@
-import { Browser } from 'playwright';
+/* eslint-disable no-restricted-syntax */
+/* eslint-disable no-await-in-loop */
+import { Ascension, AscensionMaterial, Dictionary, Rarity, Weapon } from '@shared/items';
+import { Browser, Page } from 'playwright';
+import { writeFileSync } from 'fs';
 
 const WEAPON_TYPE_URL = [
     'https://genshin-impact.fandom.com/wiki/Bows',
@@ -8,10 +12,60 @@ const WEAPON_TYPE_URL = [
     'https://genshin-impact.fandom.com/wiki/Swords',
 ];
 
-async function getUrlList(browser: Browser, url: string): Promise<string[]> {
-    const page = await browser.newPage();
-    await page.goto(url, { timeout: 0 });
+async function getWeapon(page: Page): Promise<Weapon | null> {
+    return page.$eval('body', (element) => {
+        const itemName = element.querySelector('.pi-title')?.innerHTML;
+        const rarity = element.querySelector<HTMLImageElement>('[data-source="rarity"] > div > img')?.title.toLowerCase();
+        const table = element.querySelector<HTMLTableElement>('.wikitable >tbody')?.children;
+        const ascensions: Ascension[] = [];
 
+        if (!itemName || !rarity || !table) return null;
+
+        const rarityMapping: Dictionary<Rarity> = {
+            '1 star': Rarity.OneStar,
+            '2 stars': Rarity.TwoStar,
+            '3 stars': Rarity.ThreeStar,
+            '4 stars': Rarity.FourStar,
+            '5 stars': Rarity.FiveStar,
+        };
+
+        function parseId(name: string) {
+            return name.replace(`'`, '').toLowerCase().split(' ').join('_');
+        }
+
+        for (let index = 0; index < table.length; index += 1) {
+            const item = table[index].querySelectorAll('.mw-collapsible-content > .card_container');
+            const materials: AscensionMaterial[] = [];
+
+            if (!item?.length) continue;
+
+            for (let itemIndex = 0; itemIndex < item.length; itemIndex += 1) {
+                const card = item[itemIndex];
+                const name = card.querySelector<HTMLAnchorElement>('.card_image > a')?.title.toLowerCase();
+                const quantityString = card.querySelector<HTMLSpanElement>('.card_font')?.innerText;
+
+                if (name === 'mora' || !name || !quantityString) continue;
+
+                materials.push({
+                    id: parseId(name),
+                    quantity: parseInt(quantityString, 10),
+                });
+            }
+
+            ascensions.push({
+                materials,
+            });
+        }
+
+        return {
+            id: parseId(itemName),
+            rarity: rarityMapping[rarity],
+            ascensions,
+        };
+    });
+}
+
+async function getWeaponUrlList(page: Page): Promise<string[]> {
     return page.$eval('body', (element) => {
         const list: string[] = [];
         const row = element.querySelectorAll<HTMLTableElement>('.article-table')[1].tBodies[0].children;
@@ -29,16 +83,34 @@ async function getUrlList(browser: Browser, url: string): Promise<string[]> {
     });
 }
 
+async function getWeaponList(browser: Browser, url: string): Promise<Weapon[]> {
+    const page = await browser.newPage();
+    const weaponList: Weapon[] = [];
+
+    await page.goto(url, { timeout: 0 });
+
+    const weaponUrlList = await getWeaponUrlList(page);
+
+    for (const weaponUrl of weaponUrlList) {
+        await page.goto(weaponUrl, { timeout: 0, waitUntil: 'networkidle' });
+
+        const weapon = await getWeapon(page);
+
+        if (weapon) {
+            weaponList.push(weapon);
+        }
+    }
+
+    await page.close();
+
+    return weaponList;
+}
+
 async function exportWeapon(browser: Browser) {
-    const promiseArr: Promise<string[]>[] = [];
+    const weaponResultList: Weapon[][] = await Promise.all(WEAPON_TYPE_URL.map((url) => getWeaponList(browser, url)));
+    const result: Weapon[] = weaponResultList.reduce((prev, current) => [...prev, ...current], <Weapon[]>[]);
 
-    WEAPON_TYPE_URL.forEach(async (url) => {
-        promiseArr.push(getUrlList(browser, url));
-    });
-
-    const result = await Promise.all(promiseArr);
-
-    console.log(result);
+    writeFileSync('./data/weapon.json', JSON.stringify(result, null, 4));
 }
 
 export default exportWeapon;
