@@ -15,7 +15,8 @@ async function exportWeapon(browser: Browser) {
     const page = await browser.newPage();
     await page.goto(url, { timeout: 0 });
 
-    await page.$eval('body', (element) => {
+    const data = await page.$eval('body', (element) => {
+      const list: string[] = [];
       const row =
         element.querySelectorAll<HTMLTableElement>('.article-table')[1]
           .tBodies[0].children;
@@ -26,9 +27,12 @@ async function exportWeapon(browser: Browser) {
 
         if (!dataUrl) continue;
 
-        urlList.push(dataUrl);
+        list.push(dataUrl);
       }
+      return list;
     });
+
+    urlList.push(...data);
   });
 }
 
