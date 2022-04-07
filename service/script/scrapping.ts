@@ -10,7 +10,11 @@ import {
 (async () => {
   const browser = await chromium.launch({ headless: false });
   const page = await browser.newPage();
+  const page2 = await browser.newPage();
   await page.goto('https://genshin-impact.fandom.com/wiki/Hunter%27s_Bow', {
+    timeout: 0,
+  });
+  await page2.goto('https://genshin-impact.fandom.com/wiki/Hunter%27s_Bow', {
     timeout: 0,
   });
 
