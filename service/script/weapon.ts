@@ -2,7 +2,8 @@
 /* eslint-disable no-await-in-loop */
 import { Ascension, AscensionMaterial, Dictionary, Rarity, Weapon } from '@shared/items';
 import { Browser, Page } from 'playwright';
-import { writeFileSync } from 'fs';
+import { writeFile } from 'fs/promises';
+import * as path from 'path';
 
 const WEAPON_TYPE_URL = [
     'https://genshin-impact.fandom.com/wiki/Bows',
@@ -110,7 +111,7 @@ async function exportWeapon(browser: Browser) {
     const weaponResultList: Weapon[][] = await Promise.all(WEAPON_TYPE_URL.map((url) => getWeaponList(browser, url)));
     const result: Weapon[] = weaponResultList.reduce((prev, current) => [...prev, ...current], <Weapon[]>[]);
 
-    writeFileSync('./data/weapon.json', JSON.stringify(result, null, 4));
+    await writeFile(path.join(__dirname, './data/weapon.json'), JSON.stringify(result, null, 4));
 }
 
 export default exportWeapon;
