@@ -11,7 +11,7 @@
       "args": ["./script/main"],
       "runtimeArgs": ["--nolazy", "-r", "ts-node/register"],
       "sourceMaps": true,
-      "cwd": "${workspaceRoot}/service",
+      "cwd": "${workspaceRoot}",
       "protocol": "inspector"
     }
   ]
