@@ -5,13 +5,13 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Current TS File",
+      "name": "Scraping main",
       "type": "node",
       "request": "launch",
-      "args": ["./script/main"],
+      "args": ["./scraping/main"],
       "runtimeArgs": ["--nolazy", "-r", "ts-node/register"],
       "sourceMaps": true,
-      "cwd": "${workspaceRoot}",
+      "cwd": "${workspaceRoot}/tools",
       "protocol": "inspector"
     }
   ]
