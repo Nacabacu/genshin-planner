@@ -15,6 +15,14 @@ export enum Element {
   Geo = 'geo',
 }
 
+export enum WeaponType {
+  Sword = 'sword',
+  Claymore = 'claymore',
+  Polearm = 'polearm',
+  Catalysts = 'catalysts',
+  Bow = 'bow',
+}
+
 export enum Region {
   mondstadt = 'mondstadt',
   liyue = 'liyue',
@@ -41,15 +49,15 @@ export interface ItemData {
 
 export type CommonMaterialType = keyof CommonMaterial;
 export type EliteMaterialType = keyof EliteMaterial;
-export type WeaponAscensionMaterialType = keyof WeaponAscensionMaterial;
+export type WeaponMaterialType = keyof WeaponMaterial;
 export type GemMaterialType = keyof GemMaterial;
 export type BossMaterialType = keyof BossMaterial;
+export type WeeklyBossMaterialType = keyof WeeklyBossMaterial;
 export type LocalMaterialType = keyof LocalMaterial;
-export type TalentMaterialType = keyof TalentMaterial;
+export type BookMaterialType = keyof BookMaterial;
 
 export interface MaterialData {
   materialList: ItemData[];
-  region: Region;
   dropData: DropableData;
 }
 
@@ -79,19 +87,7 @@ export interface EliteMaterial {
   spore: MaterialData;
 }
 
-export interface WeaponAscensionMaterial {
-  decarabian: MaterialData;
-  borealWolf: MaterialData;
-  dandelionGladiator: MaterialData;
-  guyun: MaterialData;
-  elixir: MaterialData;
-  aerosiderite: MaterialData;
-  distantSea: MaterialData;
-  narukami: MaterialData;
-  mask: MaterialData;
-}
-
-export interface CharacterMaterial {
+export interface WeaponMaterial {
   decarabian: MaterialData;
   borealWolf: MaterialData;
   dandelionGladiator: MaterialData;
@@ -132,6 +128,27 @@ export interface BossMaterial {
   runicFang: MaterialData;
 }
 
+export interface WeeklyBossMaterial {
+  dvalinPlume: MaterialData;
+  dvalinClaw: MaterialData;
+  dvalinSign: MaterialData;
+  andriusTail: MaterialData;
+  andriusRing: MaterialData;
+  andriusLocket: MaterialData;
+  childeTusk: MaterialData;
+  childeShard: MaterialData;
+  childeShadow: MaterialData;
+  azhdahaCrown: MaterialData;
+  azhdahaBranch: MaterialData;
+  azhdahaScale: MaterialData;
+  signoraMoment: MaterialData;
+  signoraButterFly: MaterialData;
+  signoraHeart: MaterialData;
+  mikotoMudra: MaterialData;
+  mikotoTear: MaterialData;
+  mikotoMeaning: MaterialData;
+}
+
 export interface LocalMaterial {
   callaLily: MaterialData;
   wolfhook: MaterialData;
@@ -160,7 +177,7 @@ export interface LocalMaterial {
   fluorescentFungus: MaterialData;
 }
 
-export interface TalentMaterial {
+export interface BookMaterial {
   freedom: MaterialData;
   resistance: MaterialData;
   ballad: MaterialData;
@@ -177,13 +194,13 @@ export interface TalentMaterial {
 // #region Weapon
 
 export interface Weapon extends ItemData {
-  material: WeaponMaterial;
+  ascensionMaterial: WeaponAscensionMaterial;
 }
 
-export interface WeaponMaterial {
-  common: CommonMaterialType;
-  elite: EliteMaterialType;
-  ascension: WeaponAscensionMaterialType;
+export interface WeaponAscensionMaterial {
+  commonMaterial: CommonMaterialType;
+  eliteMaterial: EliteMaterialType;
+  weaponMaterial: WeaponMaterialType;
 }
 
 // #endregion
@@ -192,14 +209,22 @@ export interface WeaponMaterial {
 
 export interface Character extends ItemData {
   element: Element;
-  material: CharacterMaterial;
-  talentMaterial: TalentMaterialType;
+  weaponType: WeaponType;
+  ascensionMaterial: CharacterAscensionMaterial;
+  talentMaterial: TalentMaterial;
 }
 
-export interface CharacterMaterial {
-  gem: GemMaterialType;
-  boss: BossMaterialType;
-  local: LocalMaterialType;
+export interface CharacterAscensionMaterial {
+  eliteMaterial: EliteMaterialType;
+  gemMaterial: GemMaterialType;
+  bossMaterial: BossMaterialType;
+  localMaterial: LocalMaterialType;
+}
+
+export interface TalentMaterial {
+  eliteMaterial: EliteMaterialType;
+  weeklyBossMaterial: WeeklyBossMaterialType;
+  bookMaterial: BookMaterialType;
 }
 
 // #endregion
@@ -215,6 +240,7 @@ export interface Artifact extends ItemData {}
 export interface DropableData {
   id: string;
   availableDay: DayInWeek[];
+  region: Region;
 }
 
 // #endregion
