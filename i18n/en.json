@@ -46,5 +46,12 @@
   "yanfei": "Yanfei",
   "yoimiya": "Yoimiya",
   "yunjin": "Yun Jin",
-  "zhongli": "Zhongli"
+  "zhongli": "Zhongli",
+  "anemo": "Anemo",
+  "cryo": "Cryo",
+  "electro": "Electro",
+  "geo": "Geo",
+  "hydro": "Hydro",
+  "pyro": "Pyro",
+  "dendro": "Dendro"
 }
