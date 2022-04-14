@@ -1,0 +1,156 @@
+{
+  "adventurer": {
+    "rarity": "3",
+    "url": "https://genshin-impact.fandom.com/wiki/Adventurer"
+  },
+  "archaic_petra": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Archaic_Petra"
+  },
+  "berserker": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Berserker"
+  },
+  "blizzard_strayer": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Blizzard_Strayer"
+  },
+  "bloodstained_chivalry": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Bloodstained_Chivalry"
+  },
+  "brave_heart": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Brave_Heart"
+  },
+  "crimson_witch_of_flames": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Crimson_Witch_of_Flames"
+  },
+  "defenders_will": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Defender's_Will"
+  },
+  "echoes_of_an_offering": {
+    "rarity": "5"
+  },
+  "emblem_of_severed_fate": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Emblem_of_Severed_Fate"
+  },
+  "gambler": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Gambler"
+  },
+  "gladiators_finale": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Gladiator's_Finale"
+  },
+  "heart_of_depth": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Heart_of_Depth"
+  },
+  "husk_of_opulent_dreams": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Husk_of_Opulent_Dreams"
+  },
+  "instructor": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Instructor"
+  },
+  "lavawalker": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Lavawalker"
+  },
+  "lucky_dog": {
+    "rarity": "3",
+    "url": "https://genshin-impact.fandom.com/wiki/Lucky_Dog"
+  },
+  "maiden_beloved": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Maiden_Beloved"
+  },
+  "martial_artist": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Martial_Artist"
+  },
+  "noblesse_oblige": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Noblesse_Oblige"
+  },
+  "oceanhued_clam": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Ocean-Hued_Clam"
+  },
+  "pale_flame": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Pale_Flame"
+  },
+  "prayers_for_destiny": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Prayers_for_Destiny"
+  },
+  "prayers_for_illumination": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Prayers_for_Illumination"
+  },
+  "prayers_for_wisdom": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Prayers_for_Wisdom"
+  },
+  "prayers_to_springtime": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Prayers_to_Springtime"
+  },
+  "resolution_of_sojourner": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Resolution_of_Sojourner"
+  },
+  "retracing_bolide": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Retracing_Bolide"
+  },
+  "scholar": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Scholar"
+  },
+  "shimenawas_reminiscence": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Shimenawa's_Reminiscence"
+  },
+  "tenacity_of_the_millelith": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Tenacity_of_the_Millelith"
+  },
+  "the_exile": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/The_Exile"
+  },
+  "thundering_fury": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Thundering_Fury"
+  },
+  "thundersoother": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Thundersoother"
+  },
+  "tiny_miracle": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Tiny_Miracle"
+  },
+  "traveling_doctor": {
+    "rarity": "3",
+    "url": "https://genshin-impact.fandom.com/wiki/Traveling_Doctor"
+  },
+  "vermillion_hereafter": {
+    "rarity": "5"
+  },
+  "viridescent_venerer": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Viridescent_Venerer"
+  },
+  "wanderers_troupe": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Wanderer's_Troupe"
+  }
+}

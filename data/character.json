@@ -1,0 +1,852 @@
+{
+  "albedo": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Albedo",
+    "element": "Geo",
+    "weaponType": "Sword",
+    "ascendMaterial": {
+      "gem": "prithiva_topaz",
+      "boss": "basalt_pillar",
+      "common": "scroll",
+      "local": "cecilia"
+    },
+    "talentMaterial": {
+      "common": "scroll",
+      "book": "ballad",
+      "weeklyBoss": "tusk_of_monoceros_caeli"
+    }
+  },
+  "aloy": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Aloy",
+    "element": "Cryo",
+    "weaponType": "Bow",
+    "ascendMaterial": {
+      "gem": "shivada_jade",
+      "boss": "crystalline_bloom",
+      "common": "spectral",
+      "local": "crystal_marrow"
+    },
+    "talentMaterial": {
+      "common": "spectral",
+      "book": "freedom",
+      "weeklyBoss": "molten_moment"
+    }
+  },
+  "amber": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Amber",
+    "element": "Pyro",
+    "weaponType": "Bow",
+    "ascendMaterial": {
+      "gem": "agnidus_agate",
+      "boss": "everflame_seed",
+      "common": "arrowhead",
+      "local": "small_lamp_grass"
+    },
+    "talentMaterial": {
+      "common": "arrowhead",
+      "book": "freedom",
+      "weeklyBoss": "dvalins_sigh"
+    }
+  },
+  "arataki_itto": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Arataki_Itto",
+    "element": "Geo",
+    "weaponType": "Claymore",
+    "ascendMaterial": {
+      "gem": "prithiva_topaz",
+      "boss": "riftborn_regalia",
+      "common": "slime",
+      "local": "onikabuto"
+    },
+    "talentMaterial": {
+      "common": "slime",
+      "book": "elegance",
+      "weeklyBoss": "ashen_heart"
+    }
+  },
+  "barbara": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Barbara",
+    "element": "Hydro",
+    "weaponType": "Catalyst",
+    "ascendMaterial": {
+      "gem": "varunada_lazurite",
+      "boss": "cleansing_heart",
+      "common": "scroll",
+      "local": "philanemo_mushroom"
+    },
+    "talentMaterial": {
+      "common": "scroll",
+      "book": "freedom",
+      "weeklyBoss": "ring_of_boreas"
+    }
+  },
+  "beidou": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Beidou",
+    "element": "Electro",
+    "weaponType": "Claymore",
+    "ascendMaterial": {
+      "gem": "vajrada_amethyst",
+      "boss": "lightning_prism",
+      "common": "treasure_insignia",
+      "local": "noctilucous_jade"
+    },
+    "talentMaterial": {
+      "common": "treasure_insignia",
+      "book": "gold",
+      "weeklyBoss": "dvalins_sigh"
+    }
+  },
+  "bennett": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Bennett",
+    "element": "Pyro",
+    "weaponType": "Sword",
+    "ascendMaterial": {
+      "gem": "agnidus_agate",
+      "boss": "everflame_seed",
+      "common": "treasure_insignia",
+      "local": "windwheel_aster"
+    },
+    "talentMaterial": {
+      "common": "treasure_insignia",
+      "book": "resistance",
+      "weeklyBoss": "dvalins_plume"
+    }
+  },
+  "chongyun": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Chongyun",
+    "element": "Cryo",
+    "weaponType": "Claymore",
+    "ascendMaterial": {
+      "gem": "shivada_jade",
+      "boss": "hoarfrost_core",
+      "common": "common_mask",
+      "local": "cor_lapis"
+    },
+    "talentMaterial": {
+      "common": "common_mask",
+      "book": "diligence",
+      "weeklyBoss": "dvalins_sigh"
+    }
+  },
+  "diluc": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Diluc",
+    "element": "Pyro",
+    "weaponType": "Claymore",
+    "ascendMaterial": {
+      "gem": "agnidus_agate",
+      "boss": "everflame_seed",
+      "common": "insignia",
+      "local": "small_lamp_grass"
+    },
+    "talentMaterial": {
+      "common": "insignia",
+      "book": "resistance",
+      "weeklyBoss": "dvalins_plume"
+    }
+  },
+  "diona": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Diona",
+    "element": "Cryo",
+    "weaponType": "Bow",
+    "ascendMaterial": {
+      "gem": "shivada_jade",
+      "boss": "hoarfrost_core",
+      "common": "arrowhead",
+      "local": "calla_lily"
+    },
+    "talentMaterial": {
+      "common": "arrowhead",
+      "book": "freedom",
+      "weeklyBoss": "shard_of_a_foul_legacy"
+    }
+  },
+  "eula": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Eula",
+    "element": "Cryo",
+    "weaponType": "Claymore",
+    "ascendMaterial": {
+      "gem": "shivada_jade",
+      "boss": "crystalline_bloom",
+      "common": "common_mask",
+      "local": "dandelion_seed"
+    },
+    "talentMaterial": {
+      "common": "common_mask",
+      "book": "resistance",
+      "weeklyBoss": "dragon_lords_crown"
+    }
+  },
+  "fischl": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Fischl",
+    "element": "Electro",
+    "weaponType": "Bow",
+    "ascendMaterial": {
+      "gem": "vajrada_amethyst",
+      "boss": "lightning_prism",
+      "common": "arrowhead",
+      "local": "small_lamp_grass"
+    },
+    "talentMaterial": {
+      "common": "arrowhead",
+      "book": "ballad",
+      "weeklyBoss": "spirit_locket_of_boreas"
+    }
+  },
+  "ganyu": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Ganyu",
+    "element": "Cryo",
+    "weaponType": "Bow",
+    "ascendMaterial": {
+      "gem": "shivada_jade",
+      "boss": "hoarfrost_core",
+      "common": "nectar",
+      "local": "qingxin"
+    },
+    "talentMaterial": {
+      "common": "nectar",
+      "book": "diligence",
+      "weeklyBoss": "shadow_of_the_warrior"
+    }
+  },
+  "gorou": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Gorou",
+    "element": "Geo",
+    "weaponType": "Bow",
+    "ascendMaterial": {
+      "gem": "prithiva_topaz",
+      "boss": "perpetual_heart",
+      "common": "spectral",
+      "local": "sango_pearl"
+    },
+    "talentMaterial": {
+      "common": "spectral",
+      "book": "light",
+      "weeklyBoss": "molten_moment"
+    }
+  },
+  "hu_tao": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Hu_Tao",
+    "element": "Pyro",
+    "weaponType": "Polearm",
+    "ascendMaterial": {
+      "gem": "agnidus_agate",
+      "boss": "juvenile_jade",
+      "common": "nectar",
+      "local": "silk_flower"
+    },
+    "talentMaterial": {
+      "common": "nectar",
+      "book": "diligence",
+      "weeklyBoss": "shard_of_a_foul_legacy"
+    }
+  },
+  "jean": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Jean",
+    "element": "Anemo",
+    "weaponType": "Sword",
+    "ascendMaterial": {
+      "gem": "vayuda_turquoise",
+      "boss": "hurricane_seed",
+      "common": "common_mask",
+      "local": "dandelion_seed"
+    },
+    "talentMaterial": {
+      "common": "common_mask",
+      "book": "resistance",
+      "weeklyBoss": "dvalins_plume"
+    }
+  },
+  "kaedehara_kazuha": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Kaedehara_Kazuha",
+    "element": "Anemo",
+    "weaponType": "Sword",
+    "ascendMaterial": {
+      "gem": "vayuda_turquoise",
+      "boss": "marionette_core",
+      "common": "treasure_insignia",
+      "local": "sea_ganoderma"
+    },
+    "talentMaterial": {
+      "common": "treasure_insignia",
+      "book": "diligence",
+      "weeklyBoss": "gilded_scale"
+    }
+  },
+  "kaeya": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Kaeya",
+    "element": "Cryo",
+    "weaponType": "Sword",
+    "ascendMaterial": {
+      "gem": "shivada_jade",
+      "boss": "hoarfrost_core",
+      "common": "treasure_insignia",
+      "local": "calla_lily"
+    },
+    "talentMaterial": {
+      "common": "treasure_insignia",
+      "book": "ballad",
+      "weeklyBoss": "spirit_locket_of_boreas"
+    }
+  },
+  "kamisato_ayaka": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Kamisato_Ayaka",
+    "element": "Cryo",
+    "weaponType": "Sword",
+    "ascendMaterial": {
+      "gem": "shivada_jade",
+      "boss": "perpetual_heart",
+      "common": "handguard",
+      "local": "sakura_bloom"
+    },
+    "talentMaterial": {
+      "common": "handguard",
+      "book": "elegance",
+      "weeklyBoss": "bloodjade_branch"
+    }
+  },
+  "kamisato_ayato": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Kamisato_Ayato",
+    "element": "Hydro",
+    "weaponType": "Sword",
+    "ascendMaterial": {
+      "gem": "varunada_lazurite",
+      "boss": "dew_of_repudiation",
+      "common": "handguard",
+      "local": "sakura_bloom"
+    },
+    "talentMaterial": {
+      "common": "handguard",
+      "book": "elegance",
+      "weeklyBoss": "mudra_of_the_malefic_general"
+    }
+  },
+  "keqing": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Keqing",
+    "element": "Electro",
+    "weaponType": "Sword",
+    "ascendMaterial": {
+      "gem": "vajrada_amethyst",
+      "boss": "lightning_prism",
+      "common": "nectar",
+      "local": "cor_lapis"
+    },
+    "talentMaterial": {
+      "common": "nectar",
+      "book": "prosperity",
+      "weeklyBoss": "ring_of_boreas"
+    }
+  },
+  "klee": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Klee",
+    "element": "Pyro",
+    "weaponType": "Catalyst",
+    "ascendMaterial": {
+      "gem": "agnidus_agate",
+      "boss": "everflame_seed",
+      "common": "scroll",
+      "local": "philanemo_mushroom"
+    },
+    "talentMaterial": {
+      "common": "scroll",
+      "book": "freedom",
+      "weeklyBoss": "ring_of_boreas"
+    }
+  },
+  "kujou_sara": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Kujou_Sara",
+    "element": "Electro",
+    "weaponType": "Bow",
+    "ascendMaterial": {
+      "gem": "vajrada_amethyst",
+      "boss": "storm_beads",
+      "common": "common_mask",
+      "local": "dendrobium"
+    },
+    "talentMaterial": {
+      "common": "common_mask",
+      "book": "elegance",
+      "weeklyBoss": "ashen_heart"
+    }
+  },
+  "lisa": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Lisa",
+    "element": "Electro",
+    "weaponType": "Catalyst",
+    "ascendMaterial": {
+      "gem": "vajrada_amethyst",
+      "boss": "lightning_prism",
+      "common": "slime",
+      "local": "valberry"
+    },
+    "talentMaterial": {
+      "common": "slime",
+      "book": "ballad",
+      "weeklyBoss": "dvalins_claw"
+    }
+  },
+  "traveler_anemo": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Lumine",
+    "element": "None",
+    "weaponType": "Sword",
+    "ascendMaterial": {
+      "gem": "brilliant_diamond",
+      "boss": "",
+      "common": "common_mask",
+      "local": "windwheel_aster"
+    },
+    "talentMaterial": {
+      "common": "scroll",
+      "book": "resistance",
+      "weeklyBoss": "dvalins_sigh"
+    }
+  },
+  "traveler_geo": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Lumine",
+    "element": "None",
+    "weaponType": "Sword",
+    "ascendMaterial": {
+      "gem": "brilliant_diamond",
+      "boss": "",
+      "common": "common_mask",
+      "local": "windwheel_aster"
+    },
+    "talentMaterial": {
+      "common": "arrowhead",
+      "book": "diligence",
+      "weeklyBoss": "tail_of_boreas"
+    }
+  },
+  "traveler_electro": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Lumine",
+    "element": "None",
+    "weaponType": "Sword",
+    "ascendMaterial": {
+      "gem": "brilliant_diamond",
+      "boss": "",
+      "common": "common_mask",
+      "local": "windwheel_aster"
+    },
+    "talentMaterial": {
+      "common": "handguard",
+      "book": "elegance",
+      "weeklyBoss": "dragon_lords_crown"
+    }
+  },
+  "mona": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Mona",
+    "element": "Hydro",
+    "weaponType": "Catalyst",
+    "ascendMaterial": {
+      "gem": "varunada_lazurite",
+      "boss": "cleansing_heart",
+      "common": "nectar",
+      "local": "philanemo_mushroom"
+    },
+    "talentMaterial": {
+      "common": "nectar",
+      "book": "resistance",
+      "weeklyBoss": "ring_of_boreas"
+    }
+  },
+  "ningguang": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Ningguang",
+    "element": "Geo",
+    "weaponType": "Catalyst",
+    "ascendMaterial": {
+      "gem": "prithiva_topaz",
+      "boss": "basalt_pillar",
+      "common": "insignia",
+      "local": "glaze_lily"
+    },
+    "talentMaterial": {
+      "common": "insignia",
+      "book": "prosperity",
+      "weeklyBoss": "spirit_locket_of_boreas"
+    }
+  },
+  "noelle": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Noelle",
+    "element": "Geo",
+    "weaponType": "Claymore",
+    "ascendMaterial": {
+      "gem": "prithiva_topaz",
+      "boss": "basalt_pillar",
+      "common": "common_mask",
+      "local": "valberry"
+    },
+    "talentMaterial": {
+      "common": "common_mask",
+      "book": "resistance",
+      "weeklyBoss": "dvalins_claw"
+    }
+  },
+  "qiqi": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Qiqi",
+    "element": "Cryo",
+    "weaponType": "Sword",
+    "ascendMaterial": {
+      "gem": "shivada_jade",
+      "boss": "hoarfrost_core",
+      "common": "scroll",
+      "local": "violetgrass"
+    },
+    "talentMaterial": {
+      "common": "scroll",
+      "book": "prosperity",
+      "weeklyBoss": "tail_of_boreas"
+    }
+  },
+  "raiden_shogun": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Raiden_Shogun",
+    "element": "Electro",
+    "weaponType": "Polearm",
+    "ascendMaterial": {
+      "gem": "vajrada_amethyst",
+      "boss": "storm_beads",
+      "common": "handguard",
+      "local": "amakumo_fruit"
+    },
+    "talentMaterial": {
+      "common": "handguard",
+      "book": "light",
+      "weeklyBoss": "molten_moment"
+    }
+  },
+  "razor": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Razor",
+    "element": "Electro",
+    "weaponType": "Claymore",
+    "ascendMaterial": {
+      "gem": "vajrada_amethyst",
+      "boss": "lightning_prism",
+      "common": "common_mask",
+      "local": "wolfhook"
+    },
+    "talentMaterial": {
+      "common": "common_mask",
+      "book": "resistance",
+      "weeklyBoss": "dvalins_claw"
+    }
+  },
+  "rosaria": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Rosaria",
+    "element": "Cryo",
+    "weaponType": "Polearm",
+    "ascendMaterial": {
+      "gem": "shivada_jade",
+      "boss": "hoarfrost_core",
+      "common": "insignia",
+      "local": "valberry"
+    },
+    "talentMaterial": {
+      "common": "insignia",
+      "book": "ballad",
+      "weeklyBoss": "shadow_of_the_warrior"
+    }
+  },
+  "sangonomiya_kokomi": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Sangonomiya_Kokomi",
+    "element": "Hydro",
+    "weaponType": "Catalyst",
+    "ascendMaterial": {
+      "gem": "varunada_lazurite",
+      "boss": "dew_of_repudiation",
+      "common": "spectral",
+      "local": "sango_pearl"
+    },
+    "talentMaterial": {
+      "common": "spectral",
+      "book": "transience",
+      "weeklyBoss": "hellfire_butterfly"
+    }
+  },
+  "sayu": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Sayu",
+    "element": "Anemo",
+    "weaponType": "Claymore",
+    "ascendMaterial": {
+      "gem": "vayuda_turquoise",
+      "boss": "marionette_core",
+      "common": "nectar",
+      "local": "crystal_marrow"
+    },
+    "talentMaterial": {
+      "common": "nectar",
+      "book": "light",
+      "weeklyBoss": "gilded_scale"
+    }
+  },
+  "shenhe": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Shenhe",
+    "element": "Cryo",
+    "weaponType": "Polearm",
+    "ascendMaterial": {
+      "gem": "shivada_jade",
+      "boss": "dragonheirs_false_fin",
+      "common": "nectar",
+      "local": "qingxin"
+    },
+    "talentMaterial": {
+      "common": "nectar",
+      "book": "prosperity",
+      "weeklyBoss": "hellfire_butterfly"
+    }
+  },
+  "sucrose": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Sucrose",
+    "element": "Anemo",
+    "weaponType": "Catalyst",
+    "ascendMaterial": {
+      "gem": "vayuda_turquoise",
+      "boss": "hurricane_seed",
+      "common": "nectar",
+      "local": "windwheel_aster"
+    },
+    "talentMaterial": {
+      "common": "nectar",
+      "book": "freedom",
+      "weeklyBoss": "spirit_locket_of_boreas"
+    }
+  },
+  "tartaglia": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Tartaglia",
+    "element": "Hydro",
+    "weaponType": "Bow",
+    "ascendMaterial": {
+      "gem": "varunada_lazurite",
+      "boss": "cleansing_heart",
+      "common": "insignia",
+      "local": "starconch"
+    },
+    "talentMaterial": {
+      "common": "insignia",
+      "book": "freedom",
+      "weeklyBoss": "shard_of_a_foul_legacy"
+    }
+  },
+  "thoma": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Thoma",
+    "element": "Pyro",
+    "weaponType": "Polearm",
+    "ascendMaterial": {
+      "gem": "agnidus_agate",
+      "boss": "smoldering_pearl",
+      "common": "treasure_insignia",
+      "local": "fluorescent_fungus"
+    },
+    "talentMaterial": {
+      "common": "treasure_insignia",
+      "book": "transience",
+      "weeklyBoss": "hellfire_butterfly"
+    }
+  },
+  "venti": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Venti",
+    "element": "Anemo",
+    "weaponType": "Bow",
+    "ascendMaterial": {
+      "gem": "vayuda_turquoise",
+      "boss": "hurricane_seed",
+      "common": "slime",
+      "local": "cecilia"
+    },
+    "talentMaterial": {
+      "common": "slime",
+      "book": "ballad",
+      "weeklyBoss": "tail_of_boreas"
+    }
+  },
+  "xiangling": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Xiangling",
+    "element": "Pyro",
+    "weaponType": "Polearm",
+    "ascendMaterial": {
+      "gem": "agnidus_agate",
+      "boss": "everflame_seed",
+      "common": "slime",
+      "local": "jueyun_chili"
+    },
+    "talentMaterial": {
+      "common": "slime",
+      "book": "diligence",
+      "weeklyBoss": "dvalins_claw"
+    }
+  },
+  "xiao": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Xiao",
+    "element": "Anemo",
+    "weaponType": "Polearm",
+    "ascendMaterial": {
+      "gem": "vayuda_turquoise",
+      "boss": "juvenile_jade",
+      "common": "slime",
+      "local": "qingxin"
+    },
+    "talentMaterial": {
+      "common": "slime",
+      "book": "prosperity",
+      "weeklyBoss": "shadow_of_the_warrior"
+    }
+  },
+  "xingqiu": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Xingqiu",
+    "element": "Hydro",
+    "weaponType": "Sword",
+    "ascendMaterial": {
+      "gem": "varunada_lazurite",
+      "boss": "cleansing_heart",
+      "common": "common_mask",
+      "local": "silk_flower"
+    },
+    "talentMaterial": {
+      "common": "common_mask",
+      "book": "gold",
+      "weeklyBoss": "tail_of_boreas"
+    }
+  },
+  "xinyan": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Xinyan",
+    "element": "Pyro",
+    "weaponType": "Claymore",
+    "ascendMaterial": {
+      "gem": "agnidus_agate",
+      "boss": "everflame_seed",
+      "common": "treasure_insignia",
+      "local": "violetgrass"
+    },
+    "talentMaterial": {
+      "common": "treasure_insignia",
+      "book": "gold",
+      "weeklyBoss": "tusk_of_monoceros_caeli"
+    }
+  },
+  "yae_miko": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Yae_Miko",
+    "element": "Electro",
+    "weaponType": "Catalyst",
+    "ascendMaterial": {
+      "gem": "vajrada_amethyst",
+      "boss": "dragonheirs_false_fin",
+      "common": "handguard",
+      "local": "sea_ganoderma"
+    },
+    "talentMaterial": {
+      "common": "handguard",
+      "book": "light",
+      "weeklyBoss": "the_meaning_of_aeons"
+    }
+  },
+  "yanfei": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Yanfei",
+    "element": "Pyro",
+    "weaponType": "Catalyst",
+    "ascendMaterial": {
+      "gem": "agnidus_agate",
+      "boss": "juvenile_jade",
+      "common": "treasure_insignia",
+      "local": "noctilucous_jade"
+    },
+    "talentMaterial": {
+      "common": "treasure_insignia",
+      "book": "gold",
+      "weeklyBoss": "bloodjade_branch"
+    }
+  },
+  "yoimiya": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Yoimiya",
+    "element": "Pyro",
+    "weaponType": "Bow",
+    "ascendMaterial": {
+      "gem": "agnidus_agate",
+      "boss": "smoldering_pearl",
+      "common": "scroll",
+      "local": "naku_weed"
+    },
+    "talentMaterial": {
+      "common": "scroll",
+      "book": "transience",
+      "weeklyBoss": "dragon_lords_crown"
+    }
+  },
+  "yun_jin": {
+    "rarity": "4",
+    "url": "https://genshin-impact.fandom.com/wiki/Yun_Jin",
+    "element": "Geo",
+    "weaponType": "Polearm",
+    "ascendMaterial": {
+      "gem": "prithiva_topaz",
+      "boss": "riftborn_regalia",
+      "common": "common_mask",
+      "local": "glaze_lily"
+    },
+    "talentMaterial": {
+      "common": "common_mask",
+      "book": "diligence",
+      "weeklyBoss": "ashen_heart"
+    }
+  },
+  "zhongli": {
+    "rarity": "5",
+    "url": "https://genshin-impact.fandom.com/wiki/Zhongli",
+    "element": "Geo",
+    "weaponType": "Polearm",
+    "ascendMaterial": {
+      "gem": "prithiva_topaz",
+      "boss": "basalt_pillar",
+      "common": "slime",
+      "local": "cor_lapis"
+    },
+    "talentMaterial": {
+      "common": "slime",
+      "book": "gold",
+      "weeklyBoss": "tusk_of_monoceros_caeli"
+    }
+  }
+}

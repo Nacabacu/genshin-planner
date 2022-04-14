@@ -7,6 +7,7 @@ export enum Rarity {
 }
 
 export enum Element {
+  Anemo = 'anemo',
   Pyro = 'pyro',
   Hydro = 'hydro',
   Electro = 'electro',
