@@ -1,247 +1,61 @@
-export enum Rarity {
-  OneStar = 1,
-  TwoStar = 2,
-  ThreeStar = 3,
-  FourStar = 4,
-  FiveStar = 5,
+export type Rarity = 1 | 2 | 3 | 4 | 5;
+export type WeaponType = 'Sword' | 'Bow' | 'Claymore' | 'Catalyst' | 'Polearm';
+export type Element = 'Anemo' | 'Cryo' | 'Pyro' | 'Hydro' | 'Electro' | 'Geo' | 'Dendro';
+export type Day = 'Monday' | 'Tuesday' | 'Wednesday' | 'Thursday' | 'Friday' | 'Saturday' | 'Sunday';
+export type Region = 'Mondstant' | 'Liyue' | 'Inazuma';
+export type DomainType = 'Artifacts' | 'Weapon Ascension Materials' | 'Talent Level-Up Material';
+
+export interface Dictionary<T> {
+  [key: string]: T;
 }
 
-export enum Element {
-  Anemo = 'anemo',
-  Pyro = 'pyro',
-  Hydro = 'hydro',
-  Electro = 'electro',
-  Dendro = 'dendro',
-  Cryo = 'cryo',
-  Geo = 'geo',
+export interface ItemDataBase {
+  rarity?: Rarity;
+  url?: string;
 }
 
-export enum WeaponType {
-  Sword = 'sword',
-  Claymore = 'claymore',
-  Polearm = 'polearm',
-  Catalysts = 'catalysts',
-  Bow = 'bow',
+export interface MaterialDataGroup {
+  materials: Dictionary<MaterialData>;
 }
 
-export enum Region {
-  mondstadt = 'mondstadt',
-  liyue = 'liyue',
-  Inazuma = 'inazuma',
-}
+export interface MaterialData extends ItemDataBase {}
 
-export enum DayInWeek {
-  Monday = 'monday',
-  Tuesday = 'tuesday',
-  Wednesday = 'wednesday',
-  Thursday = 'thursday',
-  Friday = 'friday',
-  Saturday = 'saturday',
-  Sunday = 'sunday',
-  All = 'all',
-}
+export interface ArtifactData extends ItemDataBase {}
 
-export interface ItemData {
-  id: string;
-  rarity: Rarity;
-}
-
-// #region Material
-
-export type CommonMaterialType = keyof CommonMaterial;
-export type EliteMaterialType = keyof EliteMaterial;
-export type WeaponMaterialType = keyof WeaponMaterial;
-export type GemMaterialType = keyof GemMaterial;
-export type BossMaterialType = keyof BossMaterial;
-export type WeeklyBossMaterialType = keyof WeeklyBossMaterial;
-export type LocalMaterialType = keyof LocalMaterial;
-export type BookMaterialType = keyof BookMaterial;
-
-export interface MaterialData {
-  materialList: ItemData[];
-  dropData: DropableData;
-}
-
-export interface CommonMaterial {
-  horn: MaterialData;
-  layLine: MaterialData;
-  chaos: MaterialData;
-  mist: MaterialData;
-  knife: MaterialData;
-  bone: MaterialData;
-  sentinelChaos: MaterialData;
-  prism: MaterialData;
-  claw: MaterialData;
-  statuette: MaterialData;
-}
-
-export interface EliteMaterial {
-  slime: MaterialData;
-  mask: MaterialData;
-  scroll: MaterialData;
-  arrowHead: MaterialData;
-  fatuiInsignia: MaterialData;
-  hoarderInsignia: MaterialData;
-  nectar: MaterialData;
-  handguard: MaterialData;
-  spectral: MaterialData;
-  spore: MaterialData;
-}
-
-export interface WeaponMaterial {
-  decarabian: MaterialData;
-  borealWolf: MaterialData;
-  dandelionGladiator: MaterialData;
-  guyun: MaterialData;
-  elixir: MaterialData;
-  aerosiderite: MaterialData;
-  distantSea: MaterialData;
-  narukami: MaterialData;
-  mask: MaterialData;
-}
-
-export interface GemMaterial {
-  diamond: MaterialData;
-  agate: MaterialData;
-  lazurite: MaterialData;
-  amethyst: MaterialData;
-  turquoise: MaterialData;
-  jade: MaterialData;
-  topaz: MaterialData;
-}
-
-export interface BossMaterial {
-  hurricaneSeed: MaterialData;
-  lightningPrism: MaterialData;
-  basaltPillar: MaterialData;
-  hoarfrostCore: MaterialData;
-  everflameSeed: MaterialData;
-  cleansingHeart: MaterialData;
-  juvenileJade: MaterialData;
-  crystallineBloom: MaterialData;
-  marionetteCore: MaterialData;
-  perpetualHeart: MaterialData;
-  smolderingPearl: MaterialData;
-  dewOfRepudiation: MaterialData;
-  stormBeads: MaterialData;
-  riftbornRegalia: MaterialData;
-  dragonheirFalseFin: MaterialData;
-  runicFang: MaterialData;
-}
-
-export interface WeeklyBossMaterial {
-  dvalinPlume: MaterialData;
-  dvalinClaw: MaterialData;
-  dvalinSign: MaterialData;
-  andriusTail: MaterialData;
-  andriusRing: MaterialData;
-  andriusLocket: MaterialData;
-  childeTusk: MaterialData;
-  childeShard: MaterialData;
-  childeShadow: MaterialData;
-  azhdahaCrown: MaterialData;
-  azhdahaBranch: MaterialData;
-  azhdahaScale: MaterialData;
-  signoraMoment: MaterialData;
-  signoraButterFly: MaterialData;
-  signoraHeart: MaterialData;
-  mikotoMudra: MaterialData;
-  mikotoTear: MaterialData;
-  mikotoMeaning: MaterialData;
-}
-
-export interface LocalMaterial {
-  callaLily: MaterialData;
-  wolfhook: MaterialData;
-  valberry: MaterialData;
-  cecilia: MaterialData;
-  windwheelAster: MaterialData;
-  philanemoMushroom: MaterialData;
-  smallLampGrass: MaterialData;
-  dandelionSeed: MaterialData;
-  jueyunChili: MaterialData;
-  noctilucousJade: MaterialData;
-  silkFlower: MaterialData;
-  glazeLily: MaterialData;
-  qingxin: MaterialData;
-  starconch: MaterialData;
-  violetgrass: MaterialData;
-  corLapis: MaterialData;
-  onikabuto: MaterialData;
-  sakuraBloom: MaterialData;
-  crystalMarrow: MaterialData;
-  dendrobium: MaterialData;
-  nakuWeed: MaterialData;
-  seaGanoderma: MaterialData;
-  sangoPearl: MaterialData;
-  amakumaFruit: MaterialData;
-  fluorescentFungus: MaterialData;
-}
-
-export interface BookMaterial {
-  freedom: MaterialData;
-  resistance: MaterialData;
-  ballad: MaterialData;
-  prosperity: MaterialData;
-  diligence: MaterialData;
-  gold: MaterialData;
-  transience: MaterialData;
-  elegance: MaterialData;
-  light: MaterialData;
-}
-
-// #endregion
-
-// #region Weapon
-
-export interface Weapon extends ItemData {
-  ascensionMaterial: WeaponAscensionMaterial;
-}
-
-export interface WeaponAscensionMaterial {
-  commonMaterial: CommonMaterialType;
-  eliteMaterial: EliteMaterialType;
-  weaponMaterial: WeaponMaterialType;
-}
-
-// #endregion
-
-// #region Character
-
-export interface Character extends ItemData {
+export interface CharacterData extends ItemDataBase {
   element: Element;
   weaponType: WeaponType;
-  ascensionMaterial: CharacterAscensionMaterial;
+  ascendMaterial: CharacterAscendMaterial;
   talentMaterial: TalentMaterial;
 }
 
-export interface CharacterAscensionMaterial {
-  eliteMaterial: EliteMaterialType;
-  gemMaterial: GemMaterialType;
-  bossMaterial: BossMaterialType;
-  localMaterial: LocalMaterialType;
+export interface CharacterAscendMaterial {
+  gem: string;
+  boss: string;
+  common: string;
+  local: string;
 }
 
 export interface TalentMaterial {
-  eliteMaterial: EliteMaterialType;
-  weeklyBossMaterial: WeeklyBossMaterialType;
-  bookMaterial: BookMaterialType;
+  common: string;
+  book: string;
+  weeklyBoss: string;
 }
 
-// #endregion
+export interface WeaponData extends ItemDataBase {
+  type: WeaponType;
+  ascendMaterial: WeaponAscendMaterial;
+}
 
-// #region Artifact
+export interface WeaponAscendMaterial {
+  weapon: string;
+  elite: string;
+  common: string;
+}
 
-export interface Artifact extends ItemData {}
-
-// #endregion
-
-// #region Monster and Dungeon
-
-export interface DropableData {
-  id: string;
-  availableDay: DayInWeek[];
+export interface DomainData extends ItemDataBase {
   region: Region;
+  type: DomainType;
+  reward: string[];
+  daysofweek?: Day[];
 }
-
-// #endregion
