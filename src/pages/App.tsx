@@ -6,13 +6,15 @@ import Result from './Result';
 
 function App() {
   return (
-    <>
+    <div className="flex h-screen flex-col">
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Planning />} />
-        <Route path="/result" element={<Result />} />
-      </Routes>
-    </>
+      <div className="flex-grow bg-zinc-300">
+        <Routes>
+          <Route path="/" element={<Planning />} />
+          <Route path="/result" element={<Result />} />
+        </Routes>
+      </div>
+    </div>
   );
 }
 
