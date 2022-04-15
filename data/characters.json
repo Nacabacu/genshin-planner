@@ -432,7 +432,7 @@
     }
   },
   {
-    "id": "lumine",
+    "id": "traveler_anemo",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Lumine",
     "element": "None",
@@ -450,7 +450,7 @@
     }
   },
   {
-    "id": "lumine",
+    "id": "traveler_geo",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Lumine",
     "element": "None",
@@ -468,7 +468,7 @@
     }
   },
   {
-    "id": "lumine",
+    "id": "traveler_electro",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Lumine",
     "element": "None",

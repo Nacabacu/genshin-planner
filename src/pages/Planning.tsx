@@ -1,4 +1,7 @@
-import { Table, TableBody, TableCell, TableHead, TableRow } from '@mui/material';
+import { Switch, Table, TableBody, TableCell, TableHead, TableRow } from '@mui/material';
+import ArtifactSelector from '../components/ArtifactSelector';
+import CharacterSelector from '../components/CharacterSelector';
+import WeaponSelector from '../components/WeaponSelector';
 
 function Planning() {
   return (
@@ -6,6 +9,7 @@ function Planning() {
       <Table>
         <TableHead>
           <TableRow>
+            <TableCell />
             <TableCell>Characters</TableCell>
             <TableCell>Talents</TableCell>
             <TableCell>Weapons</TableCell>
@@ -14,10 +18,21 @@ function Planning() {
         </TableHead>
         <TableBody>
           <TableRow>
-            <TableCell>Test body</TableCell>
-            <TableCell>Test body</TableCell>
-            <TableCell>Test body</TableCell>
-            <TableCell>Test body</TableCell>
+            <TableCell>
+              <Switch />
+            </TableCell>
+            <TableCell>
+              <CharacterSelector />
+            </TableCell>
+            <TableCell>
+              <Switch />
+            </TableCell>
+            <TableCell>
+              <WeaponSelector />
+            </TableCell>
+            <TableCell>
+              <ArtifactSelector />
+            </TableCell>
           </TableRow>
         </TableBody>
       </Table>

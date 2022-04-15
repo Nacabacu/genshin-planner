@@ -8,20 +8,20 @@ import { createContext, PropsWithChildren, useContext } from 'react';
 import { ArtifactData, CharacterData, DomainData, MaterialConfig, MaterialData, WeaponData } from '../../types/data';
 
 interface Data {
-  character: CharacterData[];
-  weapon: WeaponData[];
-  artifact: ArtifactData[];
-  domain: DomainData[];
-  material: MaterialData[];
+  characterList: CharacterData[];
+  weaponList: WeaponData[];
+  artifactList: ArtifactData[];
+  domainList: DomainData[];
+  materialList: MaterialData[];
   materialConfig: MaterialConfig;
 }
 
 const defaultDataContext: Data = {
-  character: _character as CharacterData[],
-  weapon: _weapon as WeaponData[],
-  artifact: _artifact as ArtifactData[],
-  domain: _domain as DomainData[],
-  material: _material as MaterialData[],
+  characterList: _character as CharacterData[],
+  weaponList: _weapon as WeaponData[],
+  artifactList: _artifact as ArtifactData[],
+  domainList: _domain as DomainData[],
+  materialList: _material as MaterialData[],
   materialConfig: _materialConfig as MaterialConfig,
 };
 

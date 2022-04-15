@@ -25,5 +25,7 @@ module.exports = {
   ignorePatterns: ['*.js', '*.ts', '*.d.ts'],
   rules: {
     'react/react-in-jsx-scope': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'react/jsx-no-duplicate-props': [1, { ignoreCase: false }],
   },
 };
