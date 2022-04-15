@@ -13,6 +13,7 @@ function WeaponSelector() {
       value={selectedWeapon}
       onChange={(event, newValue) => setSelectedWeapon(newValue)}
       options={weaponList}
+      size="small"
       autoHighlight
       disableClearable
       getOptionLabel={(option) => option.id}

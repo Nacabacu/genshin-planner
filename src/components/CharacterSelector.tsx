@@ -13,6 +13,7 @@ function CharacterSelector() {
       value={selectedCharacter}
       onChange={(event, newValue) => setSelectedCharacter(newValue)}
       options={characterList}
+      size="small"
       autoHighlight
       disableClearable
       getOptionLabel={(option) => option.id}

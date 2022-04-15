@@ -19,6 +19,7 @@ function ArtifactSelector() {
         setSelectedArtifact(newValue);
       }}
       options={artifactList}
+      size="small"
       autoHighlight
       disableClearable
       multiple
