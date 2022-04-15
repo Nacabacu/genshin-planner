@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="flex h-screen flex-col">
       <Navbar />
-      <div className="flex-grow bg-zinc-300">
+      <div className="flex-grow bg-gray-300">
         <Routes>
           <Route path="/" element={<Planning />} />
           <Route path="/result" element={<Result />} />

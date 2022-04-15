@@ -30,7 +30,7 @@ function Navbar() {
   ));
 
   return (
-    <nav className="text-zinc400 flex flex-wrap items-center bg-zinc-900 px-4 py-4 sm:px-8">
+    <nav className="text-zinc400 flex flex-wrap items-center bg-gray-900 px-4 py-4 sm:px-8">
       <LocalFireDepartment className="h-7 w-7 text-red-600" />
       <div className="ml-2 space-x-2">{navItem}</div>
       <a href={repoName} target="tab" className="ml-auto h-7 w-7 text-gray-400 hover:text-gray-300">
