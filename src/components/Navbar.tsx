@@ -1,36 +1,41 @@
-import { FireIcon } from '@heroicons/react/solid';
+import { GitHub, LocalFireDepartment } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 
 interface Navigation {
   path: string;
-  label: string;
+  name: string;
 }
 
+const repoName = 'https://github.com/Nacabacu/genshin-planner';
 const navigationList: Navigation[] = [
   {
     path: '/',
-    label: 'Home',
+    name: 'Plan',
   },
   {
     path: '/result',
-    label: 'Result',
+    name: 'Result',
   },
 ];
 
 function Navbar() {
   const navItem = navigationList.map((navigation) => (
-    <Link className="font-semibold uppercase transition-colors hover:text-zinc-300" to={navigation.path}>
-      {navigation.label}
+    <Link
+      className="py-2 font-semibold uppercase tracking-wide text-gray-400 transition-colors hover:text-gray-300 sm:py-0 sm:pt-0"
+      to={navigation.path}
+      key={navigation.name}
+    >
+      {navigation.name}
     </Link>
   ));
 
   return (
-    <nav className="flex h-16 flex-nowrap items-center bg-zinc-900 px-8 text-zinc-400">
-      <div className="inline-flex min-w-fit cursor-default">
-        <FireIcon className="h-7 w-7 text-red-600" />
-        <span className="hover:text-zinc-300e pl-2 text-xl font-semibold uppercase tracking-wide">Planner</span>
-      </div>
-      <div className="space-x-2 pl-4">{navItem}</div>
+    <nav className="text-zinc400 flex flex-wrap items-center bg-zinc-900 px-4 py-4 sm:px-8">
+      <LocalFireDepartment className="h-7 w-7 text-red-600" />
+      <div className="ml-2 space-x-2">{navItem}</div>
+      <a href={repoName} target="tab" className="ml-auto h-7 w-7 text-gray-400 hover:text-gray-300">
+        <GitHub />
+      </a>
     </nav>
   );
 }
