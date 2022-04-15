@@ -5,7 +5,7 @@ import { defineConfig } from 'vite';
 // https://vitejs.dev/config/
 export default defineConfig({
   resolve: {
-    alias: [{ find: '@public', replacement: path.resolve(__dirname, 'public') }],
+    alias: [{ find: '@data', replacement: path.resolve(__dirname, './data') }],
   },
   plugins: [react()],
 });

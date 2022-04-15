@@ -1,1013 +1,1273 @@
-{
-  "aerosiderite": {
+[
+  {
+    "id": "bit_of_aerosiderite",
     "materials": {
       "bit_of_aerosiderite": {
+        "id": "bit_of_aerosiderite",
         "rarity": 4,
         "url": "https://genshin-impact.fandom.com/wiki/Bit_of_Aerosiderite"
       },
       "chunk_of_aerosiderite": {
+        "id": "chunk_of_aerosiderite",
         "rarity": 5,
         "url": "https://genshin-impact.fandom.com/wiki/Chunk_of_Aerosiderite"
       },
       "grain_of_aerosiderite": {
+        "id": "grain_of_aerosiderite",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Grain_of_Aerosiderite"
       },
       "piece_of_aerosiderite": {
+        "id": "piece_of_aerosiderite",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Piece_of_Aerosiderite"
       }
     }
   },
-  "boreal_wolf": {
+  {
+    "id": "boreal_wolfs_broken_fang",
     "materials": {
       "boreal_wolfs_broken_fang": {
+        "id": "boreal_wolfs_broken_fang",
         "rarity": 4,
         "url": "https://genshin-impact.fandom.com/wiki/Boreal_Wolf's_Broken_Fang"
       },
       "boreal_wolfs_cracked_tooth": {
+        "id": "boreal_wolfs_cracked_tooth",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Boreal_Wolf's_Cracked_Tooth"
       },
       "boreal_wolfs_milk_tooth": {
+        "id": "boreal_wolfs_milk_tooth",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Boreal_Wolf's_Milk_Tooth"
       },
       "boreal_wolfs_nostalgia": {
+        "id": "boreal_wolfs_nostalgia",
         "rarity": 5,
         "url": "https://genshin-impact.fandom.com/wiki/Boreal_Wolf's_Nostalgia"
       }
     }
   },
-  "dandelion_gladiator": {
+  {
+    "id": "chains_of_the_dandelion_gladiator",
     "materials": {
       "chains_of_the_dandelion_gladiator": {
+        "id": "chains_of_the_dandelion_gladiator",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Chains_of_the_Dandelion_Gladiator"
       },
       "dream_of_the_dandelion_gladiator": {
+        "id": "dream_of_the_dandelion_gladiator",
         "rarity": 5,
         "url": "https://genshin-impact.fandom.com/wiki/Dream_of_the_Dandelion_Gladiator"
       },
       "fetters_of_the_dandelion_gladiator": {
+        "id": "fetters_of_the_dandelion_gladiator",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Fetters_of_the_Dandelion_Gladiator"
       },
       "shackles_of_the_dandelion_gladiator": {
+        "id": "shackles_of_the_dandelion_gladiator",
         "rarity": 4,
         "url": "https://genshin-impact.fandom.com/wiki/Shackles_of_the_Dandelion_Gladiator"
       }
     }
   },
-  "distant_sea": {
+  {
+    "id": "coral_branch_of_a_distant_sea",
     "materials": {
       "coral_branch_of_a_distant_sea": {
+        "id": "coral_branch_of_a_distant_sea",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Coral_Branch_of_a_Distant_Sea"
       },
       "golden_branch_of_a_distant_sea": {
+        "id": "golden_branch_of_a_distant_sea",
         "rarity": 5,
         "url": "https://genshin-impact.fandom.com/wiki/Golden_Branch_of_a_Distant_Sea"
       },
       "jade_branch_of_a_distant_sea": {
+        "id": "jade_branch_of_a_distant_sea",
         "rarity": 4,
         "url": "https://genshin-impact.fandom.com/wiki/Jade_Branch_of_a_Distant_Sea"
       },
       "jeweled_branch_of_a_distant_sea": {
+        "id": "jeweled_branch_of_a_distant_sea",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Jeweled_Branch_of_a_Distant_Sea"
       }
     }
   },
-  "decarabian": {
+  {
+    "id": "debris_of_decarabians_city",
     "materials": {
       "debris_of_decarabians_city": {
+        "id": "debris_of_decarabians_city",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Debris_of_Decarabian's_City"
       },
       "fragment_of_decarabians_epic": {
+        "id": "fragment_of_decarabians_epic",
         "rarity": 4,
         "url": "https://genshin-impact.fandom.com/wiki/Fragment_of_Decarabian's_Epic"
       },
       "scattered_piece_of_decarabians_dream": {
+        "id": "scattered_piece_of_decarabians_dream",
         "rarity": 5,
         "url": "https://genshin-impact.fandom.com/wiki/Scattered_Piece_of_Decarabian's_Dream"
       },
       "tile_of_decarabians_tower": {
+        "id": "tile_of_decarabians_tower",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Tile_of_Decarabian's_Tower"
       }
     }
   },
-  "guyun": {
+  {
+    "id": "divine_body_from_guyun",
     "materials": {
       "divine_body_from_guyun": {
+        "id": "divine_body_from_guyun",
         "rarity": 5,
         "url": "https://genshin-impact.fandom.com/wiki/Divine_Body_from_Guyun"
       },
       "luminous_sands_from_guyun": {
+        "id": "luminous_sands_from_guyun",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Luminous_Sands_from_Guyun"
       },
       "lustrous_stone_from_guyun": {
+        "id": "lustrous_stone_from_guyun",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Lustrous_Stone_from_Guyun"
       },
       "relic_from_guyun": {
+        "id": "relic_from_guyun",
         "rarity": 4,
         "url": "https://genshin-impact.fandom.com/wiki/Relic_from_Guyun"
       }
     }
   },
-  "mask": {
+  {
+    "id": "mask_of_the_kijin",
     "materials": {
       "mask_of_the_kijin": {
+        "id": "mask_of_the_kijin",
         "rarity": 5,
         "url": "https://genshin-impact.fandom.com/wiki/Mask_of_the_Kijin"
       },
       "mask_of_the_onehorned": {
+        "id": "mask_of_the_onehorned",
         "rarity": 4,
         "url": "https://genshin-impact.fandom.com/wiki/Mask_of_the_One-Horned"
       },
       "mask_of_the_tigers_bite": {
+        "id": "mask_of_the_tigers_bite",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Mask_of_the_Tiger's_Bite"
       },
       "mask_of_the_wicked_lieutenant": {
+        "id": "mask_of_the_wicked_lieutenant",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Mask_of_the_Wicked_Lieutenant"
       }
     }
   },
-  "elixir": {
+  {
+    "id": "mist_veiled_gold_elixir",
     "materials": {
       "mist_veiled_gold_elixir": {
+        "id": "mist_veiled_gold_elixir",
         "rarity": 4,
         "url": "https://genshin-impact.fandom.com/wiki/Mist_Veiled_Gold_Elixir"
       },
       "mist_veiled_lead_elixir": {
+        "id": "mist_veiled_lead_elixir",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Mist_Veiled_Lead_Elixir"
       },
       "mist_veiled_mercury_elixir": {
+        "id": "mist_veiled_mercury_elixir",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Mist_Veiled_Mercury_Elixir"
       },
       "mist_veiled_primo_elixir": {
+        "id": "mist_veiled_primo_elixir",
         "rarity": 5,
         "url": "https://genshin-impact.fandom.com/wiki/Mist_Veiled_Primo_Elixir"
       }
     }
   },
-  "narukami": {
+  {
+    "id": "narukamis_affection",
     "materials": {
       "narukamis_affection": {
+        "id": "narukamis_affection",
         "rarity": 4,
         "url": "https://genshin-impact.fandom.com/wiki/Narukami's_Affection"
       },
       "narukamis_joy": {
+        "id": "narukamis_joy",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Narukami's_Joy"
       },
       "narukamis_valor": {
+        "id": "narukamis_valor",
         "rarity": 5,
         "url": "https://genshin-impact.fandom.com/wiki/Narukami's_Valor"
       },
       "narukamis_wisdom": {
+        "id": "narukamis_wisdom",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Narukami's_Wisdom"
       }
     }
   },
-  "knife": {
+  {
+    "id": "agents_sacrificial_knife",
     "materials": {
       "agents_sacrificial_knife": {
+        "id": "agents_sacrificial_knife",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Agent's_Sacrificial_Knife"
       },
       "hunters_sacrificial_knife": {
+        "id": "hunters_sacrificial_knife",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Hunter's_Sacrificial_Knife"
       },
       "inspectors_sacrificial_knife": {
+        "id": "inspectors_sacrificial_knife",
         "rarity": 4,
         "url": "https://genshin-impact.fandom.com/wiki/Inspector's_Sacrificial_Knife"
       }
     }
   },
-  "agnidus_agate": {
+  {
+    "id": "agnidus_agate_chunk",
     "materials": {
       "agnidus_agate_chunk": {
+        "id": "agnidus_agate_chunk",
         "rarity": 4,
         "url": "https://genshin-impact.fandom.com/wiki/Agnidus_Agate_Chunk"
       },
       "agnidus_agate_fragment": {
+        "id": "agnidus_agate_fragment",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Agnidus_Agate_Fragment"
       },
       "agnidus_agate_gemstone": {
+        "id": "agnidus_agate_gemstone",
         "rarity": 5,
         "url": "https://genshin-impact.fandom.com/wiki/Agnidus_Agate_Gemstone"
       },
       "agnidus_agate_sliver": {
+        "id": "agnidus_agate_sliver",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Agnidus_Agate_Sliver"
       }
     }
   },
-  "ashen_heart": {
+  {
+    "id": "ashen_heart",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Ashen_Heart"
   },
-  "basalt_pillar": {
+  {
+    "id": "basalt_pillar",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Basalt_Pillar"
   },
-  "horn": {
+  {
+    "id": "black_bronze_horn",
     "materials": {
       "black_bronze_horn": {
+        "id": "black_bronze_horn",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Black_Bronze_Horn"
       },
       "black_crystal_horn": {
+        "id": "black_crystal_horn",
         "rarity": 4,
         "url": "https://genshin-impact.fandom.com/wiki/Black_Crystal_Horn"
       },
       "heavy_horn": {
+        "id": "heavy_horn",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Heavy_Horn"
       }
     }
   },
-  "bloodjade_branch": {
+  {
+    "id": "bloodjade_branch",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Bloodjade_Branch"
   },
-  "brilliant_diamond": {
+  {
+    "id": "brilliant_diamond_chunk",
     "materials": {
       "brilliant_diamond_chunk": {
+        "id": "brilliant_diamond_chunk",
         "rarity": 4,
         "url": "https://genshin-impact.fandom.com/wiki/Brilliant_Diamond_Chunk"
       },
       "brilliant_diamond_fragment": {
+        "id": "brilliant_diamond_fragment",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Brilliant_Diamond_Fragment"
       },
       "brilliant_diamond_gemstone": {
+        "id": "brilliant_diamond_gemstone",
         "rarity": 5,
         "url": "https://genshin-impact.fandom.com/wiki/Brilliant_Diamond_Gemstone"
       },
       "brilliant_diamond_sliver": {
+        "id": "brilliant_diamond_sliver",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Brilliant_Diamond_Sliver"
       }
     }
   },
-  "sentinel_chaos": {
+  {
+    "id": "chaos_axis",
     "materials": {
       "chaos_axis": {
+        "id": "chaos_axis",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Chaos_Axis"
       },
       "chaos_gear": {
+        "id": "chaos_gear",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Chaos_Gear"
       },
       "chaos_oculus": {
+        "id": "chaos_oculus",
         "rarity": 4,
         "url": "https://genshin-impact.fandom.com/wiki/Chaos_Oculus"
       }
     }
   },
-  "chaos": {
+  {
+    "id": "chaos_circuit",
     "materials": {
       "chaos_circuit": {
+        "id": "chaos_circuit",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Chaos_Circuit"
       },
       "chaos_core": {
+        "id": "chaos_core",
         "rarity": 4,
         "url": "https://genshin-impact.fandom.com/wiki/Chaos_Core"
       },
       "chaos_device": {
+        "id": "chaos_device",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Chaos_Device"
       }
     }
   },
-  "cleansing_heart": {
+  {
+    "id": "cleansing_heart",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Cleansing_Heart"
   },
-  "claw": {
+  {
+    "id": "concealed_claw",
     "materials": {
       "concealed_claw": {
+        "id": "concealed_claw",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Concealed_Claw"
       },
       "concealed_talon": {
+        "id": "concealed_talon",
         "rarity": 4,
         "url": "https://genshin-impact.fandom.com/wiki/Concealed_Talon"
       },
       "concealed_unguis": {
+        "id": "concealed_unguis",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Concealed_Unguis"
       }
     }
   },
-  "crystalline_bloom": {
+  {
+    "id": "crystalline_bloom",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Crystalline_Bloom"
   },
-  "spore": {
+  {
+    "id": "crystalline_cyst_dust",
     "materials": {
       "crystalline_cyst_dust": {
+        "id": "crystalline_cyst_dust",
         "rarity": 3
       },
       "fungal_spores": {
+        "id": "fungal_spores",
         "rarity": 1
       },
       "luminescent_pollen": {
+        "id": "luminescent_pollen",
         "rarity": 2
       }
     }
   },
-  "prism": {
+  {
+    "id": "crystal_prism",
     "materials": {
       "crystal_prism": {
+        "id": "crystal_prism",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Crystal_Prism"
       },
       "dismal_prism": {
+        "id": "dismal_prism",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Dismal_Prism"
       },
       "polarizing_prism": {
+        "id": "polarizing_prism",
         "rarity": 4,
         "url": "https://genshin-impact.fandom.com/wiki/Polarizing_Prism"
       }
     }
   },
-  "common_mask": {
+  {
+    "id": "damaged_mask",
     "materials": {
       "damaged_mask": {
+        "id": "damaged_mask",
         "rarity": 1,
         "url": "https://genshin-impact.fandom.com/wiki/Damaged_Mask"
       },
       "ominous_mask": {
+        "id": "ominous_mask",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Ominous_Mask"
       },
       "stained_mask": {
+        "id": "stained_mask",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Stained_Mask"
       }
     }
   },
-  "statuette": {
+  {
+    "id": "dark_statuette",
     "materials": {
       "dark_statuette": {
+        "id": "dark_statuette",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Dark_Statuette"
       },
       "deathly_statuette": {
+        "id": "deathly_statuette",
         "rarity": 4,
         "url": "https://genshin-impact.fandom.com/wiki/Deathly_Statuette"
       },
       "gloomy_statuette": {
+        "id": "gloomy_statuette",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Gloomy_Statuette"
       }
     }
   },
-  "lay_lines": {
+  {
+    "id": "dead_ley_line_branch",
     "materials": {
       "dead_ley_line_branch": {
+        "id": "dead_ley_line_branch",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Dead_Ley_Line_Branch"
       },
       "dead_ley_line_leaves": {
+        "id": "dead_ley_line_leaves",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Dead_Ley_Line_Leaves"
       },
       "ley_line_sprout": {
+        "id": "ley_line_sprout",
         "rarity": 4,
         "url": "https://genshin-impact.fandom.com/wiki/Ley_Line_Sprout"
       }
     }
   },
-  "dew_of_repudiation": {
+  {
+    "id": "dew_of_repudiation",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Dew_of_Repudiation"
   },
-  "scroll": {
+  {
+    "id": "divining_scroll",
     "materials": {
       "divining_scroll": {
+        "id": "divining_scroll",
         "rarity": 1,
         "url": "https://genshin-impact.fandom.com/wiki/Divining_Scroll"
       },
       "forbidden_curse_scroll": {
+        "id": "forbidden_curse_scroll",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Forbidden_Curse_Scroll"
       },
       "sealed_scroll": {
+        "id": "sealed_scroll",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Sealed_Scroll"
       }
     }
   },
-  "dragonheirs_false_fin": {
+  {
+    "id": "dragonheirs_false_fin",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Dragonheir's_False_Fin"
   },
-  "dragon_lords_crown": {
+  {
+    "id": "dragon_lords_crown",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Dragon_Lord's_Crown"
   },
-  "dvalins_claw": {
+  {
+    "id": "dvalins_claw",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Dvalin's_Claw"
   },
-  "dvalins_plume": {
+  {
+    "id": "dvalins_plume",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Dvalin's_Plume"
   },
-  "dvalins_sigh": {
+  {
+    "id": "dvalins_sigh",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Dvalin's_Sigh"
   },
-  "nectar": {
+  {
+    "id": "energy_nectar",
     "materials": {
       "energy_nectar": {
+        "id": "energy_nectar",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Energy_Nectar"
       },
       "shimmering_nectar": {
+        "id": "shimmering_nectar",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Shimmering_Nectar"
       },
       "whopperflower_nectar": {
+        "id": "whopperflower_nectar",
         "rarity": 1,
         "url": "https://genshin-impact.fandom.com/wiki/Whopperflower_Nectar"
       }
     }
   },
-  "everflame_seed": {
+  {
+    "id": "everflame_seed",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Everflame_Seed"
   },
-  "handguard": {
+  {
+    "id": "famed_handguard",
     "materials": {
       "famed_handguard": {
+        "id": "famed_handguard",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Famed_Handguard"
       },
       "kageuchi_handguard": {
+        "id": "kageuchi_handguard",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Kageuchi_Handguard"
       },
       "old_handguard": {
+        "id": "old_handguard",
         "rarity": 1,
         "url": "https://genshin-impact.fandom.com/wiki/Old_Handguard"
       }
     }
   },
-  "arrowhead": {
+  {
+    "id": "firm_arrowhead",
     "materials": {
       "firm_arrowhead": {
+        "id": "firm_arrowhead",
         "rarity": 1,
         "url": "https://genshin-impact.fandom.com/wiki/Firm_Arrowhead"
       },
       "sharp_arrowhead": {
+        "id": "sharp_arrowhead",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Sharp_Arrowhead"
       },
       "weathered_arrowhead": {
+        "id": "weathered_arrowhead",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Weathered_Arrowhead"
       }
     }
   },
-  "bone_shard": {
+  {
+    "id": "fossilized_bone_shard",
     "materials": {
       "fossilized_bone_shard": {
+        "id": "fossilized_bone_shard",
         "rarity": 4,
         "url": "https://genshin-impact.fandom.com/wiki/Fossilized_Bone_Shard"
       },
       "fragile_bone_shard": {
+        "id": "fragile_bone_shard",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Fragile_Bone_Shard"
       },
       "sturdy_bone_shard": {
+        "id": "sturdy_bone_shard",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Sturdy_Bone_Shard"
       }
     }
   },
-  "gilded_scale": {
+  {
+    "id": "gilded_scale",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Gilded_Scale"
   },
-  "treasure_insignia": {
+  {
+    "id": "golden_raven_insignia",
     "materials": {
       "golden_raven_insignia": {
+        "id": "golden_raven_insignia",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Golden_Raven_Insignia"
       },
       "silver_raven_insignia": {
+        "id": "silver_raven_insignia",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Silver_Raven_Insignia"
       },
       "treasure_hoarder_insignia": {
+        "id": "treasure_hoarder_insignia",
         "rarity": 1,
         "url": "https://genshin-impact.fandom.com/wiki/Treasure_Hoarder_Insignia"
       }
     }
   },
-  "hellfire_butterfly": {
+  {
+    "id": "hellfire_butterfly",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Hellfire_Butterfly"
   },
-  "hoarfrost_core": {
+  {
+    "id": "hoarfrost_core",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Hoarfrost_Core"
   },
-  "hurricane_seed": {
+  {
+    "id": "hurricane_seed",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Hurricane_Seed"
   },
-  "juvenile_jade": {
+  {
+    "id": "juvenile_jade",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Juvenile_Jade"
   },
-  "insignia": {
+  {
+    "id": "lieutenants_insignia",
     "materials": {
       "lieutenants_insignia": {
+        "id": "lieutenants_insignia",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Lieutenant's_Insignia"
       },
       "recruits_insignia": {
+        "id": "recruits_insignia",
         "rarity": 1,
         "url": "https://genshin-impact.fandom.com/wiki/Recruit's_Insignia"
       },
       "sergeants_insignia": {
+        "id": "sergeants_insignia",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Sergeant's_Insignia"
       }
     }
   },
-  "lightning_prism": {
+  {
+    "id": "lightning_prism",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Lightning_Prism"
   },
-  "marionette_core": {
+  {
+    "id": "marionette_core",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Marionette_Core"
   },
-  "mist_grass": {
+  {
+    "id": "mist_grass",
     "materials": {
       "mist_grass": {
+        "id": "mist_grass",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Mist_Grass"
       },
       "mist_grass_pollen": {
+        "id": "mist_grass_pollen",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Mist_Grass_Pollen"
       },
       "mist_grass_wick": {
+        "id": "mist_grass_wick",
         "rarity": 4,
         "url": "https://genshin-impact.fandom.com/wiki/Mist_Grass_Wick"
       }
     }
   },
-  "molten_moment": {
+  {
+    "id": "molten_moment",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Molten_Moment"
   },
-  "mudra_of_the_malefic_general": {
+  {
+    "id": "mudra_of_the_malefic_general",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Mudra_of_the_Malefic_General"
   },
-  "nagadus_emerald_chunk": {
+  {
+    "id": "nagadus_emerald_chunk",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Nagadus_Emerald_Chunk"
   },
-  "nagadus_emerald_fragment": {
+  {
+    "id": "nagadus_emerald_fragment",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Nagadus_Emerald_Fragment"
   },
-  "nagadus_emerald_gemstone": {
+  {
+    "id": "nagadus_emerald_gemstone",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Nagadus_Emerald_Gemstone"
   },
-  "nagadus_emerald_sliver": {
+  {
+    "id": "nagadus_emerald_sliver",
     "rarity": 2,
     "url": "https://genshin-impact.fandom.com/wiki/Nagadus_Emerald_Sliver"
   },
-  "perpetual_heart": {
+  {
+    "id": "perpetual_heart",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Perpetual_Heart"
   },
-  "prithiva_topaz": {
+  {
+    "id": "prithiva_topaz_chunk",
     "materials": {
       "prithiva_topaz_chunk": {
+        "id": "prithiva_topaz_chunk",
         "rarity": 4,
         "url": "https://genshin-impact.fandom.com/wiki/Prithiva_Topaz_Chunk"
       },
       "prithiva_topaz_fragment": {
+        "id": "prithiva_topaz_fragment",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Prithiva_Topaz_Fragment"
       },
       "prithiva_topaz_gemstone": {
+        "id": "prithiva_topaz_gemstone",
         "rarity": 5,
         "url": "https://genshin-impact.fandom.com/wiki/Prithiva_Topaz_Gemstone"
       },
       "prithiva_topaz_sliver": {
+        "id": "prithiva_topaz_sliver",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Prithiva_Topaz_Sliver"
       }
     }
   },
-  "riftborn_regalia": {
+  {
+    "id": "riftborn_regalia",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Riftborn_Regalia"
   },
-  "ring_of_boreas": {
+  {
+    "id": "ring_of_boreas",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Ring_of_Boreas"
   },
-  "runic_fang": {
+  {
+    "id": "runic_fang",
     "rarity": 4
   },
-  "shadow_of_the_warrior": {
+  {
+    "id": "shadow_of_the_warrior",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Shadow_of_the_Warrior"
   },
-  "shard_of_a_foul_legacy": {
+  {
+    "id": "shard_of_a_foul_legacy",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Shard_of_a_Foul_Legacy"
   },
-  "shivada_jade": {
+  {
+    "id": "shivada_jade_chunk",
     "materials": {
       "shivada_jade_chunk": {
+        "id": "shivada_jade_chunk",
         "rarity": 4,
         "url": "https://genshin-impact.fandom.com/wiki/Shivada_Jade_Chunk"
       },
       "shivada_jade_fragment": {
+        "id": "shivada_jade_fragment",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Shivada_Jade_Fragment"
       },
       "shivada_jade_gemstone": {
+        "id": "shivada_jade_gemstone",
         "rarity": 5,
         "url": "https://genshin-impact.fandom.com/wiki/Shivada_Jade_Gemstone"
       },
       "shivada_jade_sliver": {
+        "id": "shivada_jade_sliver",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Shivada_Jade_Sliver"
       }
     }
   },
-  "slime": {
+  {
+    "id": "slime_concentrate",
     "materials": {
       "slime_concentrate": {
+        "id": "slime_concentrate",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Slime_Concentrate"
       },
       "slime_condensate": {
+        "id": "slime_condensate",
         "rarity": 1,
         "url": "https://genshin-impact.fandom.com/wiki/Slime_Condensate"
       },
       "slime_secretions": {
+        "id": "slime_secretions",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Slime_Secretions"
       }
     }
   },
-  "smoldering_pearl": {
+  {
+    "id": "smoldering_pearl",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Smoldering_Pearl"
   },
-  "spectral": {
+  {
+    "id": "spectral_heart",
     "materials": {
       "spectral_heart": {
+        "id": "spectral_heart",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Spectral_Heart"
       },
       "spectral_husk": {
+        "id": "spectral_husk",
         "rarity": 1,
         "url": "https://genshin-impact.fandom.com/wiki/Spectral_Husk"
       },
       "spectral_nucleus": {
+        "id": "spectral_nucleus",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Spectral_Nucleus"
       }
     }
   },
-  "spirit_locket_of_boreas": {
+  {
+    "id": "spirit_locket_of_boreas",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Spirit_Locket_of_Boreas"
   },
-  "storm_beads": {
+  {
+    "id": "storm_beads",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Storm_Beads"
   },
-  "tail_of_boreas": {
+  {
+    "id": "tail_of_boreas",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Tail_of_Boreas"
   },
-  "tears_of_the_calamitous_god": {
+  {
+    "id": "tears_of_the_calamitous_god",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Tears_of_the_Calamitous_God"
   },
-  "the_meaning_of_aeons": {
+  {
+    "id": "the_meaning_of_aeons",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/The_Meaning_of_Aeons"
   },
-  "tusk_of_monoceros_caeli": {
+  {
+    "id": "tusk_of_monoceros_caeli",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Tusk_of_Monoceros_Caeli"
   },
-  "vajrada_amethyst": {
+  {
+    "id": "vajrada_amethyst_chunk",
     "materials": {
       "vajrada_amethyst_chunk": {
+        "id": "vajrada_amethyst_chunk",
         "rarity": 4,
         "url": "https://genshin-impact.fandom.com/wiki/Vajrada_Amethyst_Chunk"
       },
       "vajrada_amethyst_fragment": {
+        "id": "vajrada_amethyst_fragment",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Vajrada_Amethyst_Fragment"
       },
       "vajrada_amethyst_gemstone": {
+        "id": "vajrada_amethyst_gemstone",
         "rarity": 5,
         "url": "https://genshin-impact.fandom.com/wiki/Vajrada_Amethyst_Gemstone"
       },
       "vajrada_amethyst_sliver": {
+        "id": "vajrada_amethyst_sliver",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Vajrada_Amethyst_Sliver"
       }
     }
   },
-  "varunada_lazurite": {
+  {
+    "id": "varunada_lazurite_chunk",
     "materials": {
       "varunada_lazurite_chunk": {
+        "id": "varunada_lazurite_chunk",
         "rarity": 4,
         "url": "https://genshin-impact.fandom.com/wiki/Varunada_Lazurite_Chunk"
       },
       "varunada_lazurite_fragment": {
+        "id": "varunada_lazurite_fragment",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Varunada_Lazurite_Fragment"
       },
       "varunada_lazurite_gemstone": {
+        "id": "varunada_lazurite_gemstone",
         "rarity": 5,
         "url": "https://genshin-impact.fandom.com/wiki/Varunada_Lazurite_Gemstone"
       },
       "varunada_lazurite_sliver": {
+        "id": "varunada_lazurite_sliver",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Varunada_Lazurite_Sliver"
       }
     }
   },
-  "vayuda_turquoise": {
+  {
+    "id": "vayuda_turquoise_chunk",
     "materials": {
       "vayuda_turquoise_chunk": {
+        "id": "vayuda_turquoise_chunk",
         "rarity": 4,
         "url": "https://genshin-impact.fandom.com/wiki/Vayuda_Turquoise_Chunk"
       },
       "vayuda_turquoise_fragment": {
+        "id": "vayuda_turquoise_fragment",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Vayuda_Turquoise_Fragment"
       },
       "vayuda_turquoise_gemstone": {
+        "id": "vayuda_turquoise_gemstone",
         "rarity": 5,
         "url": "https://genshin-impact.fandom.com/wiki/Vayuda_Turquoise_Gemstone"
       },
       "vayuda_turquoise_sliver": {
+        "id": "vayuda_turquoise_sliver",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Vayuda_Turquoise_Sliver"
       }
     }
   },
-  "crown_of_insight": {
+  {
+    "id": "crown_of_insight",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Crown_of_Insight"
   },
-  "ballad": {
+  {
+    "id": "guide_to_ballad",
     "materials": {
       "guide_to_ballad": {
+        "id": "guide_to_ballad",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Guide_to_Ballad"
       },
       "philosophies_of_ballad": {
+        "id": "philosophies_of_ballad",
         "rarity": 4,
         "url": "https://genshin-impact.fandom.com/wiki/Philosophies_of_Ballad"
       },
       "teachings_of_ballad": {
+        "id": "teachings_of_ballad",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Teachings_of_Ballad"
       }
     }
   },
-  "diligence": {
+  {
+    "id": "guide_to_diligence",
     "materials": {
       "guide_to_diligence": {
+        "id": "guide_to_diligence",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Guide_to_Diligence"
       },
       "philosophies_of_diligence": {
+        "id": "philosophies_of_diligence",
         "rarity": 4,
         "url": "https://genshin-impact.fandom.com/wiki/Philosophies_of_Diligence"
       },
       "teachings_of_diligence": {
+        "id": "teachings_of_diligence",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Teachings_of_Diligence"
       }
     }
   },
-  "elegance": {
+  {
+    "id": "guide_to_elegance",
     "materials": {
       "guide_to_elegance": {
+        "id": "guide_to_elegance",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Guide_to_Elegance"
       },
       "philosophies_of_elegance": {
+        "id": "philosophies_of_elegance",
         "rarity": 4,
         "url": "https://genshin-impact.fandom.com/wiki/Philosophies_of_Elegance"
       },
       "teachings_of_elegance": {
+        "id": "teachings_of_elegance",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Teachings_of_Elegance"
       }
     }
   },
-  "freedom": {
+  {
+    "id": "guide_to_freedom",
     "materials": {
       "guide_to_freedom": {
+        "id": "guide_to_freedom",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Guide_to_Freedom"
       },
       "philosophies_of_freedom": {
+        "id": "philosophies_of_freedom",
         "rarity": 4,
         "url": "https://genshin-impact.fandom.com/wiki/Philosophies_of_Freedom"
       },
       "teachings_of_freedom": {
+        "id": "teachings_of_freedom",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Teachings_of_Freedom"
       }
     }
   },
-  "gold": {
+  {
+    "id": "guide_to_gold",
     "materials": {
       "guide_to_gold": {
+        "id": "guide_to_gold",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Guide_to_Gold"
       },
       "philosophies_of_gold": {
+        "id": "philosophies_of_gold",
         "rarity": 4,
         "url": "https://genshin-impact.fandom.com/wiki/Philosophies_of_Gold"
       },
       "teachings_of_gold": {
+        "id": "teachings_of_gold",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Teachings_of_Gold"
       }
     }
   },
-  "light": {
+  {
+    "id": "guide_to_light",
     "materials": {
       "guide_to_light": {
+        "id": "guide_to_light",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Guide_to_Light"
       },
       "philosophies_of_light": {
+        "id": "philosophies_of_light",
         "rarity": 4,
         "url": "https://genshin-impact.fandom.com/wiki/Philosophies_of_Light"
       },
       "teachings_of_light": {
+        "id": "teachings_of_light",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Teachings_of_Light"
       }
     }
   },
-  "prosperity": {
+  {
+    "id": "guide_to_prosperity",
     "materials": {
       "guide_to_prosperity": {
+        "id": "guide_to_prosperity",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Guide_to_Prosperity"
       },
       "philosophies_of_prosperity": {
+        "id": "philosophies_of_prosperity",
         "rarity": 4,
         "url": "https://genshin-impact.fandom.com/wiki/Philosophies_of_Prosperity"
       },
       "teachings_of_prosperity": {
+        "id": "teachings_of_prosperity",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Teachings_of_Prosperity"
       }
     }
   },
-  "resistance": {
+  {
+    "id": "guide_to_resistance",
     "materials": {
       "guide_to_resistance": {
+        "id": "guide_to_resistance",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Guide_to_Resistance"
       },
       "philosophies_of_resistance": {
+        "id": "philosophies_of_resistance",
         "rarity": 4,
         "url": "https://genshin-impact.fandom.com/wiki/Philosophies_of_Resistance"
       },
       "teachings_of_resistance": {
+        "id": "teachings_of_resistance",
         "rarity": 2,
         "url": "https://genshin-impact.fandom.com/wiki/Teachings_of_Resistance"
       }
     }
   },
-  "transience": {
+  {
+    "id": "guide_to_transience",
     "materials": {
       "guide_to_transience": {
+        "id": "guide_to_transience",
         "rarity": 3,
         "url": "https://genshin-impact.fandom.com/wiki/Guide_to_Transience"
       },
       "philosophies_of_transience": {
+        "id": "philosophies_of_transience",
         "rarity": 4,
         "url": "https://genshin-impact.fandom.com/wiki/Philosophies_of_Transience"
       }
     }
   },
-  "teachings_of_transience": {
+  {
+    "id": "teachings_of_transience",
     "rarity": 2,
     "url": "https://genshin-impact.fandom.com/wiki/Teachings_of_Transience"
   },
-  "calla_lily": {
+  {
+    "id": "calla_lily",
     "url": "https://genshin-impact.fandom.com/wiki/Calla_Lily"
   },
-  "cecilia": {
+  {
+    "id": "cecilia",
     "url": "https://genshin-impact.fandom.com/wiki/Cecilia"
   },
-  "dandelion_seed": {
+  {
+    "id": "dandelion_seed",
     "url": "https://genshin-impact.fandom.com/wiki/Dandelion_Seed"
   },
-  "philanemo_mushroom": {
+  {
+    "id": "philanemo_mushroom",
     "url": "https://genshin-impact.fandom.com/wiki/Philanemo_Mushroom"
   },
-  "small_lamp_grass": {
+  {
+    "id": "small_lamp_grass",
     "url": "https://genshin-impact.fandom.com/wiki/Small_Lamp_Grass"
   },
-  "valberry": {
+  {
+    "id": "valberry",
     "url": "https://genshin-impact.fandom.com/wiki/Valberry"
   },
-  "windwheel_aster": {
+  {
+    "id": "windwheel_aster",
     "url": "https://genshin-impact.fandom.com/wiki/Windwheel_Aster"
   },
-  "wolfhook": {
+  {
+    "id": "wolfhook",
     "url": "https://genshin-impact.fandom.com/wiki/Wolfhook"
   },
-  "cor_lapis": {
+  {
+    "id": "cor_lapis",
     "url": "https://genshin-impact.fandom.com/wiki/Cor_Lapis"
   },
-  "glaze_lily": {
+  {
+    "id": "glaze_lily",
     "url": "https://genshin-impact.fandom.com/wiki/Glaze_Lily"
   },
-  "jueyun_chili": {
+  {
+    "id": "jueyun_chili",
     "url": "https://genshin-impact.fandom.com/wiki/Jueyun_Chili"
   },
-  "noctilucous_jade": {
+  {
+    "id": "noctilucous_jade",
     "url": "https://genshin-impact.fandom.com/wiki/Noctilucous_Jade"
   },
-  "qingxin": {
+  {
+    "id": "qingxin",
     "url": "https://genshin-impact.fandom.com/wiki/Qingxin"
   },
-  "silk_flower": {
+  {
+    "id": "silk_flower",
     "url": "https://genshin-impact.fandom.com/wiki/Silk_Flower"
   },
-  "starconch": {
+  {
+    "id": "starconch",
     "url": "https://genshin-impact.fandom.com/wiki/Starconch"
   },
-  "violetgrass": {
+  {
+    "id": "violetgrass",
     "url": "https://genshin-impact.fandom.com/wiki/Violetgrass"
   },
-  "amakumo_fruit": {
+  {
+    "id": "amakumo_fruit",
     "url": "https://genshin-impact.fandom.com/wiki/Amakumo_Fruit"
   },
-  "crystal_marrow": {
+  {
+    "id": "crystal_marrow",
     "url": "https://genshin-impact.fandom.com/wiki/Crystal_Marrow"
   },
-  "dendrobium": {
+  {
+    "id": "dendrobium",
     "url": "https://genshin-impact.fandom.com/wiki/Dendrobium"
   },
-  "fluorescent_fungus": {
+  {
+    "id": "fluorescent_fungus",
     "url": "https://genshin-impact.fandom.com/wiki/Fluorescent_Fungus"
   },
-  "naku_weed": {
+  {
+    "id": "naku_weed",
     "url": "https://genshin-impact.fandom.com/wiki/Naku_Weed"
   },
-  "onikabuto": {
+  {
+    "id": "onikabuto",
     "url": "https://genshin-impact.fandom.com/wiki/Onikabuto"
   },
-  "sakura_bloom": {
+  {
+    "id": "sakura_bloom",
     "url": "https://genshin-impact.fandom.com/wiki/Sakura_Bloom"
   },
-  "sango_pearl": {
+  {
+    "id": "sango_pearl",
     "url": "https://genshin-impact.fandom.com/wiki/Sango_Pearl"
   },
-  "sea_ganoderma": {
+  {
+    "id": "sea_ganoderma",
     "url": "https://genshin-impact.fandom.com/wiki/Sea_Ganoderma"
   }
-}
+]

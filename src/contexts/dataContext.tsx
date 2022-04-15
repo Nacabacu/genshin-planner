@@ -1,35 +1,27 @@
-import _artifact from '@public/data/artifact.json';
-import _character from '@public/data/character.json';
-import _domain from '@public/data/domain.json';
-import _material from '@public/data/material.json';
-import _materialConfig from '@public/data/materialConfig.json';
-import _weapon from '@public/data/weapon.json';
+import _artifact from '@data/artifacts.json';
+import _character from '@data/characters.json';
+import _domain from '@data/domains.json';
+import _materialConfig from '@data/materialConfig.json';
+import _material from '@data/materials.json';
+import _weapon from '@data/weapons.json';
 import { createContext, PropsWithChildren, useContext } from 'react';
-import {
-  ArtifactData,
-  CharacterData,
-  Dictionary,
-  DomainData,
-  MaterialConfig,
-  MaterialData,
-  WeaponData,
-} from '../../types/data';
+import { ArtifactData, CharacterData, DomainData, MaterialConfig, MaterialData, WeaponData } from '../../types/data';
 
 interface Data {
-  character: Dictionary<CharacterData>;
-  weapon: Dictionary<WeaponData>;
-  artifact: Dictionary<ArtifactData>;
-  domain: Dictionary<DomainData>;
-  material: Dictionary<MaterialData>;
+  character: CharacterData[];
+  weapon: WeaponData[];
+  artifact: ArtifactData[];
+  domain: DomainData[];
+  material: MaterialData[];
   materialConfig: MaterialConfig;
 }
 
 const defaultDataContext: Data = {
-  character: _character as Dictionary<CharacterData>,
-  weapon: _weapon as Dictionary<WeaponData>,
-  artifact: _artifact as Dictionary<ArtifactData>,
-  domain: _domain as Dictionary<DomainData>,
-  material: _material as Dictionary<MaterialData>,
+  character: _character as CharacterData[],
+  weapon: _weapon as WeaponData[],
+  artifact: _artifact as ArtifactData[],
+  domain: _domain as DomainData[],
+  material: _material as MaterialData[],
   materialConfig: _materialConfig as MaterialConfig,
 };
 

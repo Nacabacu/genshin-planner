@@ -1,5 +1,6 @@
-{
-  "albedo": {
+[
+  {
+    "id": "albedo",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Albedo",
     "element": "Geo",
@@ -16,7 +17,8 @@
       "weeklyBoss": "tusk_of_monoceros_caeli"
     }
   },
-  "aloy": {
+  {
+    "id": "aloy",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Aloy",
     "element": "Cryo",
@@ -33,7 +35,8 @@
       "weeklyBoss": "molten_moment"
     }
   },
-  "amber": {
+  {
+    "id": "amber",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Amber",
     "element": "Pyro",
@@ -50,7 +53,8 @@
       "weeklyBoss": "dvalins_sigh"
     }
   },
-  "arataki_itto": {
+  {
+    "id": "arataki_itto",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Arataki_Itto",
     "element": "Geo",
@@ -67,7 +71,8 @@
       "weeklyBoss": "ashen_heart"
     }
   },
-  "barbara": {
+  {
+    "id": "barbara",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Barbara",
     "element": "Hydro",
@@ -84,7 +89,8 @@
       "weeklyBoss": "ring_of_boreas"
     }
   },
-  "beidou": {
+  {
+    "id": "beidou",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Beidou",
     "element": "Electro",
@@ -101,7 +107,8 @@
       "weeklyBoss": "dvalins_sigh"
     }
   },
-  "bennett": {
+  {
+    "id": "bennett",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Bennett",
     "element": "Pyro",
@@ -118,7 +125,8 @@
       "weeklyBoss": "dvalins_plume"
     }
   },
-  "chongyun": {
+  {
+    "id": "chongyun",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Chongyun",
     "element": "Cryo",
@@ -135,7 +143,8 @@
       "weeklyBoss": "dvalins_sigh"
     }
   },
-  "diluc": {
+  {
+    "id": "diluc",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Diluc",
     "element": "Pyro",
@@ -152,7 +161,8 @@
       "weeklyBoss": "dvalins_plume"
     }
   },
-  "diona": {
+  {
+    "id": "diona",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Diona",
     "element": "Cryo",
@@ -169,7 +179,8 @@
       "weeklyBoss": "shard_of_a_foul_legacy"
     }
   },
-  "eula": {
+  {
+    "id": "eula",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Eula",
     "element": "Cryo",
@@ -186,7 +197,8 @@
       "weeklyBoss": "dragon_lords_crown"
     }
   },
-  "fischl": {
+  {
+    "id": "fischl",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Fischl",
     "element": "Electro",
@@ -203,7 +215,8 @@
       "weeklyBoss": "spirit_locket_of_boreas"
     }
   },
-  "ganyu": {
+  {
+    "id": "ganyu",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Ganyu",
     "element": "Cryo",
@@ -220,7 +233,8 @@
       "weeklyBoss": "shadow_of_the_warrior"
     }
   },
-  "gorou": {
+  {
+    "id": "gorou",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Gorou",
     "element": "Geo",
@@ -237,7 +251,8 @@
       "weeklyBoss": "molten_moment"
     }
   },
-  "hu_tao": {
+  {
+    "id": "hu_tao",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Hu_Tao",
     "element": "Pyro",
@@ -254,7 +269,8 @@
       "weeklyBoss": "shard_of_a_foul_legacy"
     }
   },
-  "jean": {
+  {
+    "id": "jean",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Jean",
     "element": "Anemo",
@@ -271,7 +287,8 @@
       "weeklyBoss": "dvalins_plume"
     }
   },
-  "kaedehara_kazuha": {
+  {
+    "id": "kaedehara_kazuha",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Kaedehara_Kazuha",
     "element": "Anemo",
@@ -288,7 +305,8 @@
       "weeklyBoss": "gilded_scale"
     }
   },
-  "kaeya": {
+  {
+    "id": "kaeya",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Kaeya",
     "element": "Cryo",
@@ -305,7 +323,8 @@
       "weeklyBoss": "spirit_locket_of_boreas"
     }
   },
-  "kamisato_ayaka": {
+  {
+    "id": "kamisato_ayaka",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Kamisato_Ayaka",
     "element": "Cryo",
@@ -322,7 +341,8 @@
       "weeklyBoss": "bloodjade_branch"
     }
   },
-  "kamisato_ayato": {
+  {
+    "id": "kamisato_ayato",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Kamisato_Ayato",
     "element": "Hydro",
@@ -339,7 +359,8 @@
       "weeklyBoss": "mudra_of_the_malefic_general"
     }
   },
-  "keqing": {
+  {
+    "id": "keqing",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Keqing",
     "element": "Electro",
@@ -356,7 +377,8 @@
       "weeklyBoss": "ring_of_boreas"
     }
   },
-  "klee": {
+  {
+    "id": "klee",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Klee",
     "element": "Pyro",
@@ -373,7 +395,8 @@
       "weeklyBoss": "ring_of_boreas"
     }
   },
-  "kujou_sara": {
+  {
+    "id": "kujou_sara",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Kujou_Sara",
     "element": "Electro",
@@ -390,7 +413,8 @@
       "weeklyBoss": "ashen_heart"
     }
   },
-  "lisa": {
+  {
+    "id": "lisa",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Lisa",
     "element": "Electro",
@@ -407,7 +431,8 @@
       "weeklyBoss": "dvalins_claw"
     }
   },
-  "traveler_anemo": {
+  {
+    "id": "lumine",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Lumine",
     "element": "None",
@@ -424,7 +449,8 @@
       "weeklyBoss": "dvalins_sigh"
     }
   },
-  "traveler_geo": {
+  {
+    "id": "lumine",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Lumine",
     "element": "None",
@@ -441,7 +467,8 @@
       "weeklyBoss": "tail_of_boreas"
     }
   },
-  "traveler_electro": {
+  {
+    "id": "lumine",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Lumine",
     "element": "None",
@@ -458,7 +485,8 @@
       "weeklyBoss": "dragon_lords_crown"
     }
   },
-  "mona": {
+  {
+    "id": "mona",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Mona",
     "element": "Hydro",
@@ -475,7 +503,8 @@
       "weeklyBoss": "ring_of_boreas"
     }
   },
-  "ningguang": {
+  {
+    "id": "ningguang",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Ningguang",
     "element": "Geo",
@@ -492,7 +521,8 @@
       "weeklyBoss": "spirit_locket_of_boreas"
     }
   },
-  "noelle": {
+  {
+    "id": "noelle",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Noelle",
     "element": "Geo",
@@ -509,7 +539,8 @@
       "weeklyBoss": "dvalins_claw"
     }
   },
-  "qiqi": {
+  {
+    "id": "qiqi",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Qiqi",
     "element": "Cryo",
@@ -526,7 +557,8 @@
       "weeklyBoss": "tail_of_boreas"
     }
   },
-  "raiden_shogun": {
+  {
+    "id": "raiden_shogun",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Raiden_Shogun",
     "element": "Electro",
@@ -543,7 +575,8 @@
       "weeklyBoss": "molten_moment"
     }
   },
-  "razor": {
+  {
+    "id": "razor",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Razor",
     "element": "Electro",
@@ -560,7 +593,8 @@
       "weeklyBoss": "dvalins_claw"
     }
   },
-  "rosaria": {
+  {
+    "id": "rosaria",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Rosaria",
     "element": "Cryo",
@@ -577,7 +611,8 @@
       "weeklyBoss": "shadow_of_the_warrior"
     }
   },
-  "sangonomiya_kokomi": {
+  {
+    "id": "sangonomiya_kokomi",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Sangonomiya_Kokomi",
     "element": "Hydro",
@@ -594,7 +629,8 @@
       "weeklyBoss": "hellfire_butterfly"
     }
   },
-  "sayu": {
+  {
+    "id": "sayu",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Sayu",
     "element": "Anemo",
@@ -611,7 +647,8 @@
       "weeklyBoss": "gilded_scale"
     }
   },
-  "shenhe": {
+  {
+    "id": "shenhe",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Shenhe",
     "element": "Cryo",
@@ -628,7 +665,8 @@
       "weeklyBoss": "hellfire_butterfly"
     }
   },
-  "sucrose": {
+  {
+    "id": "sucrose",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Sucrose",
     "element": "Anemo",
@@ -645,7 +683,8 @@
       "weeklyBoss": "spirit_locket_of_boreas"
     }
   },
-  "tartaglia": {
+  {
+    "id": "tartaglia",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Tartaglia",
     "element": "Hydro",
@@ -662,7 +701,8 @@
       "weeklyBoss": "shard_of_a_foul_legacy"
     }
   },
-  "thoma": {
+  {
+    "id": "thoma",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Thoma",
     "element": "Pyro",
@@ -679,7 +719,8 @@
       "weeklyBoss": "hellfire_butterfly"
     }
   },
-  "venti": {
+  {
+    "id": "venti",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Venti",
     "element": "Anemo",
@@ -696,7 +737,8 @@
       "weeklyBoss": "tail_of_boreas"
     }
   },
-  "xiangling": {
+  {
+    "id": "xiangling",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Xiangling",
     "element": "Pyro",
@@ -713,7 +755,8 @@
       "weeklyBoss": "dvalins_claw"
     }
   },
-  "xiao": {
+  {
+    "id": "xiao",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Xiao",
     "element": "Anemo",
@@ -730,7 +773,8 @@
       "weeklyBoss": "shadow_of_the_warrior"
     }
   },
-  "xingqiu": {
+  {
+    "id": "xingqiu",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Xingqiu",
     "element": "Hydro",
@@ -747,7 +791,8 @@
       "weeklyBoss": "tail_of_boreas"
     }
   },
-  "xinyan": {
+  {
+    "id": "xinyan",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Xinyan",
     "element": "Pyro",
@@ -764,7 +809,8 @@
       "weeklyBoss": "tusk_of_monoceros_caeli"
     }
   },
-  "yae_miko": {
+  {
+    "id": "yae_miko",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Yae_Miko",
     "element": "Electro",
@@ -781,7 +827,8 @@
       "weeklyBoss": "the_meaning_of_aeons"
     }
   },
-  "yanfei": {
+  {
+    "id": "yanfei",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Yanfei",
     "element": "Pyro",
@@ -798,7 +845,8 @@
       "weeklyBoss": "bloodjade_branch"
     }
   },
-  "yoimiya": {
+  {
+    "id": "yoimiya",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Yoimiya",
     "element": "Pyro",
@@ -815,7 +863,8 @@
       "weeklyBoss": "dragon_lords_crown"
     }
   },
-  "yun_jin": {
+  {
+    "id": "yun_jin",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Yun_Jin",
     "element": "Geo",
@@ -832,7 +881,8 @@
       "weeklyBoss": "ashen_heart"
     }
   },
-  "zhongli": {
+  {
+    "id": "zhongli",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Zhongli",
     "element": "Geo",
@@ -849,4 +899,4 @@
       "weeklyBoss": "tusk_of_monoceros_caeli"
     }
   }
-}
+]

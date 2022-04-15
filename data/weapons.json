@@ -1,5 +1,6 @@
-{
-  "akuoumaru": {
+[
+  {
+    "id": "akuoumaru",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Akuoumaru",
     "type": "Claymore",
@@ -9,7 +10,8 @@
       "common": "handguard"
     }
   },
-  "alley_hunter": {
+  {
+    "id": "alley_hunter",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Alley_Hunter",
     "type": "Bow",
@@ -19,7 +21,8 @@
       "common": "slime"
     }
   },
-  "amenoma_kageuchi": {
+  {
+    "id": "amenoma_kageuchi",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Amenoma_Kageuchi",
     "type": "Sword",
@@ -29,7 +32,8 @@
       "common": "handguard"
     }
   },
-  "amos_bow": {
+  {
+    "id": "amos_bow",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Amos'_Bow",
     "type": "Bow",
@@ -39,7 +43,8 @@
       "common": "slime"
     }
   },
-  "apprentices_notes": {
+  {
+    "id": "apprentices_notes",
     "rarity": 1,
     "url": "https://genshin-impact.fandom.com/wiki/Apprentice's_Notes",
     "type": "Catalyst",
@@ -49,7 +54,8 @@
       "common": "common_mask"
     }
   },
-  "aquila_favonia": {
+  {
+    "id": "aquila_favonia",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Aquila_Favonia",
     "type": "Sword",
@@ -59,7 +65,8 @@
       "common": "arrowhead"
     }
   },
-  "beginners_protector": {
+  {
+    "id": "beginners_protector",
     "rarity": 1,
     "url": "https://genshin-impact.fandom.com/wiki/Beginner's_Protector",
     "type": "Polearm",
@@ -69,7 +76,8 @@
       "common": "scroll"
     }
   },
-  "blackcliff_agate": {
+  {
+    "id": "blackcliff_agate",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Blackcliff_Agate",
     "type": "Catalyst",
@@ -79,7 +87,8 @@
       "common": "scroll"
     }
   },
-  "blackcliff_longsword": {
+  {
+    "id": "blackcliff_longsword",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Blackcliff_Longsword",
     "type": "Sword",
@@ -89,7 +98,8 @@
       "common": "arrowhead"
     }
   },
-  "blackcliff_pole": {
+  {
+    "id": "blackcliff_pole",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Blackcliff_Pole",
     "type": "Polearm",
@@ -99,7 +109,8 @@
       "common": "insignia"
     }
   },
-  "blackcliff_slasher": {
+  {
+    "id": "blackcliff_slasher",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Blackcliff_Slasher",
     "type": "Claymore",
@@ -109,7 +120,8 @@
       "common": "insignia"
     }
   },
-  "blackcliff_warbow": {
+  {
+    "id": "blackcliff_warbow",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Blackcliff_Warbow",
     "type": "Bow",
@@ -119,7 +131,8 @@
       "common": "nectar"
     }
   },
-  "black_tassel": {
+  {
+    "id": "black_tassel",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Black_Tassel",
     "type": "Polearm",
@@ -129,7 +142,8 @@
       "common": "arrowhead"
     }
   },
-  "bloodtainted_greatsword": {
+  {
+    "id": "bloodtainted_greatsword",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Bloodtainted_Greatsword",
     "type": "Claymore",
@@ -139,7 +153,8 @@
       "common": "arrowhead"
     }
   },
-  "calamity_queller": {
+  {
+    "id": "calamity_queller",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Calamity_Queller",
     "type": "Polearm",
@@ -149,7 +164,8 @@
       "common": "nectar"
     }
   },
-  "cinnabar_spindle": {
+  {
+    "id": "cinnabar_spindle",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Cinnabar_Spindle",
     "type": "Sword",
@@ -159,7 +175,8 @@
       "common": "common_mask"
     }
   },
-  "compound_bow": {
+  {
+    "id": "compound_bow",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Compound_Bow",
     "type": "Bow",
@@ -169,7 +186,8 @@
       "common": "insignia"
     }
   },
-  "cool_steel": {
+  {
+    "id": "cool_steel",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Cool_Steel",
     "type": "Sword",
@@ -179,7 +197,8 @@
       "common": "arrowhead"
     }
   },
-  "crescent_pike": {
+  {
+    "id": "crescent_pike",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Crescent_Pike",
     "type": "Polearm",
@@ -189,7 +208,8 @@
       "common": "treasure_insignia"
     }
   },
-  "dark_iron_sword": {
+  {
+    "id": "dark_iron_sword",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Dark_Iron_Sword",
     "type": "Sword",
@@ -199,7 +219,8 @@
       "common": "common_mask"
     }
   },
-  "deathmatch": {
+  {
+    "id": "deathmatch",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Deathmatch",
     "type": "Polearm",
@@ -209,7 +230,8 @@
       "common": "nectar"
     }
   },
-  "debate_club": {
+  {
+    "id": "debate_club",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Debate_Club",
     "type": "Claymore",
@@ -219,7 +241,8 @@
       "common": "common_mask"
     }
   },
-  "dodoco_tales": {
+  {
+    "id": "dodoco_tales",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Dodoco_Tales",
     "type": "Catalyst",
@@ -229,7 +252,8 @@
       "common": "common_mask"
     }
   },
-  "dragons_bane": {
+  {
+    "id": "dragons_bane",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Dragon's_Bane",
     "type": "Polearm",
@@ -239,7 +263,8 @@
       "common": "scroll"
     }
   },
-  "dragonspine_spear": {
+  {
+    "id": "dragonspine_spear",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Dragonspine_Spear",
     "type": "Polearm",
@@ -249,7 +274,8 @@
       "common": "insignia"
     }
   },
-  "dull_blade": {
+  {
+    "id": "dull_blade",
     "rarity": 1,
     "url": "https://genshin-impact.fandom.com/wiki/Dull_Blade",
     "type": "Sword",
@@ -259,7 +285,8 @@
       "common": "arrowhead"
     }
   },
-  "elegy_for_the_end": {
+  {
+    "id": "elegy_for_the_end",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Elegy_for_the_End",
     "type": "Bow",
@@ -269,7 +296,8 @@
       "common": "insignia"
     }
   },
-  "emerald_orb": {
+  {
+    "id": "emerald_orb",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Emerald_Orb",
     "type": "Catalyst",
@@ -279,7 +307,8 @@
       "common": "treasure_insignia"
     }
   },
-  "engulfing_lightning": {
+  {
+    "id": "engulfing_lightning",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Engulfing_Lightning",
     "type": "Polearm",
@@ -289,7 +318,8 @@
       "common": "handguard"
     }
   },
-  "everlasting_moonglow": {
+  {
+    "id": "everlasting_moonglow",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Everlasting_Moonglow",
     "type": "Catalyst",
@@ -299,7 +329,8 @@
       "common": "spectral"
     }
   },
-  "eye_of_perception": {
+  {
+    "id": "eye_of_perception",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Eye_of_Perception",
     "type": "Catalyst",
@@ -309,7 +340,8 @@
       "common": "common_mask"
     }
   },
-  "favonius_codex": {
+  {
+    "id": "favonius_codex",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Favonius_Codex",
     "type": "Catalyst",
@@ -319,7 +351,8 @@
       "common": "scroll"
     }
   },
-  "favonius_greatsword": {
+  {
+    "id": "favonius_greatsword",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Favonius_Greatsword",
     "type": "Claymore",
@@ -329,7 +362,8 @@
       "common": "insignia"
     }
   },
-  "favonius_lance": {
+  {
+    "id": "favonius_lance",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Favonius_Lance",
     "type": "Polearm",
@@ -339,7 +373,8 @@
       "common": "slime"
     }
   },
-  "favonius_sword": {
+  {
+    "id": "favonius_sword",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Favonius_Sword",
     "type": "Sword",
@@ -349,7 +384,8 @@
       "common": "arrowhead"
     }
   },
-  "favonius_warbow": {
+  {
+    "id": "favonius_warbow",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Favonius_Warbow",
     "type": "Bow",
@@ -359,7 +395,8 @@
       "common": "nectar"
     }
   },
-  "ferrous_shadow": {
+  {
+    "id": "ferrous_shadow",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Ferrous_Shadow",
     "type": "Claymore",
@@ -369,7 +406,8 @@
       "common": "nectar"
     }
   },
-  "festering_desire": {
+  {
+    "id": "festering_desire",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Festering_Desire",
     "type": "Sword",
@@ -379,7 +417,8 @@
       "common": "insignia"
     }
   },
-  "fillet_blade": {
+  {
+    "id": "fillet_blade",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Fillet_Blade",
     "type": "Sword",
@@ -389,7 +428,8 @@
       "common": "treasure_insignia"
     }
   },
-  "freedomsworn": {
+  {
+    "id": "freedomsworn",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Freedom-Sworn",
     "type": "Sword",
@@ -399,7 +439,8 @@
       "common": "scroll"
     }
   },
-  "frostbearer": {
+  {
+    "id": "frostbearer",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Frostbearer",
     "type": "Catalyst",
@@ -409,7 +450,8 @@
       "common": "nectar"
     }
   },
-  "hakushin_ring": {
+  {
+    "id": "hakushin_ring",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Hakushin_Ring",
     "type": "Catalyst",
@@ -419,7 +461,8 @@
       "common": "scroll"
     }
   },
-  "halberd": {
+  {
+    "id": "halberd",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Halberd",
     "type": "Polearm",
@@ -429,7 +472,8 @@
       "common": "nectar"
     }
   },
-  "hamayumi": {
+  {
+    "id": "hamayumi",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Hamayumi",
     "type": "Bow",
@@ -439,7 +483,8 @@
       "common": "arrowhead"
     }
   },
-  "haran_geppaku_futsu": {
+  {
+    "id": "haran_geppaku_futsu",
     "rarity": 5,
     "type": "Sword",
     "ascendMaterial": {
@@ -448,7 +493,8 @@
       "common": "handguard"
     }
   },
-  "harbinger_of_dawn": {
+  {
+    "id": "harbinger_of_dawn",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Harbinger_of_Dawn",
     "type": "Sword",
@@ -458,7 +504,8 @@
       "common": "slime"
     }
   },
-  "hunters_bow": {
+  {
+    "id": "hunters_bow",
     "rarity": 1,
     "url": "https://genshin-impact.fandom.com/wiki/Hunter's_Bow",
     "type": "Bow",
@@ -468,7 +515,8 @@
       "common": "treasure_insignia"
     }
   },
-  "iron_point": {
+  {
+    "id": "iron_point",
     "rarity": 2,
     "url": "https://genshin-impact.fandom.com/wiki/Iron_Point",
     "type": "Polearm",
@@ -478,7 +526,8 @@
       "common": "scroll"
     }
   },
-  "iron_sting": {
+  {
+    "id": "iron_sting",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Iron_Sting",
     "type": "Sword",
@@ -488,7 +537,8 @@
       "common": "nectar"
     }
   },
-  "kaguras_verity": {
+  {
+    "id": "kaguras_verity",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Kagura's_Verity",
     "type": "Catalyst",
@@ -498,7 +548,8 @@
       "common": "spectral"
     }
   },
-  "katsuragikiri_nagamasa": {
+  {
+    "id": "katsuragikiri_nagamasa",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Katsuragikiri_Nagamasa",
     "type": "Claymore",
@@ -508,7 +559,8 @@
       "common": "handguard"
     }
   },
-  "kitain_cross_spear": {
+  {
+    "id": "kitain_cross_spear",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Kitain_Cross_Spear",
     "type": "Polearm",
@@ -518,7 +570,8 @@
       "common": "treasure_insignia"
     }
   },
-  "lions_roar": {
+  {
+    "id": "lions_roar",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Lion's_Roar",
     "type": "Sword",
@@ -528,7 +581,8 @@
       "common": "treasure_insignia"
     }
   },
-  "lithic_blade": {
+  {
+    "id": "lithic_blade",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Lithic_Blade",
     "type": "Claymore",
@@ -538,7 +592,8 @@
       "common": "arrowhead"
     }
   },
-  "lithic_spear": {
+  {
+    "id": "lithic_spear",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Lithic_Spear",
     "type": "Polearm",
@@ -548,7 +603,8 @@
       "common": "arrowhead"
     }
   },
-  "lost_prayer_to_the_sacred_winds": {
+  {
+    "id": "lost_prayer_to_the_sacred_winds",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Lost_Prayer_to_the_Sacred_Winds",
     "type": "Catalyst",
@@ -558,7 +614,8 @@
       "common": "slime"
     }
   },
-  "luxurious_sealord": {
+  {
+    "id": "luxurious_sealord",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Luxurious_Sea-Lord",
     "type": "Claymore",
@@ -568,7 +625,8 @@
       "common": "slime"
     }
   },
-  "magic_guide": {
+  {
+    "id": "magic_guide",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Magic_Guide",
     "type": "Catalyst",
@@ -578,7 +636,8 @@
       "common": "slime"
     }
   },
-  "mappa_mare": {
+  {
+    "id": "mappa_mare",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Mappa_Mare",
     "type": "Catalyst",
@@ -588,7 +647,8 @@
       "common": "slime"
     }
   },
-  "memory_of_dust": {
+  {
+    "id": "memory_of_dust",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Memory_of_Dust",
     "type": "Catalyst",
@@ -598,7 +658,8 @@
       "common": "common_mask"
     }
   },
-  "messenger": {
+  {
+    "id": "messenger",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Messenger",
     "type": "Bow",
@@ -608,7 +669,8 @@
       "common": "treasure_insignia"
     }
   },
-  "mistsplitter_reforged": {
+  {
+    "id": "mistsplitter_reforged",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Mistsplitter_Reforged",
     "type": "Sword",
@@ -618,7 +680,8 @@
       "common": "handguard"
     }
   },
-  "mitternachts_waltz": {
+  {
+    "id": "mitternachts_waltz",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Mitternachts_Waltz",
     "type": "Bow",
@@ -628,7 +691,8 @@
       "common": "treasure_insignia"
     }
   },
-  "mouuns_moon": {
+  {
+    "id": "mouuns_moon",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Mouun's_Moon",
     "type": "Bow",
@@ -638,7 +702,8 @@
       "common": "spectral"
     }
   },
-  "oathsworn_eye": {
+  {
+    "id": "oathsworn_eye",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Oathsworn_Eye",
     "type": "Catalyst",
@@ -648,7 +713,8 @@
       "common": "spectral"
     }
   },
-  "old_mercs_pal": {
+  {
+    "id": "old_mercs_pal",
     "rarity": 2,
     "url": "https://genshin-impact.fandom.com/wiki/Old_Merc's_Pal",
     "type": "Claymore",
@@ -658,7 +724,8 @@
       "common": "slime"
     }
   },
-  "otherworldly_story": {
+  {
+    "id": "otherworldly_story",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Otherworldly_Story",
     "type": "Catalyst",
@@ -668,7 +735,8 @@
       "common": "common_mask"
     }
   },
-  "pocket_grimoire": {
+  {
+    "id": "pocket_grimoire",
     "rarity": 2,
     "url": "https://genshin-impact.fandom.com/wiki/Pocket_Grimoire",
     "type": "Catalyst",
@@ -678,7 +746,8 @@
       "common": "common_mask"
     }
   },
-  "polar_star": {
+  {
+    "id": "polar_star",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Polar_Star",
     "type": "Bow",
@@ -688,7 +757,8 @@
       "common": "spectral"
     }
   },
-  "predator": {
+  {
+    "id": "predator",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Predator",
     "type": "Bow",
@@ -698,7 +768,8 @@
       "common": "arrowhead"
     }
   },
-  "primordial_jade_cutter": {
+  {
+    "id": "primordial_jade_cutter",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Primordial_Jade_Cutter",
     "type": "Sword",
@@ -708,7 +779,8 @@
       "common": "treasure_insignia"
     }
   },
-  "primordial_jade_wingedspear": {
+  {
+    "id": "primordial_jade_wingedspear",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Primordial_Jade_Winged-Spear",
     "type": "Polearm",
@@ -718,7 +790,8 @@
       "common": "insignia"
     }
   },
-  "prototype_amber": {
+  {
+    "id": "prototype_amber",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Prototype_Amber",
     "type": "Catalyst",
@@ -728,7 +801,8 @@
       "common": "arrowhead"
     }
   },
-  "prototype_archaic": {
+  {
+    "id": "prototype_archaic",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Prototype_Archaic",
     "type": "Claymore",
@@ -738,7 +812,8 @@
       "common": "common_mask"
     }
   },
-  "prototype_crescent": {
+  {
+    "id": "prototype_crescent",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Prototype_Crescent",
     "type": "Bow",
@@ -748,7 +823,8 @@
       "common": "treasure_insignia"
     }
   },
-  "prototype_rancour": {
+  {
+    "id": "prototype_rancour",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Prototype_Rancour",
     "type": "Sword",
@@ -758,7 +834,8 @@
       "common": "insignia"
     }
   },
-  "prototype_starglitter": {
+  {
+    "id": "prototype_starglitter",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Prototype_Starglitter",
     "type": "Polearm",
@@ -768,7 +845,8 @@
       "common": "common_mask"
     }
   },
-  "rainslasher": {
+  {
+    "id": "rainslasher",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Rainslasher",
     "type": "Claymore",
@@ -778,7 +856,8 @@
       "common": "scroll"
     }
   },
-  "raven_bow": {
+  {
+    "id": "raven_bow",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Raven_Bow",
     "type": "Bow",
@@ -788,7 +867,8 @@
       "common": "arrowhead"
     }
   },
-  "recurve_bow": {
+  {
+    "id": "recurve_bow",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Recurve_Bow",
     "type": "Bow",
@@ -798,7 +878,8 @@
       "common": "scroll"
     }
   },
-  "redhorn_stonethresher": {
+  {
+    "id": "redhorn_stonethresher",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Redhorn_Stonethresher",
     "type": "Claymore",
@@ -808,7 +889,8 @@
       "common": "handguard"
     }
   },
-  "royal_bow": {
+  {
+    "id": "royal_bow",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Royal_Bow",
     "type": "Bow",
@@ -818,7 +900,8 @@
       "common": "scroll"
     }
   },
-  "royal_greatsword": {
+  {
+    "id": "royal_greatsword",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Royal_Greatsword",
     "type": "Claymore",
@@ -828,7 +911,8 @@
       "common": "slime"
     }
   },
-  "royal_grimoire": {
+  {
+    "id": "royal_grimoire",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Royal_Grimoire",
     "type": "Catalyst",
@@ -838,7 +922,8 @@
       "common": "insignia"
     }
   },
-  "royal_longsword": {
+  {
+    "id": "royal_longsword",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Royal_Longsword",
     "type": "Sword",
@@ -848,7 +933,8 @@
       "common": "common_mask"
     }
   },
-  "royal_spear": {
+  {
+    "id": "royal_spear",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Royal_Spear",
     "type": "Polearm",
@@ -858,7 +944,8 @@
       "common": "insignia"
     }
   },
-  "rust": {
+  {
+    "id": "rust",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Rust",
     "type": "Bow",
@@ -868,7 +955,8 @@
       "common": "common_mask"
     }
   },
-  "sacrificial_bow": {
+  {
+    "id": "sacrificial_bow",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Sacrificial_Bow",
     "type": "Bow",
@@ -878,7 +966,8 @@
       "common": "slime"
     }
   },
-  "sacrificial_fragments": {
+  {
+    "id": "sacrificial_fragments",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Sacrificial_Fragments",
     "type": "Catalyst",
@@ -888,7 +977,8 @@
       "common": "treasure_insignia"
     }
   },
-  "sacrificial_greatsword": {
+  {
+    "id": "sacrificial_greatsword",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Sacrificial_Greatsword",
     "type": "Claymore",
@@ -898,7 +988,8 @@
       "common": "arrowhead"
     }
   },
-  "sacrificial_sword": {
+  {
+    "id": "sacrificial_sword",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Sacrificial_Sword",
     "type": "Sword",
@@ -908,7 +999,8 @@
       "common": "scroll"
     }
   },
-  "seasoned_hunters_bow": {
+  {
+    "id": "seasoned_hunters_bow",
     "rarity": 2,
     "url": "https://genshin-impact.fandom.com/wiki/Seasoned_Hunter's_Bow",
     "type": "Bow",
@@ -918,7 +1010,8 @@
       "common": "treasure_insignia"
     }
   },
-  "serpent_spine": {
+  {
+    "id": "serpent_spine",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Serpent_Spine",
     "type": "Claymore",
@@ -928,7 +1021,8 @@
       "common": "nectar"
     }
   },
-  "sharpshooters_oath": {
+  {
+    "id": "sharpshooters_oath",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Sharpshooter's_Oath",
     "type": "Bow",
@@ -938,7 +1032,8 @@
       "common": "slime"
     }
   },
-  "silver_sword": {
+  {
+    "id": "silver_sword",
     "rarity": 2,
     "url": "https://genshin-impact.fandom.com/wiki/Silver_Sword",
     "type": "Sword",
@@ -948,7 +1043,8 @@
       "common": "arrowhead"
     }
   },
-  "skyrider_greatsword": {
+  {
+    "id": "skyrider_greatsword",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Skyrider_Greatsword",
     "type": "Claymore",
@@ -958,7 +1054,8 @@
       "common": "treasure_insignia"
     }
   },
-  "skyrider_sword": {
+  {
+    "id": "skyrider_sword",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Skyrider_Sword",
     "type": "Sword",
@@ -968,7 +1065,8 @@
       "common": "insignia"
     }
   },
-  "skyward_atlas": {
+  {
+    "id": "skyward_atlas",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Skyward_Atlas",
     "type": "Catalyst",
@@ -978,7 +1076,8 @@
       "common": "arrowhead"
     }
   },
-  "skyward_blade": {
+  {
+    "id": "skyward_blade",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Skyward_Blade",
     "type": "Sword",
@@ -988,7 +1087,8 @@
       "common": "slime"
     }
   },
-  "skyward_harp": {
+  {
+    "id": "skyward_harp",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Skyward_Harp",
     "type": "Bow",
@@ -998,7 +1098,8 @@
       "common": "arrowhead"
     }
   },
-  "skyward_pride": {
+  {
+    "id": "skyward_pride",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Skyward_Pride",
     "type": "Claymore",
@@ -1008,7 +1109,8 @@
       "common": "slime"
     }
   },
-  "skyward_spine": {
+  {
+    "id": "skyward_spine",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Skyward_Spine",
     "type": "Polearm",
@@ -1018,7 +1120,8 @@
       "common": "scroll"
     }
   },
-  "slingshot": {
+  {
+    "id": "slingshot",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Slingshot",
     "type": "Bow",
@@ -1028,7 +1131,8 @@
       "common": "common_mask"
     }
   },
-  "snowtombed_starsilver": {
+  {
+    "id": "snowtombed_starsilver",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Snow-Tombed_Starsilver",
     "type": "Claymore",
@@ -1038,7 +1142,8 @@
       "common": "slime"
     }
   },
-  "solar_pearl": {
+  {
+    "id": "solar_pearl",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Solar_Pearl",
     "type": "Catalyst",
@@ -1048,7 +1153,8 @@
       "common": "nectar"
     }
   },
-  "song_of_broken_pines": {
+  {
+    "id": "song_of_broken_pines",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Song_of_Broken_Pines",
     "type": "Claymore",
@@ -1058,7 +1164,8 @@
       "common": "common_mask"
     }
   },
-  "staff_of_homa": {
+  {
+    "id": "staff_of_homa",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Staff_of_Homa",
     "type": "Polearm",
@@ -1068,7 +1175,8 @@
       "common": "slime"
     }
   },
-  "summit_shaper": {
+  {
+    "id": "summit_shaper",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Summit_Shaper",
     "type": "Sword",
@@ -1078,7 +1186,8 @@
       "common": "common_mask"
     }
   },
-  "sword_of_descension": {
+  {
+    "id": "sword_of_descension",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Sword_of_Descension",
     "type": "Sword",
@@ -1088,7 +1197,8 @@
       "common": "treasure_insignia"
     }
   },
-  "the_alley_flash": {
+  {
+    "id": "the_alley_flash",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/The_Alley_Flash",
     "type": "Sword",
@@ -1098,7 +1208,8 @@
       "common": "scroll"
     }
   },
-  "the_bell": {
+  {
+    "id": "the_bell",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/The_Bell",
     "type": "Claymore",
@@ -1108,7 +1219,8 @@
       "common": "nectar"
     }
   },
-  "the_black_sword": {
+  {
+    "id": "the_black_sword",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/The_Black_Sword",
     "type": "Sword",
@@ -1118,7 +1230,8 @@
       "common": "slime"
     }
   },
-  "the_catch": {
+  {
+    "id": "the_catch",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/\"The_Catch\"",
     "type": "Polearm",
@@ -1128,7 +1241,8 @@
       "common": "spectral"
     }
   },
-  "the_flute": {
+  {
+    "id": "the_flute",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/The_Flute",
     "type": "Sword",
@@ -1138,7 +1252,8 @@
       "common": "slime"
     }
   },
-  "the_stringless": {
+  {
+    "id": "the_stringless",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/The_Stringless",
     "type": "Bow",
@@ -1148,7 +1263,8 @@
       "common": "arrowhead"
     }
   },
-  "the_unforged": {
+  {
+    "id": "the_unforged",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/The_Unforged",
     "type": "Claymore",
@@ -1158,7 +1274,8 @@
       "common": "treasure_insignia"
     }
   },
-  "the_viridescent_hunt": {
+  {
+    "id": "the_viridescent_hunt",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/The_Viridescent_Hunt",
     "type": "Bow",
@@ -1168,7 +1285,8 @@
       "common": "arrowhead"
     }
   },
-  "the_widsith": {
+  {
+    "id": "the_widsith",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/The_Widsith",
     "type": "Catalyst",
@@ -1178,7 +1296,8 @@
       "common": "common_mask"
     }
   },
-  "thrilling_tales_of_dragon_slayers": {
+  {
+    "id": "thrilling_tales_of_dragon_slayers",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Thrilling_Tales_of_Dragon_Slayers",
     "type": "Catalyst",
@@ -1188,7 +1307,8 @@
       "common": "scroll"
     }
   },
-  "thundering_pulse": {
+  {
+    "id": "thundering_pulse",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Thundering_Pulse",
     "type": "Bow",
@@ -1198,7 +1318,8 @@
       "common": "arrowhead"
     }
   },
-  "travelers_handy_sword": {
+  {
+    "id": "travelers_handy_sword",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Traveler's_Handy_Sword",
     "type": "Sword",
@@ -1208,7 +1329,8 @@
       "common": "scroll"
     }
   },
-  "twin_nephrite": {
+  {
+    "id": "twin_nephrite",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Twin_Nephrite",
     "type": "Catalyst",
@@ -1218,7 +1340,8 @@
       "common": "insignia"
     }
   },
-  "vortex_vanquisher": {
+  {
+    "id": "vortex_vanquisher",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Vortex_Vanquisher",
     "type": "Polearm",
@@ -1228,7 +1351,8 @@
       "common": "treasure_insignia"
     }
   },
-  "waster_greatsword": {
+  {
+    "id": "waster_greatsword",
     "rarity": 1,
     "url": "https://genshin-impact.fandom.com/wiki/Waster_Greatsword",
     "type": "Claymore",
@@ -1238,7 +1362,8 @@
       "common": "slime"
     }
   },
-  "wavebreakers_fin": {
+  {
+    "id": "wavebreakers_fin",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Wavebreaker's_Fin",
     "type": "Polearm",
@@ -1248,7 +1373,8 @@
       "common": "handguard"
     }
   },
-  "whiteblind": {
+  {
+    "id": "whiteblind",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Whiteblind",
     "type": "Claymore",
@@ -1258,7 +1384,8 @@
       "common": "treasure_insignia"
     }
   },
-  "white_iron_greatsword": {
+  {
+    "id": "white_iron_greatsword",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/White_Iron_Greatsword",
     "type": "Claymore",
@@ -1268,7 +1395,8 @@
       "common": "slime"
     }
   },
-  "white_tassel": {
+  {
+    "id": "white_tassel",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/White_Tassel",
     "type": "Polearm",
@@ -1278,7 +1406,8 @@
       "common": "insignia"
     }
   },
-  "windblume_ode": {
+  {
+    "id": "windblume_ode",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Windblume_Ode",
     "type": "Bow",
@@ -1288,7 +1417,8 @@
       "common": "nectar"
     }
   },
-  "wine_and_song": {
+  {
+    "id": "wine_and_song",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Wine_and_Song",
     "type": "Catalyst",
@@ -1298,7 +1428,8 @@
       "common": "treasure_insignia"
     }
   },
-  "wolfs_gravestone": {
+  {
+    "id": "wolfs_gravestone",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Wolf's_Gravestone",
     "type": "Claymore",
@@ -1308,4 +1439,4 @@
       "common": "scroll"
     }
   }
-}
+]
