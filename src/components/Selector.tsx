@@ -8,6 +8,7 @@ export interface SelectorProps<T> {
   folder: ImageFolder;
   clearOnSelect?: boolean;
   disabled?: boolean;
+  value?: T;
   onChange?: (value: T) => void;
   label?: string;
   className?: string;
@@ -18,11 +19,12 @@ function Selector<T extends ItemDataBase>({
   folder,
   clearOnSelect,
   disabled,
+  value: defaultValue,
   onChange,
   label,
   className,
 }: PropsWithChildren<SelectorProps<T>>) {
-  const [value, setValue] = useState<T | null>(null);
+  const [value, setValue] = useState<T | null>(defaultValue as T | null);
 
   return (
     <Autocomplete
@@ -70,9 +72,10 @@ function Selector<T extends ItemDataBase>({
 }
 
 Selector.defaultProps = {
-  onChange: null,
   clearOnSelect: false,
   disabled: false,
+  value: null,
+  onChange: null,
   label: '',
   className: '',
 };

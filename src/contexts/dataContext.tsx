@@ -4,8 +4,11 @@ import _domain from '@data/domains.json';
 import _materialConfig from '@data/materialConfig.json';
 import _material from '@data/materials.json';
 import _weapon from '@data/weapons.json';
-import { createContext, PropsWithChildren, useCallback, useContext, useMemo, useState } from 'react';
+import { createContext, PropsWithChildren, useCallback, useContext, useMemo } from 'react';
 import { ArtifactData, CharacterData, DomainData, MaterialConfig, MaterialData, WeaponData } from '../../types/data';
+import useLocalStorage from '../hooks/useLocalStorage';
+
+const SELECTED_DATA_LIST_KEY = 'genshin-planner-selectedDataList';
 
 interface Data {
   characterList: CharacterData[];
@@ -45,7 +48,10 @@ const defaultSelectedDataList: SelectedData[] = [
 
 function DataProvider(props: PropsWithChildren<{}>) {
   const { children } = props;
-  const [selectedDataList, setSelectedDataList] = useState<SelectedData[]>(defaultSelectedDataList);
+  const [selectedDataList, setSelectedDataList] = useLocalStorage<SelectedData[]>(
+    SELECTED_DATA_LIST_KEY,
+    defaultSelectedDataList,
+  );
 
   const addCharacter = useCallback(
     (characterData: CharacterData) => {
@@ -59,7 +65,7 @@ function DataProvider(props: PropsWithChildren<{}>) {
       };
       setSelectedDataList([...selectedDataList, newSelectedData]);
     },
-    [selectedDataList],
+    [selectedDataList, setSelectedDataList],
   );
 
   const removeCharacter = useCallback(
@@ -68,7 +74,7 @@ function DataProvider(props: PropsWithChildren<{}>) {
         ...selectedDataList.filter((selectedData) => selectedData.characterData.id !== characterId),
       ]);
     },
-    [selectedDataList],
+    [selectedDataList, setSelectedDataList],
   );
 
   const updateSelectedData = useCallback(
@@ -87,7 +93,7 @@ function DataProvider(props: PropsWithChildren<{}>) {
 
       setSelectedDataList(newSelectedDataList);
     },
-    [selectedDataList],
+    [selectedDataList, setSelectedDataList],
   );
 
   const value = useMemo(

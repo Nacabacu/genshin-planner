@@ -15,28 +15,28 @@ interface TableHeadConfig {
 
 const tableHeadConfigList: TableHeadConfig[] = [
   {
-    label: 'Name',
-    width: '20%',
+    label: 'Character',
+    width: '25%',
   },
   {
     label: 'Ascension',
-    width: '60px',
+    width: '5%',
   },
   {
     label: 'Talent',
-    width: '60px',
+    width: '5%',
   },
   {
     label: 'Weapon',
-    width: '40%',
+    width: '25%',
   },
   {
     label: 'Artifact',
-    width: '40%',
+    width: '35%',
   },
   {
     label: '',
-    width: '60px',
+    width: '5%',
   },
 ];
 
@@ -76,6 +76,8 @@ function Planning() {
           {selectedDataList.map(
             ({
               characterData,
+              weaponData,
+              artifactDataList,
               isEnabled,
               isAscendEnabled,
               isTalentEnabled,
@@ -122,11 +124,15 @@ function Planning() {
                       }}
                     />
                     <Selector
-                      options={weaponList.filter((item) => item.type === characterData.weaponType)}
+                      options={weaponList.filter((weapon) => weapon.type === characterData.weaponType)}
                       folder={ImageFolder.Weapons}
                       disabled={!isWeaponEnabled || !isEnabled}
                       label="Select Weapon..."
                       className="flex-grow"
+                      value={weaponList.find((weapon) => weapon.id === weaponData?.id)}
+                      onChange={(value) => {
+                        updateSelectedData(characterData.id, { weaponData: value });
+                      }}
                     />
                   </div>
                 </TableCell>
@@ -144,6 +150,12 @@ function Planning() {
                       disabled={!isArtifactEnabled || !isEnabled}
                       label="Select Artifact..."
                       className="flex-grow"
+                      value={artifactList.filter((artifact) =>
+                        artifactDataList?.find((data) => artifact.id === data.id),
+                      )}
+                      onChange={(value) => {
+                        updateSelectedData(characterData.id, { artifactDataList: value });
+                      }}
                     />
                   </div>
                 </TableCell>

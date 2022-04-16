@@ -6,23 +6,36 @@ import ImageIcon, { ImageFolder } from './ImageIcon';
 interface ArtifactSelectorProps {
   options: ArtifactData[];
   disabled?: boolean;
+  value?: ArtifactData[];
+  onChange?: (value: ArtifactData[]) => void;
   label?: string;
   className?: string;
 }
 
 const limit = 2;
 
-function ArtifactSelector({ options, disabled, label, className }: PropsWithoutRef<ArtifactSelectorProps>) {
-  const [selectedArtifact, setSelectedArtifact] = useState<ArtifactData[]>([]);
-  const [isLimitReached, setIsLimitReached] = useState(selectedArtifact.length >= limit);
+function ArtifactSelector({
+  options,
+  disabled,
+  value: defaultValue,
+  onChange,
+  label,
+  className,
+}: PropsWithoutRef<ArtifactSelectorProps>) {
+  const [value, setValue] = useState<ArtifactData[]>(defaultValue || []);
+  const [isLimitReached, setIsLimitReached] = useState(value.length >= limit);
 
   return (
     <Autocomplete
       className={className}
-      value={selectedArtifact}
+      value={value}
       onChange={(event, newValue) => {
         setIsLimitReached(newValue.length >= limit);
-        setSelectedArtifact(newValue);
+        setValue(newValue);
+
+        if (!onChange) return;
+
+        onChange(newValue);
       }}
       options={options}
       size="small"
@@ -30,7 +43,7 @@ function ArtifactSelector({ options, disabled, label, className }: PropsWithoutR
       autoHighlight
       disableClearable
       multiple
-      getOptionDisabled={(option) => isLimitReached && !selectedArtifact.includes(option)}
+      getOptionDisabled={(option) => isLimitReached && !value.includes(option)}
       getOptionLabel={(option) => option.id}
       renderOption={(props, option) => (
         <Box component="li" {...props}>
@@ -39,8 +52,8 @@ function ArtifactSelector({ options, disabled, label, className }: PropsWithoutR
         </Box>
       )}
       renderInput={(params) => <TextField {...params} label={label} disabled={isLimitReached || disabled} />}
-      renderTags={(value: ArtifactData[], getTagProps) =>
-        value.map((option, index) => (
+      renderTags={(dataList: ArtifactData[], getTagProps) =>
+        dataList.map((option, index) => (
           <Chip
             icon={<ImageIcon id={option.id} folder={ImageFolder.Artifacts} iconStyle="h-6 w-6" />}
             label={option.id}
@@ -55,6 +68,8 @@ function ArtifactSelector({ options, disabled, label, className }: PropsWithoutR
 
 ArtifactSelector.defaultProps = {
   disabled: false,
+  value: null,
+  onChange: null,
   label: '',
   className: '',
 };
