@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
+import Footer from '../components/Footer';
 
 import Navbar from '../components/Navbar';
 import Planning from './Planning';
@@ -14,6 +15,7 @@ function App() {
           <Route path="/result" element={<Result />} />
         </Routes>
       </div>
+      <Footer />
     </div>
   );
 }

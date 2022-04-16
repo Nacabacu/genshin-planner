@@ -11,6 +11,7 @@ export enum ImageFolder {
   Artifacts = 'artifacts',
   Materials = 'materials',
   Weapons = 'weapons',
+  Icons = 'icons',
 }
 
 function ImageIcon({ id, folder, iconStyle }: PropsWithChildren<ImageIconProps>) {

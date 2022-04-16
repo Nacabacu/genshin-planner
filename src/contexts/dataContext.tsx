@@ -31,10 +31,20 @@ export interface SelectedData {
 }
 
 const DataContext = createContext<Data | null>(null);
+const defaultSelectedDataList: SelectedData[] = [
+  {
+    isEnabled: true,
+    isAscendEnabled: true,
+    isTalentEnabled: true,
+    isWeaponEnabled: true,
+    isArtifactEnabled: true,
+    characterId: 'klee',
+  },
+];
 
 function DataProvider(props: PropsWithChildren<{}>) {
   const { children } = props;
-  const [selectedDataList, setSelectedDataList] = useState<SelectedData[]>([]);
+  const [selectedDataList, setSelectedDataList] = useState<SelectedData[]>(defaultSelectedDataList);
 
   const addCharacter = useCallback(
     (characterData: CharacterData) => {
@@ -52,16 +62,17 @@ function DataProvider(props: PropsWithChildren<{}>) {
   );
   const updateSelectedData = useCallback(
     (characterId: string, updatedData: Partial<SelectedData>) => {
-      let oldData = selectedDataList.find((selectedData) => selectedData.characterId === characterId);
+      const newSelectedDataList = [...selectedDataList];
+      const selectedIndex = newSelectedDataList.findIndex((selectedData) => selectedData.characterId === characterId);
 
-      if (!oldData) return;
+      if (selectedIndex < 0) return;
 
-      oldData = {
-        ...oldData,
+      newSelectedDataList[selectedIndex] = {
+        ...newSelectedDataList[selectedIndex],
         ...updatedData,
       };
 
-      setSelectedDataList(selectedDataList);
+      setSelectedDataList(newSelectedDataList);
     },
     [selectedDataList],
   );

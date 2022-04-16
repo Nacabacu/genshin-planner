@@ -3,7 +3,7 @@
     "id": "akuoumaru",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Akuoumaru",
-    "type": "Claymore",
+    "type": "claymore",
     "ascendMaterial": {
       "weapon": "distant_sea",
       "elite": "claw",
@@ -14,7 +14,7 @@
     "id": "alley_hunter",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Alley_Hunter",
-    "type": "Bow",
+    "type": "bow",
     "ascendMaterial": {
       "weapon": "dandelion_gladiator",
       "elite": "chaos",
@@ -25,7 +25,7 @@
     "id": "amenoma_kageuchi",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Amenoma_Kageuchi",
-    "type": "Sword",
+    "type": "sword",
     "ascendMaterial": {
       "weapon": "distant_sea",
       "elite": "sentinel_chaos",
@@ -36,7 +36,7 @@
     "id": "amos_bow",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Amos'_Bow",
-    "type": "Bow",
+    "type": "bow",
     "ascendMaterial": {
       "weapon": "dandelion_gladiator",
       "elite": "chaos",
@@ -47,7 +47,7 @@
     "id": "apprentices_notes",
     "rarity": 1,
     "url": "https://genshin-impact.fandom.com/wiki/Apprentice's_Notes",
-    "type": "Catalyst",
+    "type": "catalyst",
     "ascendMaterial": {
       "weapon": "decarabian",
       "elite": "horn",
@@ -58,7 +58,7 @@
     "id": "aquila_favonia",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Aquila_Favonia",
-    "type": "Sword",
+    "type": "sword",
     "ascendMaterial": {
       "weapon": "decarabian",
       "elite": "horn",
@@ -69,7 +69,7 @@
     "id": "beginners_protector",
     "rarity": 1,
     "url": "https://genshin-impact.fandom.com/wiki/Beginner's_Protector",
-    "type": "Polearm",
+    "type": "polearm",
     "ascendMaterial": {
       "weapon": "dandelion_gladiator",
       "elite": "chaos",
@@ -80,7 +80,7 @@
     "id": "blackcliff_agate",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Blackcliff_Agate",
-    "type": "Catalyst",
+    "type": "catalyst",
     "ascendMaterial": {
       "weapon": "guyun",
       "elite": "knife",
@@ -91,7 +91,7 @@
     "id": "blackcliff_longsword",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Blackcliff_Longsword",
-    "type": "Sword",
+    "type": "sword",
     "ascendMaterial": {
       "weapon": "guyun",
       "elite": "knife",
@@ -102,7 +102,7 @@
     "id": "blackcliff_pole",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Blackcliff_Pole",
-    "type": "Polearm",
+    "type": "polearm",
     "ascendMaterial": {
       "weapon": "elixir",
       "elite": "mist_grass",
@@ -113,7 +113,7 @@
     "id": "blackcliff_slasher",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Blackcliff_Slasher",
-    "type": "Claymore",
+    "type": "claymore",
     "ascendMaterial": {
       "weapon": "elixir",
       "elite": "mist_grass",
@@ -124,7 +124,7 @@
     "id": "blackcliff_warbow",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Blackcliff_Warbow",
-    "type": "Bow",
+    "type": "bow",
     "ascendMaterial": {
       "weapon": "guyun",
       "elite": "knife",
@@ -135,7 +135,7 @@
     "id": "black_tassel",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Black_Tassel",
-    "type": "Polearm",
+    "type": "polearm",
     "ascendMaterial": {
       "weapon": "aerosiderite",
       "elite": "bone_shard",
@@ -146,7 +146,7 @@
     "id": "bloodtainted_greatsword",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Bloodtainted_Greatsword",
-    "type": "Claymore",
+    "type": "claymore",
     "ascendMaterial": {
       "weapon": "boreal_wolf",
       "elite": "lay_lines",
@@ -157,7 +157,7 @@
     "id": "calamity_queller",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Calamity_Queller",
-    "type": "Polearm",
+    "type": "polearm",
     "ascendMaterial": {
       "weapon": "elixir",
       "elite": "mist_grass",
@@ -168,7 +168,7 @@
     "id": "cinnabar_spindle",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Cinnabar_Spindle",
-    "type": "Sword",
+    "type": "sword",
     "ascendMaterial": {
       "weapon": "decarabian",
       "elite": "chaos",
@@ -179,7 +179,7 @@
     "id": "compound_bow",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Compound_Bow",
-    "type": "Bow",
+    "type": "bow",
     "ascendMaterial": {
       "weapon": "aerosiderite",
       "elite": "bone_shard",
@@ -190,7 +190,7 @@
     "id": "cool_steel",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Cool_Steel",
-    "type": "Sword",
+    "type": "sword",
     "ascendMaterial": {
       "weapon": "decarabian",
       "elite": "horn",
@@ -201,7 +201,7 @@
     "id": "crescent_pike",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Crescent_Pike",
-    "type": "Polearm",
+    "type": "polearm",
     "ascendMaterial": {
       "weapon": "guyun",
       "elite": "knife",
@@ -212,7 +212,7 @@
     "id": "dark_iron_sword",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Dark_Iron_Sword",
-    "type": "Sword",
+    "type": "sword",
     "ascendMaterial": {
       "weapon": "guyun",
       "elite": "knife",
@@ -223,7 +223,7 @@
     "id": "deathmatch",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Deathmatch",
-    "type": "Polearm",
+    "type": "polearm",
     "ascendMaterial": {
       "weapon": "boreal_wolf",
       "elite": "lay_lines",
@@ -234,7 +234,7 @@
     "id": "debate_club",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Debate_Club",
-    "type": "Claymore",
+    "type": "claymore",
     "ascendMaterial": {
       "weapon": "elixir",
       "elite": "mist_grass",
@@ -245,7 +245,7 @@
     "id": "dodoco_tales",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Dodoco_Tales",
-    "type": "Catalyst",
+    "type": "catalyst",
     "ascendMaterial": {
       "weapon": "boreal_wolf",
       "elite": "lay_lines",
@@ -256,7 +256,7 @@
     "id": "dragons_bane",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Dragon's_Bane",
-    "type": "Polearm",
+    "type": "polearm",
     "ascendMaterial": {
       "weapon": "elixir",
       "elite": "mist_grass",
@@ -267,7 +267,7 @@
     "id": "dragonspine_spear",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Dragonspine_Spear",
-    "type": "Polearm",
+    "type": "polearm",
     "ascendMaterial": {
       "weapon": "boreal_wolf",
       "elite": "mist_grass",
@@ -278,7 +278,7 @@
     "id": "dull_blade",
     "rarity": 1,
     "url": "https://genshin-impact.fandom.com/wiki/Dull_Blade",
-    "type": "Sword",
+    "type": "sword",
     "ascendMaterial": {
       "weapon": "decarabian",
       "elite": "horn",
@@ -289,7 +289,7 @@
     "id": "elegy_for_the_end",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Elegy_for_the_End",
-    "type": "Bow",
+    "type": "bow",
     "ascendMaterial": {
       "weapon": "boreal_wolf",
       "elite": "horn",
@@ -300,7 +300,7 @@
     "id": "emerald_orb",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Emerald_Orb",
-    "type": "Catalyst",
+    "type": "catalyst",
     "ascendMaterial": {
       "weapon": "guyun",
       "elite": "knife",
@@ -311,7 +311,7 @@
     "id": "engulfing_lightning",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Engulfing_Lightning",
-    "type": "Polearm",
+    "type": "polearm",
     "ascendMaterial": {
       "weapon": "mask",
       "elite": "sentinel_chaos",
@@ -322,7 +322,7 @@
     "id": "everlasting_moonglow",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Everlasting_Moonglow",
-    "type": "Catalyst",
+    "type": "catalyst",
     "ascendMaterial": {
       "weapon": "distant_sea",
       "elite": "prism",
@@ -333,7 +333,7 @@
     "id": "eye_of_perception",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Eye_of_Perception",
-    "type": "Catalyst",
+    "type": "catalyst",
     "ascendMaterial": {
       "weapon": "elixir",
       "elite": "mist_grass",
@@ -344,7 +344,7 @@
     "id": "favonius_codex",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Favonius_Codex",
-    "type": "Catalyst",
+    "type": "catalyst",
     "ascendMaterial": {
       "weapon": "decarabian",
       "elite": "horn",
@@ -355,7 +355,7 @@
     "id": "favonius_greatsword",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Favonius_Greatsword",
-    "type": "Claymore",
+    "type": "claymore",
     "ascendMaterial": {
       "weapon": "dandelion_gladiator",
       "elite": "chaos",
@@ -366,7 +366,7 @@
     "id": "favonius_lance",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Favonius_Lance",
-    "type": "Polearm",
+    "type": "polearm",
     "ascendMaterial": {
       "weapon": "dandelion_gladiator",
       "elite": "chaos",
@@ -377,7 +377,7 @@
     "id": "favonius_sword",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Favonius_Sword",
-    "type": "Sword",
+    "type": "sword",
     "ascendMaterial": {
       "weapon": "decarabian",
       "elite": "horn",
@@ -388,7 +388,7 @@
     "id": "favonius_warbow",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Favonius_Warbow",
-    "type": "Bow",
+    "type": "bow",
     "ascendMaterial": {
       "weapon": "dandelion_gladiator",
       "elite": "chaos",
@@ -399,7 +399,7 @@
     "id": "ferrous_shadow",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Ferrous_Shadow",
-    "type": "Claymore",
+    "type": "claymore",
     "ascendMaterial": {
       "weapon": "decarabian",
       "elite": "horn",
@@ -410,7 +410,7 @@
     "id": "festering_desire",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Festering_Desire",
-    "type": "Sword",
+    "type": "sword",
     "ascendMaterial": {
       "weapon": "dandelion_gladiator",
       "elite": "horn",
@@ -421,7 +421,7 @@
     "id": "fillet_blade",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Fillet_Blade",
-    "type": "Sword",
+    "type": "sword",
     "ascendMaterial": {
       "weapon": "elixir",
       "elite": "mist_grass",
@@ -432,7 +432,7 @@
     "id": "freedomsworn",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Freedom-Sworn",
-    "type": "Sword",
+    "type": "sword",
     "ascendMaterial": {
       "weapon": "dandelion_gladiator",
       "elite": "chaos",
@@ -443,7 +443,7 @@
     "id": "frostbearer",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Frostbearer",
-    "type": "Catalyst",
+    "type": "catalyst",
     "ascendMaterial": {
       "weapon": "dandelion_gladiator",
       "elite": "chaos",
@@ -454,7 +454,7 @@
     "id": "hakushin_ring",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Hakushin_Ring",
-    "type": "Catalyst",
+    "type": "catalyst",
     "ascendMaterial": {
       "weapon": "distant_sea",
       "elite": "prism",
@@ -465,7 +465,7 @@
     "id": "halberd",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Halberd",
-    "type": "Polearm",
+    "type": "polearm",
     "ascendMaterial": {
       "weapon": "elixir",
       "elite": "mist_grass",
@@ -476,7 +476,7 @@
     "id": "hamayumi",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Hamayumi",
-    "type": "Bow",
+    "type": "bow",
     "ascendMaterial": {
       "weapon": "narukami",
       "elite": "prism",
@@ -486,7 +486,7 @@
   {
     "id": "haran_geppaku_futsu",
     "rarity": 5,
-    "type": "Sword",
+    "type": "sword",
     "ascendMaterial": {
       "weapon": "narukami",
       "elite": "statuette",
@@ -497,7 +497,7 @@
     "id": "harbinger_of_dawn",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Harbinger_of_Dawn",
-    "type": "Sword",
+    "type": "sword",
     "ascendMaterial": {
       "weapon": "boreal_wolf",
       "elite": "lay_lines",
@@ -508,7 +508,7 @@
     "id": "hunters_bow",
     "rarity": 1,
     "url": "https://genshin-impact.fandom.com/wiki/Hunter's_Bow",
-    "type": "Bow",
+    "type": "bow",
     "ascendMaterial": {
       "weapon": "boreal_wolf",
       "elite": "lay_lines",
@@ -519,7 +519,7 @@
     "id": "iron_point",
     "rarity": 2,
     "url": "https://genshin-impact.fandom.com/wiki/Iron_Point",
-    "type": "Polearm",
+    "type": "polearm",
     "ascendMaterial": {
       "weapon": "dandelion_gladiator",
       "elite": "chaos",
@@ -530,7 +530,7 @@
     "id": "iron_sting",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Iron_Sting",
-    "type": "Sword",
+    "type": "sword",
     "ascendMaterial": {
       "weapon": "aerosiderite",
       "elite": "bone_shard",
@@ -541,7 +541,7 @@
     "id": "kaguras_verity",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Kagura's_Verity",
-    "type": "Catalyst",
+    "type": "catalyst",
     "ascendMaterial": {
       "weapon": "mask",
       "elite": "claw",
@@ -552,7 +552,7 @@
     "id": "katsuragikiri_nagamasa",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Katsuragikiri_Nagamasa",
-    "type": "Claymore",
+    "type": "claymore",
     "ascendMaterial": {
       "weapon": "narukami",
       "elite": "sentinel_chaos",
@@ -563,7 +563,7 @@
     "id": "kitain_cross_spear",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Kitain_Cross_Spear",
-    "type": "Polearm",
+    "type": "polearm",
     "ascendMaterial": {
       "weapon": "mask",
       "elite": "sentinel_chaos",
@@ -574,7 +574,7 @@
     "id": "lions_roar",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Lion's_Roar",
-    "type": "Sword",
+    "type": "sword",
     "ascendMaterial": {
       "weapon": "guyun",
       "elite": "knife",
@@ -585,7 +585,7 @@
     "id": "lithic_blade",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Lithic_Blade",
-    "type": "Claymore",
+    "type": "claymore",
     "ascendMaterial": {
       "weapon": "guyun",
       "elite": "knife",
@@ -596,7 +596,7 @@
     "id": "lithic_spear",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Lithic_Spear",
-    "type": "Polearm",
+    "type": "polearm",
     "ascendMaterial": {
       "weapon": "aerosiderite",
       "elite": "bone_shard",
@@ -607,7 +607,7 @@
     "id": "lost_prayer_to_the_sacred_winds",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Lost_Prayer_to_the_Sacred_Winds",
-    "type": "Catalyst",
+    "type": "catalyst",
     "ascendMaterial": {
       "weapon": "dandelion_gladiator",
       "elite": "chaos",
@@ -618,7 +618,7 @@
     "id": "luxurious_sealord",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Luxurious_Sea-Lord",
-    "type": "Claymore",
+    "type": "claymore",
     "ascendMaterial": {
       "weapon": "aerosiderite",
       "elite": "bone_shard",
@@ -629,7 +629,7 @@
     "id": "magic_guide",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Magic_Guide",
-    "type": "Catalyst",
+    "type": "catalyst",
     "ascendMaterial": {
       "weapon": "decarabian",
       "elite": "horn",
@@ -640,7 +640,7 @@
     "id": "mappa_mare",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Mappa_Mare",
-    "type": "Catalyst",
+    "type": "catalyst",
     "ascendMaterial": {
       "weapon": "aerosiderite",
       "elite": "bone_shard",
@@ -651,7 +651,7 @@
     "id": "memory_of_dust",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Memory_of_Dust",
-    "type": "Catalyst",
+    "type": "catalyst",
     "ascendMaterial": {
       "weapon": "aerosiderite",
       "elite": "bone_shard",
@@ -662,7 +662,7 @@
     "id": "messenger",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Messenger",
-    "type": "Bow",
+    "type": "bow",
     "ascendMaterial": {
       "weapon": "elixir",
       "elite": "mist_grass",
@@ -673,7 +673,7 @@
     "id": "mistsplitter_reforged",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Mistsplitter_Reforged",
-    "type": "Sword",
+    "type": "sword",
     "ascendMaterial": {
       "weapon": "distant_sea",
       "elite": "sentinel_chaos",
@@ -684,7 +684,7 @@
     "id": "mitternachts_waltz",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Mitternachts_Waltz",
-    "type": "Bow",
+    "type": "bow",
     "ascendMaterial": {
       "weapon": "decarabian",
       "elite": "horn",
@@ -695,7 +695,7 @@
     "id": "mouuns_moon",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Mouun's_Moon",
-    "type": "Bow",
+    "type": "bow",
     "ascendMaterial": {
       "weapon": "narukami",
       "elite": "prism",
@@ -706,7 +706,7 @@
     "id": "oathsworn_eye",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Oathsworn_Eye",
-    "type": "Catalyst",
+    "type": "catalyst",
     "ascendMaterial": {
       "weapon": "distant_sea",
       "elite": "claw",
@@ -717,7 +717,7 @@
     "id": "old_mercs_pal",
     "rarity": 2,
     "url": "https://genshin-impact.fandom.com/wiki/Old_Merc's_Pal",
-    "type": "Claymore",
+    "type": "claymore",
     "ascendMaterial": {
       "weapon": "boreal_wolf",
       "elite": "lay_lines",
@@ -728,7 +728,7 @@
     "id": "otherworldly_story",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Otherworldly_Story",
-    "type": "Catalyst",
+    "type": "catalyst",
     "ascendMaterial": {
       "weapon": "dandelion_gladiator",
       "elite": "chaos",
@@ -739,7 +739,7 @@
     "id": "pocket_grimoire",
     "rarity": 2,
     "url": "https://genshin-impact.fandom.com/wiki/Pocket_Grimoire",
-    "type": "Catalyst",
+    "type": "catalyst",
     "ascendMaterial": {
       "weapon": "decarabian",
       "elite": "horn",
@@ -750,7 +750,7 @@
     "id": "polar_star",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Polar_Star",
-    "type": "Bow",
+    "type": "bow",
     "ascendMaterial": {
       "weapon": "mask",
       "elite": "claw",
@@ -761,7 +761,7 @@
     "id": "predator",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Predator",
-    "type": "Bow",
+    "type": "bow",
     "ascendMaterial": {
       "weapon": "narukami",
       "elite": "prism",
@@ -772,7 +772,7 @@
     "id": "primordial_jade_cutter",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Primordial_Jade_Cutter",
-    "type": "Sword",
+    "type": "sword",
     "ascendMaterial": {
       "weapon": "elixir",
       "elite": "mist_grass",
@@ -783,7 +783,7 @@
     "id": "primordial_jade_wingedspear",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Primordial_Jade_Winged-Spear",
-    "type": "Polearm",
+    "type": "polearm",
     "ascendMaterial": {
       "weapon": "guyun",
       "elite": "knife",
@@ -794,7 +794,7 @@
     "id": "prototype_amber",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Prototype_Amber",
-    "type": "Catalyst",
+    "type": "catalyst",
     "ascendMaterial": {
       "weapon": "elixir",
       "elite": "mist_grass",
@@ -805,7 +805,7 @@
     "id": "prototype_archaic",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Prototype_Archaic",
-    "type": "Claymore",
+    "type": "claymore",
     "ascendMaterial": {
       "weapon": "aerosiderite",
       "elite": "bone_shard",
@@ -816,7 +816,7 @@
     "id": "prototype_crescent",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Prototype_Crescent",
-    "type": "Bow",
+    "type": "bow",
     "ascendMaterial": {
       "weapon": "elixir",
       "elite": "mist_grass",
@@ -827,7 +827,7 @@
     "id": "prototype_rancour",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Prototype_Rancour",
-    "type": "Sword",
+    "type": "sword",
     "ascendMaterial": {
       "weapon": "elixir",
       "elite": "mist_grass",
@@ -838,7 +838,7 @@
     "id": "prototype_starglitter",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Prototype_Starglitter",
-    "type": "Polearm",
+    "type": "polearm",
     "ascendMaterial": {
       "weapon": "aerosiderite",
       "elite": "bone_shard",
@@ -849,7 +849,7 @@
     "id": "rainslasher",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Rainslasher",
-    "type": "Claymore",
+    "type": "claymore",
     "ascendMaterial": {
       "weapon": "elixir",
       "elite": "mist_grass",
@@ -860,7 +860,7 @@
     "id": "raven_bow",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Raven_Bow",
-    "type": "Bow",
+    "type": "bow",
     "ascendMaterial": {
       "weapon": "decarabian",
       "elite": "horn",
@@ -871,7 +871,7 @@
     "id": "recurve_bow",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Recurve_Bow",
-    "type": "Bow",
+    "type": "bow",
     "ascendMaterial": {
       "weapon": "dandelion_gladiator",
       "elite": "chaos",
@@ -882,7 +882,7 @@
     "id": "redhorn_stonethresher",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Redhorn_Stonethresher",
-    "type": "Claymore",
+    "type": "claymore",
     "ascendMaterial": {
       "weapon": "narukami",
       "elite": "claw",
@@ -893,7 +893,7 @@
     "id": "royal_bow",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Royal_Bow",
-    "type": "Bow",
+    "type": "bow",
     "ascendMaterial": {
       "weapon": "dandelion_gladiator",
       "elite": "chaos",
@@ -904,7 +904,7 @@
     "id": "royal_greatsword",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Royal_Greatsword",
-    "type": "Claymore",
+    "type": "claymore",
     "ascendMaterial": {
       "weapon": "dandelion_gladiator",
       "elite": "chaos",
@@ -915,7 +915,7 @@
     "id": "royal_grimoire",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Royal_Grimoire",
-    "type": "Catalyst",
+    "type": "catalyst",
     "ascendMaterial": {
       "weapon": "decarabian",
       "elite": "horn",
@@ -926,7 +926,7 @@
     "id": "royal_longsword",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Royal_Longsword",
-    "type": "Sword",
+    "type": "sword",
     "ascendMaterial": {
       "weapon": "decarabian",
       "elite": "horn",
@@ -937,7 +937,7 @@
     "id": "royal_spear",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Royal_Spear",
-    "type": "Polearm",
+    "type": "polearm",
     "ascendMaterial": {
       "weapon": "elixir",
       "elite": "mist_grass",
@@ -948,7 +948,7 @@
     "id": "rust",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Rust",
-    "type": "Bow",
+    "type": "bow",
     "ascendMaterial": {
       "weapon": "guyun",
       "elite": "knife",
@@ -959,7 +959,7 @@
     "id": "sacrificial_bow",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Sacrificial_Bow",
-    "type": "Bow",
+    "type": "bow",
     "ascendMaterial": {
       "weapon": "boreal_wolf",
       "elite": "lay_lines",
@@ -970,7 +970,7 @@
     "id": "sacrificial_fragments",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Sacrificial_Fragments",
-    "type": "Catalyst",
+    "type": "catalyst",
     "ascendMaterial": {
       "weapon": "dandelion_gladiator",
       "elite": "chaos",
@@ -981,7 +981,7 @@
     "id": "sacrificial_greatsword",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Sacrificial_Greatsword",
-    "type": "Claymore",
+    "type": "claymore",
     "ascendMaterial": {
       "weapon": "boreal_wolf",
       "elite": "lay_lines",
@@ -992,7 +992,7 @@
     "id": "sacrificial_sword",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Sacrificial_Sword",
-    "type": "Sword",
+    "type": "sword",
     "ascendMaterial": {
       "weapon": "dandelion_gladiator",
       "elite": "chaos",
@@ -1003,7 +1003,7 @@
     "id": "seasoned_hunters_bow",
     "rarity": 2,
     "url": "https://genshin-impact.fandom.com/wiki/Seasoned_Hunter's_Bow",
-    "type": "Bow",
+    "type": "bow",
     "ascendMaterial": {
       "weapon": "boreal_wolf",
       "elite": "lay_lines",
@@ -1014,7 +1014,7 @@
     "id": "serpent_spine",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Serpent_Spine",
-    "type": "Claymore",
+    "type": "claymore",
     "ascendMaterial": {
       "weapon": "aerosiderite",
       "elite": "bone_shard",
@@ -1025,7 +1025,7 @@
     "id": "sharpshooters_oath",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Sharpshooter's_Oath",
-    "type": "Bow",
+    "type": "bow",
     "ascendMaterial": {
       "weapon": "boreal_wolf",
       "elite": "lay_lines",
@@ -1036,7 +1036,7 @@
     "id": "silver_sword",
     "rarity": 2,
     "url": "https://genshin-impact.fandom.com/wiki/Silver_Sword",
-    "type": "Sword",
+    "type": "sword",
     "ascendMaterial": {
       "weapon": "decarabian",
       "elite": "horn",
@@ -1047,7 +1047,7 @@
     "id": "skyrider_greatsword",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Skyrider_Greatsword",
-    "type": "Claymore",
+    "type": "claymore",
     "ascendMaterial": {
       "weapon": "aerosiderite",
       "elite": "bone_shard",
@@ -1058,7 +1058,7 @@
     "id": "skyrider_sword",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Skyrider_Sword",
-    "type": "Sword",
+    "type": "sword",
     "ascendMaterial": {
       "weapon": "aerosiderite",
       "elite": "bone_shard",
@@ -1069,7 +1069,7 @@
     "id": "skyward_atlas",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Skyward_Atlas",
-    "type": "Catalyst",
+    "type": "catalyst",
     "ascendMaterial": {
       "weapon": "boreal_wolf",
       "elite": "lay_lines",
@@ -1080,7 +1080,7 @@
     "id": "skyward_blade",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Skyward_Blade",
-    "type": "Sword",
+    "type": "sword",
     "ascendMaterial": {
       "weapon": "boreal_wolf",
       "elite": "lay_lines",
@@ -1091,7 +1091,7 @@
     "id": "skyward_harp",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Skyward_Harp",
-    "type": "Bow",
+    "type": "bow",
     "ascendMaterial": {
       "weapon": "boreal_wolf",
       "elite": "lay_lines",
@@ -1102,7 +1102,7 @@
     "id": "skyward_pride",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Skyward_Pride",
-    "type": "Claymore",
+    "type": "claymore",
     "ascendMaterial": {
       "weapon": "boreal_wolf",
       "elite": "lay_lines",
@@ -1113,7 +1113,7 @@
     "id": "skyward_spine",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Skyward_Spine",
-    "type": "Polearm",
+    "type": "polearm",
     "ascendMaterial": {
       "weapon": "dandelion_gladiator",
       "elite": "chaos",
@@ -1124,7 +1124,7 @@
     "id": "slingshot",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Slingshot",
-    "type": "Bow",
+    "type": "bow",
     "ascendMaterial": {
       "weapon": "guyun",
       "elite": "knife",
@@ -1135,7 +1135,7 @@
     "id": "snowtombed_starsilver",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Snow-Tombed_Starsilver",
-    "type": "Claymore",
+    "type": "claymore",
     "ascendMaterial": {
       "weapon": "decarabian",
       "elite": "horn",
@@ -1146,7 +1146,7 @@
     "id": "solar_pearl",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Solar_Pearl",
-    "type": "Catalyst",
+    "type": "catalyst",
     "ascendMaterial": {
       "weapon": "guyun",
       "elite": "knife",
@@ -1157,7 +1157,7 @@
     "id": "song_of_broken_pines",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Song_of_Broken_Pines",
-    "type": "Claymore",
+    "type": "claymore",
     "ascendMaterial": {
       "weapon": "decarabian",
       "elite": "horn",
@@ -1168,7 +1168,7 @@
     "id": "staff_of_homa",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Staff_of_Homa",
-    "type": "Polearm",
+    "type": "polearm",
     "ascendMaterial": {
       "weapon": "aerosiderite",
       "elite": "lay_lines",
@@ -1179,7 +1179,7 @@
     "id": "summit_shaper",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Summit_Shaper",
-    "type": "Sword",
+    "type": "sword",
     "ascendMaterial": {
       "weapon": "guyun",
       "elite": "knife",
@@ -1190,7 +1190,7 @@
     "id": "sword_of_descension",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Sword_of_Descension",
-    "type": "Sword",
+    "type": "sword",
     "ascendMaterial": {
       "weapon": "boreal_wolf",
       "elite": "lay_lines",
@@ -1201,7 +1201,7 @@
     "id": "the_alley_flash",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/The_Alley_Flash",
-    "type": "Sword",
+    "type": "sword",
     "ascendMaterial": {
       "weapon": "decarabian",
       "elite": "horn",
@@ -1212,7 +1212,7 @@
     "id": "the_bell",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/The_Bell",
-    "type": "Claymore",
+    "type": "claymore",
     "ascendMaterial": {
       "weapon": "decarabian",
       "elite": "horn",
@@ -1223,7 +1223,7 @@
     "id": "the_black_sword",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/The_Black_Sword",
-    "type": "Sword",
+    "type": "sword",
     "ascendMaterial": {
       "weapon": "boreal_wolf",
       "elite": "lay_lines",
@@ -1234,7 +1234,7 @@
     "id": "the_catch",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/\"The_Catch\"",
-    "type": "Polearm",
+    "type": "polearm",
     "ascendMaterial": {
       "weapon": "mask",
       "elite": "sentinel_chaos",
@@ -1245,7 +1245,7 @@
     "id": "the_flute",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/The_Flute",
-    "type": "Sword",
+    "type": "sword",
     "ascendMaterial": {
       "weapon": "boreal_wolf",
       "elite": "lay_lines",
@@ -1256,7 +1256,7 @@
     "id": "the_stringless",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/The_Stringless",
-    "type": "Bow",
+    "type": "bow",
     "ascendMaterial": {
       "weapon": "decarabian",
       "elite": "horn",
@@ -1267,7 +1267,7 @@
     "id": "the_unforged",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/The_Unforged",
-    "type": "Claymore",
+    "type": "claymore",
     "ascendMaterial": {
       "weapon": "elixir",
       "elite": "mist_grass",
@@ -1278,7 +1278,7 @@
     "id": "the_viridescent_hunt",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/The_Viridescent_Hunt",
-    "type": "Bow",
+    "type": "bow",
     "ascendMaterial": {
       "weapon": "decarabian",
       "elite": "horn",
@@ -1289,7 +1289,7 @@
     "id": "the_widsith",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/The_Widsith",
-    "type": "Catalyst",
+    "type": "catalyst",
     "ascendMaterial": {
       "weapon": "boreal_wolf",
       "elite": "lay_lines",
@@ -1300,7 +1300,7 @@
     "id": "thrilling_tales_of_dragon_slayers",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Thrilling_Tales_of_Dragon_Slayers",
-    "type": "Catalyst",
+    "type": "catalyst",
     "ascendMaterial": {
       "weapon": "boreal_wolf",
       "elite": "lay_lines",
@@ -1311,7 +1311,7 @@
     "id": "thundering_pulse",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Thundering_Pulse",
-    "type": "Bow",
+    "type": "bow",
     "ascendMaterial": {
       "weapon": "narukami",
       "elite": "prism",
@@ -1322,7 +1322,7 @@
     "id": "travelers_handy_sword",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Traveler's_Handy_Sword",
-    "type": "Sword",
+    "type": "sword",
     "ascendMaterial": {
       "weapon": "dandelion_gladiator",
       "elite": "chaos",
@@ -1333,7 +1333,7 @@
     "id": "twin_nephrite",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/Twin_Nephrite",
-    "type": "Catalyst",
+    "type": "catalyst",
     "ascendMaterial": {
       "weapon": "elixir",
       "elite": "mist_grass",
@@ -1344,7 +1344,7 @@
     "id": "vortex_vanquisher",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Vortex_Vanquisher",
-    "type": "Polearm",
+    "type": "polearm",
     "ascendMaterial": {
       "weapon": "aerosiderite",
       "elite": "bone_shard",
@@ -1355,7 +1355,7 @@
     "id": "waster_greatsword",
     "rarity": 1,
     "url": "https://genshin-impact.fandom.com/wiki/Waster_Greatsword",
-    "type": "Claymore",
+    "type": "claymore",
     "ascendMaterial": {
       "weapon": "boreal_wolf",
       "elite": "lay_lines",
@@ -1366,7 +1366,7 @@
     "id": "wavebreakers_fin",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Wavebreaker's_Fin",
-    "type": "Polearm",
+    "type": "polearm",
     "ascendMaterial": {
       "weapon": "mask",
       "elite": "claw",
@@ -1377,7 +1377,7 @@
     "id": "whiteblind",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Whiteblind",
-    "type": "Claymore",
+    "type": "claymore",
     "ascendMaterial": {
       "weapon": "guyun",
       "elite": "knife",
@@ -1388,7 +1388,7 @@
     "id": "white_iron_greatsword",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/White_Iron_Greatsword",
-    "type": "Claymore",
+    "type": "claymore",
     "ascendMaterial": {
       "weapon": "dandelion_gladiator",
       "elite": "chaos",
@@ -1399,7 +1399,7 @@
     "id": "white_tassel",
     "rarity": 3,
     "url": "https://genshin-impact.fandom.com/wiki/White_Tassel",
-    "type": "Polearm",
+    "type": "polearm",
     "ascendMaterial": {
       "weapon": "guyun",
       "elite": "knife",
@@ -1410,7 +1410,7 @@
     "id": "windblume_ode",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Windblume_Ode",
-    "type": "Bow",
+    "type": "bow",
     "ascendMaterial": {
       "weapon": "dandelion_gladiator",
       "elite": "lay_lines",
@@ -1421,7 +1421,7 @@
     "id": "wine_and_song",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Wine_and_Song",
-    "type": "Catalyst",
+    "type": "catalyst",
     "ascendMaterial": {
       "weapon": "boreal_wolf",
       "elite": "lay_lines",
@@ -1432,7 +1432,7 @@
     "id": "wolfs_gravestone",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Wolf's_Gravestone",
-    "type": "Claymore",
+    "type": "claymore",
     "ascendMaterial": {
       "weapon": "dandelion_gladiator",
       "elite": "chaos",
