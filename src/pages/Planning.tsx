@@ -1,4 +1,5 @@
 import { Switch, Table, TableBody, TableCell, TableHead, TableRow } from '@mui/material';
+import { useEffect, useState } from 'react';
 import { CharacterData } from '../../types/data';
 import ArtifactSelector from '../components/ArtifactSelector';
 import CharacterSelector from '../components/CharacterSelector';
@@ -8,15 +9,16 @@ import WeaponSelector from '../components/WeaponSelector';
 import { useDataContext } from '../contexts/dataContext';
 
 function Planning() {
-  const { characterList, addCharacter } = useDataContext();
-  // const [selectableCharacterList, setSelectableCharacterList] = useState<CharacterData[]>([]);
+  const { characterList, addCharacter, selectedDataList } = useDataContext();
+  const [selectableCharList, setSelectableCharList] = useState<CharacterData[]>([]);
 
-  // useEffect(() => {
-  // const selectableList = characterList.filter(
-  //   (character) => selectedDataList.findIndex((selectedData) => selectedData.characterId === character.id) < 0,
-  // );
-  // setSelectableCharacterList(selectableList);
-  // }, [selectedDataList, characterList, setSelectableCharacterList]);
+  useEffect(() => {
+    const selectable = characterList.filter(
+      (character) => selectedDataList.findIndex((selectedData) => selectedData.characterId === character.id) < 0,
+    );
+
+    setSelectableCharList(selectable);
+  }, [characterList, selectedDataList]);
 
   const onChange = (data: CharacterData) => {
     addCharacter(data);
@@ -54,7 +56,13 @@ function Planning() {
           </TableRow>
         </TableBody>
       </Table>
-      <Selector options={characterList} folder={ImageFolder.Characters} onChange={onChange} />
+      <Selector
+        options={selectableCharList}
+        folder={ImageFolder.Characters}
+        onChange={onChange}
+        clearOnSelect
+        className="w-80 pt-8"
+      />
     </>
   );
 }
