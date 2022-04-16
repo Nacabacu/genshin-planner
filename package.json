@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "lint": "npx eslint --ext .ts,.tsx src",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d docs"
   },
   "dependencies": {
     "@emotion/react": "^11.9.0",
