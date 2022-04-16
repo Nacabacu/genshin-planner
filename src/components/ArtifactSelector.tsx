@@ -1,25 +1,32 @@
-import { Autocomplete, Box, TextField } from '@mui/material';
-import { useState } from 'react';
+import { Autocomplete, Box, Chip, TextField } from '@mui/material';
+import { PropsWithoutRef, useState } from 'react';
 import { ArtifactData } from '../../types/data';
-import { useDataContext } from '../contexts/dataContext';
 import ImageIcon, { ImageFolder } from './ImageIcon';
+
+interface ArtifactSelectorProps {
+  options: ArtifactData[];
+  disabled?: boolean;
+  label?: string;
+  className?: string;
+}
 
 const limit = 2;
 
-function ArtifactSelector() {
-  const { artifactList } = useDataContext();
+function ArtifactSelector({ options, disabled, label, className }: PropsWithoutRef<ArtifactSelectorProps>) {
   const [selectedArtifact, setSelectedArtifact] = useState<ArtifactData[]>([]);
   const [isLimitReached, setIsLimitReached] = useState(selectedArtifact.length >= limit);
 
   return (
     <Autocomplete
+      className={className}
       value={selectedArtifact}
       onChange={(event, newValue) => {
         setIsLimitReached(newValue.length >= limit);
         setSelectedArtifact(newValue);
       }}
-      options={artifactList}
+      options={options}
       size="small"
+      disabled={disabled}
       autoHighlight
       disableClearable
       multiple
@@ -31,9 +38,25 @@ function ArtifactSelector() {
           {option.id}
         </Box>
       )}
-      renderInput={(params) => <TextField {...params} disabled={isLimitReached} />}
+      renderInput={(params) => <TextField {...params} label={label} disabled={isLimitReached || disabled} />}
+      renderTags={(value: ArtifactData[], getTagProps) =>
+        value.map((option, index) => (
+          <Chip
+            icon={<ImageIcon id={option.id} folder={ImageFolder.Artifacts} iconStyle="h-6 w-6" />}
+            label={option.id}
+            size="small"
+            {...getTagProps({ index })}
+          />
+        ))
+      }
     />
   );
 }
+
+ArtifactSelector.defaultProps = {
+  disabled: false,
+  label: '',
+  className: '',
+};
 
 export default ArtifactSelector;

@@ -1,24 +1,25 @@
-import { PropsWithoutRef, useState } from 'react';
+import { PropsWithoutRef } from 'react';
 import { CharacterData } from '../../types/data';
-import { useDataContext } from '../contexts/dataContext';
 import ImageIcon, { ImageFolder } from './ImageIcon';
 
 interface CharacterDetailProp {
-  characterId: string;
+  data: CharacterData;
+  disabled?: boolean;
 }
 
-function CharacterDetail({ characterId }: PropsWithoutRef<CharacterDetailProp>) {
-  const { characterList } = useDataContext();
-  const [character] = useState<CharacterData>(characterList.find((char) => char.id === characterId) as CharacterData);
-
+function CharacterDetail({ data, disabled }: PropsWithoutRef<CharacterDetailProp>) {
   return (
-    <div className="flex">
-      <ImageIcon id={character.id} folder={ImageFolder.Characters} iconStyle="h-8 w-8" />
-      <span className="ml-2 mr-auto leading-8">{character.id}</span>
-      <ImageIcon id={character.element} folder={ImageFolder.Icons} iconStyle="h-8 w-8" />
-      <ImageIcon id={character.weaponType} folder={ImageFolder.Icons} iconStyle="h-8 w-8" />
+    <div className={`flex ${disabled ? 'opacity-50' : ''}`}>
+      <ImageIcon id={data.id} folder={ImageFolder.Characters} iconStyle="h-8 w-8" />
+      <span className="ml-2 mr-auto leading-8">{data.id}</span>
+      <ImageIcon id={data.element} folder={ImageFolder.Icons} iconStyle="h-8 w-8" />
+      <ImageIcon id={data.weaponType} folder={ImageFolder.Icons} iconStyle="h-8 w-8" />
     </div>
   );
 }
+
+CharacterDetail.defaultProps = {
+  disabled: false,
+};
 
 export default CharacterDetail;

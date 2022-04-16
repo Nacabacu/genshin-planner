@@ -7,15 +7,19 @@ export interface SelectorProps<T> {
   options: T[];
   folder: ImageFolder;
   clearOnSelect?: boolean;
+  disabled?: boolean;
   onChange?: (value: T) => void;
+  label?: string;
   className?: string;
 }
 
 function Selector<T extends ItemDataBase>({
   options,
   folder,
-  onChange,
   clearOnSelect,
+  disabled,
+  onChange,
+  label,
   className,
 }: PropsWithChildren<SelectorProps<T>>) {
   const [value, setValue] = useState<T | null>(null);
@@ -39,6 +43,7 @@ function Selector<T extends ItemDataBase>({
       }}
       options={options}
       size="small"
+      disabled={disabled}
       blurOnSelect
       autoHighlight
       disableClearable
@@ -53,7 +58,7 @@ function Selector<T extends ItemDataBase>({
       renderInput={(params) => (
         <TextField
           {...params}
-          label="Add Character..."
+          label={label}
           InputProps={{
             ...params.InputProps,
             startAdornment: value ? <ImageIcon id={value.id} folder={folder} iconStyle="h-8 w-8 mr-4" /> : null,
@@ -67,6 +72,8 @@ function Selector<T extends ItemDataBase>({
 Selector.defaultProps = {
   onChange: null,
   clearOnSelect: false,
+  disabled: false,
+  label: '',
   className: '',
 };
 

@@ -16,6 +16,7 @@ interface Data {
   materialConfig: MaterialConfig;
   selectedDataList: SelectedData[];
   addCharacter: (characterData: CharacterData) => void;
+  removeCharacter: (characterId: string) => void;
   updateSelectedData: (characterId: string, updatedData: Partial<SelectedData>) => void;
 }
 
@@ -25,9 +26,9 @@ export interface SelectedData {
   isTalentEnabled: boolean;
   isWeaponEnabled: boolean;
   isArtifactEnabled: boolean;
-  characterId: string;
-  weaponId?: string;
-  artifactIdList?: string[];
+  characterData: CharacterData;
+  weaponData?: WeaponData;
+  artifactDataList?: ArtifactData[];
 }
 
 const DataContext = createContext<Data | null>(null);
@@ -38,7 +39,7 @@ const defaultSelectedDataList: SelectedData[] = [
     isTalentEnabled: true,
     isWeaponEnabled: true,
     isArtifactEnabled: true,
-    characterId: 'klee',
+    characterData: _character[0] as CharacterData,
   },
 ];
 
@@ -54,16 +55,28 @@ function DataProvider(props: PropsWithChildren<{}>) {
         isTalentEnabled: false,
         isWeaponEnabled: false,
         isArtifactEnabled: false,
-        characterId: characterData.id,
+        characterData,
       };
       setSelectedDataList([...selectedDataList, newSelectedData]);
     },
     [selectedDataList],
   );
+
+  const removeCharacter = useCallback(
+    (characterId: string) => {
+      setSelectedDataList([
+        ...selectedDataList.filter((selectedData) => selectedData.characterData.id !== characterId),
+      ]);
+    },
+    [selectedDataList],
+  );
+
   const updateSelectedData = useCallback(
     (characterId: string, updatedData: Partial<SelectedData>) => {
       const newSelectedDataList = [...selectedDataList];
-      const selectedIndex = newSelectedDataList.findIndex((selectedData) => selectedData.characterId === characterId);
+      const selectedIndex = newSelectedDataList.findIndex(
+        (selectedData) => selectedData.characterData.id === characterId,
+      );
 
       if (selectedIndex < 0) return;
 
@@ -87,9 +100,10 @@ function DataProvider(props: PropsWithChildren<{}>) {
       materialConfig: _materialConfig as MaterialConfig,
       selectedDataList,
       addCharacter,
+      removeCharacter,
       updateSelectedData,
     }),
-    [selectedDataList, addCharacter, updateSelectedData],
+    [selectedDataList, addCharacter, removeCharacter, updateSelectedData],
   );
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;
