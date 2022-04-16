@@ -11,8 +11,8 @@ function App() {
       <Navbar />
       <div className="flex-grow bg-gray-300 pt-4 sm:px-8 md:px-16 lg:px-32 xl:px-48">
         <Routes>
-          <Route path="/" element={<Planning />} />
-          <Route path="/result" element={<Result />} />
+          <Route path={`${import.meta.env.VITE_BASE}/`} element={<Planning />} />
+          <Route path={`${import.meta.env.VITE_BASE}/result`} element={<Result />} />
         </Routes>
       </div>
       <Footer />

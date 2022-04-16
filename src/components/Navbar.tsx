@@ -9,11 +9,11 @@ interface Navigation {
 const repoName = 'https://github.com/Nacabacu/genshin-planner';
 const navigationList: Navigation[] = [
   {
-    path: '/',
+    path: `${import.meta.env.VITE_BASE}/`,
     name: 'Plan',
   },
   {
-    path: '/result',
+    path: `${import.meta.env.VITE_BASE}/result`,
     name: 'Result',
   },
 ];

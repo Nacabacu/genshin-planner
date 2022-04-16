@@ -18,8 +18,9 @@
     "baseUrl": "./src",
     "paths": {
       "@data/*": ["../data/*"]
-    }
+    },
+    "types": ["vite/client"]
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "types/**/*.d.ts"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "types/**/*.d.ts", "types/**/*.ts"],
   "references": [{ "path": "./tsconfig.vite.json" }]
 }
