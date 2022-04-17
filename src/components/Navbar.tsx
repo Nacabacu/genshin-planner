@@ -25,7 +25,7 @@ function Navbar() {
       to={navigation.path}
       key={navigation.name}
       className={`flex items-center px-4 text-gray-300 ${
-        pathname === navigation.path ? 'cursor-default bg-gray-800' : 'hover:bg-gray-800 hover:text-gray-200'
+        pathname === navigation.path ? 'cursor-default bg-gray-600' : 'hover:bg-gray-700 hover:text-gray-200'
       }`}
     >
       <span>{navigation.name}</span>
