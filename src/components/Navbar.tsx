@@ -1,5 +1,5 @@
 import { GitHub, LocalFireDepartment } from '@mui/icons-material';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 interface Navigation {
   path: string;
@@ -19,21 +19,24 @@ const navigationList: Navigation[] = [
 ];
 
 function Navbar() {
+  const { pathname } = useLocation();
   const navItem = navigationList.map((navigation) => (
     <Link
-      className="py-2 font-semibold uppercase tracking-wide text-gray-400 transition-colors hover:text-gray-300 sm:py-0 sm:pt-0"
       to={navigation.path}
       key={navigation.name}
+      className={`flex items-center px-4 text-gray-300 ${
+        pathname === navigation.path ? 'cursor-default bg-gray-800' : 'hover:bg-gray-800 hover:text-gray-200'
+      }`}
     >
-      {navigation.name}
+      <span>{navigation.name}</span>
     </Link>
   ));
 
   return (
-    <nav className="text-zinc400 flex flex-wrap items-center bg-gray-900  px-4 py-4 pt-4 sm:px-8 md:px-16 lg:px-32 xl:px-48">
-      <LocalFireDepartment className="h-7 w-7 text-red-600" />
-      <div className="ml-2 space-x-2">{navItem}</div>
-      <a href={repoName} target="tab" className="ml-auto h-7 w-7 text-gray-400 hover:text-gray-300">
+    <nav className="flex h-16 items-center bg-gray-900 px-2 sm:px-8 md:px-16 lg:px-32 xl:px-48">
+      <LocalFireDepartment className="h-8 w-8 text-red-600" />
+      <span className="ml-4 flex h-full">{navItem}</span>
+      <a href={repoName} target="tab" className="ml-auto h-8 w-8 text-gray-300 hover:text-gray-200">
         <GitHub />
       </a>
     </nav>
