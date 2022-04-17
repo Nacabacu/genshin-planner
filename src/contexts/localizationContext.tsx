@@ -2,6 +2,9 @@ import en_US from '@localization/en-US.json';
 import ja_JP from '@localization/ja-JP.json';
 import th_TH from '@localization/th-TH.json';
 import { createContext, PropsWithChildren, useContext, useEffect, useMemo, useState } from 'react';
+import useLocalStorage from '../hooks/useLocalStorage';
+
+const LOCALE_KEY = 'locale';
 
 export const enum Locale {
   English = 'en-US',
@@ -14,7 +17,7 @@ type LanguageDictionary = Record<Locale, LanguageDefinition>;
 
 interface Localization {
   locale: Locale;
-  setLocale: React.Dispatch<React.SetStateAction<Locale>>;
+  setLocale: (newValue: Locale) => void;
   resources: LanguageDefinition;
 }
 
@@ -24,11 +27,11 @@ export const supportedResources: LanguageDictionary = {
   [Locale.Thai]: th_TH,
 };
 
-const defaultLanguage = Locale.English;
+const defaultLanguage: Locale = Locale.English;
 const LocalizationContext = createContext<Localization | null>(null);
 
 function LocalizationProvider({ children }: PropsWithChildren<{}>) {
-  const [locale, setLocale] = useState(defaultLanguage);
+  const [locale, setLocale] = useLocalStorage<Locale>(LOCALE_KEY, defaultLanguage);
   const [resources, setResources] = useState(supportedResources[defaultLanguage]);
 
   useEffect(() => {
@@ -41,7 +44,7 @@ function LocalizationProvider({ children }: PropsWithChildren<{}>) {
       resources,
       setLocale,
     }),
-    [locale, resources],
+    [locale, resources, setLocale],
   );
 
   return <LocalizationContext.Provider value={value}>{children}</LocalizationContext.Provider>;

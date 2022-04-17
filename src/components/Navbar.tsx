@@ -23,7 +23,7 @@ const flagMap: Partial<Record<Locale, ReactNode>> = {
 
 function Navbar({ className }: PropsWithoutRef<NavbarProps>) {
   const { pathname } = useLocation();
-  const { resources, setLocale } = useLocalizationContext();
+  const { locale, resources, setLocale } = useLocalizationContext();
   const navigationList: Navigation[] = useMemo(
     () => [
       {
@@ -59,6 +59,7 @@ function Navbar({ className }: PropsWithoutRef<NavbarProps>) {
           <Dropdown
             items={flagItems}
             hideLabel
+            defaultItem={flagItems.find((item) => item === locale)}
             getStartAdornment={(item) => flagMap[item]}
             onSelect={(item) => {
               setLocale(item);

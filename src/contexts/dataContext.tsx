@@ -8,7 +8,18 @@ import { createContext, PropsWithChildren, useCallback, useContext, useMemo } fr
 import { ArtifactData, CharacterData, DomainData, MaterialConfig, MaterialData, WeaponData } from '../../types/data';
 import useLocalStorage from '../hooks/useLocalStorage';
 
-const SELECTED_DATA_LIST_KEY = 'genshin-planner-selectedDataList';
+const SELECTED_DATA_LIST_KEY = 'selectedDataList';
+
+export interface SelectedData {
+  isEnabled: boolean;
+  isAscendEnabled: boolean;
+  isTalentEnabled: boolean;
+  isWeaponEnabled: boolean;
+  isArtifactEnabled: boolean;
+  characterData: CharacterData;
+  weaponData?: WeaponData;
+  artifactDataList?: ArtifactData[];
+}
 
 interface Data {
   characterList: CharacterData[];
@@ -21,17 +32,6 @@ interface Data {
   addCharacter: (characterData: CharacterData) => void;
   removeCharacter: (characterId: string) => void;
   updateSelectedData: (characterId: string, updatedData: Partial<SelectedData>) => void;
-}
-
-export interface SelectedData {
-  isEnabled: boolean;
-  isAscendEnabled: boolean;
-  isTalentEnabled: boolean;
-  isWeaponEnabled: boolean;
-  isArtifactEnabled: boolean;
-  characterData: CharacterData;
-  weaponData?: WeaponData;
-  artifactDataList?: ArtifactData[];
 }
 
 const DataContext = createContext<Data | null>(null);
