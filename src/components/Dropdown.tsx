@@ -1,19 +1,23 @@
 import { ArrowDropDown } from '@mui/icons-material';
-import { PropsWithoutRef, useRef, useState } from 'react';
+import { PropsWithoutRef, ReactNode, useRef, useState } from 'react';
 import { useClickOutside } from '../hooks/element';
 
-export interface DropdownItem<T> {
-  item: T;
-  value: string;
-}
-
 export interface DropDownProps<T> {
-  items: DropdownItem<T>[];
-  onSelect: (selectedValue: string) => void;
+  items: T[];
+  onSelect: (selectedValue: T) => void;
+  hideLabel?: boolean;
+  getStartAdornment?: (item: T) => ReactNode;
+  getItemLabel?: (item: T) => string;
 }
 
-function Dropdown<T extends JSX.Element | string>({ items, onSelect }: PropsWithoutRef<DropDownProps<T>>) {
-  const [selectedItem, setSelectedItem] = useState<DropdownItem<T>>(items[0]);
+function Dropdown<T>({
+  items,
+  onSelect,
+  getStartAdornment,
+  hideLabel,
+  getItemLabel,
+}: PropsWithoutRef<DropDownProps<T>>) {
+  const [selectedItem, setSelectedItem] = useState<T>(items[0]);
   const [isMenuOpened, setIsMenuOpened] = useState(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
 
@@ -21,32 +25,47 @@ function Dropdown<T extends JSX.Element | string>({ items, onSelect }: PropsWith
     setIsMenuOpened(false);
   });
 
+  const getLabel = (item: T) => {
+    if (getItemLabel) return getItemLabel(item);
+
+    if (typeof item === 'string') return item;
+
+    throw Error('If the item is not string there should be getItemLabel provided');
+  };
+
+  const getFullLabel = (item: T) => (
+    <div className="flex items-center">
+      {getStartAdornment && <div className="flex h-6 w-6 items-center">{getStartAdornment(item)}</div>}
+      {!hideLabel && getLabel(selectedItem)}
+    </div>
+  );
+
   return (
     <div className="relative" ref={wrapperRef}>
       <button
         type="button"
-        className="flex items-center rounded bg-gray-700 p-2 pl-4 text-gray-300 hover:bg-gray-600 active:bg-gray-500"
+        className="flex rounded bg-gray-700 p-2 pl-4 text-gray-300 hover:bg-gray-600 active:bg-gray-500"
         onClick={() => setIsMenuOpened(!isMenuOpened)}
       >
-        {selectedItem.item}
+        {getFullLabel(selectedItem)}
         <ArrowDropDown className="ml-auto" />
       </button>
       {isMenuOpened && (
         <div className="absolute right-0 mt-1 flex flex-col rounded bg-gray-700 py-1 text-gray-300">
           {items.map((item) => (
             <button
-              key={item.value}
+              key={getLabel(item)}
               type="button"
               className="px-6 py-2 hover:bg-gray-600 active:bg-gray-500"
               onClick={() => {
-                if (item.value === selectedItem.value) return;
+                if (item === selectedItem) return;
 
                 setSelectedItem(item);
-                onSelect(item.value);
+                onSelect(item);
                 setIsMenuOpened(false);
               }}
             >
-              {item.item}
+              {getFullLabel(item)}
             </button>
           ))}
         </div>

@@ -1,9 +1,9 @@
 import { LocalFireDepartment } from '@mui/icons-material';
 import Flags from 'country-flag-icons/react/3x2';
-import { PropsWithoutRef, useMemo } from 'react';
+import { PropsWithoutRef, ReactNode, useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Locale, useLocalizationContext } from '../contexts/localizationContext';
-import Dropdown, { DropdownItem } from './Dropdown';
+import Dropdown from './Dropdown';
 
 interface Navigation {
   path: string;
@@ -14,32 +14,12 @@ interface NavbarProps {
   className?: string;
 }
 
-const flagItems: DropdownItem<JSX.Element>[] = [
-  {
-    item: (
-      <span className="flex h-6 w-6 items-center">
-        <Flags.US />
-      </span>
-    ),
-    value: Locale.English,
-  },
-  {
-    item: (
-      <span className="flex h-6 w-6 items-center">
-        <Flags.JP />
-      </span>
-    ),
-    value: Locale.Japanese,
-  },
-  {
-    item: (
-      <span className="flex h-6 w-6 items-center">
-        <Flags.TH />
-      </span>
-    ),
-    value: Locale.Thai,
-  },
-];
+const flagItems: Locale[] = [Locale.English, Locale.Japanese, Locale.Thai];
+const flagMap: Partial<Record<Locale, ReactNode>> = {
+  [Locale.English]: <Flags.US />,
+  [Locale.Japanese]: <Flags.JP />,
+  [Locale.Thai]: <Flags.TH />,
+};
 
 function Navbar({ className }: PropsWithoutRef<NavbarProps>) {
   const { pathname } = useLocation();
@@ -78,8 +58,10 @@ function Navbar({ className }: PropsWithoutRef<NavbarProps>) {
         <span className="ml-auto">
           <Dropdown
             items={flagItems}
-            onSelect={(value) => {
-              setLocale(value as Locale);
+            hideLabel
+            getStartAdornment={(item) => flagMap[item]}
+            onSelect={(item) => {
+              setLocale(item);
             }}
           />
         </span>
