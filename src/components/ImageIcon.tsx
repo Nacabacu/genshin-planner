@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'react';
+import { PropsWithoutRef } from 'react';
 
 interface ImageIconProps {
   id: string;
@@ -14,7 +14,7 @@ export enum ImageFolder {
   Icons = 'icons',
 }
 
-function ImageIcon({ id, folder, iconStyle }: PropsWithChildren<ImageIconProps>) {
+function ImageIcon({ id, folder, iconStyle }: PropsWithoutRef<ImageIconProps>) {
   return <img loading="lazy" src={`./images/${folder}/${id}.png`} alt={id} className={`${iconStyle}`} />;
 }
 
