@@ -64,13 +64,16 @@ function Autosuggest<T>({
             <button
               key={getLabel(item)}
               type="button"
-              className="px-6 py-2 hover:bg-gray-600 active:bg-gray-500"
+              className={`active:bg-gray-500" px-6 py-2 hover:bg-gray-600 ${
+                getLabel(selectedItem) === getLabel(item) ? 'bg-cyan-600 hover:bg-cyan-500' : ''
+              }`}
               onClick={() => {
+                setIsMenuOpened(false);
+
                 if (item === selectedItem) return;
 
                 setSelectedItem(item);
                 onSelect(item);
-                setIsMenuOpened(false);
               }}
             >
               {getFullLabel(item)}
