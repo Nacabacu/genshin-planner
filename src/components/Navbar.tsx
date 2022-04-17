@@ -62,7 +62,7 @@ function Navbar({ className }: PropsWithoutRef<NavbarProps>) {
     <Link
       to={navigation.path}
       key={navigation.name}
-      className={`flex items-center px-4 ${
+      className={`flex items-center px-4 capitalize ${
         pathname === navigation.path ? 'cursor-default bg-gray-800' : 'hover:bg-gray-700 hover:text-gray-200'
       }`}
     >
