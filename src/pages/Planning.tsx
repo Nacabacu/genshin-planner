@@ -1,3 +1,5 @@
+import Switch from '../components/Switch';
+
 function Planning() {
   // const { characterList, selectedDataList } = useDataContext();
   // const [selectableCharList, setSelectableCharList] = useState<CharacterData[]>([]);
@@ -10,7 +12,7 @@ function Planning() {
   //   setSelectableCharList(selectable);
   // }, [characterList, selectedDataList]);
 
-  return <div />;
+  return <Switch onChange={(value) => console.log(value)} />;
 }
 
 export default Planning;
