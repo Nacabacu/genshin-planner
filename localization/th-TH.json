@@ -1,6 +1,10 @@
 {
   "plan": "วางแผน",
   "result": "ผลลัพธ์",
+  "default_autosuggest_label": "เลือกไอเทม...",
+  "traveler_anemo": "Traveler (Anemo)",
+  "traveler_geo": "Traveler (Geo)",
+  "traveler_electro": "Traveler (Electro)",
   "bit_of_aerosiderite": "Bit of Aerosiderite",
   "boreal_wolfs_broken_fang": "Boreal Wolf's Broken Fang",
   "boreal_wolfs_cracked_tooth": "Boreal Wolf's Cracked Tooth",

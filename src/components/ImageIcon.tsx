@@ -2,11 +2,11 @@ import { PropsWithoutRef } from 'react';
 
 interface ImageIconProps {
   id: string;
-  folder: ImageFolder;
+  type: IconType;
   className?: string;
 }
 
-export enum ImageFolder {
+export enum IconType {
   Characters = 'characters',
   Artifacts = 'artifacts',
   Materials = 'materials',
@@ -14,8 +14,8 @@ export enum ImageFolder {
   Icons = 'icons',
 }
 
-function ImageIcon({ id, folder, className }: PropsWithoutRef<ImageIconProps>) {
-  return <img loading="lazy" src={`./images/${folder}/${id}.png`} alt={id} className={`max-w-none ${className}`} />;
+function ImageIcon({ id, type, className }: PropsWithoutRef<ImageIconProps>) {
+  return <img loading="lazy" src={`./images/${type}/${id}.png`} alt={id} className={`max-w-none ${className}`} />;
 }
 
 ImageIcon.defaultProps = {
