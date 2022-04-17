@@ -46,8 +46,7 @@ const defaultSelectedDataList: SelectedData[] = [
   },
 ];
 
-function DataProvider(props: PropsWithChildren<{}>) {
-  const { children } = props;
+function DataProvider({ children }: PropsWithChildren<{}>) {
   const [selectedDataList, setSelectedDataList] = useLocalStorage<SelectedData[]>(
     SELECTED_DATA_LIST_KEY,
     defaultSelectedDataList,

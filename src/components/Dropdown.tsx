@@ -25,19 +25,19 @@ function Dropdown<T extends JSX.Element | string>({ items, onSelect }: PropsWith
     <div className="relative" ref={wrapperRef}>
       <button
         type="button"
-        className="inline-flex items-center rounded bg-gray-600 p-2 text-gray-300 hover:bg-gray-700 active:bg-gray-800"
+        className="flex items-center rounded bg-gray-700 p-2 pl-4 text-gray-300 hover:bg-gray-600 active:bg-gray-500"
         onClick={() => setIsMenuOpened(!isMenuOpened)}
       >
         {selectedItem.item}
         <ArrowDropDown className="ml-auto" />
       </button>
       {isMenuOpened && (
-        <div className="absolute right-0 mt-1 flex flex-col rounded bg-gray-600 py-1 text-gray-300">
+        <div className="absolute right-0 mt-1 flex flex-col rounded bg-gray-700 py-1 text-gray-300">
           {items.map((item) => (
             <button
               key={item.value}
               type="button"
-              className="px-6 py-2 hover:bg-gray-700 active:bg-gray-800"
+              className="px-6 py-2 hover:bg-gray-600 active:bg-gray-500"
               onClick={() => {
                 if (item.value === selectedItem.value) return;
 

@@ -1,5 +1,21 @@
-function Footer() {
-  return <div className="h-16 bg-gray-900 text-white sm:px-16 md:px-32 lg:px-48 xl:px-60">Footer</div>;
+import { GitHub } from '@mui/icons-material';
+import { PropsWithoutRef } from 'react';
+
+const repoName = 'https://github.com/Nacabacu/genshin-planner';
+interface FooterProps {
+  className?: string;
+}
+
+function Footer({ className }: PropsWithoutRef<FooterProps>) {
+  return (
+    <div className={className}>
+      <div className="flex h-12 items-center">
+        <a href={repoName} target="tab" className="ml-auto flex h-8 w-8 items-center hover:text-gray-200">
+          <GitHub />
+        </a>
+      </div>
+    </div>
+  );
 }
 
 export default Footer;

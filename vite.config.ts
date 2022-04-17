@@ -6,7 +6,10 @@ import { defineConfig } from 'vite';
 export default defineConfig({
   base: '',
   resolve: {
-    alias: [{ find: '@data', replacement: path.resolve(__dirname, './data') }],
+    alias: [
+      { find: '@data', replacement: path.resolve(__dirname, './data') },
+      { find: '@localization', replacement: path.resolve(__dirname, './localization') },
+    ],
   },
   plugins: [react()],
   build: {

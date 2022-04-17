@@ -17,7 +17,8 @@
     "jsx": "react-jsx",
     "baseUrl": "./src",
     "paths": {
-      "@data/*": ["../data/*"]
+      "@data/*": ["../data/*"],
+      "@localization/*": ["../localization/*"]
     },
     "types": ["vite/client"]
   },
