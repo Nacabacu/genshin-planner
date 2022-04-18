@@ -1,7 +1,7 @@
 import { ArrowDropDown } from '@mui/icons-material';
 import { PropsWithoutRef, ReactNode, useCallback, useEffect, useRef, useState } from 'react';
 import { useLocalizationContext } from '../contexts/localizationContext';
-import { useClickOutside } from '../hooks/element';
+import { useMouseDownOutside } from '../hooks/element';
 
 interface AutosuggestProps<T> {
   items: T[];
@@ -43,7 +43,7 @@ function Autosuggest<T>({
     [getItemLabel],
   );
 
-  useClickOutside(wrapperRef, () => {
+  useMouseDownOutside(wrapperRef, () => {
     setIsMenuOpened(false);
   });
 
@@ -101,7 +101,7 @@ function Autosuggest<T>({
         />
       </div>
       {isMenuOpened && (
-        <div className="absolute z-10 mt-1 flex max-h-60 w-full flex-col overflow-scroll rounded bg-gray-700 py-1 text-gray-300">
+        <div className="absolute z-10 mt-1 flex max-h-60 w-full flex-col overflow-scroll rounded bg-gray-700 py-1 text-gray-300 shadow-xl">
           {items
             .filter(
               (item) => hasSelected.current || getLabel(item).toLowerCase().includes(filterString.toLocaleLowerCase()),

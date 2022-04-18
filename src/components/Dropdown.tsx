@@ -1,6 +1,6 @@
 import { ArrowDropDown } from '@mui/icons-material';
 import { PropsWithoutRef, ReactNode, useRef, useState } from 'react';
-import { useClickOutside } from '../hooks/element';
+import { useMouseDownOutside } from '../hooks/element';
 
 export interface DropDownProps<T> {
   items: T[];
@@ -23,7 +23,7 @@ function Dropdown<T>({
   const [isMenuOpened, setIsMenuOpened] = useState(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
 
-  useClickOutside(wrapperRef, () => {
+  useMouseDownOutside(wrapperRef, () => {
     setIsMenuOpened(false);
   });
 

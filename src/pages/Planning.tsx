@@ -26,6 +26,7 @@ function Planning() {
           onSelect={(value) => {
             addCharacter(value);
           }}
+          resetAfterSelect
           placeholder={resources.add_character_placeholder}
           getStartAdornment={(item) => <ImageIcon id={item.id} type={IconType.Characters} className="h-6 w-6" />}
           getItemLabel={(item) => resources[item.id as keyof LanguageDefinition] as string}

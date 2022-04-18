@@ -59,7 +59,7 @@ function Navbar({ className }: PropsWithoutRef<NavbarProps>) {
           <Dropdown
             items={flagItems}
             hideLabel
-            defaultItem={flagItems.find((item) => item === locale)}
+            defaultItem={flagItems.find((item) => item === locale) || flagItems[0]}
             getStartAdornment={(item) => flagMap[item]}
             onSelect={(item) => {
               setLocale(item);

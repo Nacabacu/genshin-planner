@@ -1,6 +1,6 @@
 import { RefObject, useEffect } from 'react';
 
-export function useClickOutside<T extends HTMLElement>(ref: RefObject<T>, onClickOutside: () => void) {
+export function useMouseDownOutside<T extends HTMLElement>(ref: RefObject<T>, onClickOutside: () => void) {
   useEffect(() => {
     function onDocumentClick(event: MouseEvent) {
       if (!ref.current || !event.target) return;
@@ -10,10 +10,10 @@ export function useClickOutside<T extends HTMLElement>(ref: RefObject<T>, onClic
       }
     }
 
-    document.addEventListener('click', onDocumentClick);
+    document.addEventListener('mousedown', onDocumentClick);
 
     return () => {
-      document.removeEventListener('click', onDocumentClick);
+      document.removeEventListener('mousedown', onDocumentClick);
     };
   }, [ref, onClickOutside]);
 }
