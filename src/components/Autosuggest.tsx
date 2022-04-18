@@ -31,6 +31,7 @@ function Autosuggest<T>({
   const hasSelected = useRef(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const wrapperRef = useRef<HTMLDivElement>(null);
+  const popupRef = useRef<HTMLDivElement>(null);
   const getLabel = useCallback(
     (item: T | null) => {
       if (!item) return '';
@@ -48,9 +49,11 @@ function Autosuggest<T>({
   });
 
   useEffect(() => {
-    if (isMenuOpened) return;
+    if (isMenuOpened) {
+      const selectedElement = popupRef.current?.querySelector(`[data-name="${getLabel(selectedItem)}"]`);
 
-    if (selectedItem) {
+      selectedElement?.scrollIntoView();
+    } else if (selectedItem) {
       setFilterString(getLabel(selectedItem));
     } else {
       setFilterString('');
@@ -68,7 +71,7 @@ function Autosuggest<T>({
         onClick={() => inputRef.current?.focus()}
       >
         {getStartAdornment && selectedItem && (
-          <div className="mr-2 flex h-6 w-6 items-center">{getStartAdornment(selectedItem)}</div>
+          <div className="mr-4 flex h-6 w-6 items-center">{getStartAdornment(selectedItem)}</div>
         )}
         <input
           type="text"
@@ -101,7 +104,10 @@ function Autosuggest<T>({
         />
       </div>
       {isMenuOpened && (
-        <div className="absolute z-10 mt-1 flex max-h-60 w-full flex-col overflow-scroll rounded bg-gray-700 py-1 text-gray-300 shadow-xl">
+        <div
+          className="absolute z-10 mt-1 flex max-h-60 w-full flex-col overflow-scroll rounded bg-gray-700 py-1 text-gray-300 shadow-xl"
+          ref={popupRef}
+        >
           {items
             .filter(
               (item) => hasSelected.current || getLabel(item).toLowerCase().includes(filterString.toLocaleLowerCase()),
@@ -112,7 +118,8 @@ function Autosuggest<T>({
                 <button
                   key={label}
                   type="button"
-                  className={`active:bg-gray-500" px-6 py-2 hover:bg-gray-600 ${
+                  data-name={label}
+                  className={`active:bg-gray-500" px-4 py-2 hover:bg-gray-600 ${
                     getLabel(selectedItem) === label ? 'bg-cyan-600 hover:bg-cyan-500' : ''
                   }`}
                   onClick={() => {
@@ -128,7 +135,7 @@ function Autosuggest<T>({
                 >
                   <div className="flex items-center">
                     {getStartAdornment && (
-                      <span className="mr-2 flex h-6 w-6 items-center">{getStartAdornment(item)}</span>
+                      <span className="mr-4 flex h-6 w-6 items-center">{getStartAdornment(item)}</span>
                     )}
                     <span className="overflow-hidden whitespace-nowrap">{getLabel(item)}</span>
                   </div>

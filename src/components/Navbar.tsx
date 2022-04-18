@@ -52,7 +52,7 @@ function Navbar({ className }: PropsWithoutRef<NavbarProps>) {
 
   return (
     <nav className={className}>
-      <div className="flex h-16 items-center ">
+      <div className="flex h-16 items-center">
         <LocalFireDepartment className="!h-8 !w-8 text-cyan-600" />
         <span className="ml-4 flex h-full">{navItem}</span>
         <span className="ml-auto">

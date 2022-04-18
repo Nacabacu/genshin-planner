@@ -53,7 +53,7 @@ function Dropdown<T>({
         <ArrowDropDown className="ml-auto" />
       </button>
       {isMenuOpened && (
-        <div className="absolute right-0 mt-1 flex w-full flex-col rounded bg-gray-700 py-1 text-gray-300">
+        <div className="absolute right-0 z-10 mt-1 flex w-full flex-col rounded bg-gray-700 py-1 text-gray-300 shadow-xl">
           {items.map((item) => (
             <button
               key={getLabel(item)}

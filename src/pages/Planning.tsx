@@ -33,7 +33,7 @@ function Planning() {
         />
       </div>
       <Autosuggest
-        items={selectableCharList}
+        items={characterList}
         onSelect={(value) => {
           addCharacter(value);
         }}
