@@ -57,17 +57,12 @@ function Autosuggest<T>({
     }
   }, [isMenuOpened, getLabel, selectedItem, setFilterString]);
 
-  const getFullLabel = (item: T) => (
-    <div className="flex items-center">
-      {getStartAdornment && <span className="mr-2 flex h-6 w-6 items-center">{getStartAdornment(item)}</span>}
-      <span className="overflow-hidden whitespace-nowrap">{getLabel(item)}</span>
-    </div>
-  );
-
   return (
     <div className={`relative ${className}`} ref={wrapperRef}>
       <div
-        className={`flex cursor-text rounded bg-gray-700 p-2 pl-4 text-gray-300 ${isHover ? 'bg-gray-600' : ''}`}
+        className={`inline-flex w-full cursor-text rounded bg-gray-700 p-2 pl-4 text-gray-300 ${
+          isHover ? 'bg-gray-600' : ''
+        }`}
         onMouseOver={() => setIsHover(true)}
         onMouseOut={() => setIsHover(false)}
         onClick={() => inputRef.current?.focus()}
@@ -77,7 +72,7 @@ function Autosuggest<T>({
         )}
         <input
           type="text"
-          className={`h-6 flex-grow overflow-hidden border-none bg-gray-700 p-0 hover:bg-gray-600 focus:outline-none focus:ring-0 ${
+          className={`h-6 w-0 flex-grow overflow-hidden border-none bg-gray-700 p-0 hover:bg-gray-600 focus:outline-none focus:ring-0 ${
             isHover ? 'bg-gray-600' : ''
           }`}
           value={filterString}
@@ -131,7 +126,12 @@ function Autosuggest<T>({
                     onSelect(item);
                   }}
                 >
-                  {getFullLabel(item)}
+                  <div className="flex items-center">
+                    {getStartAdornment && (
+                      <span className="mr-2 flex h-6 w-6 items-center">{getStartAdornment(item)}</span>
+                    )}
+                    <span className="overflow-hidden whitespace-nowrap">{getLabel(item)}</span>
+                  </div>
                 </button>
               );
             })}
