@@ -2,7 +2,7 @@
   "plan": "วางแผน",
   "result": "ผลลัพธ์",
   "default_autosuggest_label": "เลือกไอเทม...",
-  "add_character_label": "เพิ่มตัวละคร",
+  "add_character_placeholder": "เพิ่มตัวละคร",
   "traveler_anemo": "Traveler (Anemo)",
   "traveler_geo": "Traveler (Geo)",
   "traveler_electro": "Traveler (Electro)",

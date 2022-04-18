@@ -5,7 +5,7 @@ import { useClickOutside } from '../hooks/element';
 export interface DropDownProps<T> {
   items: T[];
   onSelect: (selectedValue: T) => void;
-  defaultItem?: T;
+  defaultItem: T;
   hideLabel?: boolean;
   getStartAdornment?: (item: T) => ReactNode;
   getItemLabel?: (item: T) => string;
@@ -19,7 +19,7 @@ function Dropdown<T>({
   hideLabel,
   getItemLabel,
 }: PropsWithoutRef<DropDownProps<T>>) {
-  const [selectedItem, setSelectedItem] = useState<T>(defaultItem || items[0]);
+  const [selectedItem, setSelectedItem] = useState<T>(defaultItem);
   const [isMenuOpened, setIsMenuOpened] = useState(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
 
