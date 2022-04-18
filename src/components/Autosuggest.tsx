@@ -7,7 +7,9 @@ interface AutosuggestProps<T> {
   items: T[];
   onSelect: (selectedValue: T) => void;
   className?: string;
+  defaultLabel?: string;
   defaultItem?: T;
+  resetAfterSelect?: boolean;
   getStartAdornment?: (item: T) => ReactNode;
   getItemLabel?: (item: T) => string;
 }
@@ -16,6 +18,8 @@ function Autosuggest<T>({
   items,
   onSelect,
   className,
+  defaultLabel,
+  resetAfterSelect,
   getStartAdornment,
   getItemLabel,
 }: PropsWithoutRef<AutosuggestProps<T>>) {
@@ -38,7 +42,7 @@ function Autosuggest<T>({
   };
 
   const getFullLabel = (item: T | null) => {
-    if (!item) return <div>{resources.default_autosuggest_label}</div>;
+    if (!item) return <div>{defaultLabel || resources.default_autosuggest_label}</div>;
 
     return (
       <div className="flex items-center">
@@ -72,7 +76,7 @@ function Autosuggest<T>({
 
                 if (item === selectedItem) return;
 
-                setSelectedItem(item);
+                setSelectedItem(resetAfterSelect ? null : item);
                 onSelect(item);
               }}
             >
