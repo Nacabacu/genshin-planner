@@ -27,7 +27,7 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
   getStartAdornment,
   getItemLabel,
 }: PropsWithoutRef<AutosuggestProps<T, Multiple>>) {
-  const [value, setValue] = useState<ValueType<T, Multiple> | null>(null);
+  const [value, setValue] = useState<T | T[] | null>(null);
   const [filterString, setFilterString] = useState('');
   const [isMenuOpened, setIsMenuOpened] = useState(false);
   const [isHover, setIsHover] = useState(false);
@@ -48,31 +48,33 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
     },
     [getItemLabel],
   );
-  const getSelectedItem = useCallback(() => {
-    if (!value) return null;
-    if (multiple) return value as T[];
 
-    return value as T;
-  }, [value, multiple]);
+  const openMenu = () => {
+    setIsMenuOpened(true);
+    inputRef.current?.select();
+  };
 
-  useMouseDownOutside(wrapperRef, () => {
+  const closeMenu = (newValue?: T | T[] | null) => {
     setIsMenuOpened(false);
-  });
+    const currentValue = newValue || value;
 
-  useEffect(() => {
-    const selectedItem = getSelectedItem();
-
-    if (isMenuOpened) {
-      const item = Array.isArray(selectedItem) ? selectedItem[0] : selectedItem;
-      const selectedElement = popupRef.current?.querySelector(`[data-name="${getLabel(item)}"]`);
-
-      selectedElement?.scrollIntoView();
-    } else if (value && !multiple) {
-      setFilterString(getLabel(value as T));
+    if (currentValue && !Array.isArray(currentValue)) {
+      setFilterString(getLabel(currentValue));
     } else {
       setFilterString('');
     }
-  }, [isMenuOpened, getLabel, value, setFilterString, getSelectedItem, multiple]);
+  };
+
+  useMouseDownOutside(wrapperRef, closeMenu);
+
+  useEffect(() => {
+    if (!isMenuOpened || !value) return;
+
+    const item = Array.isArray(value) ? value[0] : value;
+    const selectedElement = popupRef.current?.querySelector(`[data-name="${getLabel(item)}"]`);
+
+    selectedElement?.scrollIntoView();
+  }, [isMenuOpened, value, getLabel]);
 
   return (
     <div className={`relative ${className}`} ref={wrapperRef}>
@@ -97,9 +99,11 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
             hasSelected.current = false;
             setFilterString(data.target.value);
           }}
-          onFocus={(event) => {
-            setIsMenuOpened(true);
-            event.target.select();
+          onFocus={() => {
+            if (value) {
+              hasSelected.current = true;
+            }
+            openMenu();
           }}
           placeholder={placeholder || resources.default_autosuggest_label}
           ref={inputRef}
@@ -108,9 +112,9 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
           className="ml-auto cursor-pointer hover:text-gray-200"
           onClick={(event) => {
             if (isMenuOpened) {
-              setIsMenuOpened(false);
+              closeMenu();
             } else {
-              inputRef.current?.focus();
+              openMenu();
             }
 
             event.stopPropagation();
@@ -128,10 +132,9 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
             )
             .map((item) => {
               const label = getLabel(item);
-              const selectedItem = getSelectedItem();
-              const isSelected = Array.isArray(selectedItem)
-                ? selectedItem.find((i) => getLabel(i) === label)
-                : getLabel(selectedItem) === label;
+              const isSelected = Array.isArray(value)
+                ? value.find((i) => getLabel(i) === label)
+                : getLabel(value) === label;
 
               return (
                 <button
@@ -142,24 +145,29 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
                     isSelected ? 'bg-cyan-600 hover:bg-cyan-500' : ''
                   }`}
                   onClick={() => {
-                    setIsMenuOpened(false);
-                    hasSelected.current = true;
-
                     let newValue: ValueType<T, Multiple>;
 
-                    if (Array.isArray(selectedItem)) {
-                      if (selectedItem.includes(item)) return;
-                      newValue = [...selectedItem, item] as ValueType<T, Multiple>;
+                    if (Array.isArray(value)) {
+                      if (value.includes(item)) closeMenu();
+                      newValue = [...value, item] as ValueType<T, Multiple>;
                     } else if (multiple) {
                       newValue = [item] as ValueType<T, Multiple>;
                     } else {
-                      if (item === (selectedItem as T)) return;
+                      if (item === value) closeMenu();
                       newValue = item as ValueType<T, Multiple>;
                     }
 
-                    setValue(resetAfterSelect ? null : newValue);
-                    setFilterString(multiple || resetAfterSelect ? '' : getLabel(item));
                     onSelect(newValue);
+
+                    if (resetAfterSelect) {
+                      setValue(null);
+                      setFilterString('');
+                      closeMenu();
+                    } else {
+                      setValue(newValue);
+                      setFilterString(multiple ? '' : getLabel(item));
+                      closeMenu(newValue);
+                    }
                   }}
                 >
                   <div className="flex items-center">
