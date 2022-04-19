@@ -1,8 +1,10 @@
 {
   "plan": "Plan",
   "result": "result",
-  "default_autosuggest_label": "Select item...",
+  "default_autosuggest_label": "Select item",
   "add_character_placeholder": "Add character",
+  "select_weapon_placeholder": "Select weapon",
+  "select_artifacts_placeholder": "Select artifacts",
   "traveler_anemo": "Traveler (Anemo)",
   "traveler_geo": "Traveler (Geo)",
   "traveler_electro": "Traveler (Electro)",

@@ -6,7 +6,7 @@ import { useDataContext } from '../contexts/dataContext';
 import { LanguageDefinition, useLocalizationContext } from '../contexts/localizationContext';
 
 function Planning() {
-  const { characterList, selectedDataList, addCharacter, weaponList } = useDataContext();
+  const { characterList, weaponList, artifactList, selectedDataList, addCharacter } = useDataContext();
   const { resources } = useLocalizationContext();
   const [selectableCharList, setSelectableCharList] = useState<CharacterData[]>([]);
 
@@ -54,6 +54,18 @@ function Planning() {
           />
         </div>
         <div className="flex-1">Test</div>
+      </div>
+      <div className="mt-10 w-80">
+        <Autosuggest
+          items={artifactList}
+          onSelect={(value) => {
+            console.log(value);
+          }}
+          multiple
+          placeholder={resources.add_character_placeholder}
+          getStartAdornment={(item) => <ImageIcon id={item.id} type={IconType.Artifacts} className="h-6 w-6" />}
+          getItemLabel={(item) => resources[item.id as keyof LanguageDefinition] as string}
+        />
       </div>
     </>
   );
