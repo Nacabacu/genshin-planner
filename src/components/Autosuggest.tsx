@@ -31,7 +31,7 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
   getItemLabel,
 }: PropsWithoutRef<AutosuggestProps<T, Multiple>>) {
   const [value, setValue] = useState<T | T[] | null>(null);
-  const [filterString, setFilterString] = useState('');
+  const [inputValue, setInputValue] = useState('');
   const [isMenuOpened, setIsMenuOpened] = useState(false);
   const [isHover, setIsHover] = useState(false);
   const { resources } = useLocalizationContext();
@@ -62,9 +62,9 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
     const currentValue = newValue || value;
 
     if (currentValue && !Array.isArray(currentValue)) {
-      setFilterString(getLabel(currentValue));
+      setInputValue(getLabel(currentValue));
     } else {
-      setFilterString('');
+      setInputValue('');
     }
   };
 
@@ -78,6 +78,12 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
 
     selectedElement?.scrollIntoView();
   }, [isMenuOpened, value, getLabel, multiple]);
+
+  useEffect(() => {
+    if (!Array.isArray(value)) {
+      setInputValue(getLabel(value));
+    }
+  }, [resources, getLabel, value]);
 
   const renderInputPrefix = () => {
     if (!getStartAdornment || !value) return null;
@@ -112,10 +118,10 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
         className={`h-6 w-0 flex-grow overflow-hidden border-none bg-gray-700 p-0 hover:bg-gray-600 focus:outline-none focus:ring-0 ${
           isHover ? 'bg-gray-600' : ''
         }`}
-        value={filterString}
+        value={inputValue}
         onChange={(data) => {
           hasSelected.current = false;
-          setFilterString(data.target.value);
+          setInputValue(data.target.value);
 
           if (!isMenuOpened) openMenu();
         }}
@@ -147,7 +153,7 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
 
   const renderItems = () => {
     const filteredItems = items.filter(
-      (item) => hasSelected.current || getLabel(item).toLowerCase().includes(filterString.toLocaleLowerCase()),
+      (item) => hasSelected.current || getLabel(item).toLowerCase().includes(inputValue.toLocaleLowerCase()),
     );
 
     if (filteredItems.length > 0) {
@@ -188,11 +194,11 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
 
               if (resetAfterSelect) {
                 setValue(null);
-                setFilterString('');
+                setInputValue('');
                 closeMenu();
               } else {
                 setValue(newValue);
-                setFilterString(multiple ? '' : getLabel(item));
+                setInputValue(multiple ? '' : getLabel(item));
                 closeMenu(newValue);
 
                 if (multiple && (newValue as T[]).length < maxItem) {
