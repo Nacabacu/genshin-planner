@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { CharacterData } from '../../types/data';
 import Autosuggest from '../components/Autosuggest';
 import ImageIcon, { IconType } from '../components/ImageIcon';
+import Pill from '../components/Pill';
 import { useDataContext } from '../contexts/dataContext';
 import { LanguageDefinition, useLocalizationContext } from '../contexts/localizationContext';
 
@@ -28,7 +29,7 @@ function Planning() {
           }}
           resetAfterSelect
           placeholder={resources.add_character_placeholder}
-          getStartAdornment={(item) => <ImageIcon id={item.id} type={IconType.Characters} className="h-6 w-6" />}
+          getStartAdornment={(item) => <ImageIcon id={item.id} type={IconType.Characters} />}
           getItemLabel={(item) => resources[item.id as keyof LanguageDefinition] as string}
         />
       </div>
@@ -38,7 +39,7 @@ function Planning() {
           addCharacter(value);
         }}
         placeholder={resources.add_character_placeholder}
-        getStartAdornment={(item) => <ImageIcon id={item.id} type={IconType.Characters} className="h-6 w-6" />}
+        getStartAdornment={(item) => <ImageIcon id={item.id} type={IconType.Characters} />}
         getItemLabel={(item) => resources[item.id as keyof LanguageDefinition] as string}
         className="mt-10"
       />
@@ -49,7 +50,7 @@ function Planning() {
             onSelect={(value) => {
               console.log(value);
             }}
-            getStartAdornment={(item) => <ImageIcon id={item.id} type={IconType.Weapons} className="h-6 w-6" />}
+            getStartAdornment={(item) => <ImageIcon id={item.id} type={IconType.Weapons} />}
             getItemLabel={(item) => resources[item.id as keyof LanguageDefinition] as string}
           />
         </div>
@@ -62,10 +63,16 @@ function Planning() {
             console.log(value);
           }}
           multiple
+          maxItem={3}
           placeholder={resources.add_character_placeholder}
-          getStartAdornment={(item) => <ImageIcon id={item.id} type={IconType.Artifacts} className="h-6 w-6" />}
+          getStartAdornment={(item) => <ImageIcon id={item.id} type={IconType.Artifacts} />}
           getItemLabel={(item) => resources[item.id as keyof LanguageDefinition] as string}
         />
+      </div>
+      <div className="mt-10">
+        <Pill startAdornment={<ImageIcon id="klee" type={IconType.Characters} />} />
+        <Pill label="123" deletable startAdornment={<ImageIcon id="klee" type={IconType.Characters} />} />
+        <Pill label="123" startAdornment={<ImageIcon id="klee" type={IconType.Characters} />} />
       </div>
     </>
   );

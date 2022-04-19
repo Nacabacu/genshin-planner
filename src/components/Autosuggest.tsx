@@ -2,6 +2,7 @@ import { ArrowDropDown } from '@mui/icons-material';
 import { PropsWithoutRef, ReactNode, useCallback, useEffect, useRef, useState } from 'react';
 import { useLocalizationContext } from '../contexts/localizationContext';
 import { useMouseDownOutside } from '../hooks/element';
+import Pill from './Pill';
 
 interface AutosuggestProps<T, Multiple extends boolean | undefined = undefined> {
   items: T[];
@@ -10,6 +11,7 @@ interface AutosuggestProps<T, Multiple extends boolean | undefined = undefined> 
   placeholder?: string;
   defaultItem?: ValueType<T, Multiple>;
   multiple?: Multiple;
+  maxItem?: number;
   resetAfterSelect?: boolean;
   getStartAdornment?: (item: T) => ReactNode;
   getItemLabel?: (item: T) => string;
@@ -23,6 +25,7 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
   className,
   placeholder,
   multiple,
+  maxItem = items.length,
   resetAfterSelect,
   getStartAdornment,
   getItemLabel,
@@ -68,13 +71,75 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
   useMouseDownOutside(wrapperRef, closeMenu);
 
   useEffect(() => {
-    if (!isMenuOpened || !value) return;
+    if (!isMenuOpened || !value || multiple) return;
 
     const item = Array.isArray(value) ? value[0] : value;
     const selectedElement = popupRef.current?.querySelector(`[data-name="${getLabel(item)}"]`);
 
     selectedElement?.scrollIntoView();
-  }, [isMenuOpened, value, getLabel]);
+  }, [isMenuOpened, value, getLabel, multiple]);
+
+  const renderInputPrefix = () => {
+    if (!getStartAdornment || !value) return null;
+
+    if (multiple && Array.isArray(value)) {
+      return value.map((item) => (
+        <Pill
+          key={getLabel(item)}
+          startAdornment={getStartAdornment(item)}
+          deletable
+          onDelete={() => {
+            const newValue = value.filter((i) => i !== item) as ValueType<T, Multiple>;
+
+            setValue(newValue);
+          }}
+        />
+      ));
+    }
+
+    return <div className="mr-4 flex h-6 w-6 items-center">{getStartAdornment(value as T)}</div>;
+  };
+
+  const renderInput = () => (
+    <>
+      {renderInputPrefix()}
+      <input
+        type="text"
+        className={`h-6 w-0 flex-grow overflow-hidden border-none bg-gray-700 p-0 hover:bg-gray-600 focus:outline-none focus:ring-0 ${
+          isHover ? 'bg-gray-600' : ''
+        }`}
+        value={filterString}
+        onChange={(data) => {
+          hasSelected.current = false;
+          setFilterString(data.target.value);
+
+          if (!isMenuOpened) openMenu();
+        }}
+        onFocus={() => {
+          if (value) {
+            hasSelected.current = true;
+          }
+        }}
+        onClick={() => {
+          openMenu();
+        }}
+        placeholder={placeholder || resources.default_autosuggest_placeholder}
+        ref={inputRef}
+      />
+      <ArrowDropDown
+        className="ml-auto cursor-pointer opacity-50"
+        onClick={(event) => {
+          if (isMenuOpened) {
+            closeMenu();
+          } else {
+            openMenu();
+          }
+
+          event.stopPropagation();
+        }}
+      />
+    </>
+  );
 
   const renderItems = () => {
     const filteredItems = items.filter(
@@ -84,22 +149,30 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
     if (filteredItems.length > 0) {
       return filteredItems.map((item) => {
         const label = getLabel(item);
-        const isSelected = Array.isArray(value) ? value.find((i) => getLabel(i) === label) : getLabel(value) === label;
+        const isSelected = !!(Array.isArray(value)
+          ? value.find((i) => getLabel(i) === label)
+          : getLabel(value) === label);
+        const selectedStyle = isSelected ? 'bg-cyan-600 hover:bg-cyan-500' : '';
+        const isMaxed = !!(multiple && maxItem && Array.isArray(value) && value.length >= maxItem);
+        const disabledStyle =
+          isMaxed && !isSelected ? 'opacity-50 cursor-default' : 'hover:bg-gray-600 active:bg-gray-500';
 
         return (
           <button
             key={label}
             type="button"
+            disabled={isMaxed && !isSelected}
             data-name={label}
-            className={`active:bg-gray-500" px-4 py-2 hover:bg-gray-600 ${
-              isSelected ? 'bg-cyan-600 hover:bg-cyan-500' : ''
-            }`}
+            className={`px-4 py-2 ${selectedStyle} ${disabledStyle}`}
             onClick={() => {
               let newValue: ValueType<T, Multiple>;
 
               if (Array.isArray(value)) {
-                if (value.includes(item)) closeMenu();
-                newValue = [...value, item] as ValueType<T, Multiple>;
+                if (value.includes(item)) {
+                  newValue = value.filter((i) => i !== item) as ValueType<T, Multiple>;
+                } else {
+                  newValue = [...value, item] as ValueType<T, Multiple>;
+                }
               } else if (multiple) {
                 newValue = [item] as ValueType<T, Multiple>;
               } else {
@@ -117,6 +190,10 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
                 setValue(newValue);
                 setFilterString(multiple ? '' : getLabel(item));
                 closeMenu(newValue);
+
+                if (multiple && (newValue as T[]).length < maxItem) {
+                  inputRef.current?.focus();
+                }
               }
             }}
           >
@@ -145,42 +222,12 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
         }`}
         onMouseOver={() => setIsHover(true)}
         onMouseOut={() => setIsHover(false)}
-        onClick={() => inputRef.current?.focus()}
+        onClick={() => {
+          inputRef.current?.focus();
+          openMenu();
+        }}
       >
-        {getStartAdornment && !multiple && value && (
-          <div className="mr-4 flex h-6 w-6 items-center">{getStartAdornment(value as T)}</div>
-        )}
-        <input
-          type="text"
-          className={`h-6 w-0 flex-grow overflow-hidden border-none bg-gray-700 p-0 hover:bg-gray-600 focus:outline-none focus:ring-0 ${
-            isHover ? 'bg-gray-600' : ''
-          }`}
-          value={filterString}
-          onChange={(data) => {
-            hasSelected.current = false;
-            setFilterString(data.target.value);
-          }}
-          onFocus={() => {
-            if (value) {
-              hasSelected.current = true;
-            }
-            openMenu();
-          }}
-          placeholder={placeholder || resources.default_autosuggest_placeholder}
-          ref={inputRef}
-        />
-        <ArrowDropDown
-          className="ml-auto cursor-pointer hover:text-gray-200"
-          onClick={(event) => {
-            if (isMenuOpened) {
-              closeMenu();
-            } else {
-              openMenu();
-            }
-
-            event.stopPropagation();
-          }}
-        />
+        {renderInput()}
       </div>
       {isMenuOpened && (
         <div

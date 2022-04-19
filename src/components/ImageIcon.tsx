@@ -15,7 +15,7 @@ export enum IconType {
 }
 
 function ImageIcon({ id, type, className }: PropsWithoutRef<ImageIconProps>) {
-  return <img loading="lazy" src={`./images/${type}/${id}.png`} alt={id} className={`max-w-none ${className}`} />;
+  return <img loading="lazy" src={`./images/${type}/${id}.png`} alt={id} className={className} />;
 }
 
 ImageIcon.defaultProps = {
