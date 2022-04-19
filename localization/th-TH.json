@@ -1,10 +1,11 @@
 {
   "plan": "วางแผน",
   "result": "ผลลัพธ์",
-  "default_autosuggest_label": "เลือกไอเทม",
+  "default_autosuggest_placeholder": "เลือกไอเทม",
   "add_character_placeholder": "เพิ่มตัวละคร",
   "select_weapon_placeholder": "เลือกอาวุธ",
   "select_artifacts_placeholder": "เลือกอาร์ติแฟกต์",
+  "empty_autosuggest_label": "ไม่พบ",
   "traveler_anemo": "Traveler (Anemo)",
   "traveler_geo": "Traveler (Geo)",
   "traveler_electro": "Traveler (Electro)",
