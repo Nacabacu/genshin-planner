@@ -3,6 +3,7 @@ import { CharacterData } from '../../types/data';
 import Autosuggest from '../components/Autosuggest';
 import ImageIcon, { IconType } from '../components/ImageIcon';
 import Pill from '../components/Pill';
+import Switch from '../components/Switch';
 import { useDataContext } from '../contexts/dataContext';
 import { LanguageDefinition, useLocalizationContext } from '../contexts/localizationContext';
 
@@ -32,6 +33,7 @@ function Planning() {
           getStartAdornment={(item) => <ImageIcon id={item.id} type={IconType.Characters} />}
           getItemLabel={(item) => resources[item.id as keyof LanguageDefinition] as string}
         />
+        <Switch onChange={() => {}} />
       </div>
       <Autosuggest
         items={characterList}
@@ -73,6 +75,9 @@ function Planning() {
         <Pill startAdornment={<ImageIcon id="klee" type={IconType.Characters} />} />
         <Pill label="123" deletable startAdornment={<ImageIcon id="klee" type={IconType.Characters} />} />
         <Pill label="123" startAdornment={<ImageIcon id="klee" type={IconType.Characters} />} />
+      </div>
+      <div className="mt-10">
+        <Switch onChange={() => {}} />
       </div>
     </>
   );

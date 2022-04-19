@@ -10,7 +10,7 @@ interface PillProps {
 
 function Pill({ label, deletable, onDelete, startAdornment }: PropsWithoutRef<PillProps>) {
   return (
-    <div className="inline-flex h-6 cursor-pointer items-center rounded-full bg-gray-500 px-1 ">
+    <div className="inline-flex h-6 cursor-pointer items-center rounded-full bg-gray-500 px-1">
       <span className="mr-1 !h-5 !w-5">{startAdornment}</span>
       <span hidden={!label} className=" select-none overflow-hidden whitespace-nowrap text-sm">
         {label}

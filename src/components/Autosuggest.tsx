@@ -83,21 +83,25 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
     if (!getStartAdornment || !value) return null;
 
     if (multiple && Array.isArray(value)) {
-      return value.map((item) => (
-        <Pill
-          key={getLabel(item)}
-          startAdornment={getStartAdornment(item)}
-          deletable
-          onDelete={() => {
-            const newValue = value.filter((i) => i !== item) as ValueType<T, Multiple>;
+      return (
+        <div className="mr-2">
+          {value.map((item) => (
+            <Pill
+              key={getLabel(item)}
+              startAdornment={getStartAdornment(item)}
+              deletable
+              onDelete={() => {
+                const newValue = value.filter((i) => i !== item) as ValueType<T, Multiple>;
 
-            setValue(newValue);
-          }}
-        />
-      ));
+                setValue(newValue);
+              }}
+            />
+          ))}
+        </div>
+      );
     }
 
-    return <div className="mr-4 flex h-6 w-6 items-center">{getStartAdornment(value as T)}</div>;
+    return <div className="mr-2 flex h-6 w-6 items-center">{getStartAdornment(value as T)}</div>;
   };
 
   const renderInput = () => (
@@ -198,7 +202,7 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
             }}
           >
             <div className="flex items-center">
-              {getStartAdornment && <span className="mr-4 flex h-6 w-6 items-center">{getStartAdornment(item)}</span>}
+              {getStartAdornment && <span className="mr-2 flex h-6 w-6 items-center">{getStartAdornment(item)}</span>}
               <span className="overflow-hidden whitespace-nowrap">{getLabel(item)}</span>
             </div>
           </button>
