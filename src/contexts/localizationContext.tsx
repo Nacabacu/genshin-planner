@@ -41,10 +41,10 @@ function LocalizationProvider({ children }: PropsWithChildren<{}>) {
   const value = useMemo(
     () => ({
       locale,
-      resources,
       setLocale,
+      resources,
     }),
-    [locale, resources, setLocale],
+    [locale, setLocale, resources],
   );
 
   return <LocalizationContext.Provider value={value}>{children}</LocalizationContext.Provider>;

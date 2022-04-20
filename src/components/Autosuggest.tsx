@@ -90,7 +90,7 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
 
     if (multiple && Array.isArray(value)) {
       return (
-        <div className="mr-2">
+        <div className="mr-2 flex items-center">
           {value.map((item) => (
             <Pill
               key={getLabel(item)}
