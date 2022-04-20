@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .content-padding {
+    @apply sm:px-8 md:px-16 lg:px-32 xl:px-48;
+  }
+}

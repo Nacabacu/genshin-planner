@@ -93,7 +93,7 @@ function ConfigTable({ data }: PropsWithoutRef<ConfigTableProps>) {
           <Switch
             checked={isArtifactEnabled}
             disabled={!isEnabled}
-            onChange={(isChecked) => updateSelectedData(characterData.id, { isWeaponEnabled: isChecked })}
+            onChange={(isChecked) => updateSelectedData(characterData.id, { isArtifactEnabled: isChecked })}
           />
           <Autosuggest
             items={artifactList}
@@ -150,31 +150,33 @@ function ConfigTable({ data }: PropsWithoutRef<ConfigTableProps>) {
   });
 
   return (
-    <table {...getTableProps()} className="w-full">
-      <thead>
-        {headerGroups.map((headerGroup) => (
-          <tr {...headerGroup.getHeaderGroupProps()}>
-            {headerGroup.headers.map((column) => (
-              <th {...column.getHeaderProps()} className="text-left">
-                {column.render('Header')}
-              </th>
-            ))}
-          </tr>
-        ))}
-      </thead>
-      <tbody {...getTableBodyProps()}>
-        {rows.map((row) => {
-          prepareRow(row);
-          return (
-            <tr {...row.getRowProps()}>
-              {row.cells.map((cell) => (
-                <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
+    <div>
+      <table {...getTableProps()} className="w-full">
+        <thead>
+          {headerGroups.map((headerGroup) => (
+            <tr {...headerGroup.getHeaderGroupProps()}>
+              {headerGroup.headers.map((column) => (
+                <th {...column.getHeaderProps()} className="text-left">
+                  {column.render('Header')}
+                </th>
               ))}
             </tr>
-          );
-        })}
-      </tbody>
-    </table>
+          ))}
+        </thead>
+        <tbody {...getTableBodyProps()}>
+          {rows.map((row) => {
+            prepareRow(row);
+            return (
+              <tr {...row.getRowProps()}>
+                {row.cells.map((cell) => (
+                  <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
+                ))}
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
   );
 }
 

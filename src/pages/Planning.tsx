@@ -22,7 +22,7 @@ function Planning() {
 
   return (
     <>
-      <div className="inline-flex w-full">
+      <div className="my-4 inline-flex w-full">
         <Autosuggest
           items={selectableCharList}
           onSelect={(value) => {
@@ -32,7 +32,7 @@ function Planning() {
           placeholder={resources.add_character_placeholder}
           getStartAdornment={(item) => <ImageIcon id={item.id} type={IconType.Characters} />}
           getItemLabel={(item) => resources[item.id as keyof LanguageDefinition] as string}
-          className="ml-auto mb-8 w-72"
+          className="ml-auto w-72"
         />
       </div>
       <ConfigTable data={selectedDataList} />

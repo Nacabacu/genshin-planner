@@ -18,7 +18,7 @@ function Switch({ checked, disabled, onChange }: PropsWithoutRef<SwitchProps>) {
         setIsChecked(!isChecked);
         onChange(!isChecked);
       }}
-      className={`relative m-2 flex h-6 w-12 items-center rounded-full transition-all duration-200
+      className={`relative m-2 flex h-6 w-12 flex-shrink-0 items-center rounded-full transition-all duration-200
       ${isChecked ? 'bg-green-500' : 'bg-gray-500'}
       ${disabled ? 'cursor-default opacity-50' : 'cursor-pointer'}`}
     >

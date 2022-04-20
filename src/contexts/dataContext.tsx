@@ -56,10 +56,10 @@ function DataProvider({ children }: PropsWithChildren<{}>) {
     (characterData: CharacterData) => {
       const newSelectedData: SelectedData = {
         isEnabled: true,
-        isAscensionEnabled: false,
-        isTalentEnabled: false,
-        isWeaponEnabled: false,
-        isArtifactEnabled: false,
+        isAscensionEnabled: true,
+        isTalentEnabled: true,
+        isWeaponEnabled: true,
+        isArtifactEnabled: true,
         characterData,
       };
       setSelectedDataList([...selectedDataList, newSelectedData]);
