@@ -12,6 +12,7 @@ interface AutosuggestProps<T, Multiple extends boolean | undefined = undefined> 
   defaultItem?: ValueType<T, Multiple>;
   multiple?: Multiple;
   maxItem?: number;
+  disabled?: boolean;
   resetAfterSelect?: boolean;
   getStartAdornment?: (item: T) => ReactNode;
   getItemLabel?: (item: T) => string;
@@ -24,13 +25,15 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
   onSelect,
   className,
   placeholder,
+  defaultItem,
   multiple,
   maxItem = items.length,
+  disabled,
   resetAfterSelect,
   getStartAdornment,
   getItemLabel,
 }: PropsWithoutRef<AutosuggestProps<T, Multiple>>) {
-  const [value, setValue] = useState<T | T[] | null>(null);
+  const [value, setValue] = useState<T | T[] | null>((defaultItem as T | T[]) || null);
   const [inputValue, setInputValue] = useState('');
   const [isMenuOpened, setIsMenuOpened] = useState(false);
   const [isHover, setIsHover] = useState(false);
@@ -115,9 +118,10 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
       {renderInputPrefix()}
       <input
         type="text"
-        className={`h-6 w-0 flex-grow overflow-hidden border-none bg-gray-700 p-0 hover:bg-gray-600 focus:outline-none focus:ring-0 ${
-          isHover ? 'bg-gray-600' : ''
+        className={`h-6 w-0 flex-grow overflow-hidden border-none bg-gray-700 p-0 focus:outline-none focus:ring-0 ${
+          isHover && !disabled ? 'bg-gray-600' : ''
         }`}
+        disabled={disabled}
         value={inputValue}
         onChange={(data) => {
           hasSelected.current = false;
@@ -137,8 +141,10 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
         ref={inputRef}
       />
       <ArrowDropDown
-        className="ml-auto cursor-pointer opacity-50"
+        className={`ml-auto ${disabled ? 'cursor-default opacity-50' : 'cursor-pointer'}`}
         onClick={(event) => {
+          if (disabled) return;
+
           if (isMenuOpened) {
             closeMenu();
           } else {
@@ -227,12 +233,14 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
   return (
     <div className={`relative ${className}`} ref={wrapperRef}>
       <div
-        className={`inline-flex w-full cursor-text rounded bg-gray-700 p-2 pl-4 text-gray-300 ${
-          isHover ? 'bg-gray-600' : ''
-        }`}
+        className={`inline-flex w-full  rounded bg-gray-700 p-2 pl-4 text-gray-300 ${
+          isHover && !disabled ? 'bg-gray-600' : ''
+        } ${disabled ? 'cursor-default opacity-50' : 'cursor-text'}`}
         onMouseOver={() => setIsHover(true)}
         onMouseOut={() => setIsHover(false)}
         onClick={() => {
+          if (disabled) return;
+
           inputRef.current?.focus();
           openMenu();
         }}

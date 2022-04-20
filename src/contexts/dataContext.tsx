@@ -12,7 +12,7 @@ const SELECTED_DATA_LIST_KEY = 'selectedDataList';
 
 export interface SelectedData {
   isEnabled: boolean;
-  isAscendEnabled: boolean;
+  isAscensionEnabled: boolean;
   isTalentEnabled: boolean;
   isWeaponEnabled: boolean;
   isArtifactEnabled: boolean;
@@ -38,7 +38,7 @@ const DataContext = createContext<Data | null>(null);
 const defaultSelectedDataList: SelectedData[] = [
   {
     isEnabled: true,
-    isAscendEnabled: true,
+    isAscensionEnabled: true,
     isTalentEnabled: true,
     isWeaponEnabled: true,
     isArtifactEnabled: true,
@@ -56,7 +56,7 @@ function DataProvider({ children }: PropsWithChildren<{}>) {
     (characterData: CharacterData) => {
       const newSelectedData: SelectedData = {
         isEnabled: true,
-        isAscendEnabled: false,
+        isAscensionEnabled: false,
         isTalentEnabled: false,
         isWeaponEnabled: false,
         isArtifactEnabled: false,
