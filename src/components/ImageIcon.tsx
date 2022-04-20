@@ -1,12 +1,12 @@
-import { PropsWithChildren } from 'react';
+import { PropsWithoutRef } from 'react';
 
 interface ImageIconProps {
   id: string;
-  folder: ImageFolder;
-  iconStyle?: string;
+  type: IconType;
+  className?: string;
 }
 
-export enum ImageFolder {
+export enum IconType {
   Characters = 'characters',
   Artifacts = 'artifacts',
   Materials = 'materials',
@@ -14,12 +14,12 @@ export enum ImageFolder {
   Icons = 'icons',
 }
 
-function ImageIcon({ id, folder, iconStyle }: PropsWithChildren<ImageIconProps>) {
-  return <img loading="lazy" src={`./images/${folder}/${id}.png`} alt={id} className={`${iconStyle}`} />;
+function ImageIcon({ id, type, className }: PropsWithoutRef<ImageIconProps>) {
+  return <img loading="lazy" src={`./images/${type}/${id}.png`} alt={id} className={className} />;
 }
 
 ImageIcon.defaultProps = {
-  iconStyle: '',
+  className: '',
 };
 
 export default ImageIcon;

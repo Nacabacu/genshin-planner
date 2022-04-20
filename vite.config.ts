@@ -5,8 +5,14 @@ import { defineConfig } from 'vite';
 // https://vitejs.dev/config/
 export default defineConfig({
   base: '',
+  server: {
+    port: 3001,
+  },
   resolve: {
-    alias: [{ find: '@data', replacement: path.resolve(__dirname, './data') }],
+    alias: [
+      { find: '@data', replacement: path.resolve(__dirname, './data') },
+      { find: '@localization', replacement: path.resolve(__dirname, './localization') },
+    ],
   },
   plugins: [react()],
   build: {

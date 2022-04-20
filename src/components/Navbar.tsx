@@ -1,41 +1,72 @@
-import { GitHub, LocalFireDepartment } from '@mui/icons-material';
-import { Link } from 'react-router-dom';
+import { LocalFireDepartment } from '@mui/icons-material';
+import Flags from 'country-flag-icons/react/3x2';
+import { PropsWithoutRef, ReactNode, useMemo } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Locale, useLocalizationContext } from '../contexts/localizationContext';
+import Dropdown from './Dropdown';
 
 interface Navigation {
   path: string;
   name: string;
 }
 
-const repoName = 'https://github.com/Nacabacu/genshin-planner';
-const navigationList: Navigation[] = [
-  {
-    path: `${import.meta.env.VITE_BASE}/`,
-    name: 'Plan',
-  },
-  {
-    path: `${import.meta.env.VITE_BASE}/result`,
-    name: 'Result',
-  },
-];
+interface NavbarProps {
+  className?: string;
+}
 
-function Navbar() {
+const flagItems: Locale[] = [Locale.English, Locale.Japanese, Locale.Thai];
+const flagMap: Partial<Record<Locale, ReactNode>> = {
+  [Locale.English]: <Flags.US />,
+  [Locale.Japanese]: <Flags.JP />,
+  [Locale.Thai]: <Flags.TH />,
+};
+
+function Navbar({ className }: PropsWithoutRef<NavbarProps>) {
+  const { pathname } = useLocation();
+  const { locale, resources, setLocale } = useLocalizationContext();
+  const navigationList: Navigation[] = useMemo(
+    () => [
+      {
+        path: `${import.meta.env.VITE_BASE}/`,
+        name: resources.plan,
+      },
+      {
+        path: `${import.meta.env.VITE_BASE}/result`,
+        name: resources.result,
+      },
+    ],
+    [resources],
+  );
+
   const navItem = navigationList.map((navigation) => (
     <Link
-      className="py-2 font-semibold uppercase tracking-wide text-gray-400 transition-colors hover:text-gray-300 sm:py-0 sm:pt-0"
       to={navigation.path}
       key={navigation.name}
+      className={`flex items-center px-4 capitalize ${
+        pathname === navigation.path ? 'cursor-default bg-gray-800' : 'hover:bg-gray-700 hover:text-gray-200'
+      }`}
     >
-      {navigation.name}
+      <span>{navigation.name}</span>
     </Link>
   ));
 
   return (
-    <nav className="text-zinc400 flex flex-wrap items-center bg-gray-900  px-4 py-4 pt-4 sm:px-8 md:px-16 lg:px-32 xl:px-48">
-      <LocalFireDepartment className="h-7 w-7 text-red-600" />
-      <div className="ml-2 space-x-2">{navItem}</div>
-      <a href={repoName} target="tab" className="ml-auto h-7 w-7 text-gray-400 hover:text-gray-300">
-        <GitHub />
-      </a>
+    <nav className={className}>
+      <div className="flex h-16 items-center">
+        <LocalFireDepartment className="!h-8 !w-8 text-cyan-600" />
+        <span className="ml-4 flex h-full">{navItem}</span>
+        <span className="ml-auto">
+          <Dropdown
+            items={flagItems}
+            hideLabel
+            defaultItem={flagItems.find((item) => item === locale) || flagItems[0]}
+            getStartAdornment={(item) => flagMap[item]}
+            onSelect={(item) => {
+              setLocale(item);
+            }}
+          />
+        </span>
+      </div>
     </nav>
   );
 }

@@ -5,7 +5,10 @@ module.exports = {
       transitionProperty: {
         box: 'height, width',
       },
+      translate: {
+        6.5: '1.625rem',
+      },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 };

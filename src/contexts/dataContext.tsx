@@ -8,7 +8,18 @@ import { createContext, PropsWithChildren, useCallback, useContext, useMemo } fr
 import { ArtifactData, CharacterData, DomainData, MaterialConfig, MaterialData, WeaponData } from '../../types/data';
 import useLocalStorage from '../hooks/useLocalStorage';
 
-const SELECTED_DATA_LIST_KEY = 'genshin-planner-selectedDataList';
+const SELECTED_DATA_LIST_KEY = 'selectedDataList';
+
+export interface SelectedData {
+  isEnabled: boolean;
+  isAscensionEnabled: boolean;
+  isTalentEnabled: boolean;
+  isWeaponEnabled: boolean;
+  isArtifactEnabled: boolean;
+  characterData: CharacterData;
+  weaponData?: WeaponData;
+  artifactDataList?: ArtifactData[];
+}
 
 interface Data {
   characterList: CharacterData[];
@@ -23,22 +34,11 @@ interface Data {
   updateSelectedData: (characterId: string, updatedData: Partial<SelectedData>) => void;
 }
 
-export interface SelectedData {
-  isEnabled: boolean;
-  isAscendEnabled: boolean;
-  isTalentEnabled: boolean;
-  isWeaponEnabled: boolean;
-  isArtifactEnabled: boolean;
-  characterData: CharacterData;
-  weaponData?: WeaponData;
-  artifactDataList?: ArtifactData[];
-}
-
 const DataContext = createContext<Data | null>(null);
 const defaultSelectedDataList: SelectedData[] = [
   {
     isEnabled: true,
-    isAscendEnabled: true,
+    isAscensionEnabled: true,
     isTalentEnabled: true,
     isWeaponEnabled: true,
     isArtifactEnabled: true,
@@ -46,8 +46,7 @@ const defaultSelectedDataList: SelectedData[] = [
   },
 ];
 
-function DataProvider(props: PropsWithChildren<{}>) {
-  const { children } = props;
+function DataProvider({ children }: PropsWithChildren<{}>) {
   const [selectedDataList, setSelectedDataList] = useLocalStorage<SelectedData[]>(
     SELECTED_DATA_LIST_KEY,
     defaultSelectedDataList,
@@ -57,10 +56,10 @@ function DataProvider(props: PropsWithChildren<{}>) {
     (characterData: CharacterData) => {
       const newSelectedData: SelectedData = {
         isEnabled: true,
-        isAscendEnabled: false,
-        isTalentEnabled: false,
-        isWeaponEnabled: false,
-        isArtifactEnabled: false,
+        isAscensionEnabled: true,
+        isTalentEnabled: true,
+        isWeaponEnabled: true,
+        isArtifactEnabled: true,
         characterData,
       };
       setSelectedDataList([...selectedDataList, newSelectedData]);
