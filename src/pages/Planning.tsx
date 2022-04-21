@@ -3,7 +3,6 @@ import { CharacterData } from '../../types/data';
 import Autosuggest from '../components/Autosuggest';
 import ConfigTable from '../components/ConfigTable';
 import ImageIcon, { IconType } from '../components/ImageIcon';
-import Switch from '../components/Switch';
 import { useDataContext } from '../contexts/dataContext';
 import { LanguageDefinition, useLocalizationContext } from '../contexts/localizationContext';
 
@@ -36,7 +35,6 @@ function Planning() {
         />
       </div>
       <ConfigTable data={selectedDataList} />
-      <Switch onChange={() => {}} />
     </>
   );
 }

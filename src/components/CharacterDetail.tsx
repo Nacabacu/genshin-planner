@@ -1,5 +1,6 @@
 import { PropsWithoutRef } from 'react';
 import { CharacterData } from '../../types/data';
+import { LanguageDefinition, useLocalizationContext } from '../contexts/localizationContext';
 import ImageIcon, { IconType } from './ImageIcon';
 
 interface CharacterDetailProp {
@@ -9,10 +10,11 @@ interface CharacterDetailProp {
 }
 
 function CharacterDetail({ data, disabled, className }: PropsWithoutRef<CharacterDetailProp>) {
+  const { resources } = useLocalizationContext();
   return (
     <div className={`flex ${disabled ? 'opacity-50' : ''} ${className}`}>
       <ImageIcon id={data.id} type={IconType.Characters} className="h-8" />
-      <span className="ml-2 mr-auto leading-8">{data.id}</span>
+      <span className="break-keep ml-2 mr-auto leading-8">{resources[data.id as keyof LanguageDefinition]}</span>
       <ImageIcon id={data.element} type={IconType.Icons} className="h-8" />
       <ImageIcon id={data.weaponType} type={IconType.Icons} className="h-8" />
     </div>

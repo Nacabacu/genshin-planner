@@ -4,6 +4,10 @@
 
 @layer components {
   .content-padding {
-    @apply sm:px-8 md:px-16 lg:px-32 xl:px-48;
+    @apply px-4 sm:px-8 md:px-16 lg:px-32 xl:px-48;
+  }
+
+  .break-keep {
+    word-break: keep-all;
   }
 }

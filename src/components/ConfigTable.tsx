@@ -1,5 +1,5 @@
-import { PropsWithoutRef, useMemo } from 'react';
-import { CellProps, Column, useTable } from 'react-table';
+import { PropsWithoutRef, ReactNode, useMemo } from 'react';
+import { CellProps, Column, usePagination, useTable } from 'react-table';
 import { SelectedData, useDataContext } from '../contexts/dataContext';
 import { LanguageDefinition, useLocalizationContext } from '../contexts/localizationContext';
 import Autosuggest from './Autosuggest';
@@ -10,6 +10,8 @@ import Switch from './Switch';
 interface ConfigTableProps {
   data: SelectedData[];
 }
+
+const PAGE_SIZE = 10;
 
 function CharacterCell({ row }: CellProps<SelectedData>) {
   const { updateSelectedDataList } = useDataContext();
@@ -144,38 +146,65 @@ function ConfigTable({ data }: PropsWithoutRef<ConfigTableProps>) {
     ],
     [resources],
   );
-  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } = useTable({
-    columns,
-    data,
-  });
+
+  const { getTableProps, getTableBodyProps, headerGroups, page, prepareRow, pageCount, gotoPage } = useTable(
+    {
+      columns,
+      data,
+      initialState: { pageSize: PAGE_SIZE, pageIndex: 0 },
+    },
+    usePagination,
+  );
+
+  const renderPageNumberItem = () => {
+    const element: ReactNode[] = [];
+
+    for (let index = 0; index < pageCount; index += 1) {
+      element.push(
+        <button
+          key={index}
+          type="button"
+          value={index}
+          onClick={(event) => gotoPage(parseInt((event.target as HTMLButtonElement).value, 10))}
+        >
+          {index + 1}
+        </button>,
+      );
+    }
+
+    return element;
+  };
 
   return (
-    <div>
-      <table {...getTableProps()} className="w-full">
-        <thead>
-          {headerGroups.map((headerGroup) => (
-            <tr {...headerGroup.getHeaderGroupProps()}>
-              {headerGroup.headers.map((column) => (
-                <th {...column.getHeaderProps()} className="text-left">
-                  {column.render('Header')}
-                </th>
-              ))}
-            </tr>
-          ))}
-        </thead>
-        <tbody {...getTableBodyProps()}>
-          {rows.map((row) => {
-            prepareRow(row);
-            return (
-              <tr {...row.getRowProps()}>
-                {row.cells.map((cell) => (
-                  <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
+    <div className="flex flex-col">
+      <div className="overflow-scroll">
+        <table {...getTableProps()} className="w-full">
+          <thead>
+            {headerGroups.map((headerGroup) => (
+              <tr {...headerGroup.getHeaderGroupProps()}>
+                {headerGroup.headers.map((column) => (
+                  <th {...column.getHeaderProps()} className="text-left">
+                    {column.render('Header')}
+                  </th>
                 ))}
               </tr>
-            );
-          })}
-        </tbody>
-      </table>
+            ))}
+          </thead>
+          <tbody {...getTableBodyProps()}>
+            {page.map((row) => {
+              prepareRow(row);
+              return (
+                <tr {...row.getRowProps()}>
+                  {row.cells.map((cell) => (
+                    <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
+                  ))}
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+      <div className="ml-auto space-x-2">{renderPageNumberItem()}</div>
     </div>
   );
 }
