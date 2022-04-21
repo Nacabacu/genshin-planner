@@ -6,7 +6,7 @@ import Pill from './Pill';
 
 interface AutosuggestProps<T, Multiple extends boolean | undefined = undefined> {
   items: T[];
-  onSelect: (selectedValue: ValueType<T, Multiple>) => void;
+  onUpdate: (selectedValue: ValueType<T, Multiple>) => void;
   className?: string;
   placeholder?: string;
   defaultItem?: ValueType<T, Multiple>;
@@ -22,7 +22,7 @@ type ValueType<T, Multiple> = Multiple extends undefined | false ? T : T[];
 
 function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
   items,
-  onSelect,
+  onUpdate,
   className,
   placeholder,
   defaultItem,
@@ -99,10 +99,12 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
               key={getLabel(item)}
               startAdornment={getStartAdornment(item)}
               deletable
+              disabled={disabled}
               onDelete={() => {
                 const newValue = value.filter((i) => i !== item) as ValueType<T, Multiple>;
 
                 setValue(newValue);
+                onUpdate(newValue);
               }}
             />
           ))}
@@ -196,7 +198,7 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
                 newValue = item as ValueType<T, Multiple>;
               }
 
-              onSelect(newValue);
+              onUpdate(newValue);
 
               if (resetAfterSelect) {
                 setValue(null);

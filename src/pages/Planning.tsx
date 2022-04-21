@@ -25,7 +25,7 @@ function Planning() {
       <div className="my-4 inline-flex w-full">
         <Autosuggest
           items={selectableCharList}
-          onSelect={(value) => {
+          onUpdate={(value) => {
             addCharacter(value);
           }}
           resetAfterSelect

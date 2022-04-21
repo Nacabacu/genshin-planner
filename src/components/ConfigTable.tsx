@@ -73,7 +73,7 @@ function WeaponCell({ row }: CellProps<SelectedData>) {
         items={selectableWeaponList}
         disabled={!isEnabled || !isWeaponEnabled}
         defaultItem={weaponData}
-        onSelect={(selectedWeapon) => updateSelectedDataList(characterData.id, { weaponData: selectedWeapon })}
+        onUpdate={(selectedWeapon) => updateSelectedDataList(characterData.id, { weaponData: selectedWeapon })}
         placeholder={resources.select_weapon_placeholder}
         getStartAdornment={(item) => <ImageIcon id={item.id} type={IconType.Weapons} />}
         getItemLabel={(item) => resources[item.id as keyof LanguageDefinition]}
@@ -98,7 +98,7 @@ function ArtifactCell({ row }: CellProps<SelectedData>) {
         items={artifactList}
         disabled={!isEnabled || !isArtifactEnabled}
         defaultItem={artifactDataList}
-        onSelect={(selectedArtifactList) =>
+        onUpdate={(selectedArtifactList) =>
           updateSelectedDataList(characterData.id, { artifactDataList: selectedArtifactList })
         }
         multiple
