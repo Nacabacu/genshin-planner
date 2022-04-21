@@ -1,4 +1,4 @@
-import { PropsWithoutRef, ReactNode, useMemo } from 'react';
+import { PropsWithoutRef, ReactNode, useMemo, useState } from 'react';
 import { CellProps, Column, usePagination, useTable } from 'react-table';
 import { SelectedData, useDataContext } from '../contexts/dataContext';
 import { LanguageDefinition, useLocalizationContext } from '../contexts/localizationContext';
@@ -79,7 +79,7 @@ function WeaponCell({ row }: CellProps<SelectedData>) {
         placeholder={resources.select_weapon_placeholder}
         getStartAdornment={(item) => <ImageIcon id={item.id} type={IconType.Weapons} />}
         getItemLabel={(item) => resources[item.id as keyof LanguageDefinition]}
-        className="ml-2 w-60"
+        className="ml-2 flex-grow"
       />
     </div>
   );
@@ -108,7 +108,7 @@ function ArtifactCell({ row }: CellProps<SelectedData>) {
         placeholder={resources.select_artifacts_placeholder}
         getStartAdornment={(item) => <ImageIcon id={item.id} type={IconType.Artifacts} />}
         getItemLabel={(item) => resources[item.id as keyof LanguageDefinition]}
-        className="ml-2 w-60"
+        className="ml-2 flex-grow"
       />
     </div>
   );
@@ -122,36 +122,42 @@ function ConfigTable({ data }: PropsWithoutRef<ConfigTableProps>) {
         Header: resources.character,
         Cell: CharacterCell,
         id: 'character',
+        className: 'w-[30%]',
       },
       {
         Header: resources.ascension,
         Cell: AscensionCell,
         id: 'ascension',
+        className: 'w-[5%]',
       },
       {
         Header: resources.talent,
         Cell: TalentCell,
         id: 'talent',
+        className: 'w-[5%]',
       },
       {
         Header: resources.weapon,
         Cell: WeaponCell,
         id: 'weapon',
+        className: 'w-[30%]',
       },
       {
         Header: resources.artifact,
         Cell: ArtifactCell,
         id: 'artifact',
+        className: 'w-[30%]',
       },
     ],
     [resources],
   );
 
+  const [currentPage, setCurrentPage] = useState(0);
   const { getTableProps, getTableBodyProps, headerGroups, page, prepareRow, pageCount, gotoPage } = useTable(
     {
       columns,
       data,
-      initialState: { pageSize: PAGE_SIZE, pageIndex: 0 },
+      initialState: { pageSize: PAGE_SIZE, pageIndex: currentPage },
     },
     usePagination,
   );
@@ -165,7 +171,11 @@ function ConfigTable({ data }: PropsWithoutRef<ConfigTableProps>) {
           key={index}
           type="button"
           value={index}
-          onClick={(event) => gotoPage(parseInt((event.target as HTMLButtonElement).value, 10))}
+          onClick={(event) => {
+            const newPage = parseInt((event.target as HTMLButtonElement).value, 10);
+            setCurrentPage(newPage);
+            gotoPage(newPage);
+          }}
         >
           {index + 1}
         </button>,
@@ -177,26 +187,28 @@ function ConfigTable({ data }: PropsWithoutRef<ConfigTableProps>) {
 
   return (
     <div className="flex flex-col">
-      <div className="overflow-scroll">
-        <table {...getTableProps()} className="w-full">
+      <div>
+        <table {...getTableProps()} className="min-w-full divide-y divide-gray-700">
           <thead>
             {headerGroups.map((headerGroup) => (
               <tr {...headerGroup.getHeaderGroupProps()}>
                 {headerGroup.headers.map((column) => (
-                  <th {...column.getHeaderProps()} className="text-left">
+                  <th {...column.getHeaderProps()} className={`p-2 text-left ${(column as any).className}`}>
                     {column.render('Header')}
                   </th>
                 ))}
               </tr>
             ))}
           </thead>
-          <tbody {...getTableBodyProps()}>
+          <tbody {...getTableBodyProps()} className="divide-y divide-gray-700">
             {page.map((row) => {
               prepareRow(row);
               return (
                 <tr {...row.getRowProps()}>
                   {row.cells.map((cell) => (
-                    <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
+                    <td {...cell.getCellProps()} className="p-2">
+                      {cell.render('Cell')}
+                    </td>
                   ))}
                 </tr>
               );

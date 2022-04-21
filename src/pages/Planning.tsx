@@ -21,7 +21,7 @@ function Planning() {
 
   return (
     <>
-      <div className="my-4 inline-flex w-full">
+      <div className="mt-16 mb-4 inline-flex w-full">
         <Autosuggest
           items={selectableCharList}
           onUpdate={(value) => {
