@@ -1,4 +1,4 @@
-import { PropsWithoutRef, useCallback, useMemo } from 'react';
+import { PropsWithoutRef, useMemo } from 'react';
 import { CellProps, Column, useTable } from 'react-table';
 import { SelectedData, useDataContext } from '../contexts/dataContext';
 import { LanguageDefinition, useLocalizationContext } from '../contexts/localizationContext';
@@ -11,138 +11,138 @@ interface ConfigTableProps {
   data: SelectedData[];
 }
 
-function ConfigTable({ data }: PropsWithoutRef<ConfigTableProps>) {
-  const { updateSelectedData, weaponList, artifactList } = useDataContext();
+function CharacterCell({ row }: CellProps<SelectedData>) {
+  const { updateSelectedDataList } = useDataContext();
+  const { isEnabled, characterData } = row.original;
+
+  return (
+    <div className="flex">
+      <Switch
+        checked={isEnabled}
+        onChange={(isChecked) => updateSelectedDataList(characterData.id, { isEnabled: isChecked })}
+      />
+      <CharacterDetail data={characterData} disabled={!isEnabled} className="flex-grow" />
+    </div>
+  );
+}
+
+function AscensionCell({ row }: CellProps<SelectedData>) {
+  const { updateSelectedDataList } = useDataContext();
+  const { isEnabled, characterData, isAscensionEnabled } = row.original;
+
+  return (
+    <div className="flex">
+      <Switch
+        checked={isAscensionEnabled}
+        disabled={!isEnabled}
+        onChange={(isChecked) => updateSelectedDataList(characterData.id, { isAscensionEnabled: isChecked })}
+      />
+    </div>
+  );
+}
+
+function TalentCell({ row }: CellProps<SelectedData>) {
+  const { updateSelectedDataList } = useDataContext();
+  const { isEnabled, characterData, isTalentEnabled } = row.original;
+
+  return (
+    <div className="flex">
+      <Switch
+        checked={isTalentEnabled}
+        disabled={!isEnabled}
+        onChange={(isChecked) => updateSelectedDataList(characterData.id, { isTalentEnabled: isChecked })}
+      />
+    </div>
+  );
+}
+
+function WeaponCell({ row }: CellProps<SelectedData>) {
+  const { weaponList, updateSelectedDataList } = useDataContext();
   const { resources } = useLocalizationContext();
-  const renderCharacterCell = useCallback(
-    ({ row }: CellProps<SelectedData>) => {
-      const { isEnabled, characterData } = row.original;
-      return (
-        <div className="flex">
-          <Switch
-            checked={isEnabled}
-            onChange={(isChecked) => updateSelectedData(characterData.id, { isEnabled: isChecked })}
-          />
-          <CharacterDetail data={characterData} disabled={!isEnabled} className="flex-grow" />
-        </div>
-      );
-    },
-    [updateSelectedData],
+  const { isEnabled, characterData, weaponData, isWeaponEnabled } = row.original;
+  const selectableWeaponList = weaponList.filter((weapon) => weapon.type === characterData.weaponType);
+
+  return (
+    <div className="flex">
+      <Switch
+        checked={isWeaponEnabled}
+        disabled={!isEnabled}
+        onChange={(isChecked) => updateSelectedDataList(characterData.id, { isWeaponEnabled: isChecked })}
+      />
+      <Autosuggest
+        items={selectableWeaponList}
+        disabled={!isEnabled || !isWeaponEnabled}
+        defaultItem={weaponData}
+        onSelect={(selectedWeapon) => updateSelectedDataList(characterData.id, { weaponData: selectedWeapon })}
+        placeholder={resources.select_weapon_placeholder}
+        getStartAdornment={(item) => <ImageIcon id={item.id} type={IconType.Weapons} />}
+        getItemLabel={(item) => resources[item.id as keyof LanguageDefinition]}
+        className="ml-2 w-60"
+      />
+    </div>
   );
-  const renderAscension = useCallback(
-    ({ row }: CellProps<SelectedData>) => {
-      const { isEnabled, characterData, isAscensionEnabled } = row.original;
-      return (
-        <div className="flex">
-          <Switch
-            checked={isAscensionEnabled}
-            disabled={!isEnabled}
-            onChange={(isChecked) => updateSelectedData(characterData.id, { isAscensionEnabled: isChecked })}
-          />
-        </div>
-      );
-    },
-    [updateSelectedData],
+}
+function ArtifactCell({ row }: CellProps<SelectedData>) {
+  const { artifactList, updateSelectedDataList } = useDataContext();
+  const { resources } = useLocalizationContext();
+  const { isEnabled, characterData, artifactDataList, isArtifactEnabled } = row.original;
+
+  return (
+    <div className="flex">
+      <Switch
+        checked={isArtifactEnabled}
+        disabled={!isEnabled}
+        onChange={(isChecked) => updateSelectedDataList(characterData.id, { isArtifactEnabled: isChecked })}
+      />
+      <Autosuggest
+        items={artifactList}
+        disabled={!isEnabled || !isArtifactEnabled}
+        defaultItem={artifactDataList}
+        onSelect={(selectedArtifactList) =>
+          updateSelectedDataList(characterData.id, { artifactDataList: selectedArtifactList })
+        }
+        multiple
+        maxItem={3}
+        placeholder={resources.select_artifacts_placeholder}
+        getStartAdornment={(item) => <ImageIcon id={item.id} type={IconType.Artifacts} />}
+        getItemLabel={(item) => resources[item.id as keyof LanguageDefinition]}
+        className="ml-2 w-60"
+      />
+    </div>
   );
-  const renderTalent = useCallback(
-    ({ row }: CellProps<SelectedData>) => {
-      const { isEnabled, characterData, isTalentEnabled } = row.original;
-      return (
-        <div className="flex">
-          <Switch
-            checked={isTalentEnabled}
-            disabled={!isEnabled}
-            onChange={(isChecked) => updateSelectedData(characterData.id, { isTalentEnabled: isChecked })}
-          />
-        </div>
-      );
-    },
-    [updateSelectedData],
-  );
-  const renderWeapon = useCallback(
-    ({ row }: CellProps<SelectedData>) => {
-      const { isEnabled, characterData, weaponData, isWeaponEnabled } = row.original;
-      const selectableWeaponList = weaponList.filter((weapon) => weapon.type === characterData.weaponType);
-      return (
-        <div className="flex">
-          <Switch
-            checked={isWeaponEnabled}
-            disabled={!isEnabled}
-            onChange={(isChecked) => updateSelectedData(characterData.id, { isWeaponEnabled: isChecked })}
-          />
-          <Autosuggest
-            items={selectableWeaponList}
-            disabled={!isEnabled || !isWeaponEnabled}
-            defaultItem={weaponData}
-            onSelect={(selectedWeapon) => updateSelectedData(characterData.id, { weaponData: selectedWeapon })}
-            placeholder={resources.select_weapon_placeholder}
-            getStartAdornment={(item) => <ImageIcon id={item.id} type={IconType.Weapons} />}
-            getItemLabel={(item) => resources[item.id as keyof LanguageDefinition]}
-            className="ml-2 w-60"
-          />
-        </div>
-      );
-    },
-    [updateSelectedData, resources, weaponList],
-  );
-  const renderArtifact = useCallback(
-    ({ row }: CellProps<SelectedData>) => {
-      const { isEnabled, characterData, artifactDataList, isArtifactEnabled } = row.original;
-      return (
-        <div className="flex">
-          <Switch
-            checked={isArtifactEnabled}
-            disabled={!isEnabled}
-            onChange={(isChecked) => updateSelectedData(characterData.id, { isArtifactEnabled: isChecked })}
-          />
-          <Autosuggest
-            items={artifactList}
-            disabled={!isEnabled || !isArtifactEnabled}
-            defaultItem={artifactDataList}
-            onSelect={(selectedArtifactList) =>
-              updateSelectedData(characterData.id, { artifactDataList: selectedArtifactList })
-            }
-            multiple
-            maxItem={3}
-            placeholder={resources.select_artifacts_placeholder}
-            getStartAdornment={(item) => <ImageIcon id={item.id} type={IconType.Artifacts} />}
-            getItemLabel={(item) => resources[item.id as keyof LanguageDefinition]}
-            className="ml-2 w-60"
-          />
-        </div>
-      );
-    },
-    [updateSelectedData, resources, artifactList],
-  );
+}
+
+function ConfigTable({ data }: PropsWithoutRef<ConfigTableProps>) {
+  const { resources } = useLocalizationContext();
   const columns: Column<SelectedData>[] = useMemo(
     () => [
       {
         Header: resources.character,
-        Cell: renderCharacterCell,
+        Cell: CharacterCell,
         id: 'character',
       },
       {
         Header: resources.ascension,
-        Cell: renderAscension,
+        Cell: AscensionCell,
         id: 'ascension',
       },
       {
         Header: resources.talent,
-        Cell: renderTalent,
+        Cell: TalentCell,
         id: 'talent',
       },
       {
         Header: resources.weapon,
-        Cell: renderWeapon,
+        Cell: WeaponCell,
         id: 'weapon',
       },
       {
         Header: resources.artifact,
-        Cell: renderArtifact,
+        Cell: ArtifactCell,
         id: 'artifact',
       },
     ],
-    [resources, renderCharacterCell, renderAscension, renderTalent, renderWeapon, renderArtifact],
+    [resources],
   );
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } = useTable({
     columns,

@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 
 const KEY_PREFIX = 'genshin-planner-';
 
-function useLocalStorage<T>(suffix: string, initialValue: T): [T, (newValue: T) => void] {
+type SetValue<T> = Dispatch<SetStateAction<T>>;
+
+function useLocalStorage<T>(suffix: string, initialValue: T): [T, SetValue<T>] {
   const key = `${KEY_PREFIX}${suffix}`;
   const [value, setValue] = useState<T>(() => {
     const dataString = localStorage.getItem(key);
@@ -16,7 +18,8 @@ function useLocalStorage<T>(suffix: string, initialValue: T): [T, (newValue: T) 
     }
   });
 
-  const setLocalStorageValue = (newValue: T) => {
+  const setLocalStorageValue = (func: SetStateAction<T>) => {
+    const newValue = func instanceof Function ? func(value) : func;
     const dataString = typeof newValue === 'string' ? newValue : JSON.stringify(newValue);
 
     localStorage.setItem(key, dataString);

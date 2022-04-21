@@ -31,7 +31,7 @@ interface Data {
   selectedDataList: SelectedData[];
   addCharacter: (characterData: CharacterData) => void;
   removeCharacter: (characterId: string) => void;
-  updateSelectedData: (characterId: string, updatedData: Partial<SelectedData>) => void;
+  updateSelectedDataList: (characterId: string, updatedData: Partial<SelectedData>) => void;
 }
 
 const DataContext = createContext<Data | null>(null);
@@ -76,23 +76,25 @@ function DataProvider({ children }: PropsWithChildren<{}>) {
     [selectedDataList, setSelectedDataList],
   );
 
-  const updateSelectedData = useCallback(
+  const updateSelectedDataList = useCallback(
     (characterId: string, updatedData: Partial<SelectedData>) => {
-      const newSelectedDataList = [...selectedDataList];
-      const selectedIndex = newSelectedDataList.findIndex(
-        (selectedData) => selectedData.characterData.id === characterId,
-      );
+      setSelectedDataList((currentValue) => {
+        const newSelectedDataList = [...currentValue];
+        const selectedIndex = newSelectedDataList.findIndex(
+          (selectedData) => selectedData.characterData.id === characterId,
+        );
 
-      if (selectedIndex < 0) return;
+        if (selectedIndex < 0) return currentValue;
 
-      newSelectedDataList[selectedIndex] = {
-        ...newSelectedDataList[selectedIndex],
-        ...updatedData,
-      };
+        newSelectedDataList[selectedIndex] = {
+          ...newSelectedDataList[selectedIndex],
+          ...updatedData,
+        };
 
-      setSelectedDataList(newSelectedDataList);
+        return newSelectedDataList;
+      });
     },
-    [selectedDataList, setSelectedDataList],
+    [setSelectedDataList],
   );
 
   const value = useMemo(
@@ -106,9 +108,9 @@ function DataProvider({ children }: PropsWithChildren<{}>) {
       selectedDataList,
       addCharacter,
       removeCharacter,
-      updateSelectedData,
+      updateSelectedDataList,
     }),
-    [selectedDataList, addCharacter, removeCharacter, updateSelectedData],
+    [selectedDataList, addCharacter, removeCharacter, updateSelectedDataList],
   );
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;
