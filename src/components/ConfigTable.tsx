@@ -185,7 +185,9 @@ function ConfigTable({ data }: PropsWithoutRef<ConfigTableProps>) {
             setCurrentPage(newPage);
             gotoPage(newPage);
           }}
-          className="rounded bg-gray-700 p-2 hover:bg-gray-600 active:bg-gray-500"
+          className={`rounded p-2 ${
+            index === currentPage ? 'cursor-default bg-cyan-600' : 'bg-gray-700 hover:bg-gray-600 active:bg-gray-500'
+          }`}
         >
           {index + 1}
         </button>,
