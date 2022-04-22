@@ -178,6 +178,7 @@ function ConfigTable({ data }: PropsWithoutRef<ConfigTableProps>) {
             setCurrentPage(newPage);
             gotoPage(newPage);
           }}
+          className="rounded bg-gray-700 p-2 hover:bg-cyan-600 active:bg-cyan-500"
         >
           {index + 1}
         </button>,
@@ -189,7 +190,7 @@ function ConfigTable({ data }: PropsWithoutRef<ConfigTableProps>) {
 
   return (
     <div className="flex flex-col">
-      <div>
+      <div className="h-[690px]">
         <table {...getTableProps()} className="min-w-full divide-y divide-gray-700">
           <thead>
             {headerGroups.map((headerGroup) => (
@@ -218,7 +219,7 @@ function ConfigTable({ data }: PropsWithoutRef<ConfigTableProps>) {
           </tbody>
         </table>
       </div>
-      <div className="ml-auto space-x-2">{renderPageNumberItem()}</div>
+      <div className="ml-auto mt-4 space-x-2">{renderPageNumberItem()}</div>
     </div>
   );
 }

@@ -58,8 +58,10 @@ function Dropdown<T>({
             <button
               key={getLabel(item)}
               type="button"
-              className={`active:bg-gray-500" px-6 py-2 hover:bg-gray-600 ${
-                getLabel(selectedItem) === getLabel(item) ? 'bg-cyan-600 hover:bg-cyan-500' : ''
+              className={`px-6 py-2  ${
+                getLabel(selectedItem) === getLabel(item)
+                  ? 'bg-cyan-600 hover:bg-cyan-500 active:bg-cyan-400'
+                  : 'hover:bg-gray-600 active:bg-gray-500'
               }`}
               onClick={() => {
                 setIsMenuOpened(false);

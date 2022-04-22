@@ -170,7 +170,7 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
         const isSelected = !!(Array.isArray(value)
           ? value.find((i) => getLabel(i) === label)
           : getLabel(value) === label);
-        const selectedStyle = isSelected ? 'bg-cyan-600 hover:bg-cyan-500' : '';
+        const selectedStyle = isSelected ? 'bg-cyan-600 hover:!bg-cyan-500 active:!bg-cyan-400' : '';
         const isMaxed = !!(multiple && maxItem && Array.isArray(value) && value.length >= maxItem);
         const disabledStyle =
           isMaxed && !isSelected ? 'opacity-50 cursor-default' : 'hover:bg-gray-600 active:bg-gray-500';
@@ -181,7 +181,7 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
             type="button"
             disabled={isMaxed && !isSelected}
             data-name={label}
-            className={`px-4 py-2 ${selectedStyle} ${disabledStyle}`}
+            className={`px-4 py-2 ${disabledStyle} ${selectedStyle}`}
             onClick={() => {
               let newValue: ValueType<T, Multiple>;
 
