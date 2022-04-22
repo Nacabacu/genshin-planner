@@ -1,3 +1,4 @@
+import { Close } from '@mui/icons-material';
 import { PropsWithoutRef, ReactNode, useMemo, useState } from 'react';
 import { CellProps, Column, usePagination, useTable } from 'react-table';
 import { SelectedData, useDataContext } from '../contexts/dataContext';
@@ -85,12 +86,12 @@ function WeaponCell({ row }: CellProps<SelectedData>) {
   );
 }
 function ArtifactCell({ row }: CellProps<SelectedData>) {
-  const { artifactList, updateSelectedDataList } = useDataContext();
+  const { artifactList, updateSelectedDataList, removeCharacter } = useDataContext();
   const { resources } = useLocalizationContext();
   const { isEnabled, characterData, artifactDataList, isArtifactEnabled } = row.original;
 
   return (
-    <div className="flex">
+    <div className="flex items-center">
       <Switch
         checked={isArtifactEnabled}
         disabled={!isEnabled}
@@ -108,14 +109,16 @@ function ArtifactCell({ row }: CellProps<SelectedData>) {
         placeholder={resources.select_artifacts_placeholder}
         getStartAdornment={(item) => <ImageIcon id={item.id} type={IconType.Artifacts} />}
         getItemLabel={(item) => resources[item.id as keyof LanguageDefinition]}
-        className="ml-2 flex-grow"
+        className="mx-2 flex-grow"
       />
+      <Close className="w-8 cursor-pointer" onClick={() => removeCharacter(characterData.id)} />
     </div>
   );
 }
 
 function ConfigTable({ data }: PropsWithoutRef<ConfigTableProps>) {
   const { resources } = useLocalizationContext();
+  const [currentPage, setCurrentPage] = useState(0);
   const columns: Column<SelectedData>[] = useMemo(
     () => [
       {
@@ -152,7 +155,6 @@ function ConfigTable({ data }: PropsWithoutRef<ConfigTableProps>) {
     [resources],
   );
 
-  const [currentPage, setCurrentPage] = useState(0);
   const { getTableProps, getTableBodyProps, headerGroups, page, prepareRow, pageCount, gotoPage } = useTable(
     {
       columns,
@@ -206,7 +208,7 @@ function ConfigTable({ data }: PropsWithoutRef<ConfigTableProps>) {
               return (
                 <tr {...row.getRowProps()}>
                   {row.cells.map((cell) => (
-                    <td {...cell.getCellProps()} className="p-2">
+                    <td {...cell.getCellProps()} className="px-2 py-3">
                       {cell.render('Cell')}
                     </td>
                   ))}

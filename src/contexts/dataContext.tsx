@@ -62,18 +62,19 @@ function DataProvider({ children }: PropsWithChildren<{}>) {
         isArtifactEnabled: true,
         characterData,
       };
-      setSelectedDataList([...selectedDataList, newSelectedData]);
+
+      setSelectedDataList((currentValue) => [...currentValue, newSelectedData]);
     },
-    [selectedDataList, setSelectedDataList],
+    [setSelectedDataList],
   );
 
   const removeCharacter = useCallback(
     (characterId: string) => {
-      setSelectedDataList([
-        ...selectedDataList.filter((selectedData) => selectedData.characterData.id !== characterId),
+      setSelectedDataList((currentValue) => [
+        ...currentValue.filter((selectedData) => selectedData.characterData.id !== characterId),
       ]);
     },
-    [selectedDataList, setSelectedDataList],
+    [setSelectedDataList],
   );
 
   const updateSelectedDataList = useCallback(
