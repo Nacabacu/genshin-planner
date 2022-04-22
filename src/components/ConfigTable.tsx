@@ -1,5 +1,5 @@
 import { Close } from '@mui/icons-material';
-import { PropsWithoutRef, ReactNode, useMemo, useState } from 'react';
+import { PropsWithoutRef, ReactNode, useEffect, useMemo, useState } from 'react';
 import { CellProps, Column, usePagination, useTable } from 'react-table';
 import { SelectedData, useDataContext } from '../contexts/dataContext';
 import { LanguageDefinition, useLocalizationContext } from '../contexts/localizationContext';
@@ -164,6 +164,13 @@ function ConfigTable({ data }: PropsWithoutRef<ConfigTableProps>) {
     usePagination,
   );
 
+  useEffect(() => {
+    if (page.length !== 0) return;
+
+    setCurrentPage(currentPage - 1);
+    gotoPage(currentPage - 1);
+  }, [page.length, setCurrentPage, currentPage, gotoPage]);
+
   const renderPageNumberItem = () => {
     const element: ReactNode[] = [];
 
@@ -178,7 +185,7 @@ function ConfigTable({ data }: PropsWithoutRef<ConfigTableProps>) {
             setCurrentPage(newPage);
             gotoPage(newPage);
           }}
-          className="rounded bg-gray-700 p-2 hover:bg-cyan-600 active:bg-cyan-500"
+          className="rounded bg-gray-700 p-2 hover:bg-gray-600 active:bg-gray-500"
         >
           {index + 1}
         </button>,
