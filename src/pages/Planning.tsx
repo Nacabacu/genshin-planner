@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { CharacterData } from '../../types/data';
 import Autosuggest from '../components/Autosuggest';
 import ConfigTable from '../components/ConfigTable';
+import FilterGroup, { FilterData } from '../components/FilterGroup';
 import ImageIcon, { IconType } from '../components/ImageIcon';
 import { useDataContext } from '../contexts/dataContext';
 import { LanguageDefinition, useLocalizationContext } from '../contexts/localizationContext';
@@ -9,6 +10,7 @@ import { LanguageDefinition, useLocalizationContext } from '../contexts/localiza
 function Planning() {
   const { characterList, addCharacter, selectedDataList } = useDataContext();
   const { resources } = useLocalizationContext();
+  const [filteredDataList, setFilteredDataList] = useState(selectedDataList);
   const [selectableCharList, setSelectableCharList] = useState<CharacterData[]>([]);
 
   useEffect(() => {
@@ -19,9 +21,27 @@ function Planning() {
     setSelectableCharList(selectable);
   }, [characterList, selectedDataList]);
 
+  const onFilterChange = useCallback(
+    ({ elementFilters, weaponTypeFilters }: FilterData) => {
+      let newFilteredData = selectedDataList;
+
+      if (elementFilters.length) {
+        newFilteredData = newFilteredData.filter((data) => elementFilters.includes(data.characterData.element));
+      }
+
+      if (weaponTypeFilters.length) {
+        newFilteredData = newFilteredData.filter((data) => weaponTypeFilters.includes(data.characterData.weaponType));
+      }
+
+      setFilteredDataList(newFilteredData);
+    },
+    [selectedDataList],
+  );
+
   return (
     <>
-      <div className="mt-8 mb-4 inline-flex w-full">
+      <div className="mt-8 mb-4 inline-flex w-full items-end">
+        <FilterGroup onChange={onFilterChange} />
         <Autosuggest
           items={selectableCharList}
           onUpdate={(value) => {
@@ -34,7 +54,7 @@ function Planning() {
           className="ml-auto w-72"
         />
       </div>
-      <ConfigTable data={selectedDataList} />
+      <ConfigTable data={filteredDataList} />
     </>
   );
 }

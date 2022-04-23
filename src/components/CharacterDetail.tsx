@@ -17,7 +17,7 @@ function CharacterDetail({ data, disabled, className }: PropsWithoutRef<Characte
       <span className="break-keep ml-2 hidden overflow-hidden truncate leading-8 md:block">
         {resources[data.id as keyof LanguageDefinition]}
       </span>
-      <ImageIcon id={data.element} type={IconType.Icons} className=" ml-auto h-8" />
+      <ImageIcon id={data.element} type={IconType.Icons} className="ml-auto h-8" />
       <ImageIcon id={data.weaponType} type={IconType.Icons} className="h-8" />
     </div>
   );

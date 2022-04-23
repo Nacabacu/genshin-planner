@@ -1,6 +1,9 @@
+export const elements = ['anemo', 'cryo', 'pyro', 'hydro', 'electro', 'geo', 'dendro'] as const;
+export const weaponTypes = ['sword', 'bow', 'claymore', 'catalyst', 'polearm'] as const;
+
 export type Rarity = 1 | 2 | 3 | 4 | 5;
-export type WeaponType = 'sword' | 'bow' | 'claymore' | 'catalyst' | 'polearm';
-export type Element = 'anemo' | 'cryo' | 'pyro' | 'hydro' | 'electro' | 'geo' | 'dendro';
+export type WeaponType = typeof weaponTypes[number];
+export type Element = typeof elements[number];
 export type Day = 'monday' | 'tuesday' | 'wednesday' | 'thursday' | 'friday' | 'saturday' | 'sunday';
 export type Region = 'mondstant' | 'liyue' | 'inazuma';
 export type DomainType = 'artifacts' | 'weapon_ascension_materials' | 'talent_levelup_material';

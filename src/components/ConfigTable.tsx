@@ -119,6 +119,7 @@ function ArtifactCell({ row }: CellProps<SelectedData>) {
 function ConfigTable({ data }: PropsWithoutRef<ConfigTableProps>) {
   const { resources } = useLocalizationContext();
   const [currentPage, setCurrentPage] = useState(0);
+
   const columns: Column<SelectedData>[] = useMemo(
     () => [
       {
@@ -165,11 +166,11 @@ function ConfigTable({ data }: PropsWithoutRef<ConfigTableProps>) {
   );
 
   useEffect(() => {
-    if (page.length !== 0) return;
+    if (page.length !== 0 || !data.length) return;
 
     setCurrentPage(currentPage - 1);
     gotoPage(currentPage - 1);
-  }, [page.length, setCurrentPage, currentPage, gotoPage]);
+  }, [page.length, setCurrentPage, currentPage, gotoPage, data]);
 
   const renderPageNumberItem = () => {
     const element: ReactNode[] = [];
