@@ -12,6 +12,7 @@
   "weapon": "อาวุธ",
   "artifact": "อาร์ติแฟกต์",
   "clear": "ล้าง",
+  "no_item_found": "ไม่มีรายการ",
   "traveler_anemo": "Traveler (Anemo)",
   "traveler_geo": "Traveler (Geo)",
   "traveler_electro": "Traveler (Electro)",

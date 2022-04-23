@@ -12,6 +12,7 @@
   "weapon": "Weapon",
   "artifact": "Artifact",
   "clear": "Clear",
+  "no_item_found": "No Item Found",
   "traveler_anemo": "Traveler (Anemo)",
   "traveler_geo": "Traveler (Geo)",
   "traveler_electro": "Traveler (Electro)",

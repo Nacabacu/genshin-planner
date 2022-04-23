@@ -113,7 +113,7 @@ function ArtifactCell({ row }: CellProps<SelectedData>) {
         getItemLabel={(item) => resources[item.id as keyof LanguageDefinition]}
         className="mx-2 flex-grow"
       />
-      <Close className="w-8 cursor-pointer" onClick={() => removeCharacter(characterData.id)} />
+      <Close className="w-8 cursor-pointer hover:text-gray-200" onClick={() => removeCharacter(characterData.id)} />
     </div>
   );
 }
@@ -198,7 +198,12 @@ function ConfigTable({ data, filter }: PropsWithoutRef<ConfigTableProps>) {
 
   useEffect(() => {
     setGlobalFilter(filter);
+    setCurrentPage(0);
   }, [setGlobalFilter, filter]);
+
+  useEffect(() => {
+    gotoPage(currentPage);
+  }, [gotoPage, currentPage]);
 
   const renderPageNumberItem = () => {
     const element: ReactNode[] = [];
@@ -226,37 +231,48 @@ function ConfigTable({ data, filter }: PropsWithoutRef<ConfigTableProps>) {
     return element;
   };
 
-  return (
-    <div className="flex flex-col">
-      <div className="h-[690px]">
-        <table {...getTableProps()} className="min-w-full divide-y divide-gray-700">
-          <thead>
-            {headerGroups.map((headerGroup) => (
-              <tr {...headerGroup.getHeaderGroupProps()}>
-                {headerGroup.headers.map((column) => (
-                  <th {...column.getHeaderProps()} className={`p-2 text-left ${(column as any).className}`}>
-                    {column.render('Header')}
-                  </th>
+  const renderBody = () => {
+    if (page.length === 0)
+      return (
+        <div className="flex h-full w-full items-center justify-center">
+          <div className="text-4xl opacity-50">{resources.no_item_found}</div>
+        </div>
+      );
+
+    return (
+      <table {...getTableProps()} className="min-w-full divide-y divide-gray-700">
+        <thead>
+          {headerGroups.map((headerGroup) => (
+            <tr {...headerGroup.getHeaderGroupProps()}>
+              {headerGroup.headers.map((column) => (
+                <th {...column.getHeaderProps()} className={`p-2 text-left ${(column as any).className}`}>
+                  {column.render('Header')}
+                </th>
+              ))}
+            </tr>
+          ))}
+        </thead>
+        <tbody {...getTableBodyProps()} className="divide-y divide-gray-700">
+          {page.map((row) => {
+            prepareRow(row);
+            return (
+              <tr {...row.getRowProps()}>
+                {row.cells.map((cell) => (
+                  <td {...cell.getCellProps()} className="px-2 py-3">
+                    {cell.render('Cell')}
+                  </td>
                 ))}
               </tr>
-            ))}
-          </thead>
-          <tbody {...getTableBodyProps()} className="divide-y divide-gray-700">
-            {page.map((row) => {
-              prepareRow(row);
-              return (
-                <tr {...row.getRowProps()}>
-                  {row.cells.map((cell) => (
-                    <td {...cell.getCellProps()} className="px-2 py-3">
-                      {cell.render('Cell')}
-                    </td>
-                  ))}
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
+            );
+          })}
+        </tbody>
+      </table>
+    );
+  };
+
+  return (
+    <div className="flex flex-col">
+      <div className="h-[690px]">{renderBody()}</div>
       <div className="ml-auto mt-4 space-x-2">{renderPageNumberItem()}</div>
     </div>
   );
