@@ -27,7 +27,7 @@ function Planning() {
 
   return (
     <>
-      <div className="mt-8 mb-4 inline-flex w-full items-end">
+      <div className="mt-8 mb-4 flex w-full flex-wrap-reverse items-end justify-between gap-1.5">
         <FilterGroup onChange={onFilterChange} />
         <Autosuggest
           items={selectableCharList}
@@ -38,7 +38,7 @@ function Planning() {
           placeholder={resources.add_character_placeholder}
           getStartAdornment={(item) => <ImageIcon id={item.id} type={IconType.Characters} />}
           getItemLabel={(item) => resources[item.id as keyof LanguageDefinition] as string}
-          className="ml-auto w-72"
+          className="w-72"
         />
       </div>
       <ConfigTable data={selectedDataList} filter={filter} />

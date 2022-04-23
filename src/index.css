@@ -4,7 +4,7 @@
 
 @layer components {
   .content-padding {
-    @apply px-2 sm:px-4 md:px-10 lg:px-20 xl:px-40;
+    @apply px-2 sm:px-4 md:px-10 lg:px-20 xl:px-32 2xl:px-48;
   }
 
   .break-keep {
