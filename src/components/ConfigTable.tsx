@@ -77,7 +77,7 @@ function WeaponCell({ row }: CellProps<SelectedData>) {
       <Autosuggest
         items={selectableWeaponList}
         disabled={!isEnabled || !isWeaponEnabled}
-        defaultItem={weaponData}
+        selectedItem={weaponData}
         onUpdate={(selectedWeapon) => updateSelectedDataList(characterData.id, { weaponData: selectedWeapon })}
         placeholder={resources.select_weapon_placeholder}
         getStartAdornment={(item) => <ImageIcon id={item.id} type={IconType.Weapons} />}
@@ -102,7 +102,7 @@ function ArtifactCell({ row }: CellProps<SelectedData>) {
       <Autosuggest
         items={artifactList}
         disabled={!isEnabled || !isArtifactEnabled}
-        defaultItem={artifactDataList}
+        selectedItem={artifactDataList}
         onUpdate={(selectedArtifactList) =>
           updateSelectedDataList(characterData.id, { artifactDataList: selectedArtifactList })
         }
@@ -235,7 +235,7 @@ function ConfigTable({ data, filter }: PropsWithoutRef<ConfigTableProps>) {
     if (page.length === 0)
       return (
         <div className="flex h-full w-full items-center justify-center">
-          <div className="text-4xl opacity-50">{resources.no_item_found}</div>
+          <div className="select-none text-4xl opacity-50">{resources.no_item_found}</div>
         </div>
       );
 

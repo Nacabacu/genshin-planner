@@ -9,7 +9,7 @@ interface AutosuggestProps<T, Multiple extends boolean | undefined = undefined> 
   onUpdate: (selectedValue: ValueType<T, Multiple>) => void;
   className?: string;
   placeholder?: string;
-  defaultItem?: ValueType<T, Multiple>;
+  selectedItem?: ValueType<T, Multiple>;
   multiple?: Multiple;
   maxItem?: number;
   disabled?: boolean;
@@ -25,7 +25,7 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
   onUpdate,
   className,
   placeholder,
-  defaultItem,
+  selectedItem,
   multiple,
   maxItem = items.length,
   disabled,
@@ -33,7 +33,7 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
   getStartAdornment,
   getItemLabel,
 }: PropsWithoutRef<AutosuggestProps<T, Multiple>>) {
-  const [value, setValue] = useState<T | T[] | null>((defaultItem as T | T[]) || null);
+  const [value, setValue] = useState<T | T[] | null>((selectedItem as T | T[]) || null);
   const [inputValue, setInputValue] = useState('');
   const [isMenuOpened, setIsMenuOpened] = useState(false);
   const [isHover, setIsHover] = useState(false);
@@ -72,6 +72,10 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
   };
 
   useMouseDownOutside(wrapperRef, closeMenu);
+
+  useEffect(() => {
+    setValue(selectedItem as T | T[] | null);
+  }, [selectedItem]);
 
   useEffect(() => {
     if (!isMenuOpened || !value || multiple) return;

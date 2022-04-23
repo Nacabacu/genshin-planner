@@ -1,4 +1,4 @@
-import { PropsWithoutRef, useState } from 'react';
+import { PropsWithoutRef, useEffect, useState } from 'react';
 
 interface SwitchProps {
   checked?: boolean;
@@ -8,6 +8,10 @@ interface SwitchProps {
 
 function Switch({ checked, disabled, onChange }: PropsWithoutRef<SwitchProps>) {
   const [isChecked, setIsChecked] = useState(!!checked);
+
+  useEffect(() => {
+    setIsChecked(!!checked);
+  }, [checked]);
 
   return (
     <span
