@@ -1,15 +1,17 @@
 import { Close } from '@mui/icons-material';
-import { PropsWithoutRef, ReactNode, useEffect, useMemo, useState } from 'react';
-import { CellProps, Column, usePagination, useTable } from 'react-table';
+import { PropsWithoutRef, ReactNode, useCallback, useEffect, useMemo, useState } from 'react';
+import { CellProps, Column, Row, useGlobalFilter, usePagination, useTable } from 'react-table';
 import { SelectedData, useDataContext } from '../contexts/dataContext';
 import { LanguageDefinition, useLocalizationContext } from '../contexts/localizationContext';
 import Autosuggest from './Autosuggest';
 import CharacterDetail from './CharacterDetail';
+import { FilterData } from './FilterGroup';
 import ImageIcon, { IconType } from './ImageIcon';
 import Switch from './Switch';
 
 interface ConfigTableProps {
   data: SelectedData[];
+  filter?: FilterData;
 }
 
 const PAGE_SIZE = 10;
@@ -116,7 +118,7 @@ function ArtifactCell({ row }: CellProps<SelectedData>) {
   );
 }
 
-function ConfigTable({ data }: PropsWithoutRef<ConfigTableProps>) {
+function ConfigTable({ data, filter }: PropsWithoutRef<ConfigTableProps>) {
   const { resources } = useLocalizationContext();
   const [currentPage, setCurrentPage] = useState(0);
 
@@ -155,22 +157,48 @@ function ConfigTable({ data }: PropsWithoutRef<ConfigTableProps>) {
     ],
     [resources],
   );
+  const customGlobalFilter = useCallback(
+    (rows: Row<SelectedData>[], columnIds: string[], filterValue: FilterData) =>
+      rows.filter((row) => {
+        const { characterData } = row.original;
 
-  const { getTableProps, getTableBodyProps, headerGroups, page, prepareRow, pageCount, gotoPage } = useTable(
-    {
-      columns,
-      data,
-      initialState: { pageSize: PAGE_SIZE, pageIndex: currentPage },
-    },
-    usePagination,
+        if (!filterValue) return true;
+
+        const { elementFilters, weaponTypeFilters } = filterValue;
+
+        if (elementFilters.length && weaponTypeFilters.length) {
+          return elementFilters.includes(characterData.element) && weaponTypeFilters.includes(characterData.weaponType);
+        }
+
+        if (elementFilters.length) {
+          return elementFilters.includes(characterData.element);
+        }
+
+        if (weaponTypeFilters.length) {
+          return weaponTypeFilters.includes(characterData.weaponType);
+        }
+
+        return true;
+      }),
+    [],
   );
 
-  useEffect(() => {
-    if (page.length !== 0 || !data.length) return;
+  const { getTableProps, getTableBodyProps, headerGroups, page, prepareRow, pageCount, gotoPage, setGlobalFilter } =
+    useTable(
+      {
+        columns,
+        data,
+        globalFilter: customGlobalFilter,
+        autoResetGlobalFilter: false,
+        initialState: { pageSize: PAGE_SIZE, pageIndex: currentPage },
+      },
+      useGlobalFilter,
+      usePagination,
+    );
 
-    setCurrentPage(currentPage - 1);
-    gotoPage(currentPage - 1);
-  }, [page.length, setCurrentPage, currentPage, gotoPage, data]);
+  useEffect(() => {
+    setGlobalFilter(filter);
+  }, [setGlobalFilter, filter]);
 
   const renderPageNumberItem = () => {
     const element: ReactNode[] = [];

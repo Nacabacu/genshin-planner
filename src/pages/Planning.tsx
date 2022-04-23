@@ -10,7 +10,7 @@ import { LanguageDefinition, useLocalizationContext } from '../contexts/localiza
 function Planning() {
   const { characterList, addCharacter, selectedDataList } = useDataContext();
   const { resources } = useLocalizationContext();
-  const [filteredDataList, setFilteredDataList] = useState(selectedDataList);
+  const [filter, setFilterData] = useState<FilterData | undefined>();
   const [selectableCharList, setSelectableCharList] = useState<CharacterData[]>([]);
 
   useEffect(() => {
@@ -21,22 +21,9 @@ function Planning() {
     setSelectableCharList(selectable);
   }, [characterList, selectedDataList]);
 
-  const onFilterChange = useCallback(
-    ({ elementFilters, weaponTypeFilters }: FilterData) => {
-      let newFilteredData = selectedDataList;
-
-      if (elementFilters.length) {
-        newFilteredData = newFilteredData.filter((data) => elementFilters.includes(data.characterData.element));
-      }
-
-      if (weaponTypeFilters.length) {
-        newFilteredData = newFilteredData.filter((data) => weaponTypeFilters.includes(data.characterData.weaponType));
-      }
-
-      setFilteredDataList(newFilteredData);
-    },
-    [selectedDataList],
-  );
+  const onFilterChange = useCallback((data) => {
+    setFilterData(data);
+  }, []);
 
   return (
     <>
@@ -54,7 +41,7 @@ function Planning() {
           className="ml-auto w-72"
         />
       </div>
-      <ConfigTable data={filteredDataList} />
+      <ConfigTable data={selectedDataList} filter={filter} />
     </>
   );
 }
