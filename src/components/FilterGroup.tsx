@@ -61,7 +61,7 @@ function FilterGroup({ onChange }: PropsWithoutRef<FilterGroupProps>) {
   const { resources } = useLocalizationContext();
   const [elementFilters, setElementFilters] = useState<Element[]>([]);
   const [weaponTypeFilters, setWeaponTypeFilter] = useState<WeaponType[]>([]);
-  const renderClearAll = () => (
+  const renderResetFilter = () => (
     <span
       className="cursor-pointer hover:underline"
       onClick={() => {
@@ -69,7 +69,7 @@ function FilterGroup({ onChange }: PropsWithoutRef<FilterGroupProps>) {
         setWeaponTypeFilter([]);
       }}
     >
-      {resources.clear}
+      {resources.reset}
     </span>
   );
 
@@ -90,7 +90,7 @@ function FilterGroup({ onChange }: PropsWithoutRef<FilterGroupProps>) {
           setCurrentFilter={setElementFilters}
           className="mt-1"
         />
-        {renderClearAll()}
+        {renderResetFilter()}
       </div>
     </div>
   );
