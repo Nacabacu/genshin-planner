@@ -186,15 +186,18 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
               let newValue: ValueType<T, Multiple>;
 
               if (Array.isArray(value)) {
-                if (value.includes(item)) {
-                  newValue = value.filter((i) => i !== item) as ValueType<T, Multiple>;
+                if (value.find((i) => getLabel(i) === getLabel(item))) {
+                  newValue = value.filter((i) => getLabel(i) !== getLabel(item)) as ValueType<T, Multiple>;
                 } else {
                   newValue = [...value, item] as ValueType<T, Multiple>;
                 }
               } else if (multiple) {
                 newValue = [item] as ValueType<T, Multiple>;
               } else {
-                if (item === value) closeMenu();
+                if (getLabel(item) === getLabel(value)) {
+                  closeMenu();
+                  return;
+                }
                 newValue = item as ValueType<T, Multiple>;
               }
 

@@ -107,7 +107,7 @@ function ArtifactCell({ row }: CellProps<SelectedData>) {
           updateSelectedDataList(characterData.id, { artifactDataList: selectedArtifactList })
         }
         multiple
-        maxItem={3}
+        maxItem={2}
         placeholder={resources.select_artifacts_placeholder}
         getStartAdornment={(item) => <ImageIcon id={item.id} type={IconType.Artifacts} />}
         getItemLabel={(item) => resources[item.id as keyof LanguageDefinition]}
