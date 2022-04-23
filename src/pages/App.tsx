@@ -1,10 +1,16 @@
+import { useCallback } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import ReactTooltip from 'react-tooltip';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
+import { LanguageDefinition, useLocalizationContext } from '../contexts/localizationContext';
 import Planning from './Planning';
 import Result from './Result';
 
 function App() {
+  const { resources } = useLocalizationContext();
+  const getTooptip = useCallback((id: string) => resources[id as keyof LanguageDefinition], [resources]);
+
   return (
     <div className="flex h-screen flex-col text-gray-300">
       <Navbar className="content-padding flex-initial bg-gray-900" />
@@ -15,6 +21,7 @@ function App() {
         </Routes>
       </div>
       <Footer className="content-padding flex-initial bg-gray-900" />
+      <ReactTooltip place="top" type="dark" effect="float" getContent={getTooptip} />
     </div>
   );
 }

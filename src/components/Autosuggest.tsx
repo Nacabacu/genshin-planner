@@ -103,7 +103,6 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
               key={getLabel(item)}
               label={getLabel(item)}
               hideLabel
-              tooltip={!isMenuOpened}
               deletable
               disabled={disabled}
               startAdornment={getStartAdornment(item)}

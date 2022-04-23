@@ -13,7 +13,7 @@ function CharacterDetail({ data, disabled, className }: PropsWithoutRef<Characte
   const { resources } = useLocalizationContext();
   return (
     <div className={`flex ${disabled ? 'opacity-50' : ''} ${className}`}>
-      <ImageIcon id={data.id} type={IconType.Characters} className="h-8" />
+      <ImageIcon id={data.id} type={IconType.Characters} disabledTooltip className="h-8" />
       <span className="break-keep ml-2 hidden overflow-hidden truncate leading-8 md:block">
         {resources[data.id as keyof LanguageDefinition]}
       </span>

@@ -1,6 +1,7 @@
 import { Close } from '@mui/icons-material';
 import { PropsWithoutRef, ReactNode, useCallback, useEffect, useMemo } from 'react';
 import { CellProps, Column, Row, useGlobalFilter, usePagination, useTable } from 'react-table';
+import ReactTooltip from 'react-tooltip';
 import { SelectedData, useDataContext } from '../contexts/dataContext';
 import { LanguageDefinition, useLocalizationContext } from '../contexts/localizationContext';
 import Autosuggest from './Autosuggest';
@@ -80,7 +81,7 @@ function WeaponCell({ row }: CellProps<SelectedData>) {
         selectedItem={weaponData}
         onUpdate={(selectedWeapon) => updateSelectedDataList(characterData.id, { weaponData: selectedWeapon })}
         placeholder={resources.select_weapon_placeholder}
-        getStartAdornment={(item) => <ImageIcon id={item.id} type={IconType.Weapons} />}
+        getStartAdornment={(item) => <ImageIcon id={item.id} type={IconType.Weapons} disabledTooltip />}
         getItemLabel={(item) => resources[item.id as keyof LanguageDefinition]}
         className="ml-2 flex-grow"
       />
@@ -213,6 +214,10 @@ function ConfigTable({ data, filter }: PropsWithoutRef<ConfigTableProps>) {
     useGlobalFilter,
     usePagination,
   );
+
+  useEffect(() => {
+    ReactTooltip.rebuild();
+  });
 
   useEffect(() => {
     gotoPage(pageCount - 1);

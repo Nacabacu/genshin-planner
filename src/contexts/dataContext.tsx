@@ -4,7 +4,7 @@ import _domain from '@data/domains.json';
 import _materialConfig from '@data/materialConfig.json';
 import _material from '@data/materials.json';
 import _weapon from '@data/weapons.json';
-import { createContext, PropsWithChildren, useCallback, useContext, useMemo, useState } from 'react';
+import { createContext, PropsWithChildren, useCallback, useContext, useMemo, useRef } from 'react';
 import { ArtifactData, CharacterData, DomainData, MaterialConfig, MaterialData, WeaponData } from '../../types/data';
 import useLocalStorage from '../hooks/useLocalStorage';
 
@@ -53,7 +53,7 @@ function DataProvider({ children }: PropsWithChildren<{}>) {
     defaultSelectedDataList,
   );
   // TODO: find a better way to handle when character is added
-  const [onAddCharacter, setOnAddCharacter] = useState(0);
+  const onAddCharacter = useRef(0);
 
   const addCharacter = useCallback(
     (characterData: CharacterData) => {
@@ -67,7 +67,7 @@ function DataProvider({ children }: PropsWithChildren<{}>) {
       };
 
       setSelectedDataList((currentValue) => [...currentValue, newSelectedData]);
-      setOnAddCharacter((currentValue) => currentValue + 1);
+      onAddCharacter.current += 1;
     },
     [setSelectedDataList],
   );
@@ -111,7 +111,7 @@ function DataProvider({ children }: PropsWithChildren<{}>) {
       materialList: _material as MaterialData[],
       materialConfig: _materialConfig as MaterialConfig,
       selectedDataList,
-      onAddCharacter,
+      onAddCharacter: onAddCharacter.current,
       addCharacter,
       removeCharacter,
       updateSelectedDataList,

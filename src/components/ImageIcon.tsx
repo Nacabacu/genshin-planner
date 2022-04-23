@@ -4,6 +4,7 @@ interface ImageIconProps {
   id: string;
   type: IconType;
   className?: string;
+  disabledTooltip?: boolean;
 }
 
 export enum IconType {
@@ -14,9 +15,15 @@ export enum IconType {
   Icons = 'icons',
 }
 
-function ImageIcon({ id, type, className }: PropsWithoutRef<ImageIconProps>) {
+function ImageIcon({ id, type, className, disabledTooltip }: PropsWithoutRef<ImageIconProps>) {
   return (
-    <img loading="lazy" src={`./images/${type}/${id}.png`} alt={id} className={`pointer-events-none ${className}`} />
+    <img
+      loading="lazy"
+      src={`./images/${type}/${id}.png`}
+      data-tip={disabledTooltip ? null : id}
+      alt={id}
+      className={className}
+    />
   );
 }
 
