@@ -4,6 +4,7 @@ import { CellProps, Column, Row, useGlobalFilter, usePagination, useTable } from
 import ReactTooltip from 'react-tooltip';
 import { SelectedData, useDataContext } from '../contexts/dataContext';
 import { LanguageDefinition, useLocalizationContext } from '../contexts/localizationContext';
+import useResponsiveSize, { ScreenSize } from '../hooks/useResponsiveSize';
 import Autosuggest from './Autosuggest';
 import CharacterDetail from './CharacterDetail';
 import { FilterData } from './FilterGroup';
@@ -127,14 +128,47 @@ function ArtifactCell(props: CellProps<SelectedData>) {
   );
 }
 
+function getHiddenColumns(screenSize: ScreenSize) {
+  switch (screenSize) {
+    case ScreenSize.MobilePortrait:
+      return ['talent', 'ascension', 'weapon', 'artifact'];
+    case ScreenSize.MobileLandScape:
+      return ['talent', 'ascension', 'weapon'];
+    case ScreenSize.Tablet:
+      return ['talent', 'ascension'];
+    default:
+      return [];
+  }
+}
+
 function ConfigTable({ data, filter }: PropsWithoutRef<ConfigTableProps>) {
   const { onAddCharacter } = useDataContext();
+  const screenSize = useResponsiveSize();
   const { resources } = useLocalizationContext();
+  const characterColumnHeader = useMemo(() => {
+    switch (screenSize) {
+      case ScreenSize.MobilePortrait:
+        return `${resources.character}`;
+      case ScreenSize.MobileLandScape:
+      case ScreenSize.Tablet:
+        return `${resources.character}/${resources.ascension}/${resources.talent}`;
+      default:
+        return resources.character;
+    }
+  }, [screenSize, resources]);
+  const weaponColumnHeader = useMemo(() => {
+    switch (screenSize) {
+      case ScreenSize.MobileLandScape:
+        return `${resources.weapon}/${resources.artifact}`;
+      default:
+        return resources.weapon;
+    }
+  }, [screenSize, resources]);
 
   const columns: Column<SelectedData>[] = useMemo(
     () => [
       {
-        Header: resources.character,
+        Header: characterColumnHeader,
         Cell: CharacterCell,
         id: 'character',
         className: 'w-3/12',
@@ -152,7 +186,7 @@ function ConfigTable({ data, filter }: PropsWithoutRef<ConfigTableProps>) {
         className: 'w-1/12',
       },
       {
-        Header: resources.weapon,
+        Header: weaponColumnHeader,
         Cell: WeaponCell,
         id: 'weapon',
         className: 'w-3/12',
@@ -164,7 +198,7 @@ function ConfigTable({ data, filter }: PropsWithoutRef<ConfigTableProps>) {
         className: 'w-4/12',
       },
     ],
-    [resources],
+    [resources, characterColumnHeader, weaponColumnHeader],
   );
   const customGlobalFilter = useCallback(
     (rows: Row<SelectedData>[], columnIds: string[], filterValue: FilterData) =>
@@ -201,6 +235,7 @@ function ConfigTable({ data, filter }: PropsWithoutRef<ConfigTableProps>) {
     pageCount,
     gotoPage,
     setGlobalFilter,
+    setHiddenColumns,
     state: { pageIndex },
   } = useTable(
     {
@@ -209,7 +244,7 @@ function ConfigTable({ data, filter }: PropsWithoutRef<ConfigTableProps>) {
       globalFilter: customGlobalFilter,
       autoResetGlobalFilter: false,
       autoResetPage: false,
-      initialState: { pageSize: PAGE_SIZE },
+      initialState: { pageSize: PAGE_SIZE, hiddenColumns: getHiddenColumns(screenSize) },
     },
     useGlobalFilter,
     usePagination,
@@ -227,6 +262,12 @@ function ConfigTable({ data, filter }: PropsWithoutRef<ConfigTableProps>) {
     setGlobalFilter(filter);
     gotoPage(0);
   }, [setGlobalFilter, filter, gotoPage]);
+
+  useEffect(() => {
+    const hiddenColumns = getHiddenColumns(screenSize);
+
+    setHiddenColumns(hiddenColumns);
+  }, [screenSize, setHiddenColumns]);
 
   const renderPageNumberItem = () => {
     const element: ReactNode[] = [];
@@ -295,9 +336,9 @@ function ConfigTable({ data, filter }: PropsWithoutRef<ConfigTableProps>) {
   };
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col overflow-hidden">
       <div className="h-[690px]">{renderBody()}</div>
-      <div className="ml-auto mt-4 space-x-2">{renderPageNumberItem()}</div>
+      <div className="my-4 ml-auto space-x-2">{renderPageNumberItem()}</div>
     </div>
   );
 }
