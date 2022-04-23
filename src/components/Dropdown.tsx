@@ -5,7 +5,7 @@ import { useMouseDownOutside } from '../hooks/element';
 export interface DropDownProps<T> {
   items: T[];
   onSelect: (selectedValue: T) => void;
-  defaultItem: T;
+  selectedItem: T;
   hideLabel?: boolean;
   getStartAdornment?: (item: T) => ReactNode;
   getItemLabel?: (item: T) => string;
@@ -15,11 +15,11 @@ function Dropdown<T>({
   items,
   onSelect,
   getStartAdornment,
-  defaultItem,
+  selectedItem,
   hideLabel,
   getItemLabel,
 }: PropsWithoutRef<DropDownProps<T>>) {
-  const [selectedItem, setSelectedItem] = useState<T>(defaultItem);
+  const [value, setValue] = useState<T>(selectedItem);
   const [isMenuOpened, setIsMenuOpened] = useState(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
 
@@ -38,7 +38,7 @@ function Dropdown<T>({
   const getFullLabel = (item: T) => (
     <div className="flex items-center">
       {getStartAdornment && <div className="mr-2 flex h-6 w-6 items-center">{getStartAdornment(item)}</div>}
-      {!hideLabel && getLabel(selectedItem)}
+      {!hideLabel && getLabel(value)}
     </div>
   );
 
@@ -49,7 +49,7 @@ function Dropdown<T>({
         className="flex w-full rounded bg-gray-700 p-2 pl-4 text-gray-300 hover:bg-gray-600 active:bg-gray-500"
         onClick={() => setIsMenuOpened(!isMenuOpened)}
       >
-        {getFullLabel(selectedItem)}
+        {getFullLabel(value)}
         <ArrowDropDown className="ml-auto" />
       </button>
       {isMenuOpened && (
@@ -59,16 +59,16 @@ function Dropdown<T>({
               key={getLabel(item)}
               type="button"
               className={`px-6 py-2  ${
-                getLabel(selectedItem) === getLabel(item)
+                getLabel(value) === getLabel(item)
                   ? 'bg-cyan-600 hover:bg-cyan-500 active:bg-cyan-400'
                   : 'hover:bg-gray-600 active:bg-gray-500'
               }`}
               onClick={() => {
                 setIsMenuOpened(false);
 
-                if (item === selectedItem) return;
+                if (item === value) return;
 
-                setSelectedItem(item);
+                setValue(item);
                 onSelect(item);
               }}
             >

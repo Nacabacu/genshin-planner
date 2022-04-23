@@ -4,7 +4,7 @@ import _domain from '@data/domains.json';
 import _materialConfig from '@data/materialConfig.json';
 import _material from '@data/materials.json';
 import _weapon from '@data/weapons.json';
-import { createContext, PropsWithChildren, useCallback, useContext, useMemo } from 'react';
+import { createContext, PropsWithChildren, useCallback, useContext, useMemo, useState } from 'react';
 import { ArtifactData, CharacterData, DomainData, MaterialConfig, MaterialData, WeaponData } from '../../types/data';
 import useLocalStorage from '../hooks/useLocalStorage';
 
@@ -29,6 +29,7 @@ interface Data {
   materialList: MaterialData[];
   materialConfig: MaterialConfig;
   selectedDataList: SelectedData[];
+  onAddCharacter: number;
   addCharacter: (characterData: CharacterData) => void;
   removeCharacter: (characterId: string) => void;
   updateSelectedDataList: (characterId: string, updatedData: Partial<SelectedData>) => void;
@@ -51,6 +52,8 @@ function DataProvider({ children }: PropsWithChildren<{}>) {
     SELECTED_DATA_LIST_KEY,
     defaultSelectedDataList,
   );
+  // TODO: find a better way to handle when character is added
+  const [onAddCharacter, setOnAddCharacter] = useState(0);
 
   const addCharacter = useCallback(
     (characterData: CharacterData) => {
@@ -64,6 +67,7 @@ function DataProvider({ children }: PropsWithChildren<{}>) {
       };
 
       setSelectedDataList((currentValue) => [...currentValue, newSelectedData]);
+      setOnAddCharacter((currentValue) => currentValue + 1);
     },
     [setSelectedDataList],
   );
@@ -107,11 +111,12 @@ function DataProvider({ children }: PropsWithChildren<{}>) {
       materialList: _material as MaterialData[],
       materialConfig: _materialConfig as MaterialConfig,
       selectedDataList,
+      onAddCharacter,
       addCharacter,
       removeCharacter,
       updateSelectedDataList,
     }),
-    [selectedDataList, addCharacter, removeCharacter, updateSelectedDataList],
+    [selectedDataList, addCharacter, removeCharacter, updateSelectedDataList, onAddCharacter],
   );
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;

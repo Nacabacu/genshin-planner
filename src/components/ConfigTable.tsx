@@ -1,5 +1,5 @@
 import { Close } from '@mui/icons-material';
-import { PropsWithoutRef, ReactNode, useCallback, useEffect, useMemo, useState } from 'react';
+import { PropsWithoutRef, ReactNode, useCallback, useEffect, useMemo } from 'react';
 import { CellProps, Column, Row, useGlobalFilter, usePagination, useTable } from 'react-table';
 import { SelectedData, useDataContext } from '../contexts/dataContext';
 import { LanguageDefinition, useLocalizationContext } from '../contexts/localizationContext';
@@ -87,10 +87,18 @@ function WeaponCell({ row }: CellProps<SelectedData>) {
     </div>
   );
 }
-function ArtifactCell({ row }: CellProps<SelectedData>) {
+function ArtifactCell(props: CellProps<SelectedData>) {
+  const { row, page, previousPage } = props;
   const { artifactList, updateSelectedDataList, removeCharacter } = useDataContext();
   const { resources } = useLocalizationContext();
   const { isEnabled, characterData, artifactDataList, isArtifactEnabled } = row.original;
+
+  const onClose = () => {
+    if (page.length === 1) {
+      previousPage();
+    }
+    removeCharacter(characterData.id);
+  };
 
   return (
     <div className="flex items-center">
@@ -113,14 +121,14 @@ function ArtifactCell({ row }: CellProps<SelectedData>) {
         getItemLabel={(item) => resources[item.id as keyof LanguageDefinition]}
         className="mx-2 flex-grow"
       />
-      <Close className="w-8 cursor-pointer hover:text-gray-200" onClick={() => removeCharacter(characterData.id)} />
+      <Close className="w-8 cursor-pointer hover:text-gray-200" onClick={() => onClose()} />
     </div>
   );
 }
 
 function ConfigTable({ data, filter }: PropsWithoutRef<ConfigTableProps>) {
+  const { onAddCharacter } = useDataContext();
   const { resources } = useLocalizationContext();
-  const [currentPage, setCurrentPage] = useState(0);
 
   const columns: Column<SelectedData>[] = useMemo(
     () => [
@@ -183,30 +191,42 @@ function ConfigTable({ data, filter }: PropsWithoutRef<ConfigTableProps>) {
     [],
   );
 
-  const { getTableProps, getTableBodyProps, headerGroups, page, prepareRow, pageCount, gotoPage, setGlobalFilter } =
-    useTable(
-      {
-        columns,
-        data,
-        globalFilter: customGlobalFilter,
-        autoResetGlobalFilter: false,
-        initialState: { pageSize: PAGE_SIZE, pageIndex: currentPage },
-      },
-      useGlobalFilter,
-      usePagination,
-    );
+  const {
+    getTableProps,
+    getTableBodyProps,
+    headerGroups,
+    page,
+    prepareRow,
+    pageCount,
+    gotoPage,
+    setGlobalFilter,
+    state: { pageIndex },
+  } = useTable(
+    {
+      columns,
+      data,
+      globalFilter: customGlobalFilter,
+      autoResetGlobalFilter: false,
+      autoResetPage: false,
+      initialState: { pageSize: PAGE_SIZE },
+    },
+    useGlobalFilter,
+    usePagination,
+  );
+
+  useEffect(() => {
+    gotoPage(pageCount - 1);
+  }, [onAddCharacter, pageCount, gotoPage]);
 
   useEffect(() => {
     setGlobalFilter(filter);
-    setCurrentPage(0);
-  }, [setGlobalFilter, filter]);
-
-  useEffect(() => {
-    gotoPage(currentPage);
-  }, [gotoPage, currentPage]);
+    gotoPage(0);
+  }, [setGlobalFilter, filter, gotoPage]);
 
   const renderPageNumberItem = () => {
     const element: ReactNode[] = [];
+
+    if (pageCount === 1) return null;
 
     for (let index = 0; index < pageCount; index += 1) {
       element.push(
@@ -216,11 +236,10 @@ function ConfigTable({ data, filter }: PropsWithoutRef<ConfigTableProps>) {
           value={index}
           onClick={(event) => {
             const newPage = parseInt((event.target as HTMLButtonElement).value, 10);
-            setCurrentPage(newPage);
             gotoPage(newPage);
           }}
           className={`rounded p-2 ${
-            index === currentPage ? 'cursor-default bg-cyan-600' : 'bg-gray-700 hover:bg-gray-600 active:bg-gray-500'
+            index === pageIndex ? 'cursor-default bg-cyan-600' : 'bg-gray-700 hover:bg-gray-600 active:bg-gray-500'
           }`}
         >
           {index + 1}
