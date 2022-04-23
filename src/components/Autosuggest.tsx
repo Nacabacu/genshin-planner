@@ -97,9 +97,12 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
           {value.map((item) => (
             <Pill
               key={getLabel(item)}
-              startAdornment={getStartAdornment(item)}
+              label={getLabel(item)}
+              hideLabel
+              tooltip={!isMenuOpened}
               deletable
               disabled={disabled}
+              startAdornment={getStartAdornment(item)}
               onDelete={() => {
                 const newValue = value.filter((i) => i !== item) as ValueType<T, Multiple>;
 
