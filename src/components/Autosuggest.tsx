@@ -83,6 +83,7 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
     const item = Array.isArray(value) ? value[0] : value;
     const selectedElement = popupRef.current?.querySelector(`[data-name="${getLabel(item)}"]`);
 
+    // TODO: Fix scoll bug in mobile
     selectedElement?.scrollIntoView();
   }, [isMenuOpened, value, getLabel, multiple]);
 

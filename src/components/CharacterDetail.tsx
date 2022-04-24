@@ -6,13 +6,12 @@ import ImageIcon, { IconType } from './ImageIcon';
 interface CharacterDetailProp {
   data: CharacterData;
   disabled?: boolean;
-  className?: string;
 }
 
-function CharacterDetail({ data, disabled, className }: PropsWithoutRef<CharacterDetailProp>) {
+function CharacterDetail({ data, disabled }: PropsWithoutRef<CharacterDetailProp>) {
   const { resources } = useLocalizationContext();
   return (
-    <div className={`flex ${disabled ? 'opacity-50' : ''} ${className}`}>
+    <div className={`flex ${disabled ? 'opacity-50' : ''} flex-grow`}>
       <ImageIcon id={data.id} type={IconType.Characters} disabledTooltip className="h-8" />
       <span className="break-keep ml-2 overflow-hidden truncate leading-8">
         {resources[data.id as keyof LanguageDefinition]}

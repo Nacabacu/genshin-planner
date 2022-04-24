@@ -26,7 +26,7 @@ function Planning() {
   }, []);
 
   return (
-    <>
+    <div className="flex h-full flex-col">
       <div className="mt-8 mb-4 flex w-full flex-wrap-reverse items-end justify-between gap-1.5">
         <FilterGroup onChange={onFilterChange} />
         <Autosuggest
@@ -42,7 +42,7 @@ function Planning() {
         />
       </div>
       <ConfigTable data={selectedDataList} filter={filter} />
-    </>
+    </div>
   );
 }
 
