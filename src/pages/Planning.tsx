@@ -27,7 +27,7 @@ function Planning() {
 
   return (
     <div className="flex h-full flex-col">
-      <div className="mt-8 mb-4 flex w-full flex-wrap justify-end gap-1.5">
+      <div className="my-4 flex w-full flex-wrap justify-end gap-1.5">
         <Autosuggest
           items={selectableCharList}
           onUpdate={(value) => {

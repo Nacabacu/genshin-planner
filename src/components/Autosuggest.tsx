@@ -1,7 +1,8 @@
 import { ArrowDropDown } from '@mui/icons-material';
 import { PropsWithoutRef, ReactNode, useCallback, useEffect, useRef, useState } from 'react';
 import { useLocalizationContext } from '../contexts/localizationContext';
-import { useMouseDownOutside } from '../hooks/element';
+import { useMouseDownOutside } from '../hooks/useMouseDownOutside';
+import { isBodyOverflow } from '../util/element';
 import Pill from './Pill';
 
 interface AutosuggestProps<T, Multiple extends boolean | undefined = undefined> {
@@ -19,6 +20,9 @@ interface AutosuggestProps<T, Multiple extends boolean | undefined = undefined> 
 }
 
 type ValueType<T, Multiple> = Multiple extends undefined | false ? T : T[];
+
+const MENU_ITEM_HEIGHT = 40;
+const MENU_HEIGHT = 240;
 
 function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
   items,
@@ -242,6 +246,24 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
     );
   };
 
+  const renderMenu = () => {
+    if (!wrapperRef.current) return null;
+
+    const menuHeight = Math.min(items.length * MENU_ITEM_HEIGHT, MENU_HEIGHT);
+    const isOverflow = isBodyOverflow(wrapperRef.current, menuHeight);
+
+    return (
+      <div
+        className={`absolute z-10 flex max-h-60 w-full flex-col overflow-scroll rounded bg-gray-700 py-1 text-gray-300 shadow-xl ${
+          isOverflow ? 'bottom-11 -mt-1' : 'mt-1'
+        }`}
+        ref={popupRef}
+      >
+        {renderItems()}
+      </div>
+    );
+  };
+
   return (
     <div className={`relative ${className}`} ref={wrapperRef}>
       <div
@@ -259,14 +281,7 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
       >
         {renderInput()}
       </div>
-      {isMenuOpened && (
-        <div
-          className="absolute z-10 mt-1 flex max-h-60 w-full flex-col overflow-scroll rounded bg-gray-700 py-1 text-gray-300 shadow-xl"
-          ref={popupRef}
-        >
-          {renderItems()}
-        </div>
-      )}
+      {isMenuOpened && renderMenu()}
     </div>
   );
 }
