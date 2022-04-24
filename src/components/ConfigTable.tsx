@@ -46,7 +46,7 @@ function CharacterTabletCell({ row }: CellProps<SelectedData>) {
   const { isEnabled, characterData, isAscensionEnabled, isTalentEnabled } = row.original;
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col gap-2">
       <div className="flex">
         <Switch
           checked={isEnabled}
@@ -54,16 +54,16 @@ function CharacterTabletCell({ row }: CellProps<SelectedData>) {
         />
         <CharacterDetail data={characterData} disabled={!isEnabled} />
       </div>
-      <div className="flex justify-end gap-4">
+      <div className="inline-flex justify-end gap-2">
         <span className="flex items-center">
-          <span>{resources.ascension}</span>
+          <span className="truncate">{resources.ascension}</span>
           <Switch
             checked={isAscensionEnabled}
             onChange={(isChecked) => updateSelectedDataList(characterData.id, { isAscensionEnabled: isChecked })}
           />
         </span>
         <span className="flex items-center">
-          <span>{resources.talent}</span>
+          <span className="truncate">{resources.talent}</span>
           <Switch
             checked={isTalentEnabled}
             onChange={(isChecked) => updateSelectedDataList(characterData.id, { isTalentEnabled: isChecked })}
@@ -466,6 +466,7 @@ function ConfigTable({ data, filter }: PropsWithoutRef<ConfigTableProps>) {
     ReactTooltip.rebuild();
   });
 
+  // TODO: fix bug when reset filter
   useEffect(() => {
     gotoPage(pageCount - 1);
   }, [onAddCharacter, pageCount, gotoPage]);
