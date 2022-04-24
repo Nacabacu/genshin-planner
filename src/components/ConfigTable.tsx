@@ -462,14 +462,18 @@ function ConfigTable({ data, filter }: PropsWithoutRef<ConfigTableProps>) {
     usePagination,
   );
 
+  const gotoLastPage = () => {
+    gotoPage(pageCount - 1);
+  };
+
   useEffect(() => {
     ReactTooltip.rebuild();
   });
 
-  // TODO: fix bug when reset filter
   useEffect(() => {
-    gotoPage(pageCount - 1);
-  }, [onAddCharacter, pageCount, gotoPage]);
+    gotoLastPage();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [onAddCharacter]);
 
   useEffect(() => {
     setGlobalFilter(filter);
