@@ -10,6 +10,7 @@ export interface FilterData {
 
 interface FilterGroupProps {
   onChange: (filter: FilterData) => void;
+  className: string;
 }
 
 interface RenderOptionsProps<T> {
@@ -57,7 +58,7 @@ function FilterOptions<T extends Element | WeaponType>({
   );
 }
 
-function FilterGroup({ onChange }: PropsWithoutRef<FilterGroupProps>) {
+function FilterGroup({ onChange, className }: PropsWithoutRef<FilterGroupProps>) {
   const { resources } = useLocalizationContext();
   const [elementFilters, setElementFilters] = useState<Element[]>([]);
   const [weaponTypeFilters, setWeaponTypeFilter] = useState<WeaponType[]>([]);
@@ -81,16 +82,16 @@ function FilterGroup({ onChange }: PropsWithoutRef<FilterGroupProps>) {
   }, [onChange, elementFilters, weaponTypeFilters]);
 
   return (
-    <div>
+    <div className={`flex flex-col items-end ${className}`}>
       <FilterOptions options={weaponTypes} currentFilter={weaponTypeFilters} setCurrentFilter={setWeaponTypeFilter} />
-      <div className="flex items-end gap-2">
+      <div className="flex flex-wrap-reverse items-center justify-end gap-2">
+        {renderResetFilter()}
         <FilterOptions
           options={elements.filter((element) => element !== 'dendro')}
           currentFilter={elementFilters}
           setCurrentFilter={setElementFilters}
           className="mt-1"
         />
-        {renderResetFilter()}
       </div>
     </div>
   );

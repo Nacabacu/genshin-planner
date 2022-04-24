@@ -1,9 +1,7 @@
-import { LocalFireDepartment } from '@mui/icons-material';
-import Flags from 'country-flag-icons/react/3x2';
-import { PropsWithoutRef, ReactNode, useMemo } from 'react';
+import { GitHub, LocalFireDepartment } from '@mui/icons-material';
+import { PropsWithoutRef, useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Locale, useLocalizationContext } from '../contexts/localizationContext';
-import Dropdown from './Dropdown';
+import { useLocalizationContext } from '../contexts/localizationContext';
 
 interface Navigation {
   path: string;
@@ -14,16 +12,11 @@ interface NavbarProps {
   className?: string;
 }
 
-const flagItems: Locale[] = [Locale.English, Locale.Japanese, Locale.Thai];
-const flagMap: Partial<Record<Locale, ReactNode>> = {
-  [Locale.English]: <Flags.US />,
-  [Locale.Japanese]: <Flags.JP />,
-  [Locale.Thai]: <Flags.TH />,
-};
+const githubURL = 'https://github.com/Nacabacu/genshin-planner';
 
 function Navbar({ className }: PropsWithoutRef<NavbarProps>) {
   const { pathname } = useLocation();
-  const { locale, resources, setLocale } = useLocalizationContext();
+  const { resources } = useLocalizationContext();
   const navigationList: Navigation[] = useMemo(
     () => [
       {
@@ -56,15 +49,9 @@ function Navbar({ className }: PropsWithoutRef<NavbarProps>) {
         <LocalFireDepartment className="!h-8 !w-8 text-cyan-600" />
         <span className="ml-4 flex h-full">{navItem}</span>
         <span className="ml-auto">
-          <Dropdown
-            items={flagItems}
-            hideLabel
-            selectedItem={flagItems.find((item) => item === locale) || flagItems[0]}
-            getStartAdornment={(item) => flagMap[item]}
-            onSelect={(item) => {
-              setLocale(item);
-            }}
-          />
+          <a href={githubURL} target="tab" className="flex h-8 w-8 items-center hover:text-gray-200">
+            <GitHub />
+          </a>
         </span>
       </div>
     </nav>

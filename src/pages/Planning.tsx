@@ -26,9 +26,8 @@ function Planning() {
   }, []);
 
   return (
-    <>
-      <div className="mt-8 mb-4 flex w-full flex-wrap-reverse items-end justify-between gap-1.5">
-        <FilterGroup onChange={onFilterChange} />
+    <div className="flex h-full flex-col">
+      <div className="my-4 flex w-full flex-wrap justify-end gap-1.5">
         <Autosuggest
           items={selectableCharList}
           onUpdate={(value) => {
@@ -40,9 +39,10 @@ function Planning() {
           getItemLabel={(item) => resources[item.id as keyof LanguageDefinition] as string}
           className="w-72"
         />
+        <FilterGroup onChange={onFilterChange} className="ml-auto" />
       </div>
       <ConfigTable data={selectedDataList} filter={filter} />
-    </>
+    </div>
   );
 }
 
