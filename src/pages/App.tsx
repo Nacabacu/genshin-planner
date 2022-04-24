@@ -12,7 +12,7 @@ function App() {
   const getTooptip = useCallback((id: string) => resources[id as keyof LanguageDefinition], [resources]);
 
   return (
-    <div className="flex h-screen flex-col text-gray-300">
+    <div className="flex min-h-screen flex-col text-gray-300">
       <Navbar className="content-padding flex-initial bg-gray-900" />
       <div className="content-padding flex-grow bg-gray-800">
         <Routes>
