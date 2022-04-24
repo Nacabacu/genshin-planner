@@ -230,7 +230,9 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
             }}
           >
             <div className="flex items-center">
-              {getStartAdornment && <span className="mr-2 flex h-6 w-6 items-center">{getStartAdornment(item)}</span>}
+              {getStartAdornment && (
+                <span className="mr-2 w-6 min-w-[1.5rem] items-center">{getStartAdornment(item)}</span>
+              )}
               <span className="overflow-hidden whitespace-nowrap">{getLabel(item)}</span>
             </div>
           </button>
