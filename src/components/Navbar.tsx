@@ -1,5 +1,5 @@
-import { GitHub, LocalFireDepartment } from '@mui/icons-material';
 import { PropsWithoutRef, useMemo } from 'react';
+import { FaFire, FaGithub } from 'react-icons/fa';
 import { Link, useLocation } from 'react-router-dom';
 import { useLocalizationContext } from '../contexts/localizationContext';
 
@@ -46,11 +46,11 @@ function Navbar({ className }: PropsWithoutRef<NavbarProps>) {
   return (
     <nav className={className}>
       <div className="flex h-16 items-center">
-        <LocalFireDepartment className="!h-8 !w-8 text-cyan-600" />
+        <FaFire className="!h-8 !w-8 text-cyan-600" />
         <span className="ml-4 flex h-full">{navItem}</span>
         <span className="ml-auto">
-          <a href={githubURL} target="tab" className="flex h-8 w-8 items-center hover:text-gray-200">
-            <GitHub />
+          <a href={githubURL} target="tab" className="flex items-center hover:text-gray-200">
+            <FaGithub className="h-6 w-6" />
           </a>
         </span>
       </div>

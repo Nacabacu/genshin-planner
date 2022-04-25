@@ -1,5 +1,5 @@
-import { ArrowDropDown } from '@mui/icons-material';
 import { PropsWithoutRef, ReactNode, useRef, useState } from 'react';
+import { IoMdArrowDropdown } from 'react-icons/io';
 import { useMouseDownOutside } from '../hooks/useMouseDownOutside';
 import { isBodyOverflow } from '../util/element';
 
@@ -54,7 +54,7 @@ function Dropdown<T>({
       <button
         key={getLabel(item)}
         type="button"
-        className={`px-6 py-2 ${
+        className={`p-2 pl-4 ${
           getLabel(value) === getLabel(item)
             ? 'bg-cyan-600 hover:bg-cyan-500 active:bg-cyan-400'
             : 'hover:bg-gray-600 active:bg-gray-500'
@@ -94,11 +94,11 @@ function Dropdown<T>({
     <div className={`relative ${className}`} ref={wrapperRef}>
       <button
         type="button"
-        className="flex w-full rounded bg-gray-700 p-2 pl-4 text-gray-300 hover:bg-gray-600 active:bg-gray-500"
+        className="flex w-full items-center rounded bg-gray-700 p-2 pl-4 text-gray-300 hover:bg-gray-600 active:bg-gray-500"
         onClick={() => setIsMenuOpened(!isMenuOpened)}
       >
         {getFullLabel(value)}
-        <ArrowDropDown className="ml-auto" />
+        <IoMdArrowDropdown className="h-4 w-4" />
       </button>
       {isMenuOpened && renderMenu()}
     </div>

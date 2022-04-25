@@ -1,5 +1,5 @@
-import { Close } from '@mui/icons-material';
 import { PropsWithoutRef, ReactNode, useCallback, useEffect, useMemo } from 'react';
+import { IoClose } from 'react-icons/io5';
 import { CellProps, Column, Row, useGlobalFilter, usePagination, useTable } from 'react-table';
 import ReactTooltip from 'react-tooltip';
 import { SelectedData, useDataContext } from '../contexts/dataContext';
@@ -154,7 +154,7 @@ function CharacterMobileCell({ row, page, previousPage }: CellProps<SelectedData
           getItemLabel={(item) => resources[item.id as keyof LanguageDefinition]}
           className="mx-2 flex-grow"
         />
-        <Close className="w-8 cursor-pointer hover:text-gray-200" onClick={() => onClose()} />
+        <IoClose className="h-6 w-6 cursor-pointer hover:text-gray-200" onClick={() => onClose()} />
       </div>
     </div>
   );
@@ -269,7 +269,7 @@ function WeaponMobileCell({ row, page, previousPage }: CellProps<SelectedData>) 
           getItemLabel={(item) => resources[item.id as keyof LanguageDefinition]}
           className="mx-2 flex-grow"
         />
-        <Close className="w-8 cursor-pointer hover:text-gray-200" onClick={() => onClose()} />
+        <IoClose className="h-6 w-6 cursor-pointer hover:text-gray-200" onClick={() => onClose()} />
       </div>
     </div>
   );
@@ -308,7 +308,7 @@ function ArtifactCell({ row, page, previousPage }: CellProps<SelectedData>) {
         getItemLabel={(item) => resources[item.id as keyof LanguageDefinition]}
         className="mx-2 flex-grow"
       />
-      <Close className="w-8 cursor-pointer hover:text-gray-200" onClick={() => onClose()} />
+      <IoClose className="h-6 w-6 cursor-pointer hover:text-gray-200" onClick={() => onClose()} />
     </div>
   );
 }

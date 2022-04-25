@@ -1,5 +1,5 @@
-import CancelIcon from '@mui/icons-material/Cancel';
 import { PropsWithoutRef, ReactNode } from 'react';
+import { IoCloseCircle } from 'react-icons/io5';
 
 interface PillProps {
   label: string;
@@ -21,7 +21,7 @@ function Pill({ label, hideLabel, deletable, disabled, onDelete, startAdornment 
       <span hidden={hideLabel} className="select-none overflow-hidden whitespace-nowrap text-sm">
         {label}
       </span>
-      <CancelIcon
+      <IoCloseCircle
         className={`!w-4 ${deletable ? 'block' : '!hidden'} ${disabled ? '' : 'hover:text-gray-400'}`}
         onClick={() => {
           if (disabled) return;

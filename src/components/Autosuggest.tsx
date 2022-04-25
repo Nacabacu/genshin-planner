@@ -1,5 +1,5 @@
-import { ArrowDropDown } from '@mui/icons-material';
 import { PropsWithoutRef, ReactNode, useCallback, useEffect, useRef, useState } from 'react';
+import { IoMdArrowDropdown } from 'react-icons/io';
 import { useLocalizationContext } from '../contexts/localizationContext';
 import { useMouseDownOutside } from '../hooks/useMouseDownOutside';
 import { isBodyOverflow } from '../util/element';
@@ -154,7 +154,7 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
       />
       <button
         type="button"
-        className={`ml-auto h-6 ${disabled ? 'cursor-default opacity-50' : 'cursor-pointer'}`}
+        className={`ml-auto ${disabled ? 'cursor-default opacity-50' : 'cursor-pointer'}`}
         onClick={(event) => {
           if (disabled) return;
 
@@ -167,7 +167,7 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
           event.stopPropagation();
         }}
       >
-        <ArrowDropDown />
+        <IoMdArrowDropdown className="h-4 w-4" />
       </button>
     </>
   );
