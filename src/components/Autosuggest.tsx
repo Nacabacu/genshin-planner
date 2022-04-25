@@ -152,8 +152,9 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
         placeholder={placeholder || resources.default_autosuggest_placeholder}
         ref={inputRef}
       />
-      <ArrowDropDown
-        className={`ml-auto ${disabled ? 'cursor-default opacity-50' : 'cursor-pointer'}`}
+      <button
+        type="button"
+        className={`ml-auto h-6 ${disabled ? 'cursor-default opacity-50' : 'cursor-pointer'}`}
         onClick={(event) => {
           if (disabled) return;
 
@@ -165,7 +166,9 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
 
           event.stopPropagation();
         }}
-      />
+      >
+        <ArrowDropDown />
+      </button>
     </>
   );
 
