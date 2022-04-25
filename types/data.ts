@@ -7,10 +7,23 @@ export type Element = typeof elements[number];
 export type Day = 'monday' | 'tuesday' | 'wednesday' | 'thursday' | 'friday' | 'saturday' | 'sunday';
 export type Region = 'mondstant' | 'liyue' | 'inazuma';
 export type DomainType = 'artifacts' | 'weapon_ascension_materials' | 'talent_levelup_material';
-
+export type MaterialType =
+  | 'boss'
+  | 'local'
+  | 'weeklyBoss'
+  | 'gem'
+  | 'book'
+  | 'weapon'
+  | 'common'
+  | 'elite'
+  | 'artifact';
 export interface Dictionary<T> {
   [key: string]: T;
 }
+
+export type Material = {
+  [key in MaterialType]?: string | string[];
+};
 
 export interface ItemDataBase {
   id: string;
@@ -30,32 +43,12 @@ export interface ArtifactData extends ItemDataBase {}
 export interface CharacterData extends ItemDataBase {
   element: Element;
   weaponType: WeaponType;
-  ascendMaterial: CharacterAscendMaterial;
-  talentMaterial: TalentMaterial;
+  ascendMaterial: Material;
+  talentMaterial: Material;
 }
-
-export interface CharacterAscendMaterial {
-  gem: string;
-  boss: string;
-  common: string;
-  local: string;
-}
-
-export interface TalentMaterial {
-  common: string;
-  book: string;
-  weeklyBoss: string;
-}
-
 export interface WeaponData extends ItemDataBase {
   type: WeaponType;
-  ascendMaterial: WeaponAscendMaterial;
-}
-
-export interface WeaponAscendMaterial {
-  weapon: string;
-  elite: string;
-  common: string;
+  ascendMaterial: Material;
 }
 
 export interface DomainData extends ItemDataBase {
