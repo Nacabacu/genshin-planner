@@ -26,7 +26,7 @@ function Planning() {
   }, []);
 
   return (
-    <div className="flex flex-grow flex-col">
+    <div className="flex max-w-9xl flex-grow flex-col">
       <div className="my-4 flex w-full flex-wrap justify-end gap-1.5">
         <Autosuggest
           items={selectableCharList}

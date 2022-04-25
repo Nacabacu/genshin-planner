@@ -8,6 +8,9 @@ module.exports = {
       translate: {
         6.5: '1.625rem',
       },
+      maxWidth: {
+        '9xl': '96rem',
+      },
     },
   },
   plugins: [require('@tailwindcss/forms')],

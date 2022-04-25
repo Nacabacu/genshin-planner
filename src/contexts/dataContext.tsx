@@ -153,7 +153,7 @@ function updateSelectedMaterial(selectedMaterial: SelectedMaterial, selectedData
 }
 
 function getInitialSelectedMaterial() {
-  const selectedDataList = getLocalStorage(SELECTED_DATA_LIST_KEY, defaultSelectedDataList);
+  const selectedDataList = getLocalStorage(SELECTED_DATA_LIST_KEY, defaultSelectedDataList) as SelectedData[];
   let selectedMaterial: SelectedMaterial = {
     boss: {},
     local: {},

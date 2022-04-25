@@ -13,14 +13,18 @@ function App() {
 
   return (
     <div className="flex min-h-screen flex-col text-gray-300">
-      <Navbar className="content-padding bg-gray-900" />
-      <div className="content-padding flex flex-grow bg-gray-800">
+      <div className="content-padding flex justify-center bg-gray-900">
+        <Navbar />
+      </div>
+      <div className="content-padding flex flex-grow justify-center bg-gray-800">
         <Routes>
           <Route path={`${import.meta.env.VITE_BASE}/`} element={<Planning />} />
           <Route path={`${import.meta.env.VITE_BASE}/result`} element={<Result />} />
         </Routes>
       </div>
-      <Footer className="content-padding flex-initial bg-gray-900" />
+      <div className="content-padding flex justify-center bg-gray-900">
+        <Footer />
+      </div>
       <ReactTooltip place="top" type="dark" effect="float" getContent={getTooptip} />
     </div>
   );

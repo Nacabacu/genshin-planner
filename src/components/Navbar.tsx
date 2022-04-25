@@ -1,4 +1,4 @@
-import { PropsWithoutRef, useMemo } from 'react';
+import { useMemo } from 'react';
 import { FaFire, FaGithub } from 'react-icons/fa';
 import { Link, useLocation } from 'react-router-dom';
 import { useLocalizationContext } from '../contexts/localizationContext';
@@ -8,13 +8,9 @@ interface Navigation {
   name: string;
 }
 
-interface NavbarProps {
-  className?: string;
-}
-
 const githubURL = 'https://github.com/Nacabacu/genshin-planner';
 
-function Navbar({ className }: PropsWithoutRef<NavbarProps>) {
+function Navbar() {
   const { pathname } = useLocation();
   const { resources } = useLocalizationContext();
   const navigationList: Navigation[] = useMemo(
@@ -44,17 +40,15 @@ function Navbar({ className }: PropsWithoutRef<NavbarProps>) {
   ));
 
   return (
-    <nav className={className}>
-      <div className="flex h-16 items-center">
-        <FaFire className="!h-8 !w-8 text-cyan-600" />
-        <span className="ml-4 flex h-full">{navItem}</span>
-        <span className="ml-auto">
-          <a href={githubURL} target="tab" className="flex items-center hover:text-gray-200">
-            <FaGithub className="h-6 w-6" />
-          </a>
-        </span>
-      </div>
-    </nav>
+    <div className="flex h-16 max-w-9xl flex-grow items-center">
+      <FaFire className="!h-8 !w-8 text-cyan-600" />
+      <span className="ml-4 flex h-full">{navItem}</span>
+      <span className="ml-auto">
+        <a href={githubURL} target="tab" className="flex items-center hover:text-gray-200">
+          <FaGithub className="h-6 w-6" />
+        </a>
+      </span>
+    </div>
   );
 }
 
