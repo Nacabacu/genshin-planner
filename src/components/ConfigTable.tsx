@@ -56,16 +56,18 @@ function CharacterTabletCell({ row }: CellProps<SelectedData>) {
       </div>
       <div className="inline-flex justify-end gap-2">
         <span className="flex items-center">
-          <span className="truncate">{resources.ascension}</span>
+          <span className={`truncate ${!isEnabled ? 'opacity-50' : ''}`}>{resources.ascension}</span>
           <Switch
             checked={isAscensionEnabled}
+            disabled={!isEnabled}
             onChange={(isChecked) => updateSelectedDataList(characterData.id, { isAscensionEnabled: isChecked })}
           />
         </span>
         <span className="flex items-center">
-          <span className="truncate">{resources.talent}</span>
+          <span className={`truncate ${!isEnabled ? 'opacity-50' : ''}`}>{resources.talent}</span>
           <Switch
             checked={isTalentEnabled}
+            disabled={!isEnabled}
             onChange={(isChecked) => updateSelectedDataList(characterData.id, { isTalentEnabled: isChecked })}
           />
         </span>
@@ -107,12 +109,14 @@ function CharacterMobileCell({ row, page, previousPage }: CellProps<SelectedData
         <span>
           <Switch
             checked={isAscensionEnabled}
+            disabled={!isEnabled}
             onChange={(isChecked) => updateSelectedDataList(characterData.id, { isAscensionEnabled: isChecked })}
           />
         </span>
         <span>
           <Switch
             checked={isTalentEnabled}
+            disabled={!isEnabled}
             onChange={(isChecked) => updateSelectedDataList(characterData.id, { isTalentEnabled: isChecked })}
           />
         </span>

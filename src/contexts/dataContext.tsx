@@ -287,6 +287,8 @@ function DataProvider({ children }: PropsWithChildren<{}>) {
       const {
         characterData: { id: characterId },
         weaponData,
+        isEnabled,
+        isWeaponEnabled,
       } = selectedData;
 
       if (!weaponData) return;
@@ -295,7 +297,7 @@ function DataProvider({ children }: PropsWithChildren<{}>) {
         ascendMaterial: { weapon: weaponMaterial },
       } = weaponData;
 
-      if (!weaponMaterial || Array.isArray(weaponMaterial)) return;
+      if (!weaponMaterial || Array.isArray(weaponMaterial) || !isEnabled || !isWeaponEnabled) return;
 
       const domainDrop = domainList.find((domain) => domain.reward.includes(weaponMaterial));
 
@@ -326,9 +328,11 @@ function DataProvider({ children }: PropsWithChildren<{}>) {
           id: characterId,
           talentMaterial: { book: bookMaterial },
         },
+        isEnabled,
+        isTalentEnabled,
       } = selectedData;
 
-      if (!bookMaterial || Array.isArray(bookMaterial)) return;
+      if (!bookMaterial || Array.isArray(bookMaterial) || !isEnabled || !isTalentEnabled) return;
 
       const domainDrop = domainList.find((domain) => domain.reward.includes(bookMaterial));
 
