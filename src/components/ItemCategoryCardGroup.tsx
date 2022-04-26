@@ -19,6 +19,17 @@ function ItemCategoryCardGroup({ materialTypeGroup, materialType }: PropsWithout
     ReactTooltip.rebuild();
   });
 
+  function isEmptyConfig(itemIdList: string[]) {
+    return itemIdList
+      .map((itemId) => {
+        const characterIdList = selectedMaterial[materialType][itemId];
+        if (!characterIdList || characterIdList.length === 0) return true;
+
+        return false;
+      })
+      .every((value) => !!value);
+  }
+
   const renderCard = (itemIdList: string[]) =>
     itemIdList.map((itemId) => {
       const characterIdList = selectedMaterial[materialType][itemId];
@@ -32,14 +43,18 @@ function ItemCategoryCardGroup({ materialTypeGroup, materialType }: PropsWithout
 
     if (!materialConfigItem || Array.isArray(materialConfigItem)) return null;
 
-    return Object.keys(materialConfigItem).map((key) => (
-      <div key={key} className="flex flex-col px-4 pt-4">
-        <div className="mb-1 text-xl">{resources[key as ResourcesKey]}</div>
-        <div className="grid grid-cols-1 justify-center gap-4 rounded-b-md xsm:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-          {renderCard(materialConfigItem[key])}
+    return Object.keys(materialConfigItem).map((key) => {
+      if (isEmptyConfig(materialConfigItem[key])) return null;
+
+      return (
+        <div key={key} className="flex flex-col px-4 pt-4">
+          <div className="mb-1 text-xl">{resources[key as ResourcesKey]}</div>
+          <div className="grid grid-cols-1 justify-center gap-4 rounded-b-md xsm:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+            {renderCard(materialConfigItem[key])}
+          </div>
         </div>
-      </div>
-    ));
+      );
+    });
   };
 
   return <div>{renderGroup()}</div>;
