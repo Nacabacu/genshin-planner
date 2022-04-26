@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import { ResourcesKey, useLocalizationContext } from '../contexts/localizationContext';
 import Farm from './Farm';
-import Planning from './Planning';
+import Plan from './Plan';
 
 function App() {
   const { resources } = useLocalizationContext();
@@ -18,7 +18,7 @@ function App() {
       </div>
       <div className="content-padding flex flex-grow justify-center bg-gray-800">
         <Routes>
-          <Route path={`${import.meta.env.VITE_BASE}/`} element={<Planning />} />
+          <Route path={`${import.meta.env.VITE_BASE}/`} element={<Plan />} />
           <Route path={`${import.meta.env.VITE_BASE}/farm`} element={<Farm />} />
         </Routes>
       </div>

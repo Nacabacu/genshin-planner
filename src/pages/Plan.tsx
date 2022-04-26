@@ -7,7 +7,7 @@ import ImageIcon, { IconType } from '../components/ImageIcon';
 import { useDataContext } from '../contexts/dataContext';
 import { ResourcesKey, useLocalizationContext } from '../contexts/localizationContext';
 
-function Planning() {
+function Plan() {
   const { characterList, addCharacter, selectedDataList } = useDataContext();
   const { resources } = useLocalizationContext();
   const [filter, setFilterData] = useState<FilterData | undefined>();
@@ -46,4 +46,4 @@ function Planning() {
   );
 }
 
-export default Planning;
+export default Plan;

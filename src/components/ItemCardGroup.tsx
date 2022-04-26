@@ -1,6 +1,7 @@
 import { PropsWithoutRef } from 'react';
 import { MaterialType } from '../../types/data';
 import { useDataContext } from '../contexts/dataContext';
+import { IconType } from './ImageIcon';
 import ItemCard from './ItemCard';
 
 interface ItemCardGroupProps {
@@ -21,7 +22,9 @@ function ItemCardGroup({ materialTypeList }: PropsWithoutRef<ItemCardGroupProps>
           const characterIdList = selectedMaterial[key][itemId];
           if (!characterIdList || characterIdList.length === 0) return null;
 
-          return <ItemCard key={itemId} itemId={itemId} characterIdList={characterIdList} />;
+          return (
+            <ItemCard key={itemId} itemId={itemId} iconType={IconType.Materials} characterIdList={characterIdList} />
+          );
         });
       }
 
@@ -35,6 +38,7 @@ function ItemCardGroup({ materialTypeList }: PropsWithoutRef<ItemCardGroupProps>
           <ItemCard
             key={configItemKey}
             itemId={materialData[materialData.length - 1]}
+            iconType={IconType.Materials}
             characterIdList={characterIdList}
           />
         );

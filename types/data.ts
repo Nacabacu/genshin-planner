@@ -1,6 +1,6 @@
 export const elements = ['anemo', 'cryo', 'pyro', 'hydro', 'electro', 'geo', 'dendro'] as const;
 export const weaponTypes = ['sword', 'bow', 'claymore', 'catalyst', 'polearm'] as const;
-export const regions = ['mondstant', 'liyue', 'inazuma'] as const;
+export const regions = ['mondstadt', 'liyue', 'inazuma'] as const;
 
 export type Rarity = 1 | 2 | 3 | 4 | 5;
 export type WeaponType = typeof weaponTypes[number];

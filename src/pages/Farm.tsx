@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import ReactTooltip from 'react-tooltip';
+import ArtifactCardGroup from '../components/ArtifactCardGroup';
 import Collapsible from '../components/Collapsible';
 import ImageIcon, { IconType } from '../components/ImageIcon';
 import ItemCardGroup from '../components/ItemCardGroup';
@@ -39,7 +40,7 @@ function Farm() {
       {
         label: resources.artifact,
         icon: <ImageIcon id="adventurer" type={IconType.Artifacts} />,
-        content: <div>test</div>,
+        content: <ArtifactCardGroup />,
       },
       {
         label: resources.weapon_ascension,

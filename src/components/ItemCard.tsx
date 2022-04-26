@@ -5,10 +5,11 @@ import ImageIcon, { IconType } from './ImageIcon';
 
 interface ItemCardProps {
   itemId: string;
+  iconType: IconType;
   characterIdList: string[];
 }
 
-function ItemCard({ itemId, characterIdList }: PropsWithoutRef<ItemCardProps>) {
+function ItemCard({ itemId, iconType, characterIdList }: PropsWithoutRef<ItemCardProps>) {
   const { resources } = useLocalizationContext();
   const { materialList } = useDataContext();
 
@@ -21,7 +22,7 @@ function ItemCard({ itemId, characterIdList }: PropsWithoutRef<ItemCardProps>) {
   return (
     <div className="rounded-md bg-gray-700 p-1">
       <div className="flex h-10 cursor-pointer items-center rounded-md bg-gray-800 p-1" onClick={() => navigateWiki()}>
-        <ImageIcon id={itemId} type={IconType.Materials} className="mr-2 w-8" disabledTooltip />
+        <ImageIcon id={itemId} type={iconType} className="mr-2 w-8" disabledTooltip />
         <div className="flex-grow truncate">{resources[itemId as ResourcesKey]}</div>
       </div>
       <div className="flex flex-wrap justify-center gap-2 p-2">
