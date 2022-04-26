@@ -3,6 +3,7 @@ import ReactTooltip from 'react-tooltip';
 import BossItemCardGroup from '../components/BossItemCardGroup';
 import Collapsible from '../components/Collapsible';
 import ImageIcon, { IconType } from '../components/ImageIcon';
+import LocalCardGroup from '../components/LocalCardGroup';
 import MonsterItemCardGroup from '../components/MonsterItemCardGroup';
 import WeeklyBossCardGroup from '../components/WeeklyBossCardGroup';
 import { useLocalizationContext } from '../contexts/localizationContext';
@@ -35,7 +36,7 @@ function Farm() {
       {
         label: resources.local_specialty,
         icon: <ImageIcon id="philanemo_mushroom" type={IconType.Materials} />,
-        content: <div>test</div>,
+        content: <LocalCardGroup />,
       },
       {
         label: resources.artifact,

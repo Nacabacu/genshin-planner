@@ -34,7 +34,6 @@ export interface SelectedData {
 export type SelectedMaterial = {
   [key in MaterialType]: Record<string, string[]>;
 };
-
 interface Data {
   characterList: CharacterData[];
   weaponList: WeaponData[];
@@ -50,6 +49,12 @@ interface Data {
   updateSelectedDataList: (characterId: string, updatedData: Partial<SelectedData>) => void;
 }
 
+const characterList = _character as CharacterData[];
+const weaponList = _weapon as WeaponData[];
+const artifactList = _artifact as ArtifactData[];
+const domainList = _domain as DomainData[];
+const materialList = _material as MaterialData[];
+const materialConfig = _materialConfig as MaterialConfig;
 const DataContext = createContext<Data | null>(null);
 const defaultSelectedDataList: SelectedData[] = [
   {
@@ -237,12 +242,12 @@ function DataProvider({ children }: PropsWithChildren<{}>) {
 
   const value = useMemo(
     () => ({
-      characterList: _character as CharacterData[],
-      weaponList: _weapon as WeaponData[],
-      artifactList: _artifact as ArtifactData[],
-      domainList: _domain as DomainData[],
-      materialList: _material as MaterialData[],
-      materialConfig: _materialConfig as MaterialConfig,
+      characterList,
+      weaponList,
+      artifactList,
+      domainList,
+      materialList,
+      materialConfig,
       selectedDataList,
       selectedMaterial,
       onAddCharacter: onAddCharacter.current,
@@ -250,7 +255,7 @@ function DataProvider({ children }: PropsWithChildren<{}>) {
       removeCharacter,
       updateSelectedDataList,
     }),
-    [selectedDataList, selectedMaterial, addCharacter, removeCharacter, updateSelectedDataList, onAddCharacter],
+    [selectedDataList, selectedMaterial, addCharacter, removeCharacter, onAddCharacter, updateSelectedDataList],
   );
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;

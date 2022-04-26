@@ -173,5 +173,46 @@
     "prism": ["dismal_prism", "crystal_prism", "polarizing_prism"],
     "claw": ["concealed_claw", "concealed_unguis", "concealed_talon"],
     "statuette": ["gloomy_statuette", "dark_statuette", "deathly_statuette"]
+  },
+  "weeklyBossGroup": {
+    "dvalin": ["dvalins_plume", "dvalins_claw", "dvalins_sigh"],
+    "andrius": ["tail_of_boreas", "ring_of_boreas", "spirit_locket_of_boreas"],
+    "childe": ["tusk_of_monoceros_caeli", "shard_of_a_foul_legacy", "shadow_of_the_warrior"],
+    "azhdaha": ["dragon_lords_crown", "bloodjade_branch", "gilded_scale"],
+    "la_signora": ["molten_moment", "hellfire_butterfly", "ashen_heart"],
+    "mikoto": ["mudra_of_the_malefic_general", "tears_of_the_calamitous_god", "the_meaning_of_aeons"]
+  },
+  "localGroup": {
+    "mondstant": [
+      "calla_lily",
+      "wolfhook",
+      "valberry",
+      "cecilia",
+      "windwheel_aster",
+      "philanemo_mushroom",
+      "small_lamp_grass",
+      "dandelion_seed"
+    ],
+    "liyue": [
+      "jueyun_chili",
+      "noctilucous_jade",
+      "silk_flower",
+      "glaze_lily",
+      "qingxin",
+      "starconch",
+      "violetgrass",
+      "cor_lapis"
+    ],
+    "inazuma": [
+      "onikabuto",
+      "sakura_bloom",
+      "crystal_marrow",
+      "dendrobium",
+      "naku_weed",
+      "sea_ganoderma",
+      "sango_pearl",
+      "amakumo_fruit",
+      "fluorescent_fungus"
+    ]
   }
 }
