@@ -1,5 +1,4 @@
 import { useCallback } from 'react';
-import { Route, Routes } from 'react-router-dom';
 import ReactTooltip from 'react-tooltip';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
@@ -16,11 +15,9 @@ function App() {
       <div className="content-padding flex justify-center bg-gray-900">
         <Navbar />
       </div>
-      <div className="content-padding flex flex-grow justify-center bg-gray-800">
-        <Routes>
-          <Route path={`${import.meta.env.VITE_BASE}/`} element={<Plan />} />
-          <Route path={`${import.meta.env.VITE_BASE}/farm`} element={<Farm />} />
-        </Routes>
+      <div className="content-padding flex flex-grow flex-col justify-center bg-gray-800">
+        <Plan />
+        <Farm />
       </div>
       <div className="content-padding flex justify-center bg-gray-900">
         <Footer />

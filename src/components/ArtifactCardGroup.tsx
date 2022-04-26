@@ -32,7 +32,7 @@ function ArtifactCardGroup() {
         if (type !== 'artifacts' || region !== domainRegion || !selectedArtifactMap[id]) return null;
 
         return (
-          <div key={id} className="flex flex-col px-4 pt-4">
+          <div key={id} className="flex flex-col px-4">
             <div className="mb-1 text-xl">
               {resources[id as ResourcesKey]} ({resources[domainRegion]})
             </div>
@@ -44,7 +44,7 @@ function ArtifactCardGroup() {
       }),
     );
 
-  return <div>{renderDomain()}</div>;
+  return <div className="space-y-4 pb-4">{renderDomain()}</div>;
 }
 
 export default ArtifactCardGroup;

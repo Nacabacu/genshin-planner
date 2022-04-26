@@ -93,7 +93,7 @@ function Farm() {
   }, [resources, collapsibleConfigs, isMenuExpanded]);
 
   return (
-    <div className="my-6 flex max-w-9xl flex-grow flex-col items-center gap-6">
+    <div className="mb-6 flex max-w-9xl flex-grow flex-col items-center gap-6">
       {renderExpandAllButton()}
       {collapsibleConfigs.map((config, index) => (
         <Collapsible
