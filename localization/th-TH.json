@@ -17,6 +17,8 @@
   "local_specialty": "แมพ",
   "weapon_ascension": "วัสดุเลื่อนขั้นอาวุธ",
   "talent_ascension": "วัสดุเลื่อนขั้นพรสวรรค์",
+  "expand_all": "แสดงทั้งหมด",
+  "collapse_all": "ซ่อนทั้งหมด",
   "reset": "ล้าง",
   "no_item_found": "ไม่มีรายการ",
   "anemo": "ลม",

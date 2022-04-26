@@ -17,6 +17,8 @@
   "local_specialty": "Local Specialty",
   "weapon_ascension": "Weapon Ascension",
   "talent_ascension": "Talent Ascension",
+  "expand_all": "Expand All",
+  "collapse_all": "Collapse All",
   "reset": "Reset",
   "no_item_found": "No Item Found",
   "anemo": "風",
