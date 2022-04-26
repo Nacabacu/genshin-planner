@@ -13,7 +13,7 @@ interface CollapisbleConfig {
   content: JSX.Element;
 }
 
-function Result() {
+function Farm() {
   const { resources } = useLocalizationContext();
   const collapsibleConfigs: CollapisbleConfig[] = useMemo(
     () => [
@@ -103,4 +103,4 @@ function Result() {
   );
 }
 
-export default Result;
+export default Farm;

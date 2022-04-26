@@ -20,8 +20,8 @@ function Navbar() {
         name: resources.plan,
       },
       {
-        path: `${import.meta.env.VITE_BASE}/result`,
-        name: resources.result,
+        path: `${import.meta.env.VITE_BASE}/farm`,
+        name: resources.farm,
       },
     ],
     [resources],

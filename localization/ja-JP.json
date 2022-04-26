@@ -1,6 +1,6 @@
 {
   "plan": "Plan",
-  "result": "result",
+  "farm": "Farm",
   "default_autosuggest_placeholder": "Select item",
   "add_character_placeholder": "Add character",
   "select_weapon_placeholder": "Select weapon",
