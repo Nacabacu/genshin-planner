@@ -252,9 +252,11 @@ function DataProvider({ children }: PropsWithChildren<{}>) {
       const {
         characterData: { id: characterId },
         artifactDataList,
+        isEnabled,
+        isArtifactEnabled,
       } = selectedData;
 
-      if (!artifactDataList) return;
+      if (!artifactDataList || !isEnabled || !isArtifactEnabled) return;
 
       artifactDataList.forEach((artifactData) => {
         const { id: artifactId } = artifactData;
