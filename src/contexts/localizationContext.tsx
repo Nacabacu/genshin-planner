@@ -11,6 +11,7 @@ export const enum Locale {
   Japanese = 'ja-JP',
   Thai = 'th-TH',
 }
+export type ResourcesKey = keyof LanguageDefinition;
 export type LanguageDefinition = typeof en_US;
 
 type LanguageDictionary = Record<Locale, LanguageDefinition>;

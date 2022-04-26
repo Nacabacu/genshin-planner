@@ -3,7 +3,7 @@ import { IoClose } from 'react-icons/io5';
 import { CellProps, Column, Row, useGlobalFilter, usePagination, useTable } from 'react-table';
 import ReactTooltip from 'react-tooltip';
 import { SelectedData, useDataContext } from '../contexts/dataContext';
-import { LanguageDefinition, useLocalizationContext } from '../contexts/localizationContext';
+import { ResourcesKey, useLocalizationContext } from '../contexts/localizationContext';
 import useResponsiveSize, { ScreenSize } from '../hooks/useResponsiveSize';
 import Autosuggest from './Autosuggest';
 import CharacterDetail from './CharacterDetail';
@@ -130,7 +130,7 @@ function CharacterMobileCell({ row, page, previousPage }: CellProps<SelectedData
           onUpdate={(selectedWeapon) => updateSelectedDataList(characterData.id, { weaponData: selectedWeapon })}
           placeholder={resources.select_weapon_placeholder}
           getStartAdornment={(item) => <ImageIcon id={item.id} type={IconType.Weapons} disabledTooltip />}
-          getItemLabel={(item) => resources[item.id as keyof LanguageDefinition]}
+          getItemLabel={(item) => resources[item.id as ResourcesKey]}
           className="ml-2 flex-grow"
         />
       </div>
@@ -151,7 +151,7 @@ function CharacterMobileCell({ row, page, previousPage }: CellProps<SelectedData
           maxItem={2}
           placeholder={resources.select_artifacts_placeholder}
           getStartAdornment={(item) => <ImageIcon id={item.id} type={IconType.Artifacts} />}
-          getItemLabel={(item) => resources[item.id as keyof LanguageDefinition]}
+          getItemLabel={(item) => resources[item.id as ResourcesKey]}
           className="mx-2 flex-grow"
         />
         <IoClose className="h-6 w-6 cursor-pointer hover:text-gray-200" onClick={() => onClose()} />
@@ -210,7 +210,7 @@ function WeaponCell({ row }: CellProps<SelectedData>) {
         onUpdate={(selectedWeapon) => updateSelectedDataList(characterData.id, { weaponData: selectedWeapon })}
         placeholder={resources.select_weapon_placeholder}
         getStartAdornment={(item) => <ImageIcon id={item.id} type={IconType.Weapons} disabledTooltip />}
-        getItemLabel={(item) => resources[item.id as keyof LanguageDefinition]}
+        getItemLabel={(item) => resources[item.id as ResourcesKey]}
         className="ml-2 flex-grow"
       />
     </div>
@@ -245,7 +245,7 @@ function WeaponMobileCell({ row, page, previousPage }: CellProps<SelectedData>) 
           onUpdate={(selectedWeapon) => updateSelectedDataList(characterData.id, { weaponData: selectedWeapon })}
           placeholder={resources.select_weapon_placeholder}
           getStartAdornment={(item) => <ImageIcon id={item.id} type={IconType.Weapons} disabledTooltip />}
-          getItemLabel={(item) => resources[item.id as keyof LanguageDefinition]}
+          getItemLabel={(item) => resources[item.id as ResourcesKey]}
           className="ml-2 flex-grow"
         />
       </div>
@@ -266,7 +266,7 @@ function WeaponMobileCell({ row, page, previousPage }: CellProps<SelectedData>) 
           maxItem={2}
           placeholder={resources.select_artifacts_placeholder}
           getStartAdornment={(item) => <ImageIcon id={item.id} type={IconType.Artifacts} />}
-          getItemLabel={(item) => resources[item.id as keyof LanguageDefinition]}
+          getItemLabel={(item) => resources[item.id as ResourcesKey]}
           className="mx-2 flex-grow"
         />
         <IoClose className="h-6 w-6 cursor-pointer hover:text-gray-200" onClick={() => onClose()} />
@@ -305,7 +305,7 @@ function ArtifactCell({ row, page, previousPage }: CellProps<SelectedData>) {
         maxItem={2}
         placeholder={resources.select_artifacts_placeholder}
         getStartAdornment={(item) => <ImageIcon id={item.id} type={IconType.Artifacts} />}
-        getItemLabel={(item) => resources[item.id as keyof LanguageDefinition]}
+        getItemLabel={(item) => resources[item.id as ResourcesKey]}
         className="mx-2 flex-grow"
       />
       <IoClose className="h-6 w-6 cursor-pointer hover:text-gray-200" onClick={() => onClose()} />

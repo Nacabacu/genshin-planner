@@ -25,7 +25,7 @@ function Collapsible({ children, onChange, expanded, label, icon }: PropsWithChi
   return (
     <div className="w-full">
       <div
-        className="flex cursor-pointer items-center rounded bg-slate-600 py-2 px-4"
+        className="flex cursor-pointer select-none items-center rounded-md bg-gray-700 py-2 px-4"
         onClick={() => {
           if (onChange) {
             onChange(!isExpand);
@@ -38,7 +38,7 @@ function Collapsible({ children, onChange, expanded, label, icon }: PropsWithChi
         <div className="flex-grow text-xl">{label}</div>
         {isExpand ? <IoMdArrowDropup /> : <IoMdArrowDropdown />}
       </div>
-      {isExpand && <div>{children}</div>}
+      {isExpand && children}
     </div>
   );
 }

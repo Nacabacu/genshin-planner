@@ -1,6 +1,8 @@
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
+import ReactTooltip from 'react-tooltip';
 import Collapsible from '../components/Collapsible';
 import ImageIcon, { IconType } from '../components/ImageIcon';
+import MonsterItemCardGroup from '../components/MonsterItemCardGroup';
 import { useLocalizationContext } from '../contexts/localizationContext';
 
 interface CollapisbleConfig {
@@ -16,7 +18,7 @@ function Result() {
       {
         label: resources.monster_drop,
         icon: <ImageIcon id="divining_scroll" type={IconType.Materials} />,
-        content: <div>test</div>,
+        content: <MonsterItemCardGroup />,
       },
       {
         label: resources.boss_drop,
@@ -51,20 +53,25 @@ function Result() {
     ],
     [resources],
   );
-  const [isMenuExpanded, setIsMenuExpanded] = useState<boolean[]>(() => [...collapsibleConfigs.map(() => false)]);
+  const [isMenuExpanded, setIsMenuExpanded] = useState<boolean[]>(() => [...collapsibleConfigs.map(() => true)]);
+
+  useEffect(() => {
+    ReactTooltip.rebuild();
+  });
 
   const renderExpandAllButton = useCallback(() => {
     const isExapandedAll = isMenuExpanded.every((value) => value);
 
     return (
-      <div
-        className="ml-auto cursor-pointer hover:underline"
+      <button
+        type="button"
         onClick={() => {
           setIsMenuExpanded([...collapsibleConfigs.map(() => !isExapandedAll)]);
         }}
+        className="ml-auto cursor-pointer hover:underline"
       >
         {isExapandedAll ? resources.collapse_all : resources.expand_all}
-      </div>
+      </button>
     );
   }, [resources, collapsibleConfigs, isMenuExpanded]);
 

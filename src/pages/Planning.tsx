@@ -5,7 +5,7 @@ import ConfigTable from '../components/ConfigTable';
 import FilterGroup, { FilterData } from '../components/FilterGroup';
 import ImageIcon, { IconType } from '../components/ImageIcon';
 import { useDataContext } from '../contexts/dataContext';
-import { LanguageDefinition, useLocalizationContext } from '../contexts/localizationContext';
+import { ResourcesKey, useLocalizationContext } from '../contexts/localizationContext';
 
 function Planning() {
   const { characterList, addCharacter, selectedDataList } = useDataContext();
@@ -36,7 +36,7 @@ function Planning() {
           resetAfterSelect
           placeholder={resources.add_character_placeholder}
           getStartAdornment={(item) => <ImageIcon id={item.id} type={IconType.Characters} />}
-          getItemLabel={(item) => resources[item.id as keyof LanguageDefinition] as string}
+          getItemLabel={(item) => resources[item.id as ResourcesKey] as string}
           className="w-72"
         />
         <FilterGroup onChange={onFilterChange} className="ml-auto" />

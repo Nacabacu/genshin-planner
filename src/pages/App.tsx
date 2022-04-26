@@ -3,13 +3,13 @@ import { Route, Routes } from 'react-router-dom';
 import ReactTooltip from 'react-tooltip';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
-import { LanguageDefinition, useLocalizationContext } from '../contexts/localizationContext';
+import { ResourcesKey, useLocalizationContext } from '../contexts/localizationContext';
 import Planning from './Planning';
 import Result from './Result';
 
 function App() {
   const { resources } = useLocalizationContext();
-  const getTooptip = useCallback((id: string) => resources[id as keyof LanguageDefinition], [resources]);
+  const getTooptip = useCallback((id: string) => resources[id as ResourcesKey], [resources]);
 
   return (
     <div className="flex min-h-screen flex-col text-gray-300">
