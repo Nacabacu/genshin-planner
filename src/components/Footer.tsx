@@ -1,14 +1,14 @@
-import Flags from 'country-flag-icons/react/3x2';
 import { ReactNode } from 'react';
 import { Locale, useLocalizationContext } from '../contexts/localizationContext';
 import Dropdown from './Dropdown';
+import ImageIcon, { IconType } from './ImageIcon';
 
 // TODO: Fix bug flag is not shown in iOS
 const flagItems: Locale[] = [Locale.English, Locale.Japanese, Locale.Thai];
 const flagMap: Partial<Record<Locale, ReactNode>> = {
-  [Locale.English]: <Flags.US />,
-  [Locale.Japanese]: <Flags.JP />,
-  [Locale.Thai]: <Flags.TH />,
+  [Locale.English]: <ImageIcon id="us" type={IconType.Icons} />,
+  [Locale.Japanese]: <ImageIcon id="jp" type={IconType.Icons} />,
+  [Locale.Thai]: <ImageIcon id="th" type={IconType.Icons} />,
 };
 
 function Footer() {
