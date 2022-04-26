@@ -1,11 +1,9 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import ReactTooltip from 'react-tooltip';
-import BossItemCardGroup from '../components/BossItemCardGroup';
 import Collapsible from '../components/Collapsible';
 import ImageIcon, { IconType } from '../components/ImageIcon';
-import LocalCardGroup from '../components/LocalCardGroup';
-import MonsterItemCardGroup from '../components/MonsterItemCardGroup';
-import WeeklyBossCardGroup from '../components/WeeklyBossCardGroup';
+import ItemCardGroup from '../components/ItemCardGroup';
+import ItemCategoryCardGroup from '../components/ItemCategoryCardGroup';
 import { useLocalizationContext } from '../contexts/localizationContext';
 
 interface CollapisbleConfig {
@@ -21,22 +19,22 @@ function Farm() {
       {
         label: resources.monster_drop,
         icon: <ImageIcon id="divining_scroll" type={IconType.Materials} />,
-        content: <MonsterItemCardGroup />,
+        content: <ItemCardGroup materialTypeList={['common', 'elite']} />,
       },
       {
         label: resources.boss_drop,
         icon: <ImageIcon id="shivada_jade_gemstone" type={IconType.Materials} />,
-        content: <BossItemCardGroup />,
+        content: <ItemCardGroup materialTypeList={['gem', 'boss']} />,
       },
       {
         label: resources.weekly_boss,
         icon: <ImageIcon id="tail_of_boreas" type={IconType.Materials} />,
-        content: <WeeklyBossCardGroup />,
+        content: <ItemCategoryCardGroup materialTypeGroup="weeklyBossGroup" materialType="weeklyBoss" />,
       },
       {
         label: resources.local_specialty,
         icon: <ImageIcon id="philanemo_mushroom" type={IconType.Materials} />,
-        content: <LocalCardGroup />,
+        content: <ItemCategoryCardGroup materialTypeGroup="localGroup" materialType="local" />,
       },
       {
         label: resources.artifact,

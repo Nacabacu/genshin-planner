@@ -8,22 +8,20 @@ export type Element = typeof elements[number];
 export type Region = typeof regions[number];
 export type Day = 'monday' | 'tuesday' | 'wednesday' | 'thursday' | 'friday' | 'saturday' | 'sunday';
 export type DomainType = 'artifacts' | 'weapon_ascension_materials' | 'talent_levelup_material';
-export type MaterialType =
-  | 'boss'
-  | 'local'
-  | 'weeklyBoss'
-  | 'gem'
-  | 'book'
-  | 'weapon'
-  | 'common'
-  | 'elite'
-  | 'artifact';
-export interface Dictionary<T> {
-  [key: string]: T;
-}
 
+export type MaterialType = MaterialTypeObject | MaterialTypeArray;
+export type MaterialTypeObject = 'book' | 'gem' | 'weapon' | 'common' | 'elite' | 'artifact';
+export type MaterialTypeConfigObject = MaterialTypeObject | 'weeklyBossGroup' | 'localGroup';
+export type MaterialTypeArray = 'boss' | 'local' | 'weeklyBoss';
 export type Material = {
   [key in MaterialType]?: string | string[];
+};
+export type MaterialConfig = MaterialGroupConfig & MaterialDataConfig;
+export type MaterialGroupConfig = {
+  [key in MaterialTypeConfigObject]?: Record<string, string[]>;
+};
+export type MaterialDataConfig = {
+  [key in MaterialTypeArray]?: string[];
 };
 
 export interface ItemDataBase {
@@ -34,7 +32,7 @@ export interface ItemDataBase {
 
 export interface MaterialDataGroup {
   id: string;
-  materials: Dictionary<MaterialData>;
+  materials: Record<string, MaterialData>;
 }
 
 export interface MaterialData extends ItemDataBase {}
@@ -57,22 +55,4 @@ export interface DomainData extends ItemDataBase {
   type: DomainType;
   reward: string[];
   daysofweek?: Day[];
-}
-
-export type MaterialConfig = MaterialGroupConfig & MaterialDataConfig;
-
-export interface MaterialGroupConfig {
-  gem: Dictionary<string[]>;
-  book: Dictionary<string[]>;
-  weapon: Dictionary<string[]>;
-  common: Dictionary<string[]>;
-  elite: Dictionary<string[]>;
-  weeklyBossGroup: Dictionary<string[]>;
-  localGroup: Dictionary<string[]>;
-}
-
-export interface MaterialDataConfig {
-  boss: string[];
-  local: string[];
-  weeklyBoss: string[];
 }
