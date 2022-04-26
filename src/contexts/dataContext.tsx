@@ -35,7 +35,7 @@ export type SelectedMaterial = {
   [key in MaterialType]: Record<string, string[]>;
 };
 
-type DomainMap = Record<string, Record<string, string[]>>;
+export type DomainMap = Record<string, Record<string, string[]>>;
 interface Data {
   characterList: CharacterData[];
   weaponList: WeaponData[];
@@ -47,6 +47,7 @@ interface Data {
   selectedMaterial: SelectedMaterial;
   selectedArtifactMap: DomainMap;
   selectedWeaponAscendMap: DomainMap;
+  selectedTalentAscendMap: DomainMap;
   onAddCharacter: number;
   addCharacter: (characterData: CharacterData) => void;
   removeCharacter: (characterId: string) => void;
@@ -278,6 +279,7 @@ function DataProvider({ children }: PropsWithChildren<{}>) {
     return result;
   }, [selectedDataList]);
 
+  // Refactor this with selectedTalentAscendMap
   const selectedWeaponAscendMap = useMemo(() => {
     const result: DomainMap = {};
 
@@ -315,6 +317,39 @@ function DataProvider({ children }: PropsWithChildren<{}>) {
     return result;
   }, [selectedDataList]);
 
+  const selectedTalentAscendMap = useMemo(() => {
+    const result: DomainMap = {};
+
+    selectedDataList.forEach((selectedData) => {
+      const {
+        characterData: {
+          id: characterId,
+          talentMaterial: { book: bookMaterial },
+        },
+      } = selectedData;
+
+      if (!bookMaterial || Array.isArray(bookMaterial)) return;
+
+      const domainDrop = domainList.find((domain) => domain.reward.includes(bookMaterial));
+
+      if (!domainDrop) return;
+
+      const { id: domainId } = domainDrop;
+
+      if (!result[domainId]) {
+        result[domainId] = {};
+      }
+
+      if (!result[domainId][bookMaterial]) {
+        result[domainId][bookMaterial] = [];
+      }
+
+      result[domainId][bookMaterial].push(characterId);
+    });
+
+    return result;
+  }, [selectedDataList]);
+
   const value = useMemo(
     () => ({
       characterList,
@@ -327,6 +362,7 @@ function DataProvider({ children }: PropsWithChildren<{}>) {
       selectedMaterial,
       selectedArtifactMap,
       selectedWeaponAscendMap,
+      selectedTalentAscendMap,
       onAddCharacter: onAddCharacter.current,
       addCharacter,
       removeCharacter,
@@ -337,6 +373,7 @@ function DataProvider({ children }: PropsWithChildren<{}>) {
       selectedMaterial,
       selectedArtifactMap,
       selectedWeaponAscendMap,
+      selectedTalentAscendMap,
       addCharacter,
       removeCharacter,
       onAddCharacter,

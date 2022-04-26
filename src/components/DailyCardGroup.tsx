@@ -1,15 +1,21 @@
-import { useEffect } from 'react';
+import { PropsWithoutRef, useEffect } from 'react';
 import ReactTooltip from 'react-tooltip';
-import { Day, regions } from '../../types/data';
-import { useDataContext } from '../contexts/dataContext';
+import { Day, DomainType, regions } from '../../types/data';
+import { DomainMap, useDataContext } from '../contexts/dataContext';
 import { ResourcesKey, useLocalizationContext } from '../contexts/localizationContext';
 import DayIcon from './DayIcon';
 import { IconType } from './ImageIcon';
 import ItemCard from './ItemCard';
 
-function DailyCardGroup() {
+interface DailyCardGroupProps {
+  domainMap: DomainMap;
+  domainType: DomainType;
+  materialConfig: Record<string, string[]>;
+}
+
+function DailyCardGroup({ domainMap, domainType, materialConfig }: PropsWithoutRef<DailyCardGroupProps>) {
   const { resources } = useLocalizationContext();
-  const { domainList, selectedWeaponAscendMap, materialConfig } = useDataContext();
+  const { domainList } = useDataContext();
 
   useEffect(() => {
     ReactTooltip.rebuild();
@@ -17,8 +23,8 @@ function DailyCardGroup() {
 
   const renderCard = (cardMap: Record<string, string[]>) =>
     Object.keys(cardMap).map((materialGroupId) => {
-      if (!materialConfig.weapon) return null;
-      const materialGroup = materialConfig.weapon[materialGroupId];
+      if (!materialConfig) return null;
+      const materialGroup = materialConfig[materialGroupId];
       const materialId = materialGroup[materialGroup.length - 1];
 
       return (
@@ -43,17 +49,16 @@ function DailyCardGroup() {
       domainList.map((domain) => {
         const { id, type, daysofweek, region: domainRegion } = domain;
 
-        if (type !== 'weapon_ascension_materials' || region !== domainRegion || !selectedWeaponAscendMap[id])
-          return null;
+        if (type !== domainType || region !== domainRegion || !domainMap[id]) return null;
 
         return (
           <div key={id} className="flex flex-col">
-            <div className="mb-1 flex items-center gap-2 text-xl">
+            <div className="mb-1 flex items-center gap-1 text-xl">
               <span className="truncate">{resources[id as ResourcesKey]}</span>
               <span>({resources[domainRegion]})</span>
               <span className="ml-auto flex items-center gap-2">{renderDays(daysofweek)}</span>
             </div>
-            <div>{renderCard(selectedWeaponAscendMap[id])}</div>
+            <div>{renderCard(domainMap[id])}</div>
           </div>
         );
       }),

@@ -6,6 +6,7 @@ import DailyCardGroup from '../components/DailyCardGroup';
 import ImageIcon, { IconType } from '../components/ImageIcon';
 import ItemCardGroup from '../components/ItemCardGroup';
 import ItemCategoryCardGroup from '../components/ItemCategoryCardGroup';
+import { useDataContext } from '../contexts/dataContext';
 import { useLocalizationContext } from '../contexts/localizationContext';
 
 interface CollapisbleConfig {
@@ -16,6 +17,7 @@ interface CollapisbleConfig {
 
 function Farm() {
   const { resources } = useLocalizationContext();
+  const { materialConfig, selectedWeaponAscendMap, selectedTalentAscendMap } = useDataContext();
   const collapsibleConfigs: CollapisbleConfig[] = useMemo(
     () => [
       {
@@ -46,15 +48,27 @@ function Farm() {
       {
         label: resources.weapon_ascension,
         icon: <ImageIcon id="dream_of_the_dandelion_gladiator" type={IconType.Materials} />,
-        content: <DailyCardGroup />,
+        content: (
+          <DailyCardGroup
+            domainMap={selectedWeaponAscendMap}
+            domainType="weapon_ascension_materials"
+            materialConfig={materialConfig.weapon as Record<string, string[]>}
+          />
+        ),
       },
       {
         label: resources.talent_ascension,
         icon: <ImageIcon id="philosophies_of_transience" type={IconType.Materials} />,
-        content: <div>test</div>,
+        content: (
+          <DailyCardGroup
+            domainMap={selectedTalentAscendMap}
+            domainType="talent_levelup_material"
+            materialConfig={materialConfig.book as Record<string, string[]>}
+          />
+        ),
       },
     ],
-    [resources],
+    [resources, selectedWeaponAscendMap, selectedTalentAscendMap, materialConfig],
   );
   const [isMenuExpanded, setIsMenuExpanded] = useState<boolean[]>(() => [...collapsibleConfigs.map(() => true)]);
 
