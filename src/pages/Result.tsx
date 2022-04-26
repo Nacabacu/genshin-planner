@@ -1,8 +1,10 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import ReactTooltip from 'react-tooltip';
+import BossItemCardGroup from '../components/BossItemCardGroup';
 import Collapsible from '../components/Collapsible';
 import ImageIcon, { IconType } from '../components/ImageIcon';
 import MonsterItemCardGroup from '../components/MonsterItemCardGroup';
+import WeeklyBossCardGroup from '../components/WeeklyBossCardGroup';
 import { useLocalizationContext } from '../contexts/localizationContext';
 
 interface CollapisbleConfig {
@@ -23,12 +25,12 @@ function Result() {
       {
         label: resources.boss_drop,
         icon: <ImageIcon id="shivada_jade_gemstone" type={IconType.Materials} />,
-        content: <div>test</div>,
+        content: <BossItemCardGroup />,
       },
       {
         label: resources.weekly_boss,
         icon: <ImageIcon id="tail_of_boreas" type={IconType.Materials} />,
-        content: <div>test</div>,
+        content: <WeeklyBossCardGroup />,
       },
       {
         label: resources.local_specialty,
@@ -76,7 +78,7 @@ function Result() {
   }, [resources, collapsibleConfigs, isMenuExpanded]);
 
   return (
-    <div className="mt-6 flex max-w-9xl flex-grow flex-col items-center gap-6">
+    <div className="my-6 flex max-w-9xl flex-grow flex-col items-center gap-6">
       {renderExpandAllButton()}
       {collapsibleConfigs.map((config, index) => (
         <Collapsible

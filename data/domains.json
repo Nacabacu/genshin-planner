@@ -3,126 +3,68 @@
     "id": "domain_of_blessing_autumn_hunt",
     "region": "inazuma",
     "type": "artifacts",
-    "reward": [
-      "resolution_of_sojourner",
-      "tiny_miracle",
-      "shimenawas_reminiscence",
-      "emblem_of_severed_fate"
-    ]
+    "reward": ["resolution_of_sojourner", "tiny_miracle", "shimenawas_reminiscence", "emblem_of_severed_fate"]
   },
   {
     "id": "domain_of_blessing_dance_of_steel",
     "region": "mondstadt",
     "type": "artifacts",
-    "reward": [
-      "traveling_doctor",
-      "tiny_miracle",
-      "viridescent_venerer",
-      "maiden_beloved"
-    ]
+    "reward": ["traveling_doctor", "tiny_miracle", "viridescent_venerer", "maiden_beloved"]
   },
   {
     "id": "domain_of_blessing_elegaic_rime",
     "region": "mondstadt",
     "type": "artifacts",
-    "reward": [
-      "defenders_will",
-      "gambler",
-      "blizzard_strayer",
-      "heart_of_depth"
-    ]
+    "reward": ["defenders_will", "gambler", "blizzard_strayer", "heart_of_depth"]
   },
   {
     "id": "domain_of_blessing_fires_of_purification",
     "region": "mondstadt",
     "type": "artifacts",
-    "reward": [
-      "adventurer",
-      "resolution_of_sojourner",
-      "thundering_fury",
-      "thundersoother"
-    ]
+    "reward": ["adventurer", "resolution_of_sojourner", "thundering_fury", "thundersoother"]
   },
   {
     "id": "domain_of_blessing_frost",
     "region": "liyue",
     "type": "artifacts",
-    "reward": [
-      "defenders_will",
-      "martial_artist",
-      "crimson_witch_of_flames",
-      "lavawalker"
-    ]
+    "reward": ["defenders_will", "martial_artist", "crimson_witch_of_flames", "lavawalker"]
   },
   {
     "id": "domain_of_blessing_necropolis",
     "region": "inazuma",
     "type": "artifacts",
-    "reward": [
-      "defenders_will",
-      "brave_heart",
-      "husk_of_opulent_dreams",
-      "oceanhued_clam"
-    ]
+    "reward": ["defenders_will", "brave_heart", "husk_of_opulent_dreams", "oceanhued_clam"]
   },
   {
     "id": "domain_of_blessing_spring",
     "region": "liyue",
     "type": "artifacts",
-    "reward": [
-      "lucky_dog",
-      "brave_heart",
-      "archaic_petra",
-      "retracing_bolide"
-    ]
+    "reward": ["lucky_dog", "brave_heart", "archaic_petra", "retracing_bolide"]
   },
   {
     "id": "domain_of_blessing_stone_chamber",
     "region": "liyue",
     "type": "artifacts",
-    "reward": [
-      "gambler",
-      "scholar",
-      "bloodstained_chivalry",
-      "noblesse_oblige"
-    ]
+    "reward": ["gambler", "scholar", "bloodstained_chivalry", "noblesse_oblige"]
   },
   {
     "id": "domain_of_blessing_unyielding",
     "region": "mondstadt",
     "type": "artifacts",
-    "reward": [
-      "brave_heart",
-      "martial_artist",
-      "tenacity_of_the_millelith",
-      "pale_flame"
-    ]
+    "reward": ["brave_heart", "martial_artist", "tenacity_of_the_millelith", "pale_flame"]
   },
   {
     "id": "domain_of_forgery_altar_of_sands",
     "region": "inazuma",
     "type": "weapon_ascension_materials",
-    "daysofweek": [
-      "tuesday",
-      "friday",
-      "sunday"
-    ],
-    "reward": [
-      "narukamis_wisdom",
-      "narukamis_joy",
-      "narukamis_affection",
-      "narukamis_valor"
-    ]
+    "daysofweek": ["tuesday", "friday", "sunday"],
+    "reward": ["narukamis_wisdom", "narukamis_joy", "narukamis_affection", "narukamis_valor"]
   },
   {
     "id": "domain_of_forgery_city_of_reflections",
     "region": "mondstadt",
     "type": "weapon_ascension_materials",
-    "daysofweek": [
-      "monday",
-      "thursday",
-      "sunday"
-    ],
+    "daysofweek": ["monday", "thursday", "sunday"],
     "reward": [
       "tile_of_decarabians_tower",
       "debris_of_decarabians_city",
@@ -134,11 +76,7 @@
     "id": "domain_of_forgery_ruins_of_thirsting_capital",
     "region": "mondstadt",
     "type": "weapon_ascension_materials",
-    "daysofweek": [
-      "wednesday",
-      "saturday",
-      "sunday"
-    ],
+    "daysofweek": ["wednesday", "saturday", "sunday"],
     "reward": [
       "fetters_of_the_dandelion_gladiator",
       "chains_of_the_dandelion_gladiator",
@@ -150,27 +88,14 @@
     "id": "domain_of_forgery_sand_burial",
     "region": "inazuma",
     "type": "weapon_ascension_materials",
-    "daysofweek": [
-      "wednesday",
-      "saturday",
-      "sunday"
-    ],
-    "reward": [
-      "mask_of_the_wicked_lieutenant",
-      "mask_of_the_tigers_bite",
-      "mask_of_the_onehorned",
-      "mask_of_the_kijin"
-    ]
+    "daysofweek": ["wednesday", "saturday", "sunday"],
+    "reward": ["mask_of_the_wicked_lieutenant", "mask_of_the_tigers_bite", "mask_of_the_onehorned", "mask_of_the_kijin"]
   },
   {
     "id": "domain_of_forgery_submerged_valley",
     "region": "mondstadt",
     "type": "weapon_ascension_materials",
-    "daysofweek": [
-      "tuesday",
-      "friday",
-      "sunday"
-    ],
+    "daysofweek": ["tuesday", "friday", "sunday"],
     "reward": [
       "boreal_wolfs_milk_tooth",
       "boreal_wolfs_cracked_tooth",
@@ -182,11 +107,7 @@
     "id": "domain_of_forgery_sunken_sands",
     "region": "inazuma",
     "type": "weapon_ascension_materials",
-    "daysofweek": [
-      "monday",
-      "thursday",
-      "sunday"
-    ],
+    "daysofweek": ["monday", "thursday", "sunday"],
     "reward": [
       "coral_branch_of_a_distant_sea",
       "jeweled_branch_of_a_distant_sea",
@@ -198,27 +119,14 @@
     "id": "domain_of_forgery_thundercloud_altar",
     "region": "liyue",
     "type": "weapon_ascension_materials",
-    "daysofweek": [
-      "monday",
-      "thursday",
-      "sunday"
-    ],
-    "reward": [
-      "luminous_sands_from_guyun",
-      "lustrous_stone_from_guyun",
-      "relic_from_guyun",
-      "divine_body_from_guyun"
-    ]
+    "daysofweek": ["monday", "thursday", "sunday"],
+    "reward": ["luminous_sands_from_guyun", "lustrous_stone_from_guyun", "relic_from_guyun", "divine_body_from_guyun"]
   },
   {
     "id": "domain_of_forgery_thundering_ruins",
     "region": "liyue",
     "type": "weapon_ascension_materials",
-    "daysofweek": [
-      "tuesday",
-      "friday",
-      "sunday"
-    ],
+    "daysofweek": ["tuesday", "friday", "sunday"],
     "reward": [
       "mist_veiled_lead_elixir",
       "mist_veiled_mercury_elixir",
@@ -230,151 +138,70 @@
     "id": "domain_of_forgery_trial_grounds_of_thunder",
     "region": "liyue",
     "type": "weapon_ascension_materials",
-    "daysofweek": [
-      "wednesday",
-      "saturday",
-      "sunday"
-    ],
-    "reward": [
-      "grain_of_aerosiderite",
-      "piece_of_aerosiderite",
-      "bit_of_aerosiderite",
-      "chunk_of_aerosiderite"
-    ]
+    "daysofweek": ["wednesday", "saturday", "sunday"],
+    "reward": ["grain_of_aerosiderite", "piece_of_aerosiderite", "bit_of_aerosiderite", "chunk_of_aerosiderite"]
   },
   {
     "id": "domain_of_mastery_altar_of_flames",
     "region": "mondstadt",
     "type": "talent_levelup_material",
-    "daysofweek": [
-      "monday",
-      "thursday",
-      "sunday"
-    ],
-    "reward": [
-      "teachings_of_prosperity",
-      "guide_to_prosperity",
-      "philosophies_of_prosperity"
-    ]
+    "daysofweek": ["monday", "thursday", "sunday"],
+    "reward": ["teachings_of_prosperity", "guide_to_prosperity", "philosophies_of_prosperity"]
   },
   {
     "id": "domain_of_mastery_circle_of_embers",
     "region": "liyue",
     "type": "talent_levelup_material",
-    "daysofweek": [
-      "wednesday",
-      "saturday",
-      "sunday"
-    ],
-    "reward": [
-      "teachings_of_gold",
-      "guide_to_gold",
-      "philosophies_of_gold"
-    ]
+    "daysofweek": ["wednesday", "saturday", "sunday"],
+    "reward": ["teachings_of_gold", "guide_to_gold", "philosophies_of_gold"]
   },
   {
     "id": "domain_of_mastery_frosted_altar",
     "region": "mondstadt",
     "type": "talent_levelup_material",
-    "daysofweek": [
-      "monday",
-      "thursday",
-      "sunday"
-    ],
-    "reward": [
-      "teachings_of_freedom",
-      "guide_to_freedom",
-      "philosophies_of_freedom"
-    ]
+    "daysofweek": ["monday", "thursday", "sunday"],
+    "reward": ["teachings_of_freedom", "guide_to_freedom", "philosophies_of_freedom"]
   },
   {
     "id": "domain_of_mastery_frozen_abyss",
     "region": "mondstadt",
     "type": "talent_levelup_material",
-    "daysofweek": [
-      "tuesday",
-      "friday",
-      "sunday"
-    ],
-    "reward": [
-      "teachings_of_resistance",
-      "guide_to_resistance",
-      "philosophies_of_resistance"
-    ]
+    "daysofweek": ["tuesday", "friday", "sunday"],
+    "reward": ["teachings_of_resistance", "guide_to_resistance", "philosophies_of_resistance"]
   },
   {
     "id": "domain_of_mastery_heart_of_the_flames",
     "region": "liyue",
     "type": "talent_levelup_material",
-    "daysofweek": [
-      "tuesday",
-      "friday",
-      "sunday"
-    ],
-    "reward": [
-      "teachings_of_diligence",
-      "guide_to_diligence",
-      "philosophies_of_diligence"
-    ]
+    "daysofweek": ["tuesday", "friday", "sunday"],
+    "reward": ["teachings_of_diligence", "guide_to_diligence", "philosophies_of_diligence"]
   },
   {
     "id": "domain_of_mastery_realm_of_slumber",
     "region": "mondstadt",
     "type": "talent_levelup_material",
-    "daysofweek": [
-      "wednesday",
-      "saturday",
-      "sunday"
-    ],
-    "reward": [
-      "teachings_of_ballad",
-      "guide_to_ballad",
-      "philosophies_of_ballad"
-    ]
+    "daysofweek": ["wednesday", "saturday", "sunday"],
+    "reward": ["teachings_of_ballad", "guide_to_ballad", "philosophies_of_ballad"]
   },
   {
     "id": "domain_of_mastery_reign_of_violet",
     "region": "inazuma",
     "type": "talent_levelup_material",
-    "daysofweek": [
-      "monday",
-      "thursday",
-      "sunday"
-    ],
-    "reward": [
-      "teachings_of_transience",
-      "guide_to_transience",
-      "philosophies_of_transience"
-    ]
+    "daysofweek": ["monday", "thursday", "sunday"],
+    "reward": ["teachings_of_transience", "guide_to_transience", "philosophies_of_transience"]
   },
   {
     "id": "domain_of_mastery_thundering_valley",
     "region": "inazuma",
     "type": "talent_levelup_material",
-    "daysofweek": [
-      "tuesday",
-      "friday",
-      "sunday"
-    ],
-    "reward": [
-      "teachings_of_elegance",
-      "guide_to_elegance",
-      "philosophies_of_elegance"
-    ]
+    "daysofweek": ["tuesday", "friday", "sunday"],
+    "reward": ["teachings_of_elegance", "guide_to_elegance", "philosophies_of_elegance"]
   },
   {
     "id": "domain_of_mastery_vineinfested_ruins",
     "region": "inazuma",
     "type": "talent_levelup_material",
-    "daysofweek": [
-      "wednesday",
-      "saturday",
-      "sunday"
-    ],
-    "reward": [
-      "teachings_of_light",
-      "guide_to_light",
-      "philosophies_of_light"
-    ]
+    "daysofweek": ["wednesday", "saturday", "sunday"],
+    "reward": ["teachings_of_light", "guide_to_light", "philosophies_of_light"]
   }
 ]

@@ -18,7 +18,7 @@ function MonsterItemCardGroup() {
   };
 
   return (
-    <div className="grid grid-cols-1 justify-center gap-4 rounded-b-md p-4 xsm:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+    <div className="grid grid-cols-1 justify-center gap-4 rounded-b-md px-4 pt-4 xsm:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
       {renderCard()}
     </div>
   );
