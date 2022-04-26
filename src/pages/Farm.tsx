@@ -70,7 +70,7 @@ function Farm() {
     ],
     [resources, selectedWeaponAscendMap, selectedTalentAscendMap, materialConfig],
   );
-  const [isMenuExpanded, setIsMenuExpanded] = useState<boolean[]>(() => [...collapsibleConfigs.map(() => true)]);
+  const [isMenuExpanded, setIsMenuExpanded] = useState<boolean[]>(() => [...collapsibleConfigs.map(() => false)]);
 
   useEffect(() => {
     ReactTooltip.rebuild();
