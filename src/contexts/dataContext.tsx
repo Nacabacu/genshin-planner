@@ -34,6 +34,8 @@ export interface SelectedData {
 export type SelectedMaterial = {
   [key in MaterialType]: Record<string, string[]>;
 };
+
+type DomainMap = Record<string, Record<string, string[]>>;
 interface Data {
   characterList: CharacterData[];
   weaponList: WeaponData[];
@@ -43,6 +45,8 @@ interface Data {
   materialConfig: MaterialConfig;
   selectedDataList: SelectedData[];
   selectedMaterial: SelectedMaterial;
+  selectedArtifactMap: DomainMap;
+  selectedWeaponAscendMap: DomainMap;
   onAddCharacter: number;
   addCharacter: (characterData: CharacterData) => void;
   removeCharacter: (characterId: string) => void;
@@ -240,6 +244,77 @@ function DataProvider({ children }: PropsWithChildren<{}>) {
     [setSelectedDataList],
   );
 
+  const selectedArtifactMap = useMemo(() => {
+    const result: DomainMap = {};
+
+    selectedDataList.forEach((selectedData) => {
+      const {
+        characterData: { id: characterId },
+        artifactDataList,
+      } = selectedData;
+
+      if (!artifactDataList) return;
+
+      artifactDataList.forEach((artifactData) => {
+        const { id: artifactId } = artifactData;
+        const domainDrop = domainList.find((domain) => domain.reward.includes(artifactId));
+
+        if (!domainDrop) return;
+
+        const { id: domainId } = domainDrop;
+
+        if (!result[domainId]) {
+          result[domainId] = {};
+        }
+
+        if (!result[domainId][artifactId]) {
+          result[domainId][artifactId] = [];
+        }
+
+        result[domainId][artifactId].push(characterId);
+      });
+    });
+
+    return result;
+  }, [selectedDataList]);
+
+  const selectedWeaponAscendMap = useMemo(() => {
+    const result: DomainMap = {};
+
+    selectedDataList.forEach((selectedData) => {
+      const {
+        characterData: { id: characterId },
+        weaponData,
+      } = selectedData;
+
+      if (!weaponData) return;
+
+      const {
+        ascendMaterial: { weapon: weaponMaterial },
+      } = weaponData;
+
+      if (!weaponMaterial || Array.isArray(weaponMaterial)) return;
+
+      const domainDrop = domainList.find((domain) => domain.reward.includes(weaponMaterial));
+
+      if (!domainDrop) return;
+
+      const { id: domainId } = domainDrop;
+
+      if (!result[domainId]) {
+        result[domainId] = {};
+      }
+
+      if (!result[domainId][weaponMaterial]) {
+        result[domainId][weaponMaterial] = [];
+      }
+
+      result[domainId][weaponMaterial].push(characterId);
+    });
+
+    return result;
+  }, [selectedDataList]);
+
   const value = useMemo(
     () => ({
       characterList,
@@ -250,12 +325,23 @@ function DataProvider({ children }: PropsWithChildren<{}>) {
       materialConfig,
       selectedDataList,
       selectedMaterial,
+      selectedArtifactMap,
+      selectedWeaponAscendMap,
       onAddCharacter: onAddCharacter.current,
       addCharacter,
       removeCharacter,
       updateSelectedDataList,
     }),
-    [selectedDataList, selectedMaterial, addCharacter, removeCharacter, onAddCharacter, updateSelectedDataList],
+    [
+      selectedDataList,
+      selectedMaterial,
+      selectedArtifactMap,
+      selectedWeaponAscendMap,
+      addCharacter,
+      removeCharacter,
+      onAddCharacter,
+      updateSelectedDataList,
+    ],
   );
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;

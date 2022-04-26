@@ -1,4 +1,5 @@
-import { PropsWithoutRef } from 'react';
+import { PropsWithoutRef, useEffect } from 'react';
+import ReactTooltip from 'react-tooltip';
 import { MaterialTypeArray, MaterialTypeConfigObject } from '../../types/data';
 import { useDataContext } from '../contexts/dataContext';
 import { ResourcesKey, useLocalizationContext } from '../contexts/localizationContext';
@@ -13,6 +14,10 @@ interface ItemCategoryCardGroupProps {
 function ItemCategoryCardGroup({ materialTypeGroup, materialType }: PropsWithoutRef<ItemCategoryCardGroupProps>) {
   const { resources } = useLocalizationContext();
   const { selectedMaterial, materialConfig } = useDataContext();
+
+  useEffect(() => {
+    ReactTooltip.rebuild();
+  });
 
   const renderCard = (itemIdList: string[]) =>
     itemIdList.map((itemId) => {

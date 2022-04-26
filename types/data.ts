@@ -1,12 +1,13 @@
 export const elements = ['anemo', 'cryo', 'pyro', 'hydro', 'electro', 'geo', 'dendro'] as const;
 export const weaponTypes = ['sword', 'bow', 'claymore', 'catalyst', 'polearm'] as const;
 export const regions = ['mondstadt', 'liyue', 'inazuma'] as const;
+export const days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'] as const;
 
 export type Rarity = 1 | 2 | 3 | 4 | 5;
 export type WeaponType = typeof weaponTypes[number];
 export type Element = typeof elements[number];
 export type Region = typeof regions[number];
-export type Day = 'monday' | 'tuesday' | 'wednesday' | 'thursday' | 'friday' | 'saturday' | 'sunday';
+export type Day = typeof days[number];
 export type DomainType = 'artifacts' | 'weapon_ascension_materials' | 'talent_levelup_material';
 
 export type MaterialType = MaterialTypeObject | MaterialTypeArray;
@@ -53,6 +54,6 @@ export interface WeaponData extends ItemDataBase {
 export interface DomainData extends ItemDataBase {
   region: Region;
   type: DomainType;
-  reward: string[];
+  reward: string | string[];
   daysofweek?: Day[];
 }

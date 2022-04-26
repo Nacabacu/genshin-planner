@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import ReactTooltip from 'react-tooltip';
 import ArtifactCardGroup from '../components/ArtifactCardGroup';
 import Collapsible from '../components/Collapsible';
+import DailyCardGroup from '../components/DailyCardGroup';
 import ImageIcon, { IconType } from '../components/ImageIcon';
 import ItemCardGroup from '../components/ItemCardGroup';
 import ItemCategoryCardGroup from '../components/ItemCategoryCardGroup';
@@ -45,7 +46,7 @@ function Farm() {
       {
         label: resources.weapon_ascension,
         icon: <ImageIcon id="dream_of_the_dandelion_gladiator" type={IconType.Materials} />,
-        content: <div>test</div>,
+        content: <DailyCardGroup />,
       },
       {
         label: resources.talent_ascension,
