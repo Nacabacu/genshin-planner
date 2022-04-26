@@ -40,7 +40,7 @@ function DailyCardGroup({ domainMap, domainType, materialConfig }: PropsWithoutR
   const renderDays = (daysofweek: Day[] | undefined) => {
     if (!daysofweek) return null;
 
-    return daysofweek.map((day) => <DayIcon day={day} />);
+    return daysofweek.map((day) => <DayIcon key={day} day={day} />);
   };
 
   const renderDay = () =>

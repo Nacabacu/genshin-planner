@@ -47,7 +47,7 @@ function ItemCategoryCardGroup({ materialTypeGroup, materialType }: PropsWithout
       if (isEmptyConfig(materialConfigItem[key])) return null;
 
       return (
-        <div key={key} className="flex flex-col px-4 pt-4">
+        <div key={key} className="flex flex-col px-4">
           <div className="mb-1 text-xl">{resources[key as ResourcesKey]}</div>
           <div className="grid grid-cols-1 justify-center gap-4 rounded-b-md xsm:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
             {renderCard(materialConfigItem[key])}
@@ -57,7 +57,7 @@ function ItemCategoryCardGroup({ materialTypeGroup, materialType }: PropsWithout
     });
   };
 
-  return <div>{renderGroup()}</div>;
+  return <div className="space-y-4 pt-4">{renderGroup()}</div>;
 }
 
 export default ItemCategoryCardGroup;
