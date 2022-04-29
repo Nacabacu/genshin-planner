@@ -258,7 +258,9 @@ function Autosuggest<T, Multiple extends boolean | undefined = undefined>({
 
     return (
       <div
-        className={`absolute z-10 flex max-h-60 w-full flex-col overflow-scroll rounded bg-gray-700 py-1 text-gray-300 shadow-xl ${
+        className={`overflow-y-scoll scrollbar-thumb-rounded-full scrollbar-track-rounded-full absolute
+        z-10 flex max-h-60 w-full flex-col overflow-x-hidden rounded bg-gray-700 py-1 text-gray-300
+        shadow-xl scrollbar-thin scrollbar-thumb-cyan-700 scrollbar-track-cyan-900 hover:scrollbar-thumb-cyan-600 ${
           isOverflow ? 'bottom-11 -mt-1' : 'mt-1'
         }`}
         ref={popupRef}
