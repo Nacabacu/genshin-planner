@@ -372,7 +372,7 @@ function ConfigTable({ data, filter }: PropsWithoutRef<ConfigTableProps>) {
         cell = WeaponMobileCell;
         break;
       default:
-        header = resources.character;
+        header = resources.weapon;
         cell = WeaponCell;
         break;
     }
