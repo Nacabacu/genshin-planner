@@ -95,7 +95,12 @@
       "vayuda_turquoise_chunk",
       "vayuda_turquoise_gemstone"
     ],
-    "shivada_jade": ["shivada_jade_sliver", "shivada_jade_fragment", "shivada_jade_chunk", "shivada_jade_gemstone"],
+    "shivada_jade": [
+      "shivada_jade_sliver",
+      "shivada_jade_fragment",
+      "shivada_jade_chunk",
+      "shivada_jade_gemstone"
+    ],
     "prithiva_topaz": [
       "prithiva_topaz_sliver",
       "prithiva_topaz_fragment",
@@ -104,15 +109,51 @@
     ]
   },
   "book": {
-    "freedom": ["teachings_of_freedom", "guide_to_freedom", "philosophies_of_freedom"],
-    "resistance": ["teachings_of_resistance", "guide_to_resistance", "philosophies_of_resistance"],
-    "ballad": ["teachings_of_ballad", "guide_to_ballad", "philosophies_of_ballad"],
-    "prosperity": ["teachings_of_prosperity", "guide_to_prosperity", "philosophies_of_prosperity"],
-    "diligence": ["teachings_of_diligence", "guide_to_diligence", "philosophies_of_diligence"],
-    "gold": ["teachings_of_gold", "guide_to_gold", "philosophies_of_gold"],
-    "transience": ["teachings_of_transience_", "guide_to_transience", "philosophies_of_transience"],
-    "elegance": ["teachings_of_elegance", "guide_to_elegance", "philosophies_of_elegance"],
-    "light": ["teachings_of_light", "guide_to_light", "philosophies_of_light"]
+    "freedom": [
+      "teachings_of_freedom",
+      "guide_to_freedom",
+      "philosophies_of_freedom"
+    ],
+    "resistance": [
+      "teachings_of_resistance",
+      "guide_to_resistance",
+      "philosophies_of_resistance"
+    ],
+    "ballad": [
+      "teachings_of_ballad",
+      "guide_to_ballad",
+      "philosophies_of_ballad"
+    ],
+    "prosperity": [
+      "teachings_of_prosperity",
+      "guide_to_prosperity",
+      "philosophies_of_prosperity"
+    ],
+    "diligence": [
+      "teachings_of_diligence",
+      "guide_to_diligence",
+      "philosophies_of_diligence"
+    ],
+    "gold": [
+      "teachings_of_gold",
+      "guide_to_gold",
+      "philosophies_of_gold"
+    ],
+    "transience": [
+      "teachings_of_transience_",
+      "guide_to_transience",
+      "philosophies_of_transience"
+    ],
+    "elegance": [
+      "teachings_of_elegance",
+      "guide_to_elegance",
+      "philosophies_of_elegance"
+    ],
+    "light": [
+      "teachings_of_light",
+      "guide_to_light",
+      "philosophies_of_light"
+    ]
   },
   "weapon": {
     "decarabian": [
@@ -133,54 +174,178 @@
       "shackles_of_the_dandelion_gladiator",
       "dream_of_the_dandelion_gladiator"
     ],
-    "guyun": ["luminous_sands_from_guyun", "lustrous_stone_from_guyun", "relic_from_guyun", "divine_body_from_guyun"],
+    "guyun": [
+      "luminous_sands_from_guyun",
+      "lustrous_stone_from_guyun",
+      "relic_from_guyun",
+      "divine_body_from_guyun"
+    ],
     "elixir": [
       "mist_veiled_lead_elixir",
       "mist_veiled_mercury_elixir",
       "mist_veiled_gold_elixir",
       "mist_veiled_primo_elixir"
     ],
-    "aerosiderite": ["grain_of_aerosiderite", "piece_of_aerosiderite", "bit_of_aerosiderite", "chunk_of_aerosiderite"],
+    "aerosiderite": [
+      "grain_of_aerosiderite",
+      "piece_of_aerosiderite",
+      "bit_of_aerosiderite",
+      "chunk_of_aerosiderite"
+    ],
     "distant_sea": [
       "coral_branch_of_a_distant_sea",
       "jeweled_branch_of_a_distant_sea",
       "jade_branch_of_a_distant_sea",
       "golden_branch_of_a_distant_sea"
     ],
-    "narukami": ["narukamis_wisdom", "narukamis_joy", "narukamis_affection", "narukamis_valor"],
-    "mask": ["mask_of_the_wicked_lieutenant", "mask_of_the_tigers_bite", "mask_of_the_onehorned", "mask_of_the_kijin"]
+    "narukami": [
+      "narukamis_wisdom",
+      "narukamis_joy",
+      "narukamis_affection",
+      "narukamis_valor"
+    ],
+    "mask": [
+      "mask_of_the_wicked_lieutenant",
+      "mask_of_the_tigers_bite",
+      "mask_of_the_onehorned",
+      "mask_of_the_kijin"
+    ]
   },
   "common": {
-    "slime": ["slime_condensate", "slime_secretions", "slime_concentrate"],
-    "common_mask": ["damaged_mask", "stained_mask", "ominous_mask"],
-    "scroll": ["divining_scroll", "sealed_scroll", "forbidden_curse_scroll"],
-    "arrowhead": ["firm_arrowhead", "sharp_arrowhead", "weathered_arrowhead"],
-    "insignia": ["recruits_insignia", "sergeants_insignia", "lieutenants_insignia"],
-    "treasure_insignia": ["treasure_hoarder_insignia", "silver_raven_insignia", "golden_raven_insignia"],
-    "nectar": ["whopperflower_nectar", "shimmering_nectar", "energy_nectar"],
-    "handguard": ["old_handguard", "kageuchi_handguard", "famed_handguard"],
-    "spectral": ["spectral_husk", "spectral_heart", "spectral_nucleus"],
-    "spore": ["fungal_spores", "luminescent_pollen", "crystalline_cyst_dust"]
+    "slime": [
+      "slime_condensate",
+      "slime_secretions",
+      "slime_concentrate"
+    ],
+    "common_mask": [
+      "damaged_mask",
+      "stained_mask",
+      "ominous_mask"
+    ],
+    "scroll": [
+      "divining_scroll",
+      "sealed_scroll",
+      "forbidden_curse_scroll"
+    ],
+    "arrowhead": [
+      "firm_arrowhead",
+      "sharp_arrowhead",
+      "weathered_arrowhead"
+    ],
+    "insignia": [
+      "recruits_insignia",
+      "sergeants_insignia",
+      "lieutenants_insignia"
+    ],
+    "treasure_insignia": [
+      "treasure_hoarder_insignia",
+      "silver_raven_insignia",
+      "golden_raven_insignia"
+    ],
+    "nectar": [
+      "whopperflower_nectar",
+      "shimmering_nectar",
+      "energy_nectar"
+    ],
+    "handguard": [
+      "old_handguard",
+      "kageuchi_handguard",
+      "famed_handguard"
+    ],
+    "spectral": [
+      "spectral_husk",
+      "spectral_heart",
+      "spectral_nucleus"
+    ],
+    "spore": [
+      "fungal_spores",
+      "luminescent_pollen",
+      "crystalline_cyst_dust"
+    ]
   },
   "elite": {
-    "horn": ["heavy_horn", "black_bronze_horn", "black_crystal_horn"],
-    "lay_lines": ["dead_ley_line_branch", "dead_ley_line_leaves", "ley_line_sprout"],
-    "chaos": ["chaos_device", "chaos_circuit", "chaos_core"],
-    "mist_grass": ["mist_grass_pollen", "mist_grass", "mist_grass_wick"],
-    "knife": ["hunters_sacrificial_knife", "agents_sacrificial_knife", "inspectors_sacrificial_knife"],
-    "bone_shard": ["fragile_bone_shard", "sturdy_bone_shard", "fossilized_bone_shard"],
-    "sentinel_chaos": ["chaos_gear", "chaos_axis", "chaos_oculus"],
-    "prism": ["dismal_prism", "crystal_prism", "polarizing_prism"],
-    "claw": ["concealed_claw", "concealed_unguis", "concealed_talon"],
-    "statuette": ["gloomy_statuette", "dark_statuette", "deathly_statuette"]
+    "horn": [
+      "heavy_horn",
+      "black_bronze_horn",
+      "black_crystal_horn"
+    ],
+    "lay_lines": [
+      "dead_ley_line_branch",
+      "dead_ley_line_leaves",
+      "ley_line_sprout"
+    ],
+    "chaos": [
+      "chaos_device",
+      "chaos_circuit",
+      "chaos_core"
+    ],
+    "mist_grass": [
+      "mist_grass_pollen",
+      "mist_grass",
+      "mist_grass_wick"
+    ],
+    "knife": [
+      "hunters_sacrificial_knife",
+      "agents_sacrificial_knife",
+      "inspectors_sacrificial_knife"
+    ],
+    "bone_shard": [
+      "fragile_bone_shard",
+      "sturdy_bone_shard",
+      "fossilized_bone_shard"
+    ],
+    "sentinel_chaos": [
+      "chaos_gear",
+      "chaos_axis",
+      "chaos_oculus"
+    ],
+    "prism": [
+      "dismal_prism",
+      "crystal_prism",
+      "polarizing_prism"
+    ],
+    "claw": [
+      "concealed_claw",
+      "concealed_unguis",
+      "concealed_talon"
+    ],
+    "statuette": [
+      "gloomy_statuette",
+      "dark_statuette",
+      "deathly_statuette"
+    ]
   },
   "weeklyBossGroup": {
-    "dvalin": ["dvalins_plume", "dvalins_claw", "dvalins_sigh"],
-    "andrius": ["tail_of_boreas", "ring_of_boreas", "spirit_locket_of_boreas"],
-    "childe": ["tusk_of_monoceros_caeli", "shard_of_a_foul_legacy", "shadow_of_the_warrior"],
-    "azhdaha": ["dragon_lords_crown", "bloodjade_branch", "gilded_scale"],
-    "la_signora": ["molten_moment", "hellfire_butterfly", "ashen_heart"],
-    "mikoto": ["mudra_of_the_malefic_general", "tears_of_the_calamitous_god", "the_meaning_of_aeons"]
+    "dvalin": [
+      "dvalins_plume",
+      "dvalins_claw",
+      "dvalins_sigh"
+    ],
+    "andrius": [
+      "tail_of_boreas",
+      "ring_of_boreas",
+      "spirit_locket_of_boreas"
+    ],
+    "childe": [
+      "tusk_of_monoceros_caeli",
+      "shard_of_a_foul_legacy",
+      "shadow_of_the_warrior"
+    ],
+    "azhdaha": [
+      "dragon_lords_crown",
+      "bloodjade_branch",
+      "gilded_scale"
+    ],
+    "la_signora": [
+      "molten_moment",
+      "hellfire_butterfly",
+      "ashen_heart"
+    ],
+    "mikoto": [
+      "mudra_of_the_malefic_general",
+      "tears_of_the_calamitous_god",
+      "the_meaning_of_aeons"
+    ]
   },
   "localGroup": {
     "mondstadt": [

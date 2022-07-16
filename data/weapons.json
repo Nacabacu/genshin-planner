@@ -55,6 +55,16 @@
     }
   },
   {
+    "id": "aqua_simulacra",
+    "rarity": 5,
+    "type": "bow",
+    "ascendMaterial": {
+      "weapon": "guyun",
+      "elite": "statuette",
+      "common": "spectral"
+    }
+  },
+  {
     "id": "aquila_favonia",
     "rarity": 5,
     "url": "https://genshin-impact.fandom.com/wiki/Aquila_Favonia",
@@ -341,6 +351,16 @@
     }
   },
   {
+    "id": "fading_twilight",
+    "rarity": 4,
+    "type": "bow",
+    "ascendMaterial": {
+      "weapon": "aerosiderite",
+      "elite": "knife",
+      "common": "scroll"
+    }
+  },
+  {
     "id": "favonius_codex",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Favonius_Codex",
@@ -535,6 +555,16 @@
       "weapon": "aerosiderite",
       "elite": "bone_shard",
       "common": "nectar"
+    }
+  },
+  {
+    "id": "kagotsurube_isshin",
+    "rarity": 4,
+    "type": "sword",
+    "ascendMaterial": {
+      "weapon": "mask",
+      "elite": "statuette",
+      "common": "spectral"
     }
   },
   {
@@ -1233,7 +1263,7 @@
   {
     "id": "the_catch",
     "rarity": 4,
-    "url": "https://genshin-impact.fandom.com/wiki/The_Catch",
+    "url": "https://genshin-impact.fandom.com/wiki/\"The_Catch\"",
     "type": "polearm",
     "ascendMaterial": {
       "weapon": "mask",

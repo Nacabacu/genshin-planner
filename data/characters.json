@@ -414,6 +414,23 @@
     }
   },
   {
+    "id": "kuki_shinobu",
+    "rarity": 4,
+    "element": "electro",
+    "weaponType": "sword",
+    "ascendMaterial": {
+      "gem": "vajrada_amethyst",
+      "boss": "runic_fang",
+      "common": "spectral",
+      "local": "naku_weed"
+    },
+    "talentMaterial": {
+      "common": "spectral",
+      "book": "elegance",
+      "weeklyBoss": "tears_of_the_calamitous_god"
+    }
+  },
+  {
     "id": "lisa",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Lisa",
@@ -666,6 +683,23 @@
     }
   },
   {
+    "id": "shikanoin_heizou",
+    "rarity": 4,
+    "element": "anemo",
+    "weaponType": "catalyst",
+    "ascendMaterial": {
+      "gem": "vayuda_turquoise",
+      "boss": "runic_fang",
+      "common": "treasure_insignia",
+      "local": "onikabuto"
+    },
+    "talentMaterial": {
+      "common": "treasure_insignia",
+      "book": "transience",
+      "weeklyBoss": "the_meaning_of_aeons"
+    }
+  },
+  {
     "id": "sucrose",
     "rarity": 4,
     "url": "https://genshin-impact.fandom.com/wiki/Sucrose",
@@ -843,6 +877,23 @@
       "common": "treasure_insignia",
       "book": "gold",
       "weeklyBoss": "bloodjade_branch"
+    }
+  },
+  {
+    "id": "yelan",
+    "rarity": 5,
+    "element": "hydro",
+    "weaponType": "bow",
+    "ascendMaterial": {
+      "gem": "varunada_lazurite",
+      "boss": "runic_fang",
+      "common": "insignia",
+      "local": "starconch"
+    },
+    "talentMaterial": {
+      "common": "insignia",
+      "book": "prosperity",
+      "weeklyBoss": "gilded_scale"
     }
   },
   {
