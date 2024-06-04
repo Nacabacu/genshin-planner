@@ -13,6 +13,9 @@ function App() {
 
   return (
     <div className="flex min-h-screen flex-col text-gray-300">
+      <div className="flex justify-center bg-cyan-400 text-cyan-900">
+        I've quit this game, the data has not been updated since 2.8
+      </div>
       <div className="content-padding flex justify-center bg-gray-900">
         <Navbar />
       </div>
