@@ -1,3 +1,5 @@
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter } from 'react-router-dom';
@@ -11,6 +13,8 @@ ReactDOM.render(
     <HashRouter>
       <LocalizationProvider>
         <DataProvider>
+          <Analytics />
+          <SpeedInsights />
           <App />
         </DataProvider>
       </LocalizationProvider>
